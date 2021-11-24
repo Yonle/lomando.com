@@ -1,5 +1,5 @@
 # lomando.com
-A complete source code of https://lomando.com Scrapped with [httrack](https://www.httrack.com). 
+A not-so complete source code of https://lomando.com Scrapped with [httrack](https://www.httrack.com). 
 
 To view source code, See `static` branch. 
 
