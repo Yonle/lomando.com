@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/main.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:50:02 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>めいんめにゅー|ふぁんしーあいらんど</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#mainent1{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#mainent2{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#entdoor1{
+    background-color:#000000;
+    opacity: 0.1;
+    width:276px;
+    height:347px;
+    position:absolute;
+    left:347px;
+    top:173px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#entdoor2{
+    background-color: #000000;
+    opacity: 0.1;
+    width:276px;
+    height:347px;
+    position:absolute;
+    left:347px;
+    top:173px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#mainpic1{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1a{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:20px;
+    z-index: 1;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1b{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:60px;
+    z-index: 2;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1c{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:100px;
+    z-index: 3;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link1d{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:140px;
+    z-index: 4;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ghostarea{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:560px;
+    left:180px;
+    z-index: 5;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#yukie{
+    width:970px;
+    height:560px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 6;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#mainpic2{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hantei1{
+    width:315px;
+    height:341px;
+    opacity: 0.0;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 1;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hantei2{
+    width:315px;
+    height:341px;
+    opacity: 0.0;
+    position:absolute;
+    top:0px;
+    left:331px;
+    z-index: 2;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#hantei3{
+    width:315px;
+    height:341px;
+    opacity: 0.0;
+    position:absolute;
+    top:0px;
+    left:665px;
+    z-index: 3;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2a{
+    border-radius: 50%;
+    width:157px;
+    height:197px;
+    position:absolute;
+    top:384px;
+    left:69px;
+    z-index: 4;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2b{
+    border-radius: 50%;
+    width:157px;
+    height:197px;
+    position:absolute;
+    top:384px;
+    left:294px;
+    z-index: 5;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2c{
+    border-radius: 50%;
+    width:157px;
+    height:197px;
+    position:absolute;
+    top:384px;
+    left:519px;
+    z-index: 6;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#link2d{
+    border-radius: 50%;
+    width:157px;
+    height:197px;
+    position:absolute;
+    top:384px;
+    left:744px;
+    z-index: 7;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="doorse" preload="auto">
+<source src="pse/doorkishimi.wav" type="audio/wav">
+<source src="pse/doorkishimi.mp3" type="audio/mp3">
+</audio>
+
+<audio id="bgm" preload="auto" loop>
+<source src="pse/horrorbgm.wav" type="audio/wav">
+<source src="pse/horrorbgm.mp3" type="audio/mp3">
+</audio>
+
+<audio id="yukiekoe" preload="auto">
+<source src="pse/kbsmkoe.wav" type="audio/wav">
+<source src="pse/kbsmkoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="maindollkoe" preload="auto">
+<source src="pse/maindollkoe.wav" type="audio/wav">
+<source src="pse/maindollkoe.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<!--エントランス-->
+<img src="pimg/mainent1.jpg"id="mainent1">
+<img src="pimg/mainent2.jpg"id="mainent2">
+<div id="entdoor1"></div>
+<div id="entdoor2"></div>
+<!--メイン1リンク-->
+<img src="pimg/mainpic1.jpg"id="mainpic1">
+<img src="pimg/mainlink.jpg"id="link1a">
+<img src="pimg/mainlink.jpg"id="link1b">
+<img src="pimg/mainlink.jpg"id="link1c">
+<img src="pimg/mainlink.jpg"id="link1d">
+<img src="pimg/mainlink.jpg"id="ghostarea">
+<img src="pimg/mainyukie.gif"id="yukie">
+<!--メイン2リンク-->
+<img src="pimg/mainpic2.jpg"id="mainpic2">
+<img src="pimg/maindollhantei.png"id="hantei1">
+<img src="pimg/maindollhantei.png"id="hantei2">
+<img src="pimg/maindollhantei.png"id="hantei3">
+<img src="pimg/mirror.gif"id="link2a">
+<img src="pimg/mirror.gif"id="link2b">
+<img src="pimg/mirror.gif"id="link2c">
+<img src="pimg/mirror.gif"id="link2d">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let mainent1 = document.getElementById('mainent1');
+let mainent2 = document.getElementById('mainent2');
+let entdoor1 = document.getElementById('entdoor1');
+let entdoor2 = document.getElementById('entdoor2');
+let mainpic1 = document.getElementById('mainpic1');
+let link1a = document.getElementById('link1a');
+let link1b = document.getElementById('link1b');
+let link1c = document.getElementById('link1c');
+let link1d = document.getElementById('link1d');
+let ghostarea = document.getElementById('ghostarea');
+let yukie = document.getElementById('yukie');
+let bgm = document.getElementById('bgm');
+let doorse = document.getElementById('doorse');
+let yukiekoe = document.getElementById('yukiekoe');
+let maindollkoe = document.getElementById('maindollkoe');
+let waitPoint = 1;
+
+let mainpic2 = document.getElementById('mainpic2');
+let hantei1 = document.getElementById('hantei1');
+let hantei2 = document.getElementById('hantei2');
+let hantei3 = document.getElementById('hantei3');
+let link2a = document.getElementById('link2a');
+let link2b = document.getElementById('link2b');
+let link2c = document.getElementById('link2c');
+let link2d = document.getElementById('link2d');
+let dollkoe = document.getElementById('maindollkoe');
+
+entdoor1.addEventListener('mouseover',function(){entdoor1.style.cursor = 'pointer';});
+entdoor1.addEventListener('click',function(){
+    doorse.load();
+    doorse.play();
+    mainent1.style.display = 'none';
+    entdoor1.style.display = 'none';
+    mainent2.style.display = 'inline';
+    entdoor2.style.display = 'inline';
+});
+entdoor2.addEventListener('mouseover',function(){entdoor2.style.cursor = 'pointer';});
+entdoor2.addEventListener('click',function(){
+    bgm.load();
+    bgm.play();
+    mainent2.style.display = 'none';
+    entdoor2.style.display = 'none';
+    let changePoint = Math.floor(Math.random()*2)+1;
+    if(changePoint === 1){
+        mainpic1.style.display = 'inline';
+        link1a.style.display = 'inline';
+        link1b.style.display = 'inline';
+        link1c.style.display = 'inline';
+        link1d.style.display = 'inline';
+        ghostarea.style.display = 'inline';
+    }
+    if(changePoint === 2){
+        mainpic2.style.display = 'inline';
+        hantei1.style.display = 'inline';
+        hantei2.style.display = 'inline';
+        hantei3.style.display = 'inline';
+        link2a.style.display = 'inline';
+        link2b.style.display = 'inline';
+        link2c.style.display = 'inline';
+        link2d.style.display = 'inline';
+}
+});
+
+link1a.addEventListener('mouseover',function(){link1a.style.cursor = 'pointer';});
+link1a.addEventListener('click',function(){location.href = 'elizabeth.html';});
+
+link1b.addEventListener('mouseover',function(){link1b.style.cursor = 'pointer';});
+link1b.addEventListener('click',function(){location.href = 'chaos.html';});
+
+link1c.addEventListener('mouseover',function(){link1c.style.cursor = 'pointer';});
+link1c.addEventListener('click',function(){location.href = 'heven.html';});
+
+link1d.addEventListener('mouseover',function(){link1d.style.cursor = 'pointer';});
+link1d.addEventListener('click',function(){location.href = 'eden.html';});
+
+link2a.addEventListener('mouseover',function(){link2a.style.cursor = 'pointer';});
+link2a.addEventListener('click',function(){location.href = 'elizabeth.html';});
+
+link2b.addEventListener('mouseover',function(){link2b.style.cursor = 'pointer';});
+link2b.addEventListener('click',function(){location.href = 'chaos.html';});
+
+link2c.addEventListener('mouseover',function(){link2c.style.cursor = 'pointer';});
+link2c.addEventListener('click',function(){location.href = 'heven.html';});
+
+link2d.addEventListener('mouseover',function(){link2d.style.cursor = 'pointer';});
+link2d.addEventListener('click',function(){location.href = 'eden.html';});
+
+ghostarea.addEventListener('mouseover',function(){ghostarea.style.cursor = 'pointer';});
+ghostarea.addEventListener('click',function(){
+    yukiekoe.load();
+    yukiekoe.play();
+    ghostarea.style.display = 'none';
+    yukie.style.display = 'inline';
+    let timerId = setInterval(function(){
+        if(waitPoint<=0){
+            yukie.style.display = 'none';
+        }
+        waitPoint--;
+    },240);
+});
+
+hantei1.addEventListener('mouseover',function(){hantei1.style.cursor = 'pointer';});
+hantei1.addEventListener('click',function(){
+    dollkoe.load();
+    dollkoe.play();
+});
+
+hantei2.addEventListener('mouseover',function(){hantei2.style.cursor = 'pointer';});
+hantei2.addEventListener('click',function(){
+    dollkoe.load();
+    dollkoe.play();
+});
+
+hantei3.addEventListener('mouseover',function(){hantei3.style.cursor = 'pointer';});
+hantei3.addEventListener('click',function(){
+    dollkoe.load();
+    dollkoe.play();
+});
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/main.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:50:18 GMT -->
+</html>

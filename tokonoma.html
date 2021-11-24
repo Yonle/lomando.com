@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/tokonoma.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:57:47 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>床の間</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:728px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back1{width:970px;height:728px;position:absolute;left:0px;top:0px;}
+#back2{width:970px;height:728px;position:absolute;left:0px;top:0px;display:none;}
+#back3{width:970px;height:728px;position:absolute;left:0px;top:0px;display:none;}
+#fusuma{width:122px;height:415px;position:absolute;right:327px;top:184px;}
+#fusumachiri{width:122px;height:415px;position:absolute;right:327px;top:184px;display:none;}
+#fusuma100{width:122px;height:415px;position:absolute;right:327px;top:184px;display:none;}
+#fusuma75{width:92px;height:415px;position:absolute;right:327px;top:184px;display:none;}
+#fusuma50{width:61px;height:415px;position:absolute;right:327px;top:184px;display:none;}
+#fusuma25{width:31px;height:415px;position:absolute;right:327px;top:184px;display:none;}
+#fusumahantei{
+    background-color:#00ff00;
+    width:122px;
+    height:367px;
+    position:absolute;
+    right:327px;
+    top:201px;
+    opacity:0.0;
+    display:none;
+}
+#nexthantei{
+    background-color:#ff42bd;
+    width:122px;
+    height:367px;
+    position:absolute;
+    right:327px;
+    top:201px;
+    opacity:0.0;
+    display:none;
+}
+/*掛け軸判定*/
+#kakejiku{
+    background-color:#ff42bd;
+    width:86px;
+    height:338px;
+    position:absolute;
+    left:275px;
+    top:132px;
+    opacity:0.0;
+}
+/*左ボタンセット*/
+#offleft{width:29px;height:50px;position:absolute;left:179px;top:297px;}
+#offdarkleft{width:29px;height:50px;position:absolute;left:179px;top:297px;display:none;}
+#onleft{width:29px;height:50px;position:absolute;left:179px;top:297px;display:none;}
+#ondarkleft{width:29px;height:50px;position:absolute;left:179px;top:297px;display:none;}
+#chirileft{width:29px;height:50px;position:absolute;left:179px;top:297px;display:none;}
+#offdarkleftdm{width:29px;height:50px;position:absolute;left:179px;top:297px;display:none;}
+/*右ボタンセット*/
+#offright{width:29px;height:50px;position:absolute;left:428px;top:297px;}
+#offdarkright{width:29px;height:50px;position:absolute;left:428px;top:297px;display:none;}
+#onright{width:29px;height:50px;position:absolute;left:428px;top:297px;display:none;}
+#ondarkright{width:29px;height:50px;position:absolute;left:428px;top:297px;display:none;}
+#chiriright{width:29px;height:50px;position:absolute;left:428px;top:297px;display:none;}
+#ondarkrightdm{width:29px;height:50px;position:absolute;left:428px;top:297px;display:none;}
+/*首串セット*/
+#neckr67{width:271px;height:127px;position:absolute;right:0px;top:0px;display:none;}
+#neckr45{width:396px;height:403px;position:absolute;right:0px;top:0px;display:none;}
+#neckr22{width:517px;height:641px;position:absolute;right:11px;top:0px;display:none;}
+#neck0{width:427px;height:728px;position:absolute;left:279px;top:0px;display:none;}
+#neckl22{width:480px;height:684px;position:absolute;left:61px;top:0px;display:none;}
+#neckl45{width:395px;height:400px;position:absolute;left:0px;top:0px;display:none;}
+#neckl67{width:275px;height:134px;position:absolute;left:0px;top:0px;display:none;}
+/*お化け*/
+#obake1{width:340px;height:660px;position:absolute;left:315px;top:68px;display:none;}
+#obake2{width:340px;height:660px;position:absolute;left:315px;top:48px;display:none;}
+#obake3{width:340px;height:660px;position:absolute;left:315px;top:48px;display:none;}
+/*ボスラッシュ*/
+#rush1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#rush2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#rush3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#rush4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#rush5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+/*全画面白*/
+#weffect{
+    background-color:#ffffff;
+    width:970px;
+    height:580px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    display:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:728px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="buttonse" preload="auto">
+<source src="pse/tokobutton.wav" type="audio/wav">
+<source src="pse/tokobutton.mp3" type="audio/mp3">
+</audio>
+
+<audio id="fusumase" preload="auto">
+<source src="pse/tokofusuma.wav" type="audio/wav">
+<source src="pse/tokofusuma.mp3" type="audio/mp3">
+</audio>
+
+<audio id="kubikoe" preload="auto">
+<source src="pse/takawarai2.wav" type="audio/wav">
+<source src="pse/takawarai2.mp3" type="audio/mp3">
+</audio>
+
+<audio id="scream" preload="auto">
+<source src="pse/screamlong.wav" type="audio/wav">
+<source src="pse/screamlong.mp3" type="audio/mp3">
+</audio>
+
+<audio id="takawarai" preload="auto">
+<source src="pse/takawarai.wav" type="audio/wav">
+<source src="pse/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="oowarai" preload="auto">
+<source src="pse/oowarai.wav" type="audio/wav">
+<source src="pse/oowarai.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src ="pimg/tokonomaback1.jpg"id="back1">
+<img src ="pimg/tokonomaback2.jpg"id="back2">
+<img src ="pimg/tokonomaback3.jpg"id="back3">
+<!--ふすまセット-->
+<img src ="pimg/tokofusuma.png"id="fusuma">
+<img src ="pimg/tokofusumachiri.png"id="fusumachiri">
+<img src ="pimg/tokofusuma100.png"id="fusuma100">
+<img src ="pimg/tokofusuma75.png"id="fusuma75">
+<img src ="pimg/tokofusuma50.png"id="fusuma50">
+<img src ="pimg/tokofusuma25.png"id="fusuma25">
+<div id="fusumahantei"></div>
+<div id="nexthantei"></div>
+<!--掛け軸判定-->
+<div id="kakejiku"></div>
+<!--左ボタンセット-->
+<img src ="pimg/tokooff.png"id="offleft">
+<img src ="pimg/tokooffdark.png"id="offdarkleft">
+<img src ="pimg/tokoon.png"id="onleft">
+<img src ="pimg/tokoondark.png"id="ondarkleft">
+<img src ="pimg/tokobuttonchiri.png"id="chirileft">
+<img src ="pimg/tokooffdark.png"id="offdarkleftdm">
+<!--右ボタンセット-->
+<img src ="pimg/tokooff.png"id="offright">
+<img src ="pimg/tokooffdark.png"id="offdarkright">
+<img src ="pimg/tokoon.png"id="onright">
+<img src ="pimg/tokoondark.png"id="ondarkright">
+<img src ="pimg/tokobuttonchiri.png"id="chiriright">
+<img src ="pimg/tokoondark.png"id="ondarkrightdm">
+<!--首串セット-->
+<img src ="pimg/tokoneckr67.png"id="neckr67">
+<img src ="pimg/tokoneckr45.png"id="neckr45">
+<img src ="pimg/tokoneckr22.png"id="neckr22">
+<img src ="pimg/tokoneck0.png"id="neck0">
+<img src ="pimg/tokoneckl22.png"id="neckl22">
+<img src ="pimg/tokoneckl45.png"id="neckl45">
+<img src ="pimg/tokoneckl67.png"id="neckl67">
+<!--お化け-->
+<img src ="pimg/tokoobake1.png"id="obake1">
+<img src ="pimg/tokoobake2.png"id="obake2">
+<img src ="pimg/tokoobake3.png"id="obake3">
+<!--ボスラッシュ-->
+<img src ="pimg/tokorush1.jpg"id="rush1">
+<img src ="pimg/tokorush2.jpg"id="rush2">
+<img src ="pimg/tokorush3.jpg"id="rush3">
+<img src ="pimg/tokorush4.gif"id="rush4">
+<img src ="pimg/tokorush5.jpg"id="rush5">
+<!--全画面白-->
+<div id="weffect"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let back1 = document.getElementById('back1');
+let back2 = document.getElementById('back2');
+let back3 = document.getElementById('back3');
+//ふすまセット
+let fusuma = document.getElementById('fusuma');
+let fusumachiri = document.getElementById('fusumachiri');
+let fusuma100 = document.getElementById('fusuma100');
+let fusuma75 = document.getElementById('fusuma75');
+let fusuma50 = document.getElementById('fusuma50');
+let fusuma25 = document.getElementById('fusuma25');
+let fusumahantei = document.getElementById('fusumahantei');
+let nexthantei = document.getElementById('nexthantei');
+//掛け軸判定
+let kakejiku = document.getElementById('kakejiku');
+//左ボタンセット
+let offleft = document.getElementById('offleft');
+let offdarkleft = document.getElementById('offdarkleft');
+let onleft = document.getElementById('onleft');
+let ondarkleft = document.getElementById('ondarkleft');
+let chirileft = document.getElementById('chirileft');
+let offdarkleftdm = document.getElementById('offdarkleftdm');//ダミー
+//右ボタンセット
+let offright = document.getElementById('offright');
+let offdarkright = document.getElementById('offdarkright');
+let onright = document.getElementById('onright');
+let ondarkright = document.getElementById('ondarkright');
+let chiriright = document.getElementById('chiriright');
+let ondarkrightdm = document.getElementById('ondarkrightdm');//ダミー
+//首串セット
+let neckr67 = document.getElementById('neckr67');
+let neckr45 = document.getElementById('neckr45');
+let neckr22 = document.getElementById('neckr22');
+let neck0 = document.getElementById('neck0');
+let neckl22 = document.getElementById('neckl22');
+let neckl45 = document.getElementById('neckl45');
+let neckl67 = document.getElementById('neckl67');
+//お化け t68→t48
+let obake1 = document.getElementById('obake1');
+let obake2 = document.getElementById('obake2');
+let obake3 = document.getElementById('obake3');
+//大画面白
+let weffect = document.getElementById('weffect');
+//ボスラッシュ
+let rush1 = document.getElementById('rush1');
+let rush2 = document.getElementById('rush2');
+let rush3 = document.getElementById('rush3');
+let rush4 = document.getElementById('rush4');
+let rush5 = document.getElementById('rush5');
+//効果音
+let sebutton = document.getElementById('buttonse');
+let sefusuma = document.getElementById('fusumase');
+let koekubi = document.getElementById('kubikoe');
+let koescream = document.getElementById('scream');
+let koetakawarai = document.getElementById('takawarai');
+let koeoowarai = document.getElementById('oowarai');
+//点数
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let timerKubi = '';
+let kubiRoop = '';
+let timerObake = '';
+
+//掛け軸を調べる
+kakejiku.addEventListener('mouseover',function(){kakejiku.style.cursor = 'pointer';});
+kakejiku.addEventListener('click',function(){
+    location.href = 'totptbpuiouiss.html';
+});
+
+//暗い時にふすまを調べる
+fusumahantei.addEventListener('mouseover',function(){fusumahantei.style.cursor = 'pointer';});
+fusumahantei.addEventListener('click',function(){
+    sefusuma.load();
+    sefusuma.play();
+    ondarkright.style.display = 'none';
+    offdarkleft.style.display = 'none';
+    ondarkrightdm.style.display = 'inline';
+    offdarkleftdm.style.display = 'inline';
+    fusumahantei.style.display = 'none';
+    fusuma100.style.display = 'none';
+    fusuma75.style.display = 'inline';
+    let timerFusuma = setInterval(function(){
+        fps3++;
+        switch(fps3){
+            case 1:
+            fusuma75.style.display = 'none';
+            fusuma50.style.display = 'inline';
+            break;
+            case 2:
+            fusuma50.style.display = 'none';
+            fusuma25.style.display = 'inline';
+            break;
+            case 3:
+            fusuma25.style.display = 'none';
+            nexthantei.style.display = 'inline';
+            clearInterval(timerFusuma);
+            break;
+        }
+    },80);
+});
+
+//ちりめん状態の時に左スイッチをon→offにする
+chirileft.addEventListener('mouseover',function(){chirileft.style.cursor = 'pointer';});
+chirileft.addEventListener('click',function(){
+    sebutton.load();
+    sebutton.play();
+    clearInterval(timerObake);
+    obake1.style.display = 'none';
+    obake1.style.top = '68px';
+    obake2.style.display = 'none';
+    obake3.style.display = 'none';
+    chirileft.style.display = 'none';
+    chiriright.style.display = 'none';
+    fusumachiri.style.display = 'none';
+    back3.style.display = 'none';
+    offleft.style.display = 'inline';
+    offright.style.display = 'inline';
+    fusuma.style.display = 'inline';
+    back1.style.display = 'inline';
+    kakejiku.style.display = 'inline';
+});
+
+//明るい時に左スイッチをoff→onにする
+offleft.addEventListener('mouseover',function(){offleft.style.cursor = 'pointer';});
+offleft.addEventListener('click',function(){
+    sebutton.load();
+    sebutton.play();
+    koescream.load();
+    koetakawarai.load();
+    koeoowarai.load();
+    fps2 = 0;
+    offleft.style.display = 'none';
+    offright.style.display = 'none';
+    fusuma.style.display = 'none';
+    kakejiku.style.display = 'none';
+    back1.style.display = 'none';
+    back3.style.display = 'inline';
+    chirileft.style.display = 'inline';
+    chiriright.style.display = 'inline';
+    fusumachiri.style.display = 'inline';
+    obake1.style.display = 'inline';
+    timerObake = setInterval(function(){
+        fps2++;
+        switch(fps2){
+            case 1:
+            obake1.style.top = '66px';
+            break;
+            case 2:
+            obake1.style.top = '64px';
+            break;
+            case 3:
+            obake1.style.top = '62px';
+            break;
+            case 4:
+            obake1.style.top = '60px';
+            break;
+            case 5:
+            obake1.style.top = '58px';
+            break;
+            case 6:
+            obake1.style.top = '56px';
+            break;
+            case 7:
+            obake1.style.top = '54px';
+            break;
+            case 8:
+            obake1.style.top = '52px';
+            break;
+            case 9:
+            obake1.style.top = '50px';
+            break;
+            case 10:
+            obake1.style.top = '48px';
+            break;
+            case 11:
+            obake1.style.display = 'none';
+            obake2.style.display = 'inline';
+            break;
+            case 12:
+            obake2.style.display = 'none';
+            obake3.style.display = 'inline';
+            break;
+            case 13:
+            obake3.style.display = 'none';
+            back3.style.display = 'none';
+            chirileft.style.display = 'none';
+            chiriright.style.display = 'none';
+            fusumachiri.style.display = 'none';
+            d1.style.height = '580px;'
+            weffect.style.display = 'inline';
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 14:
+            koescream.play();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush1.style.display = 'inline';
+            break;
+            case 42://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush1.style.display = 'none';
+            weffect.style.display = 'inline';
+            break;
+            case 43:
+            koetakawarai.play();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush2.style.display = 'inline';
+            break;
+            case 67://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush2.style.display = 'none';
+            weffect.style.display = 'inline';
+            break;
+            case 68:
+            koescream.play();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush3.style.display = 'inline';
+            break;
+            case 92://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush3.style.display = 'none';
+            weffect.style.display = 'inline';
+            break;
+            case 93:
+            koeoowarai.play();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush4.style.display = 'inline';
+            break;
+            case 117://画面白
+            body.style.backgroundColor = '#ffffff';
+            rush4.style.display = 'none';
+            weffect.style.display = 'inline';
+            break;
+            case 118:
+            koescream.play();
+            body.style.backgroundColor = '#000000';
+            weffect.style.display = 'none';
+            rush5.style.display = 'inline';
+            break;
+            case 142:
+            location.href = 'topd.html';
+            clearInterval(timerObake);
+            break;
+        }
+    },80);
+});
+
+//明るい時に右スイッチをoff→onにして電気を消す
+offright.addEventListener('mouseover',function(){offright.style.cursor = 'pointer';});
+offright.addEventListener('click',function(){
+    sebutton.load();
+    sebutton.play();
+    back1.style.display = 'none';
+    offright.style.display = 'none';
+    offleft.style.display = 'none';
+    fusuma.style.display = 'none';
+    kakejiku.style.display = 'none';
+    back2.style.display = 'inline';
+    ondarkright.style.display = 'inline';
+    offdarkleft.style.display = 'inline';
+    fusuma100.style.display = 'inline';
+    fusumahantei.style.display = 'inline';  
+});
+//暗い時に右スイッチをon→offにして明るくする
+ondarkright.addEventListener('mouseover',function(){ondarkright.style.cursor = 'pointer';});
+ondarkright.addEventListener('click',function(){
+    sebutton.load();
+    sebutton.play();
+    back2.style.display = 'none';
+    ondarkright.style.display = 'none';
+    offdarkleft.style.display = 'none';
+    fusuma100.style.display = 'none';
+    fusumahantei.style.display = 'none';  
+    back1.style.display = 'inline';
+    offright.style.display = 'inline';
+    offleft.style.display = 'inline';
+    fusuma.style.display = 'inline';
+    kakejiku.style.display = 'inline';
+});
+//首スイングアニメーション
+function kubimove(){
+    fps1 = 0;
+    timerKubi = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            koekubi.pause();
+            koekubi.load();
+            koekubi.play();
+            neckr67.style.display = 'inline';
+            break;
+            case 2:
+            neckr67.style.display = 'none';
+            neckr45.style.display = 'inline';
+            break;
+            case 3:
+            neckr45.style.display = 'none';
+            neckr22.style.display = 'inline';
+            break;
+            case 4:
+            neckr22.style.display = 'none';
+            neck0.style.display = 'inline';
+            break;
+            case 5:
+            neck0.style.display = 'none';
+            neckl22.style.display = 'inline';
+            break;
+            case 6:
+            neckl22.style.display = 'none';
+            neckl45.style.display = 'inline';
+            break;
+            case 7:
+            neckl45.style.display = 'none';
+            neckl67.style.display = 'inline';
+            break;
+            case 8:
+            neckl67.style.display = 'none';
+            break;
+            case 19:
+            koekubi.pause();
+            koekubi.load();
+            koekubi.play();
+            neckl67.style.display = 'inline';
+            break;
+            case 20:
+            neckl67.style.display = 'none';
+            neckl45.style.display = 'inline';
+            break;
+            case 21:
+            neckl45.style.display = 'none';
+            neckl22.style.display = 'inline';
+            break;
+            case 22:
+            neckl22.style.display = 'none';
+            neck0.style.display = 'inline';
+            break;
+            case 23:
+            neck0.style.display = 'none';
+            neckr22.style.display = 'inline';
+            break;
+            case 24:
+            neckr22.style.display = 'none';
+            neckr45.style.display = 'inline';
+            break;
+            case 25:
+            neckr45.style.display = 'none';
+            neckr67.style.display = 'inline';
+            break;
+            case 26:
+            neckr67.style.display = 'none';
+            clearInterval(timerKubi);
+            break;
+        }
+    },80);
+}
+//暗い時に左スイッチをoff→onにする
+offdarkleft.addEventListener('mouseover',function(){offdarkleft.style.cursor = 'pointer';});
+offdarkleft.addEventListener('click',function(){
+    sebutton.load();
+    sebutton.play();
+    ondarkright.style.display = 'none';
+    ondarkleft.style.display = 'inline';
+    fusumahantei.style.display = 'none';
+    kubimove();
+    kubiRoop = setInterval(function(){
+        kubimove();
+    },3040);
+});
+//暗い時に左スイッチをon→offにする
+ondarkleft.addEventListener('mouseover',function(){ondarkleft.style.cursor = 'pointer';});
+ondarkleft.addEventListener('click',function(){
+    sebutton.load();
+    sebutton.play();
+    ondarkleft.style.display = 'none';
+    clearInterval(kubiRoop);
+    clearInterval(timerKubi);
+    neckr67.style.display = 'none';
+    neckr45.style.display = 'none';
+    neckr22.style.display = 'none';
+    neck0.style.display = 'none';
+    neckl22.style.display = 'none';
+    neckl45.style.display = 'none';
+    neckl67.style.display = 'none';
+    offdarkleft.style.display = 'inline';
+    ondarkright.style.display = 'inline';
+    fusumahantei.style.display = 'inline';
+});
+
+nexthantei.addEventListener('mouseover',function(){nexthantei.style.cursor = 'pointer';});
+nexthantei.addEventListener('click',function(){
+    location.href = 'gate.html';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/tokonoma.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:58:22 GMT -->
+</html>

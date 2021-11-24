@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/edeuenatseurre.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:52:52 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ﾀ堕椎・taｶﾗ、箱ｦ。sa蛾ｼte？ﾈ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:960px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+#door{width:80px;height:183px;position:absolute;left:440px;bottom:194px;}
+#door2{width:80px;height:183px;position:absolute;left:440px;bottom:194px;display:none;}
+/*■■■■■■■■■■■■開いた宝箱■■■■■■■■■■■■*/
+#to1{width:200px;height:163px;position:absolute;left:60px;bottom:387px;display:none;}
+#to2{width:200px;height:163px;position:absolute;left:380px;bottom:387px;display:none;}
+#to3{width:200px;height:163px;position:absolute;left:700px;bottom:387px;display:none;}
+
+#to4{width:200px;height:163px;position:absolute;left:60px;bottom:194px;display:none;}
+#to5{width:200px;height:163px;position:absolute;left:700px;bottom:194px;display:none;}
+
+#to6{width:200px;height:163px;position:absolute;left:60px;bottom:0px;display:none;}
+#to7{width:200px;height:163px;position:absolute;left:380px;bottom:0px;display:none;}
+#to8{width:200px;height:163px;position:absolute;left:700px;bottom:0px;display:none;}
+/*開いた宝箱(当たり)*/
+#toatari{width:200px;height:163px;position:absolute;left:60px;bottom:387px;display:none;}
+/*■■■■■■■■■■■■閉まった宝箱■■■■■■■■■■■■*/
+#tc1{width:200px;height:142px;position:absolute;left:60px;bottom:387px;}
+#tc2{width:200px;height:142px;position:absolute;left:380px;bottom:387px;}
+#tc3{width:200px;height:142px;position:absolute;left:700px;bottom:387px;}
+
+#tc4{width:200px;height:142px;position:absolute;left:60px;bottom:194px;}
+#tc5{width:200px;height:142px;position:absolute;left:700px;bottom:194px;}
+
+#tc6{width:200px;height:142px;position:absolute;left:60px;bottom:0px;}
+#tc7{width:200px;height:142px;position:absolute;left:380px;bottom:0px;}
+#tc8{width:200px;height:142px;position:absolute;left:700px;bottom:0px;}
+/*閉まった宝箱(当たり)*/
+#tcatari{width:200px;height:142px;position:absolute;left:60px;bottom:387px;}
+
+#msg{
+    color:#ffffff;
+    font-size:20px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    text-align:center;
+    position:absolute;
+    left:360px;
+    bottom:10px;
+}
+#obake{width:53px;height:58px;position:absolute;left:459px;top:281px;opacity:0.2;display:none;}
+#pushboushi{
+    background-color:#000000;
+    width:960px;
+    height:580px;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    opacity:0.0;
+    display:none;
+}
+#gameover{
+    width:960px;
+    height:580px;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    opacity:0.0;
+    display:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="doorse" preload="auto">
+<source src="pse/gachagacha.wav" type="audio/wav">
+<source src="pse/gachagacha.mp3" type="audio/mp3">
+</audio>
+
+<audio id="opense" preload="auto">
+<source src="pse/nisefutaout.wav" type="audio/wav">
+<source src="pse/nisefutaout.mp3" type="audio/mp3">
+</audio>
+
+<audio id="psychokoe" preload="auto">
+<source src="pse/psychokoe.wav" type="audio/wav">
+<source src="pse/psychokoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="damagese" preload="auto">
+<source src="pse/janyoudamage.wav" type="audio/wav">
+<source src="pse/janyoudamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="itemse" preload="auto">
+<source src="pse/itemgetevent.wav" type="audio/wav">
+<source src="pse/itemgetevent.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src = "pimg/door.jpg" id="door">
+
+<img src = "pimg/treasureopen.png" id="to1">
+<img src = "pimg/treasureopen.png" id="to2">
+<img src = "pimg/treasureopen.png" id="to3">
+<img src = "pimg/treasureopen.png" id="to4">
+<img src = "pimg/treasureopen.png" id="to5">
+<img src = "pimg/treasureopen.png" id="to6">
+<img src = "pimg/treasureopen.png" id="to7">
+<img src = "pimg/treasureopen.png" id="to8">
+
+<img src = "pimg/treasureclose.png" id="tc1">
+<img src = "pimg/treasureclose.png" id="tc2">
+<img src = "pimg/treasureclose.png" id="tc3">
+<img src = "pimg/treasureclose.png" id="tc4">
+<img src = "pimg/treasureclose.png" id="tc5">
+<img src = "pimg/treasureclose.png" id="tc6">
+<img src = "pimg/treasureclose.png" id="tc7">
+<img src = "pimg/treasureclose.png" id="tc8">
+
+<img src = "pimg/treasurekeyget.gif" id="toatari">
+<img src = "pimg/treasureclose.png" id="tcatari">
+
+<p id = "msg"></p>
+<img src="pimg/treasureobake.png" id="obake">
+<div id="pushboushi"></div>
+<img src="pimg/gameover.jpg" id="gameover">
+<img src = "pimg/door.jpg" id="door2">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let door = document.getElementById('door');
+let door2 = document.getElementById('door2');
+let to1 = document.getElementById('to1');
+let to2 = document.getElementById('to2');
+let to3 = document.getElementById('to3');
+let to4 = document.getElementById('to4');
+let to5 = document.getElementById('to5');
+let to6 = document.getElementById('to6');
+let to7 = document.getElementById('to7');
+let to8 = document.getElementById('to8');
+let toatari = document.getElementById('toatari');
+let tc1 = document.getElementById('tc1');
+let tc2 = document.getElementById('tc2');
+let tc3 = document.getElementById('tc3');
+let tc4 = document.getElementById('tc4');
+let tc5 = document.getElementById('tc5');
+let tc6 = document.getElementById('tc6');
+let tc7 = document.getElementById('tc7');
+let tc8 = document.getElementById('tc8');
+let tcatari = document.getElementById('tcatari');
+let pushboushi = document.getElementById('pushboushi');
+let msg = document.getElementById('msg');
+let obake = document.getElementById('obake');
+
+let seopen = document.getElementById('opense');
+let koepsycho = document.getElementById('psychokoe');
+let sedamage = document.getElementById('damagese');
+let seitem = document.getElementById('itemse');
+let sedoor = document.getElementById('doorse');
+
+let keygetpoint = 0;
+let deathpoint = 0;
+let fps1 = 0;
+let fpt1 = 0;
+let fpt2 = 0;
+let fpt3 = 0;
+
+function atariRandom(){
+    let com = Math.floor(Math.random()*8)+1;
+    switch(com){
+        //【1】上段左側に当たり宝箱を配置
+        case 1:
+        toatari.style.left = '60px';
+        toatari.style.bottom = '387px';
+        tcatari.style.left = '60px';
+        tcatari.style.bottom = '387px';
+        break;
+        //【2】上段中央に当たり宝箱を配置
+        case 2:
+        toatari.style.left = '380px';
+        toatari.style.bottom = '387px';
+        tcatari.style.left = '380px';
+        tcatari.style.bottom = '387px';
+        break;
+        //【3】上段右側に当たり宝箱を配置
+        case 3:
+        toatari.style.left = '700px';
+        toatari.style.bottom = '387px';
+        tcatari.style.left = '700px';
+        tcatari.style.bottom = '387px';
+        break;
+        //【4】中段左側に当たり宝箱を配置
+        case 4:
+        toatari.style.left = '60px';
+        toatari.style.bottom = '194px';
+        tcatari.style.left = '60px';
+        tcatari.style.bottom = '194px';
+        break;
+        //【5】中段右側に当たり宝箱を配置
+        case 5:
+        toatari.style.left = '700px';
+        toatari.style.bottom = '194px';
+        tcatari.style.left = '700px';
+        tcatari.style.bottom = '194px';
+        break;
+        //【6】下段左側に当たり宝箱を配置
+        case 6:
+        toatari.style.left = '60px';
+        toatari.style.bottom = '0px';
+        tcatari.style.left = '60px';
+        tcatari.style.bottom = '0px';
+        break;
+        //【7】下段中央に当たり宝箱を配置
+        case 7:
+        toatari.style.left = '380px';
+        toatari.style.bottom = '0px';
+        tcatari.style.left = '380px';
+        tcatari.style.bottom = '0px';
+        break;
+        //【8】下段右側に当たり宝箱を配置
+        case 8:
+        toatari.style.left = '700px';
+        toatari.style.bottom = '0px';
+        tcatari.style.left = '700px';
+        tcatari.style.bottom = '0px';
+        break;
+    }
+}
+
+function saiShuffle(){
+    to1.style.display = 'none';
+    to2.style.display = 'none';
+    to3.style.display = 'none';
+    to4.style.display = 'none';
+    to5.style.display = 'none';
+    to6.style.display = 'none';
+    to7.style.display = 'none';
+    to8.style.display = 'none';
+    tc1.style.display = 'inline';
+    tc2.style.display = 'inline';
+    tc3.style.display = 'inline';
+    tc4.style.display = 'inline';
+    tc5.style.display = 'inline';
+    tc6.style.display = 'inline';
+    tc7.style.display = 'inline';
+    tc8.style.display = 'inline';
+    atariRandom();
+}
+
+//1・2回ハズレ宝箱を開けた場合
+function hazureOpen(){
+    fpt1 = 0;
+    pushboushi.style.display = 'inline';
+    let treasureId1 = setInterval(function(){
+        fpt1++;
+        switch(fpt1){
+            case 1:
+            koepsycho.load();
+            sedamage.load();
+            break;
+            case 15://オバケ10%
+            koepsycho.play();
+            obake.style.display = 'inline';
+            break;
+            case 16://オバケ20%
+            obake.style.width = '106px';
+            obake.style.height = '116px';
+            obake.style.left = '432px';
+            obake.style.top = '232px';
+            obake.style.opacity = '0.3';
+            break;
+            case 17://オバケ30%
+            obake.style.width = '159px';
+            obake.style.height = '174px';
+            obake.style.left = '406px';
+            obake.style.top = '223px';
+            obake.style.opacity = '0.4';
+            break;
+            case 18://オバケ40%
+            obake.style.width = '212px';
+            obake.style.height = '232px';
+            obake.style.left = '379px';
+            obake.style.top = '174px';
+            obake.style.opacity = '0.5';
+            break;
+            case 19://オバケ50%
+            obake.style.width = '265px';
+            obake.style.height = '290px';
+            obake.style.left = '353px';
+            obake.style.top = '165px';
+            obake.style.opacity = '0.6';
+            break;
+            case 20://オバケ60%
+            obake.style.width = '318px';
+            obake.style.height = '348px';
+            obake.style.left = '326px';
+            obake.style.top = '116px';
+            obake.style.opacity = '0.7';
+            break;
+            case 21://オバケ70%
+            obake.style.width = '371px';
+            obake.style.height = '406px';
+            obake.style.left = '300px';
+            obake.style.top = '107px';
+            obake.style.opacity = '0.8';
+            break;
+            case 22://オバケ80%
+            obake.style.width = '424px';
+            obake.style.height = '464px';
+            obake.style.left = '273px';
+            obake.style.top = '58px';
+            obake.style.opacity = '0.9';
+            break;
+            case 23://オバケ90%
+            obake.style.width = '477px';
+            obake.style.height = '522px';
+            obake.style.left = '247px';
+            obake.style.top = '49px';
+            obake.style.opacity = '1.0';
+            break;
+            case 24://オバケ100%
+            sedamage.play();
+            obake.style.width = '530px';
+            obake.style.height = '580px';
+            obake.style.left = '220px';
+            obake.style.top = '0px';
+            pushboushi.style.opacity = '0.5';
+            pushboushi.style.backgroundColor = '#ff0000';
+            deathpoint += 10;
+            break;
+            case 25://押し防止背景・オバケを非表示にして初期状態に戻す。
+            pushboushi.style.display = 'none';
+            pushboushi.style.opacity = '0.0';
+            pushboushi.style.backgroundColor = '#000000';
+            obake.style.display = 'none';
+            obake.style.width = '53px';
+            obake.style.height = '58px';
+            obake.style.left = '459px';
+            obake.style.top = '281px';
+            obake.style.opacity = '0.2';
+            //saiShuffle();
+            clearInterval(treasureId1);
+            break;
+        }
+    },40);
+}
+//3回目にハズレ宝箱を開けた場合
+function hazureDeath(){
+    pushboushi.style.display = 'inline';
+    let treasureId2 = setInterval(function(){
+        fpt2++;
+        switch(fpt2){
+            case 1:
+            koepsycho.load();
+            sedamage.load();
+            break;
+            case 15://オバケ10%
+            koepsycho.play();
+            obake.style.display = 'inline';
+            break;
+            case 16://オバケ20%
+            obake.style.width = '106px';
+            obake.style.height = '116px';
+            obake.style.left = '432px';
+            obake.style.top = '232px';
+            obake.style.opacity = '0.3';
+            break;
+            case 17://オバケ30%
+            obake.style.width = '159px';
+            obake.style.height = '174px';
+            obake.style.left = '406px';
+            obake.style.top = '223px';
+            obake.style.opacity = '0.4';
+            break;
+            case 18://オバケ40%
+            obake.style.width = '212px';
+            obake.style.height = '232px';
+            obake.style.left = '379px';
+            obake.style.top = '174px';
+            obake.style.opacity = '0.5';
+            break;
+            case 19://オバケ50%
+            obake.style.width = '265px';
+            obake.style.height = '290px';
+            obake.style.left = '353px';
+            obake.style.top = '165px';
+            obake.style.opacity = '0.6';
+            break;
+            case 20://オバケ60%
+            obake.style.width = '318px';
+            obake.style.height = '348px';
+            obake.style.left = '326px';
+            obake.style.top = '116px';
+            obake.style.opacity = '0.7';
+            break;
+            case 21://オバケ70%
+            obake.style.width = '371px';
+            obake.style.height = '406px';
+            obake.style.left = '300px';
+            obake.style.top = '107px';
+            obake.style.opacity = '0.8';
+            break;
+            case 22://オバケ80%
+            obake.style.width = '424px';
+            obake.style.height = '464px';
+            obake.style.left = '273px';
+            obake.style.top = '58px';
+            obake.style.opacity = '0.9';
+            break;
+            case 23://オバケ90%
+            obake.style.width = '477px';
+            obake.style.height = '522px';
+            obake.style.left = '247px';
+            obake.style.top = '49px';
+            obake.style.opacity = '1.0';
+            break;
+            case 24://オバケ100%
+            sedamage.play();
+            obake.style.width = '530px';
+            obake.style.height = '580px';
+            obake.style.left = '220px';
+            obake.style.top = '0px';
+            pushboushi.style.opacity = '0.5';
+            pushboushi.style.backgroundColor = '#ff0000';
+            break;
+            case 25://押し防止背景・オバケを非表示にして初期状態に戻す。
+            pushboushi.style.opacity = '0.0';
+            pushboushi.style.backgroundColor = '#000000';
+            obake.style.display = 'none';
+            obake.style.width = '53px';
+            obake.style.height = '58px';
+            obake.style.left = '459px';
+            obake.style.top = '281px';
+            obake.style.opacity = '0.2';
+            break;
+            case 38://GameOver
+            gameover.style.display = 'inline';
+            gameover.style.opacity = '0.2';
+            body.style.backgroundColor = '#330000';
+            break;
+            case 40:
+            gameover.style.opacity = '0.4';
+            body.style.backgroundColor = '#660000';
+            break;
+            case 42:
+            gameover.style.opacity = '0.6';
+            body.style.backgroundColor = '#990000';
+            break;
+            case 44:
+            gameover.style.opacity = '0.8';
+            body.style.backgroundColor = '#cc0000';
+            break;
+            case 46:
+            gameover.style.opacity = '1.0';
+            body.style.backgroundColor = '#ff0000';
+            clearInterval(treasureId2);
+            break;
+        }
+    },40);
+}
+//宝箱開けた回数に応じた条件分岐
+function hazureBunki(){
+    if(deathpoint>=20){
+        hazureDeath();
+    }else{
+        hazureOpen();
+    }
+}
+//扉を開けようとするが開かない
+door.addEventListener('mouseover',function(){door.style.cursor='pointer';});
+door.addEventListener('click',function(){
+    sedoor.load();
+    sedoor.play();
+    fps1 = 0;
+    pushboushi.style.display = 'inline';
+    msg.innerText = '鍵がかかっているようだ。\n(It seems to be locked.)';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        if(fps1>=1){
+            pushboushi.style.display = 'none';
+            msg.innerText = '';
+            clearInterval(timerId1);
+        }
+    },1500);
+});
+
+tc1.addEventListener('mouseover',function(){tc1.style.cursor='pointer';});
+tc1.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc1.style.display = 'none';
+    to1.style.display = 'inline';
+    hazureBunki();
+});
+tc2.addEventListener('mouseover',function(){tc2.style.cursor='pointer';});
+tc2.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc2.style.display = 'none';
+    to2.style.display = 'inline';
+    hazureBunki();
+});
+tc3.addEventListener('mouseover',function(){tc3.style.cursor='pointer';});
+tc3.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc3.style.display = 'none';
+    to3.style.display = 'inline';
+    hazureBunki();
+});
+tc4.addEventListener('mouseover',function(){tc4.style.cursor='pointer';});
+tc4.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc4.style.display = 'none';
+    to4.style.display = 'inline';
+    hazureBunki();
+});
+tc5.addEventListener('mouseover',function(){tc5.style.cursor='pointer';});
+tc5.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc5.style.display = 'none';
+    to5.style.display = 'inline';
+    hazureBunki();
+});
+tc6.addEventListener('mouseover',function(){tc6.style.cursor='pointer';});
+tc6.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc6.style.display = 'none';
+    to6.style.display = 'inline';
+    hazureBunki();
+});
+tc7.addEventListener('mouseover',function(){tc7.style.cursor='pointer';});
+tc7.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc7.style.display = 'none';
+    to7.style.display = 'inline';
+    hazureBunki();
+});
+tc8.addEventListener('mouseover',function(){tc8.style.cursor='pointer';});
+tc8.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    tc8.style.display = 'none';
+    to8.style.display = 'inline';
+    hazureBunki();
+});
+
+tcatari.addEventListener('mouseover',function(){tcatari.style.cursor='pointer';});
+tcatari.addEventListener('click',function(){
+    seitem.load();
+    seitem.play();
+    pushboushi.style.display = 'inline';
+    tcatari.style.display = 'none';
+    toatari.style.display = 'inline';
+    msg.style.left = '366px';
+    msg.style.color = '#00ff00';
+    msg.innerText = '扉の鍵を手に入れた。\n(You got the door key.)';
+    let keygetTimer = setInterval(function(){
+        fpt3++;
+        if(fpt3>=1){
+            msg.innerText = '';
+            door2.style.display = 'inline';
+            clearInterval(keygetTimer);
+        }
+    },2000);
+});
+
+door2.addEventListener('mouseover',function(){door2.style.cursor='pointer';});
+door2.addEventListener('click',function(){
+    location.href = 'paradisky.html';
+});
+
+//実行する処理
+atariRandom();
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/edeuenatseurre.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:53:04 GMT -->
+</html>

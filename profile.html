@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:30 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ｒくぉいｌ；ｖｆｊ；：あｓｄｓ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:968px;
+    height:582px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+/*手左側6個*/
+#hl1{width:116px;height:97px;position:absolute;top:0px;left:0px;}
+#hl2{width:116px;height:97px;position:absolute;top:97px;left:0px;}
+#hl3{width:116px;height:97px;position:absolute;top:194px;left:0px;}
+#hl4{width:116px;height:97px;position:absolute;top:291px;left:0px;}
+#hl5{width:116px;height:97px;position:absolute;top:388px;left:0px;}
+#hl6{width:116px;height:97px;position:absolute;top:485px;left:0px;}
+/*手右側6個*/
+#hr1{width:116px;height:97px;position:absolute;top:0px;right:0px;}
+#hr2{width:116px;height:97px;position:absolute;top:97px;right:0px;}
+#hr3{width:116px;height:97px;position:absolute;top:194px;right:0px;}
+#hr4{width:116px;height:97px;position:absolute;top:291px;right:0px;}
+#hr5{width:116px;height:97px;position:absolute;top:388px;right:0px;}
+#hr6{width:116px;height:97px;position:absolute;top:485px;right:0px;}
+/*手上側8個*/
+#ht1{width:92px;height:116px;position:absolute;top:0px;left:116px;}
+#ht2{width:92px;height:116px;position:absolute;top:0px;left:208px;}
+#ht3{width:92px;height:116px;position:absolute;top:0px;left:300px;}
+#ht4{width:92px;height:116px;position:absolute;top:0px;left:392px;}
+#ht5{width:92px;height:116px;position:absolute;top:0px;left:484px;}
+#ht6{width:92px;height:116px;position:absolute;top:0px;left:576px;}
+#ht7{width:92px;height:116px;position:absolute;top:0px;left:668px;}
+#ht8{width:92px;height:116px;position:absolute;top:0px;left:760px;}
+/*手下側8個*/
+#hb1{width:92px;height:116px;position:absolute;bottom:0px;left:116px;}
+#hb2{width:92px;height:116px;position:absolute;bottom:0px;left:208px;}
+#hb3{width:92px;height:116px;position:absolute;bottom:0px;left:300px;}
+#hb4{width:92px;height:116px;position:absolute;bottom:0px;left:392px;}
+#hb5{width:92px;height:116px;position:absolute;bottom:0px;left:484px;}
+#hb6{width:92px;height:116px;position:absolute;bottom:0px;left:576px;}
+#hb7{width:92px;height:116px;position:absolute;bottom:0px;left:668px;}
+#hb8{width:92px;height:116px;position:absolute;bottom:0px;left:760px;}
+/*プロフィール*/
+#profile{width:170px;height:170px;position:absolute;top:200px;left:256px;border:5px solid #ffffff;}
+#p1{
+    font-size:15px;
+    color:#ffffff;
+    font-weight:bold;
+    text-align:left;
+    position:absolute;
+    top:180px;
+    right:256px;
+}
+#shinitai{width:970px;height:607px;position:absolute;top:0px;left:0px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:968px;height:582px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="sunaarashise" preload="auto" loop>
+<source src="pse/sunaarashi.wav" type="audio/wav">
+<source src="pse/sunaarashi.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<!--手左側6個-->
+<img src="pimg/prohandleft.gif"id="hl1">
+<img src="pimg/prohandleft.gif"id="hl2">
+<img src="pimg/prohandleft.gif"id="hl3">
+<img src="pimg/prohandleft.gif"id="hl4">
+<img src="pimg/prohandleft.gif"id="hl5">
+<img src="pimg/prohandleft.gif"id="hl6">
+<!--手右側6個-->
+<img src="pimg/prohandright.gif"id="hr1">
+<img src="pimg/prohandright.gif"id="hr2">
+<img src="pimg/prohandright.gif"id="hr3">
+<img src="pimg/prohandright.gif"id="hr4">
+<img src="pimg/prohandright.gif"id="hr5">
+<img src="pimg/prohandright.gif"id="hr6">
+<!--手上側8個-->
+<img src="pimg/prohandtop.gif"id="ht1">
+<img src="pimg/prohandtop.gif"id="ht2">
+<img src="pimg/prohandtop.gif"id="ht3">
+<img src="pimg/prohandtop.gif"id="ht4">
+<img src="pimg/prohandtop.gif"id="ht5">
+<img src="pimg/prohandtop.gif"id="ht6">
+<img src="pimg/prohandtop.gif"id="ht7">
+<img src="pimg/prohandtop.gif"id="ht8">
+<!--手下側8個-->
+<img src="pimg/prohandbottom.gif"id="hb1">
+<img src="pimg/prohandbottom.gif"id="hb2">
+<img src="pimg/prohandbottom.gif"id="hb3">
+<img src="pimg/prohandbottom.gif"id="hb4">
+<img src="pimg/prohandbottom.gif"id="hb5">
+<img src="pimg/prohandbottom.gif"id="hb6">
+<img src="pimg/prohandbottom.gif"id="hb7">
+<img src="pimg/prohandbottom.gif"id="hb8">
+<!--プロフィール-->
+<img src="pimg/profile.jpg"id="profile">
+<p id="p1">
+ふぁんしーあいらんど管理人<br>
+(～2010年4月04日)<br><br>
+詳細不明<br><br>
+unknown<br><br>
+詳細不明<br><br>
+unknown<br><br>
+詳細不明
+</p>
+<img src="pimg/shinitaichan.gif"id="shinitai">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+/*手左側6個*/
+let hl1 = document.getElementById('hl1');
+let hl2 = document.getElementById('hl2');
+let hl3 = document.getElementById('hl3');
+let hl4 = document.getElementById('hl4');
+let hl5 = document.getElementById('hl5');
+let hl6 = document.getElementById('hl6');
+/*手右側6個*/
+let hr1 = document.getElementById('hr1');
+let hr2 = document.getElementById('hr2');
+let hr3 = document.getElementById('hr3');
+let hr4 = document.getElementById('hr4');
+let hr5 = document.getElementById('hr5');
+let hr6 = document.getElementById('hr6');
+/*手上側8個*/
+let ht1 = document.getElementById('ht1');
+let ht2 = document.getElementById('ht2');
+let ht3 = document.getElementById('ht3');
+let ht4 = document.getElementById('ht4');
+let ht5 = document.getElementById('ht5');
+let ht6 = document.getElementById('ht6');
+let ht7 = document.getElementById('ht7');
+let ht8 = document.getElementById('ht8');
+/*手下側8個*/
+let hb1 = document.getElementById('hb1');
+let hb2 = document.getElementById('hb2');
+let hb3 = document.getElementById('hb3');
+let hb4 = document.getElementById('hb4');
+let hb5 = document.getElementById('hb5');
+let hb6 = document.getElementById('hb6');
+let hb7 = document.getElementById('hb7');
+let hb8 = document.getElementById('hb8');
+/*プロフィール*/
+let profile = document.getElementById('profile');
+let p1 = document.getElementById('p1');
+let shinitai = document.getElementById('shinitai');
+let sesunaarashi = document.getElementById('sunaarashise');
+
+profile.addEventListener('mouseover',function(){profile.style.cursor = 'pointer';});
+profile.addEventListener('click',function(){
+    //全部消す
+    hl1.style.display = 'none';
+    hl2.style.display = 'none';
+    hl3.style.display = 'none';
+    hl4.style.display = 'none';
+    hl5.style.display = 'none';
+    hl6.style.display = 'none';
+    hr1.style.display = 'none';
+    hr2.style.display = 'none';
+    hr3.style.display = 'none';
+    hr4.style.display = 'none';
+    hr5.style.display = 'none';
+    hr6.style.display = 'none';
+    ht1.style.display = 'none';
+    ht2.style.display = 'none';
+    ht3.style.display = 'none';
+    ht4.style.display = 'none';
+    ht5.style.display = 'none';
+    ht6.style.display = 'none';
+    ht7.style.display = 'none';
+    ht8.style.display = 'none';
+    hb1.style.display = 'none';
+    hb2.style.display = 'none';
+    hb3.style.display = 'none';
+    hb4.style.display = 'none';
+    hb5.style.display = 'none';
+    hb6.style.display = 'none';
+    hb7.style.display = 'none';
+    hb8.style.display = 'none';
+    profile.style.display = 'none';
+    p1.style.display = 'none';
+    //シニタイちゃん現る
+    sesunaarashi.load();
+    sesunaarashi.play();
+    shinitai.style.display = 'inline';
+});
+
+
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:38 GMT -->
+</html>

@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/gate.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:58:51 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>目目目</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:728px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#boxback{width:800px;height:600px;position:absolute;left:0px;top:0px;}
+/*パネル1*/
+#pane0{width:130px;height:170px;position:absolute;left:69px;top:215px;}
+#pane1{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane2{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane3{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane4{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane5{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane6{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane7{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane8{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#pane9{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#panemove1{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#panemove2{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+#panemove3{width:130px;height:170px;position:absolute;left:69px;top:215px;display:none;}
+/*パネル2*/
+#pane00{width:130px;height:170px;position:absolute;left:246px;top:215px;}
+#pane11{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane22{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane33{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane44{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane55{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane66{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane77{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane88{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#pane99{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#panemove11{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#panemove22{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+#panemove33{width:130px;height:170px;position:absolute;left:246px;top:215px;display:none;}
+/*パネル3*/
+#pane000{width:130px;height:170px;position:absolute;left:421px;top:215px;}
+#pane111{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane222{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane333{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane444{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane555{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane666{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane777{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane888{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#pane999{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#panemove111{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#panemove222{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+#panemove333{width:130px;height:170px;position:absolute;left:421px;top:215px;display:none;}
+/*パネル4*/
+#pane0000{width:130px;height:170px;position:absolute;left:597px;top:215px;}
+#pane1111{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane2222{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane3333{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane4444{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane5555{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane6666{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane7777{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane8888{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#pane9999{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#panemove1111{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#panemove2222{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#panemove3333{width:130px;height:170px;position:absolute;left:597px;top:215px;display:none;}
+#boxsuc{width:800px;height:600px;position:absolute;left:0px;top:0px;display:none;}
+/*目目目ゲート*/
+#eye1{width:91px;height:89px;position:absolute;left:277px;top:76px;}
+#eye2{width:128px;height:125px;position:absolute;left:97px;top:180px;}
+#eye3{width:91px;height:89px;position:absolute;left:199px;top:319px;}
+#eye4{width:128px;height:125px;position:absolute;left:97px;top:422px;}
+#eye5{width:91px;height:89px;position:absolute;left:277px;top:560px;}
+#eye6{width:91px;height:89px;position:absolute;right:277px;top:76px;}
+#eye7{width:128px;height:125px;position:absolute;right:97px;top:180px;}
+#eye8{width:91px;height:89px;position:absolute;right:199px;top:319px;}
+#eye9{width:128px;height:125px;position:absolute;right:97px;top:422px;}
+#eye10{width:91px;height:89px;position:absolute;right:277px;top:560px;}
+#gate{width:970px;height:728px;position:absolute;right:0px;top:0px;}
+#gatehantei{
+    background-color:#00ff00;
+    width:150px;
+    height:50px;
+    position:absolute;
+    right:409px;
+    top:255px;
+    opacity:0.0;
+}
+#gateopen{width:970px;height:728px;position:absolute;left:0px;top:0px;display:none;}
+#linkhantei{
+    background-color:#00ff00;
+    width:554px;
+    height:728px;
+    position:absolute;
+    left:205px;
+    top:0px;
+    opacity:0.0;
+    display:none;
+}
+#blackout{width:800px;height:600px;position:absolute;right:0px;top:0px;opacity:0.0;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:728px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="boxpanese" preload="auto">
+<source src="pse/boxpane.wav" type="audio/wav">
+<source src="pse/boxpane.mp3" type="audio/mp3">
+</audio>
+
+<audio id="unlockse" preload="auto">
+<source src="pse/boxunlock.wav" type="audio/wav">
+<source src="pse/boxunlock.mp3" type="audio/mp3">
+</audio>
+
+<audio id="gateopense" preload="auto">
+<source src="pse/gateopense.wav" type="audio/wav">
+<source src="pse/gateopense.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/gatepaneup.jpg"id="boxback">
+<!--パネル1-->
+<img src="pimg/boxpane0.jpg"id="pane0">
+<img src="pimg/boxpane1.jpg"id="pane1">
+<img src="pimg/boxpane2.jpg"id="pane2">
+<img src="pimg/boxpane3.jpg"id="pane3">
+<img src="pimg/boxpane4.jpg"id="pane4">
+<img src="pimg/boxpane5.jpg"id="pane5">
+<img src="pimg/boxpane6.jpg"id="pane6">
+<img src="pimg/boxpane7.jpg"id="pane7">
+<img src="pimg/boxpane8.jpg"id="pane8">
+<img src="pimg/boxpane9.jpg"id="pane9">
+<img src="pimg/boxpanemove1.jpg"id="panemove1">
+<img src="pimg/boxpanemove2.jpg"id="panemove2">
+<img src="pimg/boxpanemove3.jpg"id="panemove3">
+<!--パネル2-->
+<img src="pimg/boxpane0.jpg"id="pane00">
+<img src="pimg/boxpane1.jpg"id="pane11">
+<img src="pimg/boxpane2.jpg"id="pane22">
+<img src="pimg/boxpane3.jpg"id="pane33">
+<img src="pimg/boxpane4.jpg"id="pane44">
+<img src="pimg/boxpane5.jpg"id="pane55">
+<img src="pimg/boxpane6.jpg"id="pane66">
+<img src="pimg/boxpane7.jpg"id="pane77">
+<img src="pimg/boxpane8.jpg"id="pane88">
+<img src="pimg/boxpane9.jpg"id="pane99">
+<img src="pimg/boxpanemove1.jpg"id="panemove11">
+<img src="pimg/boxpanemove2.jpg"id="panemove22">
+<img src="pimg/boxpanemove3.jpg"id="panemove33">
+<!--パネル3-->
+<img src="pimg/boxpane0.jpg"id="pane000">
+<img src="pimg/boxpane1.jpg"id="pane111">
+<img src="pimg/boxpane2.jpg"id="pane222">
+<img src="pimg/boxpane3.jpg"id="pane333">
+<img src="pimg/boxpane4.jpg"id="pane444">
+<img src="pimg/boxpane5.jpg"id="pane555">
+<img src="pimg/boxpane6.jpg"id="pane666">
+<img src="pimg/boxpane7.jpg"id="pane777">
+<img src="pimg/boxpane8.jpg"id="pane888">
+<img src="pimg/boxpane9.jpg"id="pane999">
+<img src="pimg/boxpanemove1.jpg"id="panemove111">
+<img src="pimg/boxpanemove2.jpg"id="panemove222">
+<img src="pimg/boxpanemove3.jpg"id="panemove333">
+<!--パネル4-->
+<img src="pimg/boxpane0.jpg"id="pane0000">
+<img src="pimg/boxpane1.jpg"id="pane1111">
+<img src="pimg/boxpane2.jpg"id="pane2222">
+<img src="pimg/boxpane3.jpg"id="pane3333">
+<img src="pimg/boxpane4.jpg"id="pane4444">
+<img src="pimg/boxpane5.jpg"id="pane5555">
+<img src="pimg/boxpane6.jpg"id="pane6666">
+<img src="pimg/boxpane7.jpg"id="pane7777">
+<img src="pimg/boxpane8.jpg"id="pane8888">
+<img src="pimg/boxpane9.jpg"id="pane9999">
+<img src="pimg/boxpanemove1.jpg"id="panemove1111">
+<img src="pimg/boxpanemove2.jpg"id="panemove2222">
+<img src="pimg/boxpanemove3.jpg"id="panemove3333">
+<!--目目目ゲート-->
+<img src="pimg/gateeyesmall.gif"id="eye1">
+<img src="pimg/gateeyebig.gif"id="eye2">
+<img src="pimg/gateeyesmall.gif"id="eye3">
+<img src="pimg/gateeyebig.gif"id="eye4">
+<img src="pimg/gateeyesmall.gif"id="eye5">
+<img src="pimg/gateeyesmall.gif"id="eye6">
+<img src="pimg/gateeyebig.gif"id="eye7">
+<img src="pimg/gateeyesmall.gif"id="eye8">
+<img src="pimg/gateeyebig.gif"id="eye9">
+<img src="pimg/gateeyesmall.gif"id="eye10">
+<img src="pimg/gate.png"id="gate">
+<img src="pimg/gatepanesuc.jpg"id="boxsuc">
+<div id="gatehantei"></div>
+<img src="pimg/gateopen.gif"id="gateopen">
+<div id="linkhantei"></div>
+<img src="pimg/blackout.jpg"id="blackout">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let boxback = document.getElementById('boxback');
+/*パネル1セット*/
+let pane0 = document.getElementById('pane0');
+let pane1 = document.getElementById('pane1');
+let pane2 = document.getElementById('pane2');
+let pane3 = document.getElementById('pane3');
+let pane4 = document.getElementById('pane4');
+let pane5 = document.getElementById('pane5');
+let pane6 = document.getElementById('pane6');
+let pane7 = document.getElementById('pane7');
+let pane8 = document.getElementById('pane8');
+let pane9 = document.getElementById('pane9');
+let panemove1 = document.getElementById('panemove1');
+let panemove2 = document.getElementById('panemove2');
+let panemove3 = document.getElementById('panemove3');
+/*パネル2セット*/
+let pane00 = document.getElementById('pane00');
+let pane11 = document.getElementById('pane11');
+let pane22 = document.getElementById('pane22');
+let pane33 = document.getElementById('pane33');
+let pane44 = document.getElementById('pane44');
+let pane55 = document.getElementById('pane55');
+let pane66 = document.getElementById('pane66');
+let pane77 = document.getElementById('pane77');
+let pane88 = document.getElementById('pane88');
+let pane99 = document.getElementById('pane99');
+let panemove11 = document.getElementById('panemove11');
+let panemove22 = document.getElementById('panemove22');
+let panemove33 = document.getElementById('panemove33');
+/*パネル3セット*/
+let pane000 = document.getElementById('pane000');
+let pane111 = document.getElementById('pane111');
+let pane222 = document.getElementById('pane222');
+let pane333 = document.getElementById('pane333');
+let pane444 = document.getElementById('pane444');
+let pane555 = document.getElementById('pane555');
+let pane666 = document.getElementById('pane666');
+let pane777 = document.getElementById('pane777');
+let pane888 = document.getElementById('pane888');
+let pane999 = document.getElementById('pane999');
+let panemove111 = document.getElementById('panemove111');
+let panemove222 = document.getElementById('panemove222');
+let panemove333 = document.getElementById('panemove333');
+/*パネル4セット*/
+let pane0000 = document.getElementById('pane0000');
+let pane1111 = document.getElementById('pane1111');
+let pane2222 = document.getElementById('pane2222');
+let pane3333 = document.getElementById('pane3333');
+let pane4444 = document.getElementById('pane4444');
+let pane5555 = document.getElementById('pane5555');
+let pane6666 = document.getElementById('pane6666');
+let pane7777 = document.getElementById('pane7777');
+let pane8888 = document.getElementById('pane8888');
+let pane9999 = document.getElementById('pane9999');
+let panemove1111 = document.getElementById('panemove1111');
+let panemove2222 = document.getElementById('panemove2222');
+let panemove3333 = document.getElementById('panemove3333');
+let boxsuc = document.getElementById('boxsuc');
+/*目目目ゲート*/
+let eye1 = document.getElementById('eye1');
+let eye2 = document.getElementById('eye2');
+let eye3 = document.getElementById('eye3');
+let eye4 = document.getElementById('eye4');
+let eye5 = document.getElementById('eye5');
+let eye6 = document.getElementById('eye6');
+let eye7 = document.getElementById('eye7');
+let eye8 = document.getElementById('eye8');
+let eye9 = document.getElementById('eye9');
+let eye10 = document.getElementById('eye10');
+let gate = document.getElementById('gate');
+let gatehantei = document.getElementById('gatehantei');
+let gateopen = document.getElementById('gateopen');
+let linkhantei = document.getElementById('linkhantei');
+let blackout = document.getElementById('blackout');
+/*効果音*/
+let seboxpane = document.getElementById('boxpanese');
+let seunlock = document.getElementById('unlockse');
+let seopen = document.getElementById('gateopense');
+/*スコア一覧*/
+let fps0 = 0;
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps00 = 0;
+let fps11 = 0;
+let fps22 = 0;
+let fps33 = 0;
+let fps44 = 0;
+let fps55 = 0;
+let fps66 = 0;
+let fps77 = 0;
+let fps88 = 0;
+let fps99 = 0;
+let fps000 = 0;
+let fps111 = 0;
+let fps222 = 0;
+let fps333 = 0;
+let fps444 = 0;
+let fps555 = 0;
+let fps666 = 0;
+let fps777 = 0;
+let fps888 = 0;
+let fps999 = 0;
+let fps0000 = 0;
+let fps1111 = 0;
+let fps2222 = 0;
+let fps3333 = 0;
+let fps4444 = 0;
+let fps5555 = 0;
+let fps6666 = 0;
+let fps7777 = 0;
+let fps8888 = 0;
+let fps9999 = 0;
+let panepoint = 0;
+let fpsfuta = 0;
+
+/*目目目ゲートのパネルをクリックした時、展開パネルステージを展開*/
+gatehantei.addEventListener('mouseover',function(){gatehantei.style.cursor = 'pointer';});
+gatehantei.addEventListener('click',function(){
+    gatehantei.style.display = 'none';
+    gate.style.display = 'none';
+    eye1.style.display = 'none';
+    eye2.style.display = 'none';
+    eye3.style.display = 'none';
+    eye4.style.display = 'none';
+    eye5.style.display = 'none';
+    eye6.style.display = 'none';
+    eye7.style.display = 'none';
+    eye8.style.display = 'none';
+    eye9.style.display = 'none';
+    eye10.style.display = 'none';
+    d1.style.width = '800px';
+    d1.style.height = '600px';
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル全消し■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function panehide(){
+    pane0.style.display = 'none';
+    pane1.style.display = 'none';
+    pane2.style.display = 'none';
+    pane3.style.display = 'none';
+    pane4.style.display = 'none';
+    pane5.style.display = 'none';
+    pane6.style.display = 'none';
+    pane7.style.display = 'none';
+    pane8.style.display = 'none';
+    pane9.style.display = 'none';
+    pane00.style.display = 'none';
+    pane11.style.display = 'none';
+    pane22.style.display = 'none';
+    pane33.style.display = 'none';
+    pane44.style.display = 'none';
+    pane55.style.display = 'none';
+    pane66.style.display = 'none';
+    pane77.style.display = 'none';
+    pane88.style.display = 'none';
+    pane99.style.display = 'none';
+    pane000.style.display = 'none';
+    pane111.style.display = 'none';
+    pane222.style.display = 'none';
+    pane333.style.display = 'none';
+    pane444.style.display = 'none';
+    pane555.style.display = 'none';
+    pane666.style.display = 'none';
+    pane777.style.display = 'none';
+    pane888.style.display = 'none';
+    pane999.style.display = 'none';
+    pane000.style.display = 'none';
+    pane1111.style.display = 'none';
+    pane2222.style.display = 'none';
+    pane3333.style.display = 'none';
+    pane4444.style.display = 'none';
+    pane5555.style.display = 'none';
+    pane6666.style.display = 'none';
+    pane7777.style.display = 'none';
+    pane8888.style.display = 'none';
+    pane9999.style.display = 'none';
+}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル蓋開く■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function opencheck(){
+    if(panepoint>=40){
+        seunlock.load();
+        seunlock.play();
+        panehide();
+        boxsuc.style.display = 'inline';
+        let timerIdfuta = setInterval(function(){
+            switch(fpsfuta){
+                case 11:
+                blackout.style.display = 'inline';
+                break;
+                case 12:
+                blackout.style.opacity = '0.2';
+                break;
+                case 13:
+                blackout.style.opacity = '0.4';
+                break;
+                case 14:
+                blackout.style.opacity = '0.6';
+                break;
+                case 15:
+                blackout.style.opacity = '0.8';
+                break;
+                case 16:
+                blackout.style.opacity = '1.0';
+                boxsuc.style.display = 'none';
+                boxback.style.display = 'none';
+                blackout.style.width = '970px';
+                blackout.style.height = '728px';
+                d1.style.width = '970px';
+                d1.style.height = '728px';
+                break;
+                case 17:
+                gateopen.style.display = 'inline';//ここにフェードインステージ入れる
+                break;
+                case 18:
+                blackout.style.opacity = '0.8';
+                break;
+                case 19:
+                blackout.style.opacity = '0.6';
+                break;
+                case 20:
+                blackout.style.opacity = '0.4';
+                break;
+                case 21:
+                blackout.style.opacity = '0.2';
+                break;
+                case 22:
+                blackout.style.opacity = '0.0';
+                blackout.style.display = 'none';
+                break;
+                case 29:
+                seopen.load();
+                seopen.play();
+                break;
+                case 36:
+                linkhantei.style.display = 'inline';
+                clearInterval(timerIdfuta);
+            }
+            fpsfuta++;
+        },80);
+    }
+}
+
+linkhantei.addEventListener('mouseover',function(){linkhantei.style.cursor = 'pointer';});
+linkhantei.addEventListener('click',function(){
+    location.href = 'shingallery.html';
+});
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル1の数字を変える■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//0→1
+pane0.addEventListener('mouseover',function(){pane0.style.cursor = 'pointer';});
+pane0.addEventListener('click',function(){
+    fps0 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane0.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId0 = setInterval(function(){
+        switch(fps0){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane1.style.display = 'inline';
+            clearInterval(timerId0);
+            break;
+        }
+        fps0++;
+    },80);
+});
+//1→2
+pane1.addEventListener('mouseover',function(){pane1.style.cursor = 'pointer';});
+pane1.addEventListener('click',function(){
+    fps1 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane1.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId1 = setInterval(function(){
+        switch(fps1){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane2.style.display = 'inline';
+            clearInterval(timerId1);
+            break;
+        }
+        fps1++;
+    },80);
+});
+//2→3
+pane2.addEventListener('mouseover',function(){pane2.style.cursor = 'pointer';});
+pane2.addEventListener('click',function(){
+    fps2 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane2.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId2 = setInterval(function(){
+        switch(fps2){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane3.style.display = 'inline';
+            clearInterval(timerId2);
+            break;
+        }
+        fps2++;
+    },80);
+});
+//3→4
+pane3.addEventListener('mouseover',function(){pane3.style.cursor = 'pointer';});
+pane3.addEventListener('click',function(){
+    fps3 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane3.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId3 = setInterval(function(){
+        switch(fps3){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane4.style.display = 'inline';
+            panepoint += 10;//★★
+            opencheck();//★★
+            clearInterval(timerId3);
+            break;
+        }
+        fps3++;
+    },80);
+});
+//4→5
+pane4.addEventListener('mouseover',function(){pane4.style.cursor = 'pointer';});
+pane4.addEventListener('click',function(){
+    fps4 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane4.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId4 = setInterval(function(){
+        switch(fps4){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane5.style.display = 'inline';
+            panepoint -= 10;//★★
+            clearInterval(timerId4);
+            break;
+        }
+        fps4++;
+    },80);
+});
+//5→6
+pane5.addEventListener('mouseover',function(){pane5.style.cursor = 'pointer';});
+pane5.addEventListener('click',function(){
+    fps5 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane5.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId5 = setInterval(function(){
+        switch(fps5){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane6.style.display = 'inline';
+            clearInterval(timerId5);
+            break;
+        }
+        fps5++;
+    },80);
+});
+//6→7
+pane6.addEventListener('mouseover',function(){pane6.style.cursor = 'pointer';});
+pane6.addEventListener('click',function(){
+    fps6 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane6.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId6 = setInterval(function(){
+        switch(fps6){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane7.style.display = 'inline';
+            clearInterval(timerId6);
+            break;
+        }
+        fps6++;
+    },80);
+});
+//7→8
+pane7.addEventListener('mouseover',function(){pane7.style.cursor = 'pointer';});
+pane7.addEventListener('click',function(){
+    fps7 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane7.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId7 = setInterval(function(){
+        switch(fps7){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane8.style.display = 'inline';
+            clearInterval(timerId7);
+            break;
+        }
+        fps7++;
+    },80);
+});
+//8→9
+pane8.addEventListener('mouseover',function(){pane8.style.cursor = 'pointer';});
+pane8.addEventListener('click',function(){
+    fps8 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane8.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId8 = setInterval(function(){
+        switch(fps8){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane9.style.display = 'inline';
+            clearInterval(timerId8);
+            break;
+        }
+        fps8++;
+    },80);
+});
+//9→0
+pane9.addEventListener('mouseover',function(){pane9.style.cursor = 'pointer';});
+pane9.addEventListener('click',function(){
+    fps9 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane9.style.display = 'none';
+    panemove1.style.display = 'inline';//変えない
+    let timerId9 = setInterval(function(){
+        switch(fps9){
+            case 1:
+            panemove1.style.display = 'none';//変えない
+            panemove2.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2.style.display = 'none';//変えない
+            panemove3.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3.style.display = 'none';//変えない
+            pane0.style.display = 'inline';
+            clearInterval(timerId9);
+            break;
+        }
+        fps9++;
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル2の数字を変える■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//0→1
+pane00.addEventListener('mouseover',function(){pane00.style.cursor = 'pointer';});
+pane00.addEventListener('click',function(){
+    fps00 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane00.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId00 = setInterval(function(){
+        switch(fps00){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane11.style.display = 'inline';
+            clearInterval(timerId00);
+            break;
+        }
+        fps00++;
+    },80);
+});
+//1→2
+pane11.addEventListener('mouseover',function(){pane11.style.cursor = 'pointer';});
+pane11.addEventListener('click',function(){
+    fps11 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane11.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId11 = setInterval(function(){
+        switch(fps11){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane22.style.display = 'inline';
+            clearInterval(timerId11);
+            break;
+        }
+        fps11++;
+    },80);
+});
+//2→3
+pane22.addEventListener('mouseover',function(){pane22.style.cursor = 'pointer';});
+pane22.addEventListener('click',function(){
+    fps22 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane22.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId22 = setInterval(function(){
+        switch(fps22){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane33.style.display = 'inline';
+            clearInterval(timerId22);
+            break;
+        }
+        fps22++;
+    },80);
+});
+//3→4
+pane33.addEventListener('mouseover',function(){pane33.style.cursor = 'pointer';});
+pane33.addEventListener('click',function(){
+    fps33 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane33.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId33 = setInterval(function(){
+        switch(fps33){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane44.style.display = 'inline';
+            clearInterval(timerId33);
+            break;
+        }
+        fps33++;
+    },80);
+});
+//4→5
+pane44.addEventListener('mouseover',function(){pane44.style.cursor = 'pointer';});
+pane44.addEventListener('click',function(){
+    fps44 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane44.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId44 = setInterval(function(){
+        switch(fps44){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane55.style.display = 'inline';
+            panepoint += 10;//★★
+            opencheck();//★★
+            clearInterval(timerId44);
+            break;
+        }
+        fps44++;
+    },80);
+});
+//5→6
+pane55.addEventListener('mouseover',function(){pane55.style.cursor = 'pointer';});
+pane55.addEventListener('click',function(){
+    fps55 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane55.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId55 = setInterval(function(){
+        switch(fps55){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane66.style.display = 'inline';
+            panepoint -= 10;//★★
+            clearInterval(timerId55);
+            break;
+        }
+        fps55++;
+    },80);
+});
+//6→7
+pane66.addEventListener('mouseover',function(){pane66.style.cursor = 'pointer';});
+pane66.addEventListener('click',function(){
+    fps66 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane66.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId66 = setInterval(function(){
+        switch(fps66){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane77.style.display = 'inline';
+            clearInterval(timerId66);
+            break;
+        }
+        fps66++;
+    },80);
+});
+//7→8
+pane77.addEventListener('mouseover',function(){pane77.style.cursor = 'pointer';});
+pane77.addEventListener('click',function(){
+    fps77 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane77.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId77 = setInterval(function(){
+        switch(fps77){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane88.style.display = 'inline';
+            clearInterval(timerId77);
+            break;
+        }
+        fps77++;
+    },80);
+});
+//8→9
+pane88.addEventListener('mouseover',function(){pane88.style.cursor = 'pointer';});
+pane88.addEventListener('click',function(){
+    fps88 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane88.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId88 = setInterval(function(){
+        switch(fps88){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane99.style.display = 'inline';
+            clearInterval(timerId88);
+            break;
+        }
+        fps88++;
+    },80);
+});
+//9→0
+pane99.addEventListener('mouseover',function(){pane99.style.cursor = 'pointer';});
+pane99.addEventListener('click',function(){
+    fps99 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane99.style.display = 'none';
+    panemove11.style.display = 'inline';//変えない
+    let timerId99 = setInterval(function(){
+        switch(fps99){
+            case 1:
+            panemove11.style.display = 'none';//変えない
+            panemove22.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove22.style.display = 'none';//変えない
+            panemove33.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove33.style.display = 'none';//変えない
+            pane00.style.display = 'inline';
+            clearInterval(timerId99);
+            break;
+        }
+        fps99++;
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル3の数字を変える■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//0→1
+pane000.addEventListener('mouseover',function(){pane000.style.cursor = 'pointer';});
+pane000.addEventListener('click',function(){
+    fps000 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane000.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId000 = setInterval(function(){
+        switch(fps000){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane111.style.display = 'inline';
+            clearInterval(timerId000);
+            break;
+        }
+        fps000++;
+    },80);
+});
+//1→2
+pane111.addEventListener('mouseover',function(){pane111.style.cursor = 'pointer';});
+pane111.addEventListener('click',function(){
+    fps111 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane111.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId111 = setInterval(function(){
+        switch(fps111){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane222.style.display = 'inline';
+            panepoint += 10;//★★
+            opencheck();//★★
+            clearInterval(timerId111);
+            break;
+        }
+        fps111++;
+    },80);
+});
+//2→3
+pane222.addEventListener('mouseover',function(){pane222.style.cursor = 'pointer';});
+pane222.addEventListener('click',function(){
+    fps222 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane222.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId222 = setInterval(function(){
+        switch(fps222){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane333.style.display = 'inline';
+            panepoint -= 10;//★★
+            clearInterval(timerId222);
+            break;
+        }
+        fps222++;
+    },80);
+});
+//3→4
+pane333.addEventListener('mouseover',function(){pane333.style.cursor = 'pointer';});
+pane333.addEventListener('click',function(){
+    fps333 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane333.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId333 = setInterval(function(){
+        switch(fps333){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane444.style.display = 'inline';
+            clearInterval(timerId333);
+            break;
+        }
+        fps333++;
+    },80);
+});
+//4→5
+pane444.addEventListener('mouseover',function(){pane444.style.cursor = 'pointer';});
+pane444.addEventListener('click',function(){
+    fps444 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane444.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId444 = setInterval(function(){
+        switch(fps444){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane555.style.display = 'inline';
+            clearInterval(timerId444);
+            break;
+        }
+        fps444++;
+    },80);
+});
+//5→6
+pane555.addEventListener('mouseover',function(){pane555.style.cursor = 'pointer';});
+pane555.addEventListener('click',function(){
+    fps555 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane555.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId555 = setInterval(function(){
+        switch(fps555){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane666.style.display = 'inline';
+            clearInterval(timerId555);
+            break;
+        }
+        fps555++;
+    },80);
+});
+//6→7
+pane666.addEventListener('mouseover',function(){pane666.style.cursor = 'pointer';});
+pane666.addEventListener('click',function(){
+    fps666 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane666.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId666 = setInterval(function(){
+        switch(fps666){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane777.style.display = 'inline';
+            clearInterval(timerId666);
+            break;
+        }
+        fps666++;
+    },80);
+});
+//7→8
+pane777.addEventListener('mouseover',function(){pane777.style.cursor = 'pointer';});
+pane777.addEventListener('click',function(){
+    fps777 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane777.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId777 = setInterval(function(){
+        switch(fps777){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane888.style.display = 'inline';
+            clearInterval(timerId777);
+            break;
+        }
+        fps777++;
+    },80);
+});
+//8→9
+pane888.addEventListener('mouseover',function(){pane888.style.cursor = 'pointer';});
+pane888.addEventListener('click',function(){
+    fps888 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane888.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId888 = setInterval(function(){
+        switch(fps888){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane999.style.display = 'inline';
+            clearInterval(timerId888);
+            break;
+        }
+        fps888++;
+    },80);
+});
+//9→0
+pane999.addEventListener('mouseover',function(){pane999.style.cursor = 'pointer';});
+pane999.addEventListener('click',function(){
+    fps999 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane999.style.display = 'none';
+    panemove111.style.display = 'inline';//変えない
+    let timerId999 = setInterval(function(){
+        switch(fps999){
+            case 1:
+            panemove111.style.display = 'none';//変えない
+            panemove222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove222.style.display = 'none';//変えない
+            panemove333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove333.style.display = 'none';//変えない
+            pane000.style.display = 'inline';
+            clearInterval(timerId999);
+            break;
+        }
+        fps999++;
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■パネル4の数字を変える■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//0→1
+pane0000.addEventListener('mouseover',function(){pane0000.style.cursor = 'pointer';});
+pane0000.addEventListener('click',function(){
+    fps0000 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane0000.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId0000 = setInterval(function(){
+        switch(fps0000){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane1111.style.display = 'inline';
+            clearInterval(timerId0000);
+            break;
+        }
+        fps0000++;
+    },80);
+});
+//1→2
+pane1111.addEventListener('mouseover',function(){pane1111.style.cursor = 'pointer';});
+pane1111.addEventListener('click',function(){
+    fps1111 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane1111.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId1111 = setInterval(function(){
+        switch(fps1111){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane2222.style.display = 'inline';
+            clearInterval(timerId1111);
+            break;
+        }
+        fps1111++;
+    },80);
+});
+//2→3
+pane2222.addEventListener('mouseover',function(){pane2222.style.cursor = 'pointer';});
+pane2222.addEventListener('click',function(){
+    fps2222 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane2222.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId2222 = setInterval(function(){
+        switch(fps2222){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane3333.style.display = 'inline';
+            clearInterval(timerId2222);
+            break;
+        }
+        fps2222++;
+    },80);
+});
+//3→4
+pane3333.addEventListener('mouseover',function(){pane3333.style.cursor = 'pointer';});
+pane3333.addEventListener('click',function(){
+    fps3333 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane3333.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId3333 = setInterval(function(){
+        switch(fps3333){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane4444.style.display = 'inline';
+            clearInterval(timerId3333);
+            break;
+        }
+        fps3333++;
+    },80);
+});
+//4→5
+pane4444.addEventListener('mouseover',function(){pane4444.style.cursor = 'pointer';});
+pane4444.addEventListener('click',function(){
+    fps4444 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane4444.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId4444 = setInterval(function(){
+        switch(fps4444){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane5555.style.display = 'inline';
+            clearInterval(timerId4444);
+            break;
+        }
+        fps4444++;
+    },80);
+});
+//5→6
+pane5555.addEventListener('mouseover',function(){pane5555.style.cursor = 'pointer';});
+pane5555.addEventListener('click',function(){
+    fps5555 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane5555.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId5555 = setInterval(function(){
+        switch(fps5555){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane6666.style.display = 'inline';
+            clearInterval(timerId5555);
+            break;
+        }
+        fps5555++;
+    },80);
+});
+//6→7
+pane6666.addEventListener('mouseover',function(){pane6666.style.cursor = 'pointer';});
+pane6666.addEventListener('click',function(){
+    fps6666 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane6666.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId6666 = setInterval(function(){
+        switch(fps6666){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane7777.style.display = 'inline';
+            panepoint += 10;//★★
+            opencheck();//★★
+            clearInterval(timerId6666);
+            break;
+        }
+        fps6666++;
+    },80);
+});
+//7→8
+pane7777.addEventListener('mouseover',function(){pane7777.style.cursor = 'pointer';});
+pane7777.addEventListener('click',function(){
+    fps7777 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane7777.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId7777 = setInterval(function(){
+        switch(fps7777){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane8888.style.display = 'inline';
+            panepoint -= 10;//★★
+            clearInterval(timerId7777);
+            break;
+        }
+        fps7777++;
+    },80);
+});
+//8→9
+pane8888.addEventListener('mouseover',function(){pane8888.style.cursor = 'pointer';});
+pane8888.addEventListener('click',function(){
+    fps8888 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane8888.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId8888 = setInterval(function(){
+        switch(fps8888){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane9999.style.display = 'inline';
+            clearInterval(timerId8888);
+            break;
+        }
+        fps8888++;
+    },80);
+});
+//9→0
+pane9999.addEventListener('mouseover',function(){pane9999.style.cursor = 'pointer';});
+pane9999.addEventListener('click',function(){
+    fps9999 = 0;
+    seboxpane.load();//変えない
+    seboxpane.play();//変えない
+    pane9999.style.display = 'none';
+    panemove1111.style.display = 'inline';//変えない
+    let timerId9999 = setInterval(function(){
+        switch(fps9999){
+            case 1:
+            panemove1111.style.display = 'none';//変えない
+            panemove2222.style.display = 'inline';//変えない
+            break;
+            case 2:
+            panemove2222.style.display = 'none';//変えない
+            panemove3333.style.display = 'inline';//変えない
+            break;
+            case 3:
+            panemove3333.style.display = 'none';//変えない
+            pane0000.style.display = 'inline';
+            clearInterval(timerId9999);
+            break;
+        }
+        fps9999++;
+    },80);
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/gate.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:58:57 GMT -->
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/chaos.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:13 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ｃｓづあぽい。ゎおいぐｖ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #990000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#chaosback{width:970px;height:580px;position:absolute;top:0px;left:0px;}
+#eye{width:495px;height:294px;position:absolute;top:143px;left:237px;}
+/*ハートの動き*/
+@keyframes heartmove{0%{left:0px;top:0px;}50%{left:653px;top:180px;}100%{left:0px;top:0px;}}
+@-webkit-keyframes heartmove{0%{left:0px;top:0px;}50%{left:653px;top:180px;}100%{left:0px;top:0px;}}
+#heart{
+    width:317px;
+    height:400px;
+    position:absolute;
+    animation-name:heartmove;
+    -webkit-animation-name:heartmove;
+    animation-duration:5s;
+    -webkit-animation-duration:5s;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+}
+/*バクテリアの動き*/
+@keyframes bactemove{0%{left:381px;top:0px;}50%{left:381px;top:321px;}100%{left:381px;top:0px;}}
+@-webkit-keyframes bactemove{0%{left:381px;top:0px;}50%{left:381px;top:321px;}100%{left:381px;top:0px;}}
+#bacte{
+    width:208px;
+    height:259px;
+    position:absolute;
+    animation-name:bactemove;
+    -webkit-animation-name:bactemove;
+    animation-duration:5s;
+    -webkit-animation-duration:5s;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+}
+/*新聞の動き*/
+@keyframes newsmove{0%{left:0px;top:0px;}40%{left:703px;top:0px;}50%{left:703px;top:131px;}90%{left:0px;top:131px;}100%{left:0px;top:0px;}}
+@-webkit-keyframes newsmove{0%{left:0px;top:0px;}40%{left:703px;top:0px;}50%{left:703px;top:131px;}90%{left:0px;top:131px;}100%{left:0px;top:0px;}}
+#newspaper{
+    width:267px;
+    height:449px;
+    position:absolute;
+    animation-name:newsmove;
+    -webkit-animation-name:newsmove;
+    animation-duration:10s;
+    -webkit-animation-duration:10s;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+<!--
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemget.wav" type="audio/wav">
+<source src="pse/itemget.mp3" type="audio/mp3">
+</audio>
+-->
+<div id="d1">
+<img src="pimg/chaosback.gif"id="chaosback">
+<a href="profile.html"target="_top"><img src="pimg/chaosbacte.gif"id="bacte"></a>
+<a href="9gu0omn0obyea.html"target="_top"><img src="pimg/chaosheart.gif"id="heart"></a>
+<a href="nikki.html"target="_top"><img src="pimg/chaosnewspaper.gif"id="newspaper"></a>
+<a href="eye.html"target="_top"><img src="pimg/chaoseye.gif"id="eye"></a>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/chaos.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:18 GMT -->
+</html>

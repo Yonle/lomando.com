@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/xmaschallenge.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:48:37 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>クリスマスチャレンジ(FANCY ISLAND Christmas Challenge)|ふぁんしーあいらんど</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back1{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+#back2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#santa{width:668px;height:416px;position:absolute;left:151px;top:10px;}
+#santaniko{width:251px;height:297px;position:absolute;left:378px;top:11px;}
+#fukidashi{width:312px;height:187px;position:absolute;right:20px;top:23px;display:none;}
+#pbox1{width:180px;height:118px;position:absolute;left:120px;bottom:38px;display:none;}
+#pbox2{width:180px;height:118px;position:absolute;left:406px;bottom:38px;display:none;}
+#pbox3{width:180px;height:118px;position:absolute;left:692px;bottom:38px;display:none;}
+#pboxarea1{width:158px;height:106px;position:absolute;left:120px;bottom:50px;background-color:#00ff00;opacity:0.0;display:none;}
+#pboxarea2{width:158px;height:106px;position:absolute;left:406px;bottom:50px;background-color:#00ff00;opacity:0.0;display:none;}
+#pboxarea3{width:158px;height:106px;position:absolute;left:692px;bottom:50px;background-color:#00ff00;opacity:0.0;display:none;}
+#pboxopen1{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+#pboxopen2{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+#pboxopen3{width:532px;height:580px;position:absolute;left:219px;top:0px;display:none;}
+#hazure{width:158px;height:106px;position:absolute;left:0px;bottom:50px;background-color:#000000;opacity:0.0;display:none;}
+#hadou1{width:389px;height:390px;position:absolute;left:290px;top:95px;display:none;}
+#hadou2{width:615px;height:580px;position:absolute;left:177px;top:0px;display:none;}
+#hadou3{width:896px;height:580px;position:absolute;left:37px;top:0px;display:none;}
+/*ボスラッシュ*/
+#obk0{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk6{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk7{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk8{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk9{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk10{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk11{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk12{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk13{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#obk14{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#blackout{width:970px;height:580px;position:absolute;left:0px;top:0px;background-color:#000000;opacity:0.9;}
+#fadefont{width:574px;height:229px;position:absolute;left:198px;top:174px;display:none;}
+#blood1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#blood2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#blood3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#blood4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#blood5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+/*景品*/
+#prize1{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+#prize2{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+#prize3{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+#prize4{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+#prize5{width:250px;height:360px;position:absolute;left:360px;top:45px;display:none;}
+#startbt{width:200px;height:50px;position:absolute;left:385px;top:400px;}
+#restartbt{width:200px;height:50px;position:absolute;left:10px;bottom:10px;display:none;}
+#caution{
+    font-size:18px;
+    color:#ffffff;
+    text-align:center;
+    margin: auto;
+    padding: 0px;
+    line-height:140%;
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:80px;
+}
+#copyright{
+    font-size:12px;
+    color:#cccccc;
+    text-align:left;
+    margin: 0px;
+    padding: 0px;
+    line-height:1em;
+    position:absolute;
+    left:5px;
+    bottom:5px;
+}
+#santaserifu{
+    font-size:20px;
+    color:#444444;
+    text-align:left;
+    margin: 0px;
+    padding: 0px;
+    line-height:140%;
+    position:absolute;
+    left:730px;
+    top:68px;
+}
+#santaserifueng{
+    font-size:12px;
+    color:#444444;
+    text-align:left;
+    margin: 0px;
+    padding: 0px;
+    line-height:140%;
+    position:absolute;
+    left:750px;
+    top:150px;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="xmasbgm" preload="auto"loop>
+<source src="pse/xmasbgm.wav" type="audio/wav">
+<source src="pse/xmasbgm.mp3" type="audio/mp3">
+</audio>
+
+<audio id="gaaanse" preload="auto">
+<source src="pse/gaaan.wav" type="audio/wav">
+<source src="pse/gaaan.mp3" type="audio/mp3">
+</audio>
+
+<audio id="mojiokurise" preload="auto"loop>
+<source src="pse/mojiokuri.wav" type="audio/wav">
+<source src="pse/mojiokuri.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tettelese" preload="auto">
+<source src="pse/tettele.wav" type="audio/wav">
+<source src="pse/tettele.mp3" type="audio/mp3">
+</audio>
+
+<audio id="hadouse" preload="auto">
+<source src="pse/medadyshun.wav" type="audio/wav">
+<source src="pse/medadyshun.mp3" type="audio/mp3">
+</audio>
+
+<audio id="screambgm" preload="auto">
+<source src="pse/jinglescream.wav" type="audio/wav">
+<source src="pse/jinglescream.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/xmas/back.jpg"id="back1">
+<img src="pimg/xmas/santa.png"id="santa">
+<img src="pimg/xmas/santaniko.png"id="santaniko">
+<img src="pimg/xmas/fukidashi.png"id="fukidashi">
+<img src="pimg/xmas/pbox1.png"id="pbox1">
+<img src="pimg/xmas/pbox2.png"id="pbox2">
+<img src="pimg/xmas/pbox3.png"id="pbox3">
+<img src="pimg/xmas/back2.jpg"id="back2">
+<div id="pboxarea1"></div>
+<div id="pboxarea2"></div>
+<div id="pboxarea3"></div>
+<div id="hazure"></div>
+<img src="pimg/xmas/hadou1.png"id="hadou1">
+<img src="pimg/xmas/hadou2.png"id="hadou2">
+<img src="pimg/xmas/hadou3.png"id="hadou3">
+<!--ボスラッシュ-->
+<img src="pimg/xmas/obk0.jpg"id="obk0">
+<img src="pimg/xmas/obk1.jpg"id="obk1">
+<img src="pimg/xmas/obk2.jpg"id="obk2">
+<img src="pimg/xmas/obk3.jpg"id="obk3">
+<img src="pimg/xmas/obk4.jpg"id="obk4">
+<img src="pimg/xmas/obk5.jpg"id="obk5">
+<img src="pimg/xmas/obk6.jpg"id="obk6">
+<img src="pimg/xmas/obk7.jpg"id="obk7">
+<img src="pimg/xmas/obk8.jpg"id="obk8">
+<img src="pimg/xmas/obk9.jpg"id="obk9">
+<img src="pimg/xmas/obk10.jpg"id="obk10">
+<img src="pimg/xmas/obk11.jpg"id="obk11">
+<img src="pimg/xmas/obk12.jpg"id="obk12">
+<img src="pimg/xmas/obk13.jpg"id="obk13">
+<img src="pimg/xmas/obk14.jpg"id="obk14">
+<div id="blackout"></div>
+<img src="pimg/xmas/fadefont.gif"id="fadefont">
+<img src="pimg/xmas/blood1.png"id="blood1">
+<img src="pimg/xmas/blood2.png"id="blood2">
+<img src="pimg/xmas/blood3.png"id="blood3">
+<img src="pimg/xmas/blood4.png"id="blood4">
+<img src="pimg/xmas/blood5.png"id="blood5">
+<img src="pimg/xmas/pboxopen1.gif"id="pboxopen1">
+<img src="pimg/xmas/pboxopen2.gif"id="pboxopen2">
+<img src="pimg/xmas/pboxopen3.gif"id="pboxopen3">
+<!--景品-->
+<img src="pimg/xmas/prize1.png"id="prize1">
+<img src="pimg/xmas/prize2.png"id="prize2">
+<img src="pimg/xmas/prize3.png"id="prize3">
+<img src="pimg/xmas/prize4.png"id="prize4">
+<img src="pimg/xmas/prize5.png"id="prize5">
+<p id="caution"></p>
+<p id="copyright"></p>
+<p id="santaserifu"></p>
+<p id="santaserifueng"></p>
+<img src="pimg/xmas/startbt.png"id="startbt">
+<img src="pimg/xmas/restartbt.png"id="restartbt">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let back1 = document.getElementById('back1');
+let back2 = document.getElementById('back2');
+let santa = document.getElementById('santa');
+let santaniko = document.getElementById('santaniko');
+let fukidashi = document.getElementById('fukidashi');
+let pbox1 = document.getElementById('pbox1');
+let pbox2 = document.getElementById('pbox2');
+let pbox3 = document.getElementById('pbox3');
+let pboxarea1 = document.getElementById('pboxarea1');
+let pboxarea2 = document.getElementById('pboxarea2');
+let pboxarea3 = document.getElementById('pboxarea3');
+let pboxopen1 = document.getElementById('pboxopen1');
+let pboxopen2 = document.getElementById('pboxopen2');
+let pboxopen3 = document.getElementById('pboxopen3');
+let hazure = document.getElementById('hazure');
+let hadou1 = document.getElementById('hadou1');
+let hadou2 = document.getElementById('hadou2');
+let hadou3 = document.getElementById('hadou3');
+/*ボスラッシュ*/
+let obk0 = document.getElementById('obk0');
+let obk1 = document.getElementById('obk1');
+let obk2 = document.getElementById('obk2');
+let obk3 = document.getElementById('obk3');
+let obk4 = document.getElementById('obk4');
+let obk5 = document.getElementById('obk5');
+let obk6 = document.getElementById('obk6');
+let obk7 = document.getElementById('obk7');
+let obk8 = document.getElementById('obk8');
+let obk9 = document.getElementById('obk9');
+let obk10 = document.getElementById('obk10');
+let obk11 = document.getElementById('obk11');
+let obk12 = document.getElementById('obk12');
+let obk13 = document.getElementById('obk13');
+let obk14 = document.getElementById('obk14');
+let blackout = document.getElementById('blackout');
+let fadefont = document.getElementById('fadefont');
+let blood1 = document.getElementById('blood1');
+let blood2 = document.getElementById('blood2');
+let blood3 = document.getElementById('blood3');
+let blood4 = document.getElementById('blood4');
+let blood5 = document.getElementById('blood5');
+let startbt = document.getElementById('startbt');
+let restartbt = document.getElementById('restartbt');
+let caution = document.getElementById('caution');
+let copyright = document.getElementById('copyright');
+let santaserifu = document.getElementById('santaserifu');
+let santaserifueng = document.getElementById('santaserifueng');
+//景品
+let prize1 = document.getElementById('prize1');
+let prize2 = document.getElementById('prize2');
+let prize3 = document.getElementById('prize3');
+let prize4 = document.getElementById('prize4');
+let prize5 = document.getElementById('prize5');
+//効果音
+let bgmxmas = document.getElementById('xmasbgm');
+let segaaan = document.getElementById('gaaanse');
+let semojiokuri = document.getElementById('mojiokurise');
+let setettele = document.getElementById('tettelese');
+let sehadou = document.getElementById('hadouse');
+let bgmscream = document.getElementById('screambgm');
+//スコア
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let prz1 = 0;
+let prz2 = 0;
+let prz3 = 0;
+let prz4 = 0;
+let prz5 = 0;
+
+function cautionYoui(){
+    caution.innerText = '■ご注意-CAUTION-■\n\nこのゲームは本編と同様に音が出ます。\n公共の場でプレイする際は周囲のご迷惑にならないよう\nイヤホンをつけてお楽しみください。\n(一部音量注意の為、予め端末の音量を下げてお楽しみ下さい。)\nビックリ要素を含むため、心臓の弱い方はプレイをお控え下さい。\nThis game sounds like the main part.\nWhen playing this game in a public place,\n please wear earphones to avoid inconvenience to others.\nThis game may make a loud sound, so please lower the volume beforehand.\nPlease note that this game contains scary expressions.';
+    copyright.innerText = '【最初の素敵なBGM】TAM Music Factory様【効果音】On Jin(音人)様【やっちまった時のBGM】失踪之人';
+}
+
+cautionYoui();
+
+/*ハズレをランダムに配置する*/
+function hazureRandom(){
+    let com = Math.floor(Math.random()*3)+1;
+    switch(com){
+        case 1:
+        hazure.style.left = '120px';
+        hazure.style.display = 'inline';
+        break;
+        case 2:
+        hazure.style.left = '406px';
+        hazure.style.display = 'inline';
+        break;
+        case 3:
+        hazure.style.left = '692px';
+        hazure.style.display = 'inline';
+        break;
+    }
+}
+
+startbt.addEventListener('mouseover',function(){startbt.style.cursor = 'pointer';});
+startbt.addEventListener('click',function(){
+    startbt.style.display = 'none';
+    caution.innerText = '';
+    copyright.innerText = '';
+    blackout.style.display = 'none';
+    bgmscream.load();
+    bgmxmas.load();
+    bgmxmas.play();
+    fukidashi.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 1:
+            semojiokuri.load();
+            semojiokuri.play();
+            santaserifu.innerText = '3';
+            break;
+            case 2:
+            santaserifu.innerText = '3つ';
+            santaserifueng.innerText = 'P';
+            break;
+            case 3:
+            santaserifu.innerText = '3つの';
+            santaserifueng.innerText = 'Ple';
+            break;
+            case 4:
+            santaserifu.innerText = '3つの中';
+            santaserifueng.innerText = 'Plea';
+            break;
+            case 5:
+            santaserifu.innerText = '3つの中か';
+            santaserifueng.innerText = 'Please';
+            break;
+            case 6:
+            santaserifu.innerText = '3つの中から';
+            santaserifueng.innerText = 'Please c';
+            break;
+            case 7:
+            santaserifu.innerText = '3つの中から1';
+            santaserifueng.innerText = 'Please cho';
+            break;
+            case 8:
+            santaserifu.innerText = '3つの中から1つ';
+            santaserifueng.innerText = 'Please choo';
+            break;
+            case 9:
+            santaserifu.innerText = '3つの中から1つ\n好';
+            santaserifueng.innerText = 'Please choose';
+            break;
+            case 10:
+            santaserifu.innerText = '3つの中から1つ\n好き';
+            santaserifueng.innerText = 'Please choose o';
+            break;
+            case 11:
+            santaserifu.innerText = '3つの中から1つ\n好きな';
+            santaserifueng.innerText = 'Please choose one';
+            break;
+            case 12:
+            santaserifu.innerText = '3つの中から1つ\n好きなプ';
+            santaserifueng.innerText = 'Please choose one o';
+            break;
+            case 13:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレ';
+            santaserifueng.innerText = 'Please choose one of\nt';
+            break;
+            case 14:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼ';
+            santaserifueng.innerText = 'Please choose one of\nth';
+            break;
+            case 15:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼン';
+            santaserifueng.innerText = 'Please choose one of\nthe t';
+            break;
+            case 16:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼント';
+            santaserifueng.innerText = 'Please choose one of\nthe th';
+            break;
+            case 17:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを';
+            santaserifueng.innerText = 'Please choose one of\nthe thre';
+            break;
+            case 18:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選';
+            santaserifueng.innerText = 'Please choose one of\nthe three';
+            break;
+            case 19:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶ';
+            santaserifueng.innerText = 'Please choose one of\nthe three pr';
+            break;
+            case 20:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶの';
+            santaserifueng.innerText = 'Please choose one of\nthe three pre';
+            break;
+            case 21:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶのじ';
+            santaserifueng.innerText = 'Please choose one of\nthe three prese';
+            break;
+            case 22:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶのじゃ';
+            santaserifueng.innerText = 'Please choose one of\nthe three present';
+            break;
+            case 23:
+            santaserifu.innerText = '3つの中から1つ\n好きなプレゼントを\n選ぶのじゃ。';
+            santaserifueng.innerText = 'Please choose one of\nthe three presents.';
+            semojiokuri.pause();
+            break;
+            case 35:
+            santaserifu.innerText = '';
+            santaserifueng.innerText = '';
+            fukidashi.style.display = 'none';
+            santaniko.style.display = 'none';
+            pbox1.style.display = 'inline';
+            pbox2.style.display = 'inline';
+            pbox3.style.display = 'inline';
+            pboxarea1.style.display = 'inline';
+            pboxarea2.style.display = 'inline';
+            pboxarea3.style.display = 'inline';
+            hazureRandom();
+            clearInterval(timerId1);
+            break;
+        }
+    },80);
+});
+//景品飛び出す演出
+function prizeApp(){
+    let com2 = Math.floor(Math.random()*5)+1;
+    switch(com2){
+        case 1://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品1■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer1 = setInterval(function(){//■■数字変える
+            prz1++;//■■数字変える
+            switch(prz1){//■■数字変える
+                case 1:
+                setettele.load();
+                setettele.play();
+                prize1.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize1.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize1.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                pboxopen1.style.display = 'none';
+                pboxopen2.style.display = 'none';
+                pboxopen3.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize1.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize1.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize1.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize1.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                santaserifu.style.left = '720px';
+                santaserifu.style.top = '78px';
+                santaserifueng.style.left = '750px';
+                santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『クマのぬいぐるみ』\nカワイイんじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a bear stuffed\nanimal. It is cute.';//■文章変える
+                restartbt.style.display = 'inline';
+                clearInterval(prizeTimer1);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品1ここまで■■■■■■
+        case 2://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品2■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer2 = setInterval(function(){//■■数字変える
+            prz2++;//■■数字変える
+            switch(prz2){//■■数字変える
+                case 1:
+                setettele.load();
+                setettele.play();
+                prize2.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize2.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize2.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                pboxopen1.style.display = 'none';
+                pboxopen2.style.display = 'none';
+                pboxopen3.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize2.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize2.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize2.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize2.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                santaserifu.style.left = '730px';
+                santaserifu.style.top = '78px';
+                santaserifueng.style.left = '730px';
+                santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『携帯ゲーム機』\n面白そうじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a small game console.\nIt looks interesting.';//■文章変える
+                restartbt.style.display = 'inline';
+                clearInterval(prizeTimer2);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品2ここまで■■■■■■
+        case 3://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品3■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer3 = setInterval(function(){//■■数字変える
+            prz3++;//■■数字変える
+            switch(prz3){//■■数字変える
+                case 1:
+                setettele.load();
+                setettele.play();
+                prize3.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize3.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize3.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                pboxopen1.style.display = 'none';
+                pboxopen2.style.display = 'none';
+                pboxopen3.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize3.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize3.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize3.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize3.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                santaserifu.style.left = '720px';
+                santaserifu.style.top = '78px';
+                santaserifueng.style.left = '750px';
+                santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『サッカーボール』\n蹴りまくりじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a soccer ball.\nLet us kick it a lot.';//■文章変える
+                restartbt.style.display = 'inline';
+                clearInterval(prizeTimer3);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品3ここまで■■■■■■
+        case 4://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品4■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer4 = setInterval(function(){//■■数字変える
+            prz4++;//■■数字変える
+            switch(prz4){//■■数字変える
+                case 1:
+                setettele.load();
+                setettele.play();
+                prize4.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize4.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize4.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                pboxopen1.style.display = 'none';
+                pboxopen2.style.display = 'none';
+                pboxopen3.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize4.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize4.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize4.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize4.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                santaserifu.style.left = '730px';
+                santaserifu.style.top = '78px';
+                santaserifueng.style.left = '740px';
+                santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『着せ替え人形』\nカワイイんじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a dress-up doll.\nIt is cute.';//■文章変える
+                restartbt.style.display = 'inline';
+                clearInterval(prizeTimer4);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品4ここまで■■■■■■
+        case 5://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■景品5■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        let prizeTimer5 = setInterval(function(){//■■数字変える
+            prz5++;//■■数字変える
+            switch(prz5){//■■数字変える
+                case 1:
+                setettele.load();
+                setettele.play();
+                prize5.style.display = 'inline';//■■数字変える
+                break;
+                case 2:
+                prize5.style.top = '48px';//■■数字変える
+                break;
+                case 3:
+                prize5.style.top = '45px';//■■数字変える
+                break;
+                case 39:
+                pboxopen1.style.display = 'none';
+                pboxopen2.style.display = 'none';
+                pboxopen3.style.display = 'none';
+                blackout.style.opacity = '0.6';
+                prize5.style.top = '95px';//■■数字変える
+                break;
+                case 40:
+                blackout.style.opacity = '0.4';
+                prize5.style.top = '135px';//■■数字変える
+                break;
+                case 41:
+                blackout.style.opacity = '0.2';
+                prize5.style.top = '175px';//■■数字変える
+                break;
+                case 42:
+                blackout.style.display = 'none';
+                prize5.style.top = '215px';//■■数字変える
+                santaniko.style.display = 'inline';
+                fukidashi.style.display = 'inline';
+                santaserifu.style.left = '710px';
+                santaserifu.style.top = '78px';
+                santaserifueng.style.left = '740px';
+                santaserifueng.style.top = '140px';
+                santaserifu.innerText = '『キックスケーター』\nこれでラクチンじゃ！';//■文章変える
+                santaserifueng.innerText = 'You got a kick scooter.\nIt makes moving easier.';//■文章変える
+                restartbt.style.display = 'inline';
+                clearInterval(prizeTimer5);//■■数字変える
+                break;
+            }
+        },80);
+        break;//■■■■■■景品5ここまで■■■■■■
+    }
+}
+
+restartbt.addEventListener('mouseover',function(){restartbt.style.cursor='pointer';});
+restartbt.addEventListener('click',function(){
+    location.reload();
+});
+
+//プレゼント赤を選択
+pboxarea1.addEventListener('mouseover',function(){pboxarea1.style.cursor='pointer';});//■■数字を変える
+pboxarea1.addEventListener('click',function(){//■■数字を変える
+    pbox1.style.display = 'none';
+    pbox2.style.display = 'none';
+    pbox3.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    hazure.style.display = 'none';
+    blackout.style.opacity = '0.2';
+    blackout.style.display = 'inline';
+    let timerId2 = setInterval(function(){//■■数字を変える
+        fps2++;//■■数字を変える
+        switch(fps2){//■■数字を変える
+            case 1:
+            blackout.style.opacity = '0.4';
+            break;
+            case 2:
+            blackout.style.opacity = '0.6';
+            break;
+            case 3:
+            blackout.style.opacity = '0.8';
+            pboxopen1.style.display = 'inline';//■■数字を変える
+            break;
+            case 4:
+            clearInterval(timerId2);//■■数字を変える
+            prizeApp();
+            break;
+        }
+    },80);
+});
+//プレゼント緑を選択
+pboxarea2.addEventListener('mouseover',function(){pboxarea2.style.cursor='pointer';});//■■数字を変える
+pboxarea2.addEventListener('click',function(){//■■数字を変える
+    pbox1.style.display = 'none';
+    pbox2.style.display = 'none';
+    pbox3.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    hazure.style.display = 'none';
+    blackout.style.opacity = '0.2';
+    blackout.style.display = 'inline';
+    let timerId3 = setInterval(function(){//■■数字を変える
+        fps3++;//■■数字を変える
+        switch(fps3){//■■数字を変える
+            case 1:
+            blackout.style.opacity = '0.4';
+            break;
+            case 2:
+            blackout.style.opacity = '0.6';
+            break;
+            case 3:
+            blackout.style.opacity = '0.8';
+            pboxopen2.style.display = 'inline';//■■数字を変える
+            break;
+            case 4:
+            clearInterval(timerId3);//■■数字を変える
+            prizeApp();
+            break;
+        }
+    },80);
+});
+//プレゼント青を選択
+pboxarea3.addEventListener('mouseover',function(){pboxarea3.style.cursor='pointer';});//■■数字を変える
+pboxarea3.addEventListener('click',function(){//■■数字を変える
+    pbox1.style.display = 'none';
+    pbox2.style.display = 'none';
+    pbox3.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    hazure.style.display = 'none';
+    blackout.style.opacity = '0.2';
+    blackout.style.display = 'inline';
+    let timerId4 = setInterval(function(){//■■数字を変える
+        fps4++;//■■数字を変える
+        switch(fps4){//■■数字を変える
+            case 1:
+            blackout.style.opacity = '0.4';
+            break;
+            case 2:
+            blackout.style.opacity = '0.6';
+            break;
+            case 3:
+            blackout.style.opacity = '0.8';
+            pboxopen3.style.display = 'inline';//■■数字を変える
+            break;
+            case 4:
+            clearInterval(timerId4);//■■数字を変える
+            prizeApp();
+            break;
+        }
+    },80);
+});
+
+//ハズレを選択した場合
+hazure.addEventListener('mouseover',function(){hazure.style.cursor='pointer';});
+hazure.addEventListener('click',function(){
+    hazure.style.display = 'none';
+    pboxarea1.style.display = 'none';
+    pboxarea2.style.display = 'none';
+    pboxarea3.style.display = 'none';
+    bgmxmas.pause();
+    segaaan.load();
+    segaaan.play();
+    back2.style.display = 'inline';
+    let timerId5 = setInterval(function(){
+        fps5++;
+        switch(fps5){
+            case 36:
+            sehadou.load();
+            sehadou.play();
+            hadou1.style.display = 'inline';
+            break;
+            case 37:
+            hadou1.style.display = 'none';
+            hadou2.style.display = 'inline';
+            break;
+            case 38:
+            hadou2.style.display = 'none';
+            hadou3.style.display = 'inline';
+            blackout.style.opacity = '1.0';
+            break;
+            case 39:
+            hadou3.style.display = 'none';
+            blackout.style.display = 'inline';
+            break;
+            case 40:
+            blackout.style.backgroundColor = '#ffffff';
+            break;
+            case 41://■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ボスラッシュ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+            bgmscream.play();
+            blackout.style.display = 'none';
+            obk0.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 45:
+            obk0.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 50:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 59:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 63:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 68:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 76:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 80:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 86:
+            obk7.style.display = 'none';
+            obk8.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 93:
+            obk8.style.display = 'none';
+            obk9.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 95:
+            obk9.style.display = 'none';
+            obk10.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 113:
+            obk10.style.display = 'none';
+            obk11.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 118:
+            obk11.style.display = 'none';
+            obk12.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 122:
+            obk12.style.display = 'none';
+            obk13.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 129:
+            obk13.style.display = 'none';
+            obk14.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 132:
+            obk14.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 136:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 141:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 145:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 147:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 150:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 154:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 159:
+            obk7.style.display = 'none';
+            obk8.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 163:
+            obk8.style.display = 'none';
+            obk9.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 168:
+            obk9.style.display = 'none';
+            obk10.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 173:
+            obk10.style.display = 'none';
+            obk11.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 186:
+            obk11.style.display = 'none';
+            obk12.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 190:
+            obk12.style.display = 'none';
+            obk13.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 195:
+            obk13.style.display = 'none';
+            obk14.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 204:
+            obk14.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 209:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 213:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 223:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 227:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 232:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 238:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 241:
+            obk7.style.display = 'none';
+            obk8.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 259:
+            obk8.style.display = 'none';
+            obk9.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 263:
+            obk9.style.display = 'none';
+            obk10.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 268:
+            obk10.style.display = 'none';
+            obk11.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 275:
+            obk11.style.display = 'none';
+            obk12.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 277:
+            obk12.style.display = 'none';
+            obk13.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 282:
+            obk13.style.display = 'none';
+            obk14.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 286:
+            obk14.style.display = 'none';
+            obk1.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 291:
+            obk1.style.display = 'none';
+            obk2.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 293:
+            obk2.style.display = 'none';
+            obk3.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 295:
+            obk3.style.display = 'none';
+            obk4.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 300:
+            obk4.style.display = 'none';
+            obk5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 304:
+            obk5.style.display = 'none';
+            obk6.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            break;
+            case 309:
+            obk6.style.display = 'none';
+            obk7.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 313:
+            obk7.style.display = 'none';
+            obk0.style.display = 'inline';
+            body.style.backgroundColor = '#8b0003';
+            blackout.style.backgroundColor = '#8b0003';
+            blackout.style.opacity = '0.1';
+            break;
+            case 376:
+            blackout.style.display = 'inline';
+            break;
+            case 377:
+            blackout.style.opacity = '0.2';
+            break;
+            case 378:
+            blackout.style.opacity = '0.3';
+            break;
+            case 379:
+            blackout.style.opacity = '0.4';
+            break;
+            case 380:
+            blackout.style.opacity = '0.5';
+            break;
+            case 381:
+            blackout.style.opacity = '0.6';
+            break;
+            case 382:
+            blackout.style.opacity = '0.7';
+            break;
+            case 383:
+            blackout.style.opacity = '0.8';
+            break;
+            case 384:
+            blackout.style.opacity = '0.9';
+            break;
+            case 385:
+            blackout.style.opacity = '1.0';
+            fadefont.style.display = 'inline';
+            break;
+            case 454:
+            blood1.style.display = 'inline';
+            body.style.backgroundColor = '#6e0002';
+            break;
+            case 455:
+            blood2.style.display = 'inline';
+            body.style.backgroundColor = '#530001';
+            break;
+            case 456:
+            blood3.style.display = 'inline';
+            body.style.backgroundColor = '#370001';
+            break;
+            case 457:
+            blood4.style.display = 'inline';
+            body.style.backgroundColor = '#1c0000';
+            break;
+            case 458:
+            blood5.style.display = 'inline';
+            body.style.backgroundColor = '#000000';
+            break;
+            case 459:
+            blackout.style.backgroundColor = '#000000';
+            fadefont.style.display = 'none';
+            blood1.style.display = 'none';
+            blood2.style.display = 'none';
+            blood3.style.display = 'none';
+            blood4.style.display = 'none';
+            blood5.style.display = 'none';
+            location.href = 'main.html';
+            clearInterval(timerId5);
+            break;
+        }  
+    },55);
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/xmaschallenge.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:49:31 GMT -->
+</html>

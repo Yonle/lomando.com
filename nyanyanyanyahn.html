@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/nyanyanyanyahn.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:53:35 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>幽管の少年の間</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#dback{background-color:#000000;width:560px;height:315px;position:absolute;top:132px;left:205px;}
+#nisedougaonna1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#nisedougaonna2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#don{width:65px;height:49px;position:absolute;top:255px;left:452px;opacity:0.6;border-radius:10px;}
+/*トップバー*/
+#dtbar{width:560px;height:34px;position:absolute;top:132px;left:205px;opacity:0.6;}
+#dprof{width:32px;height:32px;position:absolute;top:133px;left:225px;opacity:1.0;border-radius:100px;}
+#dicon5{width:16px;height:16px;position:absolute;top:141px;right:255px;opacity:0.8;}
+#dicon6{width:16px;height:16px;position:absolute;top:141px;right:225px;opacity:0.8;}
+#dtitle{color:#dddddd;font-size:10pt;position:absolute;top:131px;left:265px;}
+/*アンダーバー*/
+#dbar{width:560px;height:34px;position:absolute;top:413px;left:205px;display:none;}
+#dicon1{width:16px;height:16px;position:absolute;top:425px;left:225px;opacity:0.8;display:none;}
+#dicon2{width:16px;height:16px;position:absolute;top:425px;left:255px;opacity:0.8;display:none;}
+#dicon3{width:16px;height:16px;position:absolute;top:425px;right:255px;opacity:0.8;display:none;}
+#dicon4{width:16px;height:16px;position:absolute;top:425px;right:225px;opacity:0.8;display:none;}
+/*ヒットエリア*/
+#hitarea{background-color:#ff0000;width:110px;height:110px;position:absolute;top:230px;left:431px;opacity:0.0;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="takawaraikoe" preload="auto">
+<source src="pse/takawarai.wav" type="audio/wav">
+<source src="pse/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="shoutotsuse" preload="auto">
+<source src="pse/shoutotsu.wav" type="audio/wav">
+<source src="pse/shoutotsu.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<div id="dback"></div>
+<img src = "pimg/dougatopbar.jpg"id="dtbar">
+<img src = "pimg/dougabar.gif"id="dbar">
+<img src = "pimg/dougaicon1.jpg"id="dicon1">
+<img src = "pimg/dougaicon2.jpg"id="dicon2">
+<img src = "pimg/dougaicon3.jpg"id="dicon3">
+<img src = "pimg/dougaicon4.jpg"id="dicon4">
+<img src = "pimg/dougaicon5.jpg"id="dicon5">
+<img src = "pimg/dougaicon6.jpg"id="dicon6">
+<img src = "pimg/dougaprof.jpg"id="dprof">
+<img src = "pimg/dougaon.jpg"id="don">
+<p id="dtitle">【ふぁんしーあいらんど公式】威ｱ門。ﾈ、ゑュ」襖、s鵜</p>
+<img src = "pimg/nisedougaonna1.gif"id="nisedougaonna1">
+<img src = "pimg/nisedougaonna2.gif"id="nisedougaonna2">
+<div id="hitarea"></div>
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let dback = document.getElementById('dback');
+let gameover = document.getElementById('gameover');
+let don = document.getElementById('don');
+//トップバー
+let dtbar = document.getElementById('dtbar');
+let dprof = document.getElementById('dprof');
+let dicon5 = document.getElementById('dicon5');
+let dicon6 = document.getElementById('dicon6');
+let dtitle = document.getElementById('dtitle');
+//アンダーバー
+let dbar = document.getElementById('dbar');
+let dicon1 = document.getElementById('dicon1');
+let dicon2 = document.getElementById('dicon2');
+let dicon3 = document.getElementById('dicon3');
+let dicon4 = document.getElementById('dicon4');
+//時間表示
+let fps = 0;
+let secPoint = 0;
+let seccount = document.createElement('div');
+seccount.setAttribute('id','seccount');
+seccount.style.position = 'absolute';
+seccount.style.top = '414px';
+seccount.style.left = '285px';
+seccount.style.color = '#ffffff';
+seccount.style.fontSize = '9pt';
+//お化け
+let nisedougaonna1 =  document.getElementById('nisedougaonna1');
+let nisedougaonna2 =  document.getElementById('nisedougaonna2');
+let hitarea =  document.getElementById('hitarea');
+//bgm
+let koetakawarai = document.getElementById('takawaraikoe');
+let seshoutotsu = document.getElementById('shoutotsuse');
+
+function taskHideTop(){
+//トップバー
+dtbar.style.display = 'none';
+dprof.style.display = 'none';
+dicon5.style.display = 'none';
+dicon6.style.display = 'none';
+dtitle.style.display = 'none';
+}
+
+function taskAppUnder(){
+//アンダーバー
+dbar.style.display = 'inline';
+dicon1.style.display = 'inline';
+dicon2.style.display = 'inline';
+dicon3.style.display = 'inline';
+dicon4.style.display = 'inline';
+}
+
+dicon1.addEventListener('mouseover',function(){
+    dicon1.style.opacity = '1.0';
+});
+dicon1.addEventListener('mouseout',function(){
+    dicon1.style.opacity = '0.8';
+});
+
+dicon2.addEventListener('mouseover',function(){
+    dicon2.style.opacity = '1.0';
+});
+dicon2.addEventListener('mouseout',function(){
+    dicon2.style.opacity = '0.8';
+});
+
+dicon3.addEventListener('mouseover',function(){
+    dicon3.style.opacity = '1.0';
+});
+dicon3.addEventListener('mouseout',function(){
+    dicon3.style.opacity = '0.8';
+});
+
+dicon4.addEventListener('mouseover',function(){
+    dicon4.style.opacity = '1.0';
+});
+dicon4.addEventListener('mouseout',function(){
+    dicon4.style.opacity = '0.8';
+});
+
+dicon5.addEventListener('mouseover',function(){
+    dicon5.style.opacity = '1.0';
+});
+dicon5.addEventListener('mouseout',function(){
+    dicon5.style.opacity = '0.8';
+});
+
+dicon6.addEventListener('mouseover',function(){
+    dicon6.style.opacity = '1.0';
+});
+dicon6.addEventListener('mouseout',function(){
+    dicon6.style.opacity = '0.8';
+});
+
+don.addEventListener('mouseover',function(){don.style.cursor = 'pointer';don.style.opacity = '1.0';});
+don.addEventListener('click',function(){
+    koetakawarai.load();
+    koetakawarai.play();
+    don.style.display = 'none';
+    nisedougaonna1.style.display = 'inline';
+    let timerId = setInterval(function(){
+        if(fps>=1){
+            seshoutotsu.load();
+            seshoutotsu.play();
+            nisedougaonna1.style.display = 'none';
+            nisedougaonna2.style.display = 'inline';
+            hitarea.style.display = 'inline';
+            clearInterval(timerId);
+        }
+        fps++;
+    },180);
+});
+
+hitarea.addEventListener('mouseover',function(){hitarea.style.cursor = 'pointer';});
+hitarea.addEventListener('click',function(){
+    location.href ='iamonnenuohs.html';
+});
+
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/nyanyanyanyahn.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:53:51 GMT -->
+</html>

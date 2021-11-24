@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!-- Mirrored from lomando.com/roulette.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:49:31 GMT -->
+<head>
+<meta charset="UTF-8">
+<title>項目を好きに決められるルーレット</title>
+<!--
+<base href="http://warotopi.shime-saba.com/index.html"target="_top">
+-->
+<meta name="description"content="空欄(10文字まで入力可)に自由に選択肢を入力したらスタートボタンを押して回してね！どれにしようか迷った時にオススメ！">
+<meta name="keywords"content="ふぁんしーあいらんど,ルーレット">
+<meta name="viewport"content="width=device-width">
+<style>
+/*PC表示用のスタイルシート横幅700px以上の場合*/
+@media screen and (min-width:700px) {
+    #body{background-color:#fff9e9;margin:0px;padding:0px;line-height:1em;position:relative;}
+    #d1{background-color:#fff9e9;width:970px;height:680px;margin:0px;padding:0px;line-height:1em;position:relative;}
+    #t1{width:100%;margin:auto;}
+    #pcheader{background-color:#ff9999;width:100%;height:30px;position:absolute;top:0px;}
+    #header{background-color:#ffcccc;width:100%;height:110px;position:absolute;top:30px;}
+    #headpicpc{width:213px;height:86px;position:absolute;top:42px;left:5px;}
+    #headpicsmp{display:none;}
+    #headmargin{background-color:#fff9e9;width:100%;height:150px;}
+    .adspace{border-top:1px solid #666666;border-bottom:1px solid #666666;text-align:center;vertical-align:middle;}
+    #contitle{font-size:25px;font-weight:bold;color:#ed873b;text-align:left;margin:0px;padding:20px 20px;line-height:1em;}
+    #sharesp{margin:0px;padding:5px 20px;line-height:1em;border-top:1px solid #666666;border-bottom:1px solid #666666;}
+    #contint{font-size:14px;color:#666666;text-align:left;margin:0px;padding:5px 20px;line-height:1em;}
+    #footmargin{background-color:#fff9e9;width:100%;height:100px;}
+    #footer{background-color:#ff9999;width:100%;height:90px;position:absolute;bottom:0px;}
+    #kinshijikou{width:500px;text-align:center;position:absolute;bottom:30px;left:0px;right:0px;margin:auto;}
+    .shironuki{color:#ffffff;font-size:16px;}
+    #r1{width:450px;height:450px;position:absolute;left:20px;top:20px;}
+    #r2{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r3{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r4{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r5{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r6{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r7{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r8{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r9{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r10{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r11{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r12{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r13{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r14{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r15{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r16{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r17{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r18{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r19{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r20{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r21{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r22{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r23{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #r24{width:450px;height:450px;position:absolute;left:20px;top:20px;display:none;}
+    #startbt{width:360px;height:80px;position:absolute;left:65px;bottom:120px;}
+    #stopbt{width:360px;height:80px;position:absolute;left:65px;bottom:120px;display:none;}
+    #yaji{width:138px;height:48px;position:absolute;left:401px;top:221px;}
+    #tposi{position:absolute;top:140px;right:0px;}
+    #board12{border-collapse:collapse;border:2px solid #000000;}
+    #col1{width:30px;height:30px;background-color:#ff0000;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col2{width:30px;height:30px;background-color:#ffff00;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col3{width:30px;height:30px;background-color:#009944;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col4{width:30px;height:30px;background-color:#f49800;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col5{width:30px;height:30px;background-color:#d400ff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col6{width:30px;height:30px;background-color:#000000;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col7{width:30px;height:30px;background-color:#808080;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col8{width:30px;height:30px;background-color:#ffffff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col9{width:30px;height:30px;background-color:#0000ff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col10{width:30px;height:30px;background-color:#00ffff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col11{width:30px;height:30px;background-color:#ffa7ee;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col12{width:30px;height:30px;background-color:#00ff00;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #text1{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text2{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text3{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text4{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text5{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text6{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text7{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text8{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text9{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text10{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text11{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text12{width:175px;height:30px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    .tarea1{font-size:14px;resize:none;width:168px;}
+    #jpmark1{width:27px;height:27px;display:none;}
+    #jpmark2{width:27px;height:27px;display:none;}
+    #jpmark3{width:27px;height:27px;display:none;}
+    #jpmark4{width:27px;height:27px;display:none;}
+    #jpmark5{width:27px;height:27px;display:none;}
+    #jpmark6{width:27px;height:27px;display:none;}
+    #jpmark7{width:27px;height:27px;display:none;}
+    #jpmark8{width:27px;height:27px;display:none;}
+    #jpmark9{width:27px;height:27px;display:none;}
+    #jpmark10{width:27px;height:27px;display:none;}
+    #jpmark11{width:27px;height:27px;display:none;}
+    #jpmark12{width:27px;height:27px;display:none;}
+}
+/*スマホ表示用のスタイルシート横幅700px以下の場合*/
+@media screen and (max-width:700px) {
+    #body{background-color:#fff9e9;margin:0px;padding:0px;line-height:1em;position:relative;}
+    #d1{background-color:#fff9e9;width:360px;height:700px;margin:0px;padding:0px;line-height:1em;position:relative;}
+    #t1{width:100%;margin:auto;}
+    #pcheader{display:none;}
+    #header{background-color:#ffcccc;width:100%;height:70px;position:absolute;top:10px;}
+    #headpicpc{display:none;}
+    #headpicsmp{width:246px;height:70px;position:absolute;top:10px;left:0px;right:0px;margin:auto;}
+    #headmargin{background-color:#fff9e9;width:100%;height:90px;}
+    .adspace{border-top:1px solid #666666;border-bottom:1px solid #666666;text-align:center;vertical-align:middle;height:250px;}
+    #contitle{font-size:18px;font-weight:bold;color:#ed873b;text-align:center;margin:0px;padding:20px 20px;line-height:1em;}
+    #sharesp{margin:0px;padding:5px 20px;line-height:1em;border-top:1px solid #666666;border-bottom:1px solid #666666;}
+    #contint{font-size:16px;color:#666666;text-align:left;margin:0px;padding:5px 20px;line-height:1.5em;}
+    #footmargin{background-color:#fff9e9;width:100%;height:100px;}
+    #footer{background-color:#ff9999;width:100%;height:90px;position:absolute;bottom:0px;}
+    #kinshijikou{width:300px;text-align:left;position:absolute;bottom:15px;left:0px;right:0px;margin:auto;}
+    .shironuki{color:#ffffff;font-size:16px;}
+    #r1{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;}
+    #r2{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r3{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r4{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r5{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r6{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r7{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r8{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r9{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r10{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r11{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r12{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r13{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r14{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r15{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r16{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r17{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r18{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r19{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r20{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r21{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r22{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r23{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #r24{width:330px;height:330px;position:absolute;top:20px;left:0px;right:0px;margin:auto;display:none;}
+    #startbt{width:330px;height:73px;position:absolute;top:370px;left:0px;right:0px;margin:auto;}
+    #stopbt{width:330px;height:73px;position:absolute;top:370px;left:0px;right:0px;margin:auto;display:none;}
+    #yaji{width:100px;height:35px;position:absolute;right:0px;top:168px;}
+    #tposi{width:354px;position:absolute;top:463px;left:0px;right:0px;margin:auto;}
+    #board12{border-collapse:collapse;border:2px solid #000000;}
+    #col1{width:22px;height:22px;background-color:#ff0000;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col2{width:22px;height:22px;background-color:#ffff00;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col3{width:22px;height:22px;background-color:#009944;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col4{width:22px;height:22px;background-color:#f49800;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col5{width:22px;height:22px;background-color:#d400ff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col6{width:22px;height:22px;background-color:#000000;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col7{width:22px;height:22px;background-color:#808080;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col8{width:22px;height:22px;background-color:#ffffff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col9{width:22px;height:22px;background-color:#0000ff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col10{width:22px;height:22px;background-color:#00ffff;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col11{width:22px;height:22px;background-color:#ffa7ee;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #col12{width:22px;height:22px;background-color:#00ff00;border:2px solid #000000;text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+    #text1{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text2{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text3{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text4{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text5{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text6{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text7{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text8{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text9{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text10{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text11{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    #text12{width:150px;height:22px;text-align:center;vertical-align:middle;border:2px solid #000000;background-color:#ffffff;margin:0px;padding:0px;line-height:1em;}
+    .tarea1{font-size:14px;resize:none;width:140px;}
+    #jpmark1{width:18px;height:18px;display:none;}
+    #jpmark2{width:18px;height:18px;display:none;}
+    #jpmark3{width:18px;height:18px;display:none;}
+    #jpmark4{width:18px;height:18px;display:none;}
+    #jpmark5{width:18px;height:18px;display:none;}
+    #jpmark6{width:18px;height:18px;display:none;}
+    #jpmark7{width:18px;height:18px;display:none;}
+    #jpmark8{width:18px;height:18px;display:none;}
+    #jpmark9{width:18px;height:18px;display:none;}
+    #jpmark10{width:18px;height:18px;display:none;}
+    #jpmark11{width:18px;height:18px;display:none;}
+    #jpmark12{width:18px;height:18px;display:none;}
+}
+</style>
+</head>
+<body id="body">
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■ヘッダー■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<div id="pcheader"></div>
+<div id="header"></div>
+<img src="eimg/neohpicpc.png"id="headpicpc">
+<img src="eimg/neohpicsmp.png"id="headpicsmp">
+<table id="t1">
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■ヘッダー被り防止■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr><td id="headmargin"></td></tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■広告表示スペース上段■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr>
+<td class="adspace">
+<!--★★★ここにレスポンシブ広告を配置★★★-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 新pref上 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9642990549530289"
+     data-ad-slot="5214444298"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■作品タイトル■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr>
+<td>
+<h3 id="contitle">
+<!--★★★作品名を記入★★★-->
+項目を好きに決められるルーレット
+</h3>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■共有ボタン設置スペース■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr>
+<td id="sharesp">
+<!--★★★共有ボタン★★★-->
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■作品の説明■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr>
+<td>
+<p id="contint">
+<!--★★★作品の説明を記入★★★-->
+空欄(10文字まで入力可)に自由に選択肢を入力したらスタートボタンを押して回してね！<br>
+どれにしようか迷った時にオススメ！
+</p>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■メインコンテンツ表示スペース■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr>
+<td id="main">
+<div id="d1"><!--★★★★★★★★★★★★★★このd1内にメインコンテンツを配置★★★★★★★★★★★★★★★-->
+<img src="eimg/roulette/rou1.png"id="r1">
+<img src="eimg/roulette/rou2.png"id="r2">
+<img src="eimg/roulette/rou3.png"id="r3">
+<img src="eimg/roulette/rou4.png"id="r4">
+<img src="eimg/roulette/rou5.png"id="r5">
+<img src="eimg/roulette/rou6.png"id="r6">
+<img src="eimg/roulette/rou7.png"id="r7">
+<img src="eimg/roulette/rou8.png"id="r8">
+<img src="eimg/roulette/rou9.png"id="r9">
+<img src="eimg/roulette/rou10.png"id="r10">
+<img src="eimg/roulette/rou11.png"id="r11">
+<img src="eimg/roulette/rou12.png"id="r12">
+<img src="eimg/roulette/rou13.png"id="r13">
+<img src="eimg/roulette/rou14.png"id="r14">
+<img src="eimg/roulette/rou15.png"id="r15">
+<img src="eimg/roulette/rou16.png"id="r16">
+<img src="eimg/roulette/rou17.png"id="r17">
+<img src="eimg/roulette/rou18.png"id="r18">
+<img src="eimg/roulette/rou19.png"id="r19">
+<img src="eimg/roulette/rou20.png"id="r20">
+<img src="eimg/roulette/rou21.png"id="r21">
+<img src="eimg/roulette/rou22.png"id="r22">
+<img src="eimg/roulette/rou23.png"id="r23">
+<img src="eimg/roulette/rou24.png"id="r24">
+<img src="eimg/roulette/startbt.png"id="startbt">
+<img src="eimg/roulette/stopbt.png"id="stopbt">
+<img src="eimg/roulette/yaji.png"id="yaji">
+<div id="tposi">
+<table id="board12">
+<tr><td id="col1"><img src="eimg/roulette/jpmark.png"id="jpmark1"></td><td id="text1"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td><td id="col2"><img src="eimg/roulette/jpmarkred.png"id="jpmark7"></td><td id="text2"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td></tr>
+<tr><td id="col3"><img src="eimg/roulette/jpmark.png"id="jpmark2"></td><td id="text3"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td><td id="col4"><img src="eimg/roulette/jpmark.png"id="jpmark8"></td><td id="text4"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td></tr>
+<tr><td id="col5"><img src="eimg/roulette/jpmark.png"id="jpmark3"></td><td id="text5"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td><td id="col6"><img src="eimg/roulette/jpmark.png"id="jpmark9"></td><td id="text6"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td></tr>
+<tr><td id="col7"><img src="eimg/roulette/jpmark.png"id="jpmark4"></td><td id="text7"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td><td id="col8"><img src="eimg/roulette/jpmarkred.png"id="jpmark10"></td><td id="text8"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td></tr>
+<tr><td id="col9"><img src="eimg/roulette/jpmark.png"id="jpmark5"></td><td id="text9"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td><td id="col10"><img src="eimg/roulette/jpmarkred.png"id="jpmark11"></td><td id="text10"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td></tr>
+<tr><td id="col11"><img src="eimg/roulette/jpmarkred.png"id="jpmark6"></td><td id="text11"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td><td id="col12"><img src="eimg/roulette/jpmarkred.png"id="jpmark12"></td><td id="text12"><form><textarea class="tarea1"cols="10"rows="1"maxlength="10"></textarea></form></td></tr>
+</table>
+</div>
+</div><!--★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★-->
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■広告表示スペース下段■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr>
+<td class="adspace">
+<!--★★★ここにレスポンシブ広告を配置★★★-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 新pref下 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9642990549530289"
+     data-ad-slot="1275199284"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■フッター被り防止■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<tr><td id="footmargin"></td></tr>
+</table>
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■フッター■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<div id="footer"></div>
+<p id="kinshijikou"><span class="shironuki">
+当サイト内のコンテンツの無断転載・無断複製を固く禁止致します。<br>
+<!--
+実況動画等は構いませんが、管理人が投稿しているyoutube動画のみを<br>
+そのままの状態で動画投稿サイトに上げる行為は禁止致します。<br>
+(「実況」動画の一部として紹介するのは構いません。)<br>
+-->
+Copyright&copy;2010-2020 "Fancy Island" All Rights Reserved.
+</span></p>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+let r1 = document.getElementById('r1');
+let r2 = document.getElementById('r2');
+let r3 = document.getElementById('r3');
+let r4 = document.getElementById('r4');
+let r5 = document.getElementById('r5');
+let r6 = document.getElementById('r6');
+let r7 = document.getElementById('r7');
+let r8 = document.getElementById('r8');
+let r9 = document.getElementById('r9');
+let r10 = document.getElementById('r10');
+let r11 = document.getElementById('r11');
+let r12 = document.getElementById('r12');
+let r13 = document.getElementById('r13');
+let r14 = document.getElementById('r14');
+let r15 = document.getElementById('r15');
+let r16 = document.getElementById('r16');
+let r17 = document.getElementById('r17');
+let r18 = document.getElementById('r18');
+let r19 = document.getElementById('r19');
+let r20 = document.getElementById('r20');
+let r21 = document.getElementById('r21');
+let r22 = document.getElementById('r22');
+let r23 = document.getElementById('r23');
+let r24 = document.getElementById('r24');
+let startbt = document.getElementById('startbt');
+let stopbt = document.getElementById('stopbt');
+let jpmark1 = document.getElementById('jpmark1');
+let jpmark2 = document.getElementById('jpmark2');
+let jpmark3 = document.getElementById('jpmark3');
+let jpmark4 = document.getElementById('jpmark4');
+let jpmark5 = document.getElementById('jpmark5');
+let jpmark6 = document.getElementById('jpmark6');
+let jpmark7 = document.getElementById('jpmark7');
+let jpmark8 = document.getElementById('jpmark8');
+let jpmark9 = document.getElementById('jpmark9');
+let jpmark10 = document.getElementById('jpmark10');
+let jpmark11 = document.getElementById('jpmark11');
+let jpmark12 = document.getElementById('jpmark12');
+/*スコア*/
+let fps0 = 0;
+let timerId0 = '';
+/*それぞれのルーレット減速タイマー用fps1～12*/
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let fps11 = 0;
+let fps12 = 0;
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■回ってるルーレット盤を消す■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function allNone(){
+    r1.style.display='none';
+    r2.style.display='none';
+    r3.style.display='none';
+    r4.style.display='none';
+    r5.style.display='none';
+    r6.style.display='none';
+    r7.style.display='none';
+    r8.style.display='none';
+    r9.style.display='none';
+    r10.style.display='none';
+    r11.style.display='none';
+    r12.style.display='none';
+    r13.style.display='none';
+    r14.style.display='none';
+    r15.style.display='none';
+    r16.style.display='none';
+    r17.style.display='none';
+    r18.style.display='none';
+    r19.style.display='none';
+    r20.style.display='none';
+    r21.style.display='none';
+    r22.style.display='none';
+    r23.style.display='none';
+    r24.style.display='none';
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■スタートボタンをクリックしてルーレットを回す■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+startbt.addEventListener('mouseover',function(){startbt.style.cursor='pointer';});
+startbt.addEventListener('click',function(){
+    startbt.style.display='none';
+    stopbt.style.display='inline';
+    fps0 = 0;
+    fps1 = 0;
+    fps2 = 0;
+    fps3 = 0;
+    fps4 = 0;
+    fps5 = 0;
+    fps6 = 0;
+    fps7 = 0;
+    fps8 = 0;
+    fps9 = 0;
+    fps10 = 0;
+    fps11 = 0;
+    fps12 = 0;
+    jpmark1.style.display='none';
+    jpmark2.style.display='none';
+    jpmark3.style.display='none';
+    jpmark4.style.display='none';
+    jpmark5.style.display='none';
+    jpmark6.style.display='none';
+    jpmark7.style.display='none';
+    jpmark8.style.display='none';
+    jpmark9.style.display='none';
+    jpmark10.style.display='none';
+    jpmark11.style.display='none';
+    jpmark12.style.display='none';
+    timerId0 = setInterval(function(){
+        fps0++;
+        switch(fps0){
+            case 1:
+            r1.style.display = 'none';
+            r2.style.display = 'inline';
+            break;
+            case 2:
+            r2.style.display = 'none';
+            r3.style.display = 'inline';
+            break;
+            case 3:
+            r3.style.display = 'none';
+            r4.style.display = 'inline';
+            break;
+            case 4:
+            r4.style.display = 'none';
+            r5.style.display = 'inline';
+            break;
+            case 5:
+            r5.style.display = 'none';
+            r6.style.display = 'inline';
+            break;
+            case 6:
+            r6.style.display = 'none';
+            r7.style.display = 'inline';
+            break;
+            case 7:
+            r7.style.display = 'none';
+            r8.style.display = 'inline';
+            break;
+            case 8:
+            r8.style.display = 'none';
+            r9.style.display = 'inline';
+            break;
+            case 9:
+            r9.style.display = 'none';
+            r10.style.display = 'inline';
+            break;
+            case 10:
+            r10.style.display = 'none';
+            r11.style.display = 'inline';
+            break;
+            case 11:
+            r11.style.display = 'none';
+            r12.style.display = 'inline';
+            break;
+            case 12:
+            r12.style.display = 'none';
+            r13.style.display = 'inline';
+            break;
+            case 13:
+            r13.style.display = 'none';
+            r14.style.display = 'inline';
+            break;
+            case 14:
+            r14.style.display = 'none';
+            r15.style.display = 'inline';
+            break;
+            case 15:
+            r15.style.display = 'none';
+            r16.style.display = 'inline';
+            break;
+            case 16:
+            r16.style.display = 'none';
+            r17.style.display = 'inline';
+            break;
+            case 17:
+            r17.style.display = 'none';
+            r18.style.display = 'inline';
+            break;
+            case 18:
+            r18.style.display = 'none';
+            r19.style.display = 'inline';
+            break;
+            case 19:
+            r19.style.display = 'none';
+            r20.style.display = 'inline';
+            break;
+            case 20:
+            r20.style.display = 'none';
+            r21.style.display = 'inline';
+            break;
+            case 21:
+            r21.style.display = 'none';
+            r22.style.display = 'inline';
+            break;
+            case 22:
+            r22.style.display = 'none';
+            r23.style.display = 'inline';
+            break;
+            case 23:
+            r23.style.display = 'none';
+            r24.style.display = 'inline';
+            break;
+            case 24:
+            r24.style.display = 'none';
+            r1.style.display = 'inline';
+            fps0 = 0;
+            break;
+        }
+    },20);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■ストップボタンをクリックしてルーレットを止める■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+stopbt.addEventListener('mouseover',function(){stopbt.style.cursor='pointer';});
+stopbt.addEventListener('click',function(){
+    stopbt.style.display='none';
+    let com = Math.floor(Math.random()*12)+1;
+    switch(com){
+        case 1://★★★★★★赤で停止させる★★★★★★
+        let timerId1 = setInterval(function(){//■■■数字変える
+            fps1++;//■■■数字変える
+            switch(fps1){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r18.style.display = 'inline';
+                break;
+                case 3:
+                r18.style.display = 'none';
+                r19.style.display = 'inline';
+                break;
+                case 6:
+                r19.style.display = 'none';
+                r20.style.display = 'inline';
+                break;
+                case 10:
+                r20.style.display = 'none';
+                r21.style.display = 'inline';
+                break;
+                case 15:
+                r21.style.display = 'none';
+                r22.style.display = 'inline';
+                break;
+                case 21:
+                r22.style.display = 'none';
+                r23.style.display = 'inline';
+                break;
+                case 28:
+                r23.style.display = 'none';
+                r24.style.display = 'inline';
+                break;
+                case 36:
+                r24.style.display = 'none';
+                r1.style.display = 'inline';
+                jpmark1.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId1);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 2://★★★★★★黄緑で停止させる★★★★★★
+        let timerId2 = setInterval(function(){//■■■数字変える
+            fps2++;//■■■数字変える
+            switch(fps2){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r20.style.display = 'inline';
+                break;
+                case 3:
+                r20.style.display = 'none';
+                r21.style.display = 'inline';
+                break;
+                case 6:
+                r21.style.display = 'none';
+                r22.style.display = 'inline';
+                break;
+                case 10:
+                r22.style.display = 'none';
+                r23.style.display = 'inline';
+                break;
+                case 15:
+                r23.style.display = 'none';
+                r24.style.display = 'inline';
+                break;
+                case 21:
+                r24.style.display = 'none';
+                r1.style.display = 'inline';
+                break;
+                case 28:
+                r1.style.display = 'none';
+                r2.style.display = 'inline';
+                break;
+                case 36:
+                r2.style.display = 'none';
+                r3.style.display = 'inline';
+                jpmark12.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId2);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 3://★★★★★★ピンクで停止させる★★★★★★
+        let timerId3 = setInterval(function(){//■■■数字変える
+            fps3++;//■■■数字変える
+            switch(fps3){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r22.style.display = 'inline';
+                break;
+                case 3:
+                r22.style.display = 'none';
+                r23.style.display = 'inline';
+                break;
+                case 6:
+                r23.style.display = 'none';
+                r24.style.display = 'inline';
+                break;
+                case 10:
+                r24.style.display = 'none';
+                r1.style.display = 'inline';
+                break;
+                case 15:
+                r1.style.display = 'none';
+                r2.style.display = 'inline';
+                break;
+                case 21:
+                r2.style.display = 'none';
+                r3.style.display = 'inline';
+                break;
+                case 28:
+                r3.style.display = 'none';
+                r4.style.display = 'inline';
+                break;
+                case 36:
+                r4.style.display = 'none';
+                r5.style.display = 'inline';
+                jpmark6.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId3);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 4://★★★★★★水色で停止させる★★★★★★
+        let timerId4 = setInterval(function(){//■■■数字変える
+            fps4++;//■■■数字変える
+            switch(fps4){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r24.style.display = 'inline';
+                break;
+                case 3:
+                r24.style.display = 'none';
+                r1.style.display = 'inline';
+                break;
+                case 6:
+                r1.style.display = 'none';
+                r2.style.display = 'inline';
+                break;
+                case 10:
+                r2.style.display = 'none';
+                r3.style.display = 'inline';
+                break;
+                case 15:
+                r3.style.display = 'none';
+                r4.style.display = 'inline';
+                break;
+                case 21:
+                r4.style.display = 'none';
+                r5.style.display = 'inline';
+                break;
+                case 28:
+                r5.style.display = 'none';
+                r6.style.display = 'inline';
+                break;
+                case 36:
+                r6.style.display = 'none';
+                r7.style.display = 'inline';
+                jpmark11.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId4);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 5://★★★★★★青色で停止させる★★★★★★
+        let timerId5 = setInterval(function(){//■■■数字変える
+            fps5++;//■■■数字変える
+            switch(fps5){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r2.style.display = 'inline';
+                break;
+                case 3:
+                r2.style.display = 'none';
+                r3.style.display = 'inline';
+                break;
+                case 6:
+                r3.style.display = 'none';
+                r4.style.display = 'inline';
+                break;
+                case 10:
+                r4.style.display = 'none';
+                r5.style.display = 'inline';
+                break;
+                case 15:
+                r5.style.display = 'none';
+                r6.style.display = 'inline';
+                break;
+                case 21:
+                r6.style.display = 'none';
+                r7.style.display = 'inline';
+                break;
+                case 28:
+                r7.style.display = 'none';
+                r8.style.display = 'inline';
+                break;
+                case 36:
+                r8.style.display = 'none';
+                r9.style.display = 'inline';
+                jpmark5.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId5);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 6://★★★★★★白色で停止させる★★★★★★
+        let timerId6 = setInterval(function(){//■■■数字変える
+            fps6++;//■■■数字変える
+            switch(fps6){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r4.style.display = 'inline';
+                break;
+                case 3:
+                r4.style.display = 'none';
+                r5.style.display = 'inline';
+                break;
+                case 6:
+                r5.style.display = 'none';
+                r6.style.display = 'inline';
+                break;
+                case 10:
+                r6.style.display = 'none';
+                r7.style.display = 'inline';
+                break;
+                case 15:
+                r7.style.display = 'none';
+                r8.style.display = 'inline';
+                break;
+                case 21:
+                r8.style.display = 'none';
+                r9.style.display = 'inline';
+                break;
+                case 28:
+                r9.style.display = 'none';
+                r10.style.display = 'inline';
+                break;
+                case 36:
+                r10.style.display = 'none';
+                r11.style.display = 'inline';
+                jpmark10.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId6);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 7://★★★★★★灰色で停止させる★★★★★★
+        let timerId7 = setInterval(function(){//■■■数字変える
+            fps7++;//■■■数字変える
+            switch(fps7){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r6.style.display = 'inline';
+                break;
+                case 3:
+                r6.style.display = 'none';
+                r7.style.display = 'inline';
+                break;
+                case 6:
+                r7.style.display = 'none';
+                r8.style.display = 'inline';
+                break;
+                case 10:
+                r8.style.display = 'none';
+                r9.style.display = 'inline';
+                break;
+                case 15:
+                r9.style.display = 'none';
+                r10.style.display = 'inline';
+                break;
+                case 21:
+                r10.style.display = 'none';
+                r11.style.display = 'inline';
+                break;
+                case 28:
+                r11.style.display = 'none';
+                r12.style.display = 'inline';
+                break;
+                case 36:
+                r12.style.display = 'none';
+                r13.style.display = 'inline';
+                jpmark4.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId7);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 8://★★★★★★黒色で停止させる★★★★★★
+        let timerId8 = setInterval(function(){//■■■数字変える
+            fps8++;//■■■数字変える
+            switch(fps8){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r8.style.display = 'inline';
+                break;
+                case 3:
+                r8.style.display = 'none';
+                r9.style.display = 'inline';
+                break;
+                case 6:
+                r9.style.display = 'none';
+                r10.style.display = 'inline';
+                break;
+                case 10:
+                r10.style.display = 'none';
+                r11.style.display = 'inline';
+                break;
+                case 15:
+                r11.style.display = 'none';
+                r12.style.display = 'inline';
+                break;
+                case 21:
+                r12.style.display = 'none';
+                r13.style.display = 'inline';
+                break;
+                case 28:
+                r13.style.display = 'none';
+                r14.style.display = 'inline';
+                break;
+                case 36:
+                r14.style.display = 'none';
+                r15.style.display = 'inline';
+                jpmark9.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId8);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 9://★★★★★★紫色で停止させる★★★★★★
+        let timerId9 = setInterval(function(){//■■■数字変える
+            fps9++;//■■■数字変える
+            switch(fps9){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r10.style.display = 'inline';
+                break;
+                case 3:
+                r10.style.display = 'none';
+                r11.style.display = 'inline';
+                break;
+                case 6:
+                r11.style.display = 'none';
+                r12.style.display = 'inline';
+                break;
+                case 10:
+                r12.style.display = 'none';
+                r13.style.display = 'inline';
+                break;
+                case 15:
+                r13.style.display = 'none';
+                r14.style.display = 'inline';
+                break;
+                case 21:
+                r14.style.display = 'none';
+                r15.style.display = 'inline';
+                break;
+                case 28:
+                r15.style.display = 'none';
+                r16.style.display = 'inline';
+                break;
+                case 36:
+                r16.style.display = 'none';
+                r17.style.display = 'inline';
+                jpmark3.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId9);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 10://★★★★★★オレンジ色で停止させる★★★★★★
+        let timerId10 = setInterval(function(){//■■■数字変える
+            fps10++;//■■■数字変える
+            switch(fps10){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r12.style.display = 'inline';
+                break;
+                case 3:
+                r12.style.display = 'none';
+                r13.style.display = 'inline';
+                break;
+                case 6:
+                r13.style.display = 'none';
+                r14.style.display = 'inline';
+                break;
+                case 10:
+                r14.style.display = 'none';
+                r15.style.display = 'inline';
+                break;
+                case 15:
+                r15.style.display = 'none';
+                r16.style.display = 'inline';
+                break;
+                case 21:
+                r16.style.display = 'none';
+                r17.style.display = 'inline';
+                break;
+                case 28:
+                r17.style.display = 'none';
+                r18.style.display = 'inline';
+                break;
+                case 36:
+                r18.style.display = 'none';
+                r19.style.display = 'inline';
+                jpmark8.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId10);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 11://★★★★★★緑色で停止させる★★★★★★
+        let timerId11 = setInterval(function(){//■■■数字変える
+            fps11++;//■■■数字変える
+            switch(fps11){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r14.style.display = 'inline';
+                break;
+                case 3:
+                r14.style.display = 'none';
+                r15.style.display = 'inline';
+                break;
+                case 6:
+                r15.style.display = 'none';
+                r16.style.display = 'inline';
+                break;
+                case 10:
+                r16.style.display = 'none';
+                r17.style.display = 'inline';
+                break;
+                case 15:
+                r17.style.display = 'none';
+                r18.style.display = 'inline';
+                break;
+                case 21:
+                r18.style.display = 'none';
+                r19.style.display = 'inline';
+                break;
+                case 28:
+                r19.style.display = 'none';
+                r20.style.display = 'inline';
+                break;
+                case 36:
+                r20.style.display = 'none';
+                r21.style.display = 'inline';
+                jpmark2.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId11);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+        case 12://★★★★★★黄色で停止させる★★★★★★
+        let timerId12 = setInterval(function(){//■■■数字変える
+            fps12++;//■■■数字変える
+            switch(fps12){//■■■数字変える
+                case 1:
+                clearInterval(timerId0);
+                allNone();
+                r16.style.display = 'inline';
+                break;
+                case 3:
+                r16.style.display = 'none';
+                r17.style.display = 'inline';
+                break;
+                case 6:
+                r17.style.display = 'none';
+                r18.style.display = 'inline';
+                break;
+                case 10:
+                r18.style.display = 'none';
+                r19.style.display = 'inline';
+                break;
+                case 15:
+                r19.style.display = 'none';
+                r20.style.display = 'inline';
+                break;
+                case 21:
+                r20.style.display = 'none';
+                r21.style.display = 'inline';
+                break;
+                case 28:
+                r21.style.display = 'none';
+                r22.style.display = 'inline';
+                break;
+                case 36:
+                r22.style.display = 'none';
+                r23.style.display = 'inline';
+                jpmark7.style.display = 'inline';//■■■数字変える
+                clearInterval(timerId12);//■■■数字変える
+                startbt.style.display = 'inline';
+                break;
+            }
+        },20);
+        break;
+    }
+});
+</script>
+</body>
+
+<!-- Mirrored from lomando.com/roulette.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:50:02 GMT -->
+</html>

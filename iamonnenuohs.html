@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/iamonnenuohs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:54:26 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ゐﾕ聞禰「。ﾚ、於ｽ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:560px;
+    height:710px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+
+#textarea1{font-size: 18pt;}
+
+#seikai{display: none;}
+#seikai2{display: none;}
+#faceup{display: none;}
+#door{display: none;}
+#uradoor{display: none;}
+#door2{width:80px;height:183px;position:absolute;top:0px;left:445px;opacity:0.0;display:none;}
+#door3{width:80px;height:183px;position:absolute;top:198px;left:445px;display:none;}
+#hintbt{
+    width:33px;
+    height:45px;
+    position:absolute;
+    bottom:0px;
+    left:90px;
+}
+#hint{
+    width:375px;
+    height:45px;
+    position:absolute;
+    bottom:0px;
+    left:90px;
+    display:none;
+}
+#englink{
+    position:absolute;
+    bottom:50px;
+    left:210px;
+    color:#ffffff;
+    font-size: 13pt;
+}
+#p1{color:#ffffff;font-size: 12pt;text-align:center;}
+#dorodoro{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--音声の二次配布・無断利用禁止。-->
+<audio id="seikaidayo" preload="auto">
+<source src="pse/smpboykoe1.wav" type="audio/wav">
+<source src="pse/smpboykoe1.mp3" type="audio/mp3">
+</audio>
+
+<audio id="chigauyo" preload="auto">
+<source src="pse/smpboykoe2.wav" type="audio/wav">
+<source src="pse/smpboykoe2.mp3" type="audio/mp3">
+</audio>
+
+<audio id="opense" preload="auto">
+<source src="pse/boxopen.wav" type="audio/wav">
+<source src="pse/boxopen.mp3" type="audio/mp3">
+</audio>
+
+<audio id="screamkoe" preload="auto">
+<source src="pse/screamlong.wav" type="audio/wav">
+<source src="pse/screamlong.mp3" type="audio/mp3">
+</audio>
+<div id="d1">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FQ74w8YeguM" id="douga" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p id="p1">
+上の動画内の平仮名10文字を並べ替えて作った文章<br>
+を、下の欄に入力して「決定」ボタンを押してね！
+</p>
+<p>
+<form name="form1"id="form1">
+<textarea name="textarea1"id="textarea1"value="1" cols="20" rows=1 maxlength="10"></textarea>
+</form>
+</p>
+<p><input type="button" value="決定"id="kakuninbt"></p>
+<img src = "pimg/smpboyseikai.gif"id="seikai">
+<img src = "pimg/smpboyseikai2.gif"id="seikai2">
+<img src = "pimg/smpboyup.jpg"id="faceup">
+<img src = "pimg/smprdoor.jpg"id="door">
+<img src = "pimg/smprdoor.jpg"id="uradoor">
+<a id="englink" href="ieamonnnegnuohs12.html" target="_top">English edition</a>
+<img src = "pimg/smpboyhintbt.jpg"id="hintbt">
+<img src = "pimg/smpboyhint.jpg"id="hint">
+<img src = "pimg/dorodoro.jpg"id="dorodoro">
+<img src = "pimg/smprdoor.jpg"id="door2">
+<img src = "pimg/smprdoor.jpg"id="door3">
+</div>
+<script>
+document.oncontextmenu = function(){return false;}
+let form1 = document.getElementById('form1');
+let aikotoba = document.form1.textarea1;
+let d1 = document.getElementById('d1');
+let p1 = document.getElementById('p1');
+let kakuninbt = document.getElementById('kakuninbt');
+let seikai = document.getElementById('seikai');
+let seikai2 = document.getElementById('seikai2');
+let faceup = document.getElementById('faceup');
+let door = document.getElementById('door');
+let door2 = document.getElementById('door2');
+let door3 = document.getElementById('door3');
+let seikaidayo = document.getElementById('seikaidayo');
+let seopen = document.getElementById('opense');
+let chigauyo = document.getElementById('chigauyo');
+let koescream = document.getElementById('screamkoe');
+let hintbt = document.getElementById('hintbt');
+let hint = document.getElementById('hint');
+let douga = document.getElementById('douga');
+let englink = document.getElementById('englink');
+let seikaiTimeNum = 0;
+let seikaiTimeNum2 = 0;
+let chigauTimeNum = 0;
+let fps = 0;
+
+kakuninbt.addEventListener('mouseover',function(){kakuninbt.style.cursor = 'pointer';});
+kakuninbt.addEventListener('click',function(){
+    if(aikotoba.value === 'あなたのうしろにいる'){
+        seikaidayo.load();
+        seikaidayo.play();
+        seikaiTimeNum = 1;
+        p1.style.display = 'none';
+        kakuninbt.style.display = 'none';
+        form1.style.display = 'none';
+        seikai.style.display = 'inline';
+        let timerId1 = setInterval(function(){
+            if(seikaiTimeNum <= 0){
+                clearInterval(timerId1);
+                seikai.style.display = 'none';
+                door.style.display = 'inline';
+            }
+            seikaiTimeNum--;
+    },1065);
+    }else if(aikotoba.value === 'にたいあめのみこかね'){
+        p1.style.display = 'none';
+        kakuninbt.style.display = 'none';
+        form1.style.display = 'none';
+        seikai2.style.display = 'inline';
+        let timerId2 = setInterval(function(){
+            seikaiTimeNum2++;
+            switch(seikaiTimeNum2){
+                case 19:
+                seopen.load();
+                seopen.play();
+                break;
+                case 27:
+                seikai2.style.display = 'none';
+                uradoor.style.display = 'inline';
+                clearInterval(timerId2);
+                break;
+            }
+        },80);
+    }else{
+        chigauyo.load();
+        chigauyo.play();
+        chigauTimeNum = 1;
+        kakuninbt.style.display = 'none';
+        faceup.style.display = 'inline';
+        let timerId2 = setInterval(function(){
+            if(chigauTimeNum <= 0){
+                clearInterval(timerId2);
+                faceup.style.display = 'none';
+                kakuninbt.style.display = 'inline';
+            }
+            chigauTimeNum--;
+    },1000);
+    }
+});
+
+hintbt.addEventListener('mouseover',function(){hintbt.style.cursor = 'pointer';});
+hintbt.addEventListener('click',function(){
+    hintbt.style.display = 'none';
+    hint.style.display = 'inline';
+});
+
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('click',function(){
+    koescream.load();
+    koescream.play();
+    door.style.display = 'none';
+    douga.style.display = 'none';
+    hintbt.style.display = 'none';
+    hint.style.display = 'none';
+    englink.style.display = 'none';
+    d1.style.width = '970px';
+    d1.style.height = '580px';
+    dorodoro.style.display = 'inline';
+    let timerId3 = setInterval(function(){
+        switch(fps){
+            case 11:
+            door2.style.display = 'inline';
+            break;
+            case 12:
+            door2.style.opacity = '0.2';
+            door2.style.top = '40px';
+            break;
+            case 14:
+            door2.style.opacity = '0.4';
+            door2.style.top = '80px';
+            break;
+            case 16:
+            door2.style.opacity = '0.6';
+            door2.style.top = '120px';
+            break;
+            case 18:
+            door2.style.opacity = '0.8';
+            door2.style.top = '160px';
+            break;
+            case 20:
+            door2.style.opacity = '1.0';
+            door2.style.top = '198px';
+            break;
+            case 22:
+            door2.style.display = 'none';
+            door3.style.display = 'inline';
+            clearInterval(timerId3);
+            break;
+        }
+        fps++;
+    },80);
+});
+door3.addEventListener('mouseover',function(){door3.style.cursor = 'pointer';});
+door3.addEventListener('click',function(){
+    location.href = 'onomureiminem.html';
+});
+uradoor.addEventListener('mouseover',function(){uradoor.style.cursor = 'pointer';});
+uradoor.addEventListener('click',function(){
+    location.href = 'nsiduehfioqdpso.html';
+});
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/iamonnenuohs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:54:41 GMT -->
+</html>

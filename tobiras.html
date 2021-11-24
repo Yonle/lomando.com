@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/tobiras.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:57:37 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>扉</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:582px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:582px;position:absolute;left:0px;top:0px;}
+#door{width:175px;height:349px;position:absolute;left:397px;top:116px;}
+#dooropen{width:175px;height:349px;position:absolute;left:397px;top:116px;display:none;}
+#nikki1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#nikki2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#konkon{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#curse{width:600px;height:800px;position:absolute;left:0px;top:0px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:582px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="opense" preload="auto">
+<source src="pse/randooropen.wav" type="audio/wav">
+<source src="pse/randooropen.mp3" type="audio/mp3">
+</audio>
+
+<audio id="nikkikoe" preload="auto">
+<source src="pse/screamlong.wav" type="audio/wav">
+<source src="pse/screamlong.mp3" type="audio/mp3">
+</audio>
+
+<audio id="konkonse" preload="auto" loop>
+<source src="pse/konkonse.wav" type="audio/wav">
+<source src="pse/konkonse.mp3" type="audio/mp3">
+</audio>
+
+<audio id="cursese" preload="auto" loop>
+<source src="pse/vhsboo.wav" type="audio/wav">
+<source src="pse/vhsboo.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src = "pimg/randomdoorback.gif" id="back">
+<img src = "pimg/randomdoor.jpg" id="door">
+<img src = "pimg/randomdooropen.gif" id="dooropen">
+<img src = "pimg/rannikki1.jpg" id="nikki1">
+<img src = "pimg/rannikki2.jpg" id="nikki2">
+<img src="pimg/konkonsan.gif"id="konkon">
+<img src="pimg/curse1.jpg"id="curse">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let back = document.getElementById('back');
+let door = document.getElementById('door');
+let dooropen = document.getElementById('dooropen');
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let seopen = document.getElementById('opense');
+let koenikki = document.getElementById('nikkikoe');
+let sekonkon = document.getElementById('konkonse');
+let securse = document.getElementById('cursese');
+
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('click',function(){
+    seopen.load();
+    seopen.play();
+    let bunki = Math.floor(Math.random()*4)+1;
+    switch(bunki){
+        //■■■分岐1■■■
+        case 1:
+        door.style.display = 'none';
+        dooropen.style.display = 'inline';
+        let timerId1 = setInterval(function(){
+            fps1++;
+            if(fps1 >= 9){
+                location.href = 'tokonoma.html';
+                clearInterval(timerId1);
+            }
+        },80);
+        break;
+        //■■■分岐2■■■
+        case 2:
+        door.style.display = 'none';
+        dooropen.style.display = 'inline';
+        let timerId2 = setInterval(function(){
+            fps2++;
+            switch(fps2){
+                case 1:
+                koenikki.load();
+                break;
+                case 9:
+                dooropen.style.display = 'none';
+                back.style.display = 'none';
+                nikki1.style.display = 'inline';
+                break;
+                case 33:
+                koenikki.play();
+                nikki1.style.display = 'none';
+                nikki2.style.display = 'inline';
+                clearInterval(timerId2);
+                break;
+            }
+        },80);
+        break;
+        //■■■分岐3■■■
+        case 3:
+        door.style.display = 'none';
+        dooropen.style.display = 'inline';
+        let timerId3 = setInterval(function(){
+            fps3++;
+            if(fps3 >= 9){
+                sekonkon.load();
+                sekonkon.play();
+                body.style.backgroundColor = '#a40000';
+                back.style.display = 'none';
+                konkon.style.display = 'inline';
+                clearInterval(timerId3);
+            }
+        },80);
+        break;
+        //■■■分岐4■■■
+        case 4:
+        door.style.display = 'none';
+        dooropen.style.display = 'inline';
+        let timerId4 = setInterval(function(){
+            fps4++;
+            if(fps4 >= 9){
+                securse.load();
+                securse.play();
+                back.style.display = 'none';
+                d1.style.width = '600px';
+                d1.style.height = '800px';
+                curse.style.display = 'inline';
+                clearInterval(timerId4);
+            }
+        },80);
+        break;
+    }
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/tobiras.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:57:47 GMT -->
+</html>

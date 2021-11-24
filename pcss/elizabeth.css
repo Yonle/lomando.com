@@ -1,0 +1,277 @@
+#door{
+    width:160px;
+    height:160px;
+    position: absolute;
+    top:210px;
+    left:405px;
+}
+#konkon{
+    width:970px;
+    height:580px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    background-color: #000000;
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+/*エリザベスアニメーション********************************************/
+/*エリザベス1の動き**************************/
+@keyframes eli1move{
+    0% {
+        top:2px;
+        left:0px;
+    }
+    50% {
+        top:2px;
+        left:870px;
+    }
+    100% {
+        top:2px;
+        left:0px;
+    }
+}
+@-webkit-keyframes eli1move{
+    0% {
+        top:2px;
+        left:0px;
+    }
+    50% {
+        top:2px;
+        left:870px;
+    }
+    100% {
+        top:2px;
+        left:0px;
+    }
+}
+/*エリザベス2の動き**************************/
+@keyframes eli2move{
+    0% {
+        top:102px;
+        right:0px;
+    }
+    50% {
+        top:102px;
+        right:911px;
+    }
+    100% {
+        top:102px;
+        right:0px;
+    }
+}
+@-webkit-keyframes eli2move{
+    0% {
+        top:102px;
+        left:0px;
+    }
+    50% {
+        top:102px;
+        left:911px;
+    }
+    100% {
+        top:102px;
+        left:0px;
+    }
+}
+/*エリザベス3の動き**************************/
+@keyframes eli3move{
+    0% {
+        top:161px;
+        left:0px;
+    }
+    50% {
+        top:161px;
+        left:895px;
+    }
+    100% {
+        top:161px;
+        left:0px;
+    }
+}
+@-webkit-keyframes eli3move{
+    0% {
+        top:161px;
+        left:0px;
+    }
+    50% {
+        top:161px;
+        left:895px;
+    }
+    100% {
+        top:161px;
+        left:0px;
+    }
+}
+/*エリザベス4の動き**************************/
+@keyframes eli4move{
+    0% {
+        top:236px;
+        right:0px;
+    }
+    50% {
+        top:236px;
+        right:845px;
+    }
+    100% {
+        top:236px;
+        right:0px;
+    }
+}
+@-webkit-keyframes eli4move{
+    0% {
+        top:236px;
+        right:0px;
+    }
+    50% {
+        top:236px;
+        right:845px;
+    }
+    100% {
+        top:236px;
+        right:0px;
+    }
+}
+/*エリザベス5の動き**************************/
+@keyframes eli5move{
+    0% {
+        top:361px;
+        left:0px;
+    }
+    50% {
+        top:361px;
+        left:804px;
+    }
+    100% {
+        top:361px;
+        left:0px;
+    }
+}
+@-webkit-keyframes eli5move{
+    0% {
+        top:361px;
+        left:0px;
+    }
+    50% {
+        top:361px;
+        left:804px;
+    }
+    100% {
+        top:361px;
+        left:0px;
+    }
+}
+/*エリザベス6の動き**************************/
+@keyframes eli6move{
+    0% {
+        top:527px;
+        right:0px;
+    }
+    50% {
+        top:527px;
+        right:919px;
+    }
+    100% {
+        top:527px;
+        right:0px;
+    }
+}
+@-webkit-keyframes eli6move{
+    0% {
+        top:527px;
+        right:0px;
+    }
+    50% {
+        top:527px;
+        right:919px;
+    }
+    100% {
+        top:527px;
+        right:0px;
+    }
+}
+#eli1{
+    width:100px;
+    height:100px;
+    position:absolute;
+    animation-name: eli1move;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli1move;
+    -webkit-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli2{
+    width:59px;
+    height:59px;
+    position:absolute;
+    animation-name: eli2move;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli2move;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli3{
+    width:75px;
+    height:75px;
+    position:absolute;
+    animation-name: eli3move;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli3move;
+    -webkit-animation-duration: 14s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli4{
+    width:125px;
+    height:125px;
+    position:absolute;
+    animation-name: eli4move;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli4move;
+    -webkit-animation-duration: 18s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli5{
+    width:166px;
+    height:166px;
+    position:absolute;
+    animation-name: eli5move;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli5move;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}
+#eli6{
+    width:51px;
+    height:51px;
+    position:absolute;
+    animation-name: eli6move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: eli6move;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    display:none;
+}

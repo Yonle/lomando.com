@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/tn89alpnos6iop.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:59:09 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ﾄｩﾅﾙﾌﾟﾉｼｵﾌﾟ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+#e1{
+    width:186px;
+    height:120px;
+    background-color: #000000;
+    border:3px solid #ffffff;
+    border-radius:10%;
+    position:absolute;
+    right:4px;
+    top:5px;
+    display:none;
+}
+#ep1{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:17px;
+    color:#ffffff;
+    position:absolute;
+    right:20px;
+    top:17px;
+    display:none;
+}
+#ep2{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:24px;
+    color:#ffffff;
+    position:absolute;
+    right:30px;
+    top:80px;
+    display:none;
+}
+#roulette{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+}
+#enegu{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+}
+#enechoki{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+}
+#enepar{
+    width:100px;
+    height:120px;
+    position:absolute;
+    right:200px;
+    top:8px;
+    display:none;
+}
+#v1{
+    width:186px;
+    height:120px;
+    background-color: #000000;
+    border:3px solid #ffffff;
+    border-radius:10%;
+    position:absolute;
+    left:4px;
+    bottom:5px;
+    display:none;
+}
+#vp1{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:16px;
+    color:#ffffff;
+    position:absolute;
+    left:20px;
+    bottom:70px;
+    display:none;
+}
+#vp2{
+    text-align:center;
+    line-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size:24px;
+    color:#ffffff;
+    position:absolute;
+    left:30px;
+    bottom:35px;
+    display:none;
+}
+/*round1*/
+#yougu{width:100px;height:40px;position:absolute;left:200px;bottom:88px;opacity:0.5;display:none;}
+#youchoki{width:100px;height:40px;position:absolute;left:200px;bottom:48px;opacity:0.5;display:none;}
+#youpar{width:100px;height:40px;position:absolute;left:200px;bottom:8px;opacity:0.5;display:none;}
+
+#yougudm{
+    width:100px;
+    height:40px;
+    position:absolute;
+    left:200px;
+    bottom:88px;
+    display:none;
+}
+#youchokidm{
+    width:100px;
+    height:40px;
+    position:absolute;
+    left:200px;
+    bottom:48px;
+    display:none;
+}
+#youpardm{
+    width:100px;
+    height:40px;
+    position:absolute;
+    left:200px;
+    bottom:8px;
+    display:none;
+}
+#pieyama{
+    width:201px;
+    height:265px;
+    position: absolute;
+    left:385px;
+    top:126px;
+    display:none;
+}
+#pienoroi{
+    width:201px;
+    height:265px;
+    position: absolute;
+    left:385px;
+    top:126px;
+    display:none;
+}
+#pienata{
+    width:201px;
+    height:265px;
+    position: absolute;
+    left:385px;
+    top:126px;
+    display:none;
+}
+#barrier1{width:375px;height:265px;position: absolute;left:298px;top:126px;display:none;}
+/*ガス*/
+#gas1{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#gas2{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#gas3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#gas4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#msgwindow{
+    width:776px;
+    height:115px;
+    background-color:#000000;
+    border:3px solid #ffffff;
+    position: absolute;
+    top:0px;
+    left:97px;
+    display:none;
+}
+#msg1{
+    font-size:10pt;
+    color:#ffffff;
+    text-align: center;
+    display:none;
+}
+#msgwindow2{
+    width:776px;
+    height:54px;
+    background-color:#000000;
+    border:3px solid #ffffff;
+    position: absolute;
+    top:385px;
+    left:97px;
+    display:none;
+}
+#msg3{
+    font-size:15pt;
+    color:#ffffff;
+    text-align: center;
+    display:none;
+}
+#door{
+    width:80px;
+    height:183px;
+    position:absolute;
+    top:198px;
+    left:445px;
+}
+#nextdoor{
+    width:80px;
+    height:183px;
+    position:absolute;
+    top:198px;
+    left:445px;
+    display:none;
+}
+#nextdoordm{
+    width:80px;
+    height:183px;
+    position:absolute;
+    top:198px;
+    left:445px;
+    display:none;
+}
+#blackout{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0.0;
+    display:none;
+}
+#gameover{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0.0;
+    display:none;
+}
+#encount{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#aikokun{
+    width:970px;
+    height:306px;
+    position:absolute;
+    top:137px;
+    right:0px;
+    display:none;
+}
+#memoleft{width:753px;height:580px;position: absolute;left:108px;top:0px;display:none;}
+#memo{width:106px;height:21px;position: absolute;left:432px;top:279px;display:none;}
+#yukie{width:970px;height:560px;position: absolute;left:0px;top:10px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="screamse" preload="auto">
+<source src="pse/scream.wav" type="audio/wav">
+<source src="pse/scream.mp3" type="audio/mp3">
+</audio>
+
+<audio id="sentoubgm" preload="auto" loop>
+<source src="pse/janbgm1.wav" type="audio/wav">
+<source src="pse/janbgm1.mp3" type="audio/mp3">
+</audio>
+
+<audio id="buttonse" preload="auto">
+<source src="pse/janbutton.wav" type="audio/wav">
+<source src="pse/janbutton.mp3" type="audio/mp3">
+</audio>
+
+<audio id="piedeathse" preload="auto">
+<source src="pse/janpiedeath.wav" type="audio/wav">
+<source src="pse/janpiedeath.mp3" type="audio/mp3">
+</audio>
+
+<audio id="ydamagese" preload="auto">
+<source src="pse/janyoudamage.wav" type="audio/wav">
+<source src="pse/janyoudamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="edamagese" preload="auto">
+<source src="pse/janenedamage.wav" type="audio/wav">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="pienoroise" preload="auto">
+<source src="pse/janpienoroi.wav" type="audio/wav">
+<source src="pse/janpienoroi.mp3" type="audio/mp3">
+</audio>
+
+<audio id="aikokunse" preload="auto">
+<source src="se/takawarai.wav" type="audio/wav">
+<source src="se/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="encountse" preload="auto">
+<source src="pse/janencount.wav" type="audio/wav">
+<source src="pse/janencount.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/janplaback.jpg"id="back">
+<img src="pimg/door.jpg"id="door">
+<img src="pimg/janpla.png"id="pieyama">
+<img src="pimg/janplanoroi.gif"id="pienoroi">
+<img src="pimg/janplanata.gif"id="pienata">
+<img src="pimg/janplabarrier1.gif"id="barrier1">
+<!--ガス-->
+<img src="pimg/janplagas1.png"id="gas1">
+<img src="pimg/janplagas2.png"id="gas2">
+<img src="pimg/janplagas3.png"id="gas3">
+<img src="pimg/janplagas4.png"id="gas4">
+<!--パラメータ表示-->
+<div id="e1"></div>
+<p id="ep1"></p>
+<p id="ep2"></p>
+<div id="v1"></div>
+<p id="vp1"></p>
+<p id="vp2"></p>
+<!--メッセージウィンドウ1-->
+<div id="msgwindow"><p id="msg1"></p></div>
+<!--メッセージウィンドウ2-->
+<div id="msgwindow2"><p id="msg3"></p></div>
+<!--round1-->
+<img src="pimg/janguy.jpg"id="yougu">
+<img src="pimg/janchokiy.jpg"id="youchoki">
+<img src="pimg/janpary.jpg"id="youpar">
+<img src="pimg/janerandom.gif"id="roulette">
+<img src="pimg/janguy.jpg"id="yougudm">
+<img src="pimg/janchokiy.jpg"id="youchokidm">
+<img src="pimg/janpary.jpg"id="youpardm">
+<img src="pimg/jangue.jpg"id="enegu">
+<img src="pimg/janchokie.jpg"id="enechoki">
+<img src="pimg/janpare.jpg"id="enepar">
+<img src="pimg/janplaencount.gif"id="encount">
+<img src="pimg/janaikokun.jpg"id="aikokun">
+<!--勝敗判定後-->
+<img src="pimg/door.jpg"id="nextdoor">
+<img src="pimg/door.jpg"id="nextdoordm">
+<img src="pimg/blackout.jpg"id="blackout">
+<img src="pimg/gameover.jpg"id="gameover">
+<!--メモイベント-->
+<img src="pimg/janpiememoright.jpg"id="memoleft">
+<img src="pimg/janmemokirehashi.jpg"id="memo">
+<img src="pimg/mainyukie.gif"id="yukie">
+
+<audio id="yukiese" preload="auto">
+<source src="pse/kbsmkoe.wav" type="audio/wav">
+<source src="pse/kbsmkoe.mp3" type="audio/mp3">
+</audio>
+
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let back = document.getElementById('back');
+let door = document.getElementById('door');
+let encount = document.getElementById('encount');
+let pieyama = document.getElementById('pieyama');
+let pienoroi = document.getElementById('pienoroi');
+let pienata = document.getElementById('pienata');
+let barrier1 = document.getElementById('barrier1');
+let gas1 = document.getElementById('gas1');
+let gas2 = document.getElementById('gas2');
+let gas3 = document.getElementById('gas3');
+let gas4 = document.getElementById('gas4');
+let msgwindow = document.getElementById('msgwindow');
+let msg1 = document.getElementById('msg1');
+let msgwindow2 = document.getElementById('msgwindow2');
+let msg3 = document.getElementById('msg3');
+let e1 = document.getElementById('e1');
+let ep1 = document.getElementById('ep1');
+let ep2 = document.getElementById('ep2');
+let v1 = document.getElementById('v1');
+let vp1 = document.getElementById('vp1');
+let vp2 = document.getElementById('vp2');
+let roulette = document.getElementById('roulette');
+//round1
+let yougu = document.getElementById('yougu');
+let youchoki = document.getElementById('youchoki');
+let youpar = document.getElementById('youpar');
+//それ以外
+let yougudm = document.getElementById('yougudm');
+let youchokidm = document.getElementById('youchokidm');
+let youpardm = document.getElementById('youpardm');
+let enegu = document.getElementById('enegu');
+let enechoki = document.getElementById('enechoki');
+let enepar = document.getElementById('enepar');
+let aikokun = document.getElementById('aikokun');
+let fps1 = 0;
+//こっちと相手のHP
+let youhp = 200;
+let enehp = 200;
+//1st round********************************************************
+const GU = 1;
+const CHOKI = 2;
+const PAR = 3;
+//こっちがグー
+let humhand1 = 0;
+let comhand1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+//こっちがチョキ
+let humhand2 = 0;
+let comhand2 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+//こっちがパー
+let humhand3 = 0;
+let comhand3 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let gasps = 0;
+let renzokutimer = '';
+let gasTimer = '';
+
+//勝敗判定時
+let fpswin = 0;
+let fpslose = 0;
+let blackout = document.getElementById('blackout');
+let gameover = document.getElementById('gameover');
+let nextdoor = document.getElementById('nextdoor');
+let nextdoordm = document.getElementById('nextdoordm');
+
+//SE・BGM
+let sescream = document.getElementById('screamse');
+let bgmsentou = document.getElementById('sentoubgm');
+let sebutton = document.getElementById('buttonse');
+let sepiedeath = document.getElementById('piedeathse');
+let seydamage = document.getElementById('ydamagese');
+let seedamage = document.getElementById('edamagese');
+let sepienoroi = document.getElementById('pienoroise');
+let seaikokun = document.getElementById('aikokunse');
+let seencount = document.getElementById('encountse');
+
+//ガス
+function gasAnime(){
+    gasps = 0;
+    gasTimer = setInterval(function(){
+        gasps++;
+        switch(gasps){
+            case 1:
+            gas2.style.display = 'none';
+            gas1.style.display = 'inline';
+            break;
+            case 2:
+            gas1.style.display = 'none';
+            gas2.style.display = 'inline';
+            break;
+            case 3:
+            gas2.style.display = 'none';
+            gas3.style.display = 'inline';
+            break;
+            case 4:
+            gas3.style.display = 'none';
+            gas4.style.display = 'inline';
+            break;
+            case 5:
+            gas4.style.display = 'none';
+            gas3.style.display = 'inline';
+            break;
+            case 6:
+            gas3.style.display = 'none';
+            gas2.style.display = 'inline';
+            clearInterval(gasTimer);
+            break;
+        }
+    },300);
+}
+
+//ガス連続
+function gasRenzoku(){
+    gasAnime();
+    renzokutimer = setInterval(function(){
+        gasAnime();
+    },2100);
+}
+
+//要素全消し
+function allnone(){
+    e1.style.display = 'none';
+    ep1.style.display = 'none';
+    ep2.style.display = 'none';
+    v1.style.display = 'none';
+    vp1.style.display = 'none';
+    vp2.style.display = 'none';
+    msgwindow2.style.display = 'none';
+    msg3.style.display = 'none';
+    yougudm.style.display = 'none';
+    youchokidm.style.display = 'none';
+    youpardm.style.display = 'none';
+    enegu.style.display = 'none';
+    enechoki.style.display = 'none';
+    enepar.style.display = 'none';
+    gas1.style.display = 'none';
+    gas2.style.display = 'none';
+    gas3.style.display = 'none';
+    gas4.style.display = 'none';
+}
+
+//ジャンケンゲーム用意
+function janReady(){
+    msg1.style.display = 'none';
+    msgwindow.style.display = 'none';
+    msgwindow2.style.display = 'block';
+    msg3.style.display = 'block';
+    msg3.innerText = 'この部屋は化物が放つ毒霧で満ちている・・・。';
+    e1.style.display = 'block';
+    ep1.style.display = 'block';
+    ep1.innerText = 'Mother Puchipuchi\n--------------------';
+    ep2.style.display = 'block';
+    ep2.innerText = 'HP:200/200';
+    v1.style.display = 'block';
+    vp1.style.display = 'block';
+    vp1.innerText = 'You(Poisonous state)\n--------------------';
+    vp2.style.display = 'block';
+    vp2.innerText = 'HP:200/200';
+    roulette.style.display = 'inline';
+    yougu.style.display = 'inline';
+    youchoki.style.display = 'inline';
+    youpar.style.display = 'inline';
+    gasRenzoku();
+}
+//最初に出てくるドアをクリックした時
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('click',function(){
+    sescream.load();
+    sescream.play();
+    door.style.display = 'none';
+    encount.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        fps1++;
+        switch(fps1){
+            case 9:
+            seencount.load();
+            seencount.play();
+            break;
+            case 23:
+            bgmsentou.load();
+            bgmsentou.play();
+            encount.style.display = 'none';
+            pieyama.style.display = 'inline';
+            msgwindow.style.display = 'block';
+            msg1.style.display = 'block';
+            msg1.innerText = '\n\nマザープチプチ「ココカラ先ヘハ、行カセナイ・・・。」\n(Mother Puchipuchi"I will prevent you from going further.")';
+            break;
+            case 33:
+            janReady();
+            clearInterval(timerId1);
+        }
+    },200);
+});
+
+//役を押した時に音を鳴らし、こっちの手札3つを押せないように非表示にする
+function BtseAndJanbthide(){
+    sebutton.load();
+    sebutton.play();
+    yougu.style.display = 'none';
+    youchoki.style.display = 'none';
+    youpar.style.display = 'none';
+}
+
+//現在のラウンドの数値を初期化・表示を非表示にして次のラウンドを用意する
+function roundYoui(){
+    humhand1 = 0;
+    humhand2 = 0;
+    humhand3 = 0;
+    comhand1 = 0;
+    comhand2 = 0;
+    comhand3 = 0;
+    fps2 = 0;
+    fps3 = 0;
+    fps4 = 0;
+    fps5 = 0;
+    fps6 = 0;
+    fps7 = 0;
+    fps8 = 0;
+    fps9 = 0;
+    fps10 = 0;
+    yougudm.style.display = 'none';
+    youchokidm.style.display = 'none';
+    youpardm.style.display = 'none';
+    enegu.style.display = 'none';
+    enechoki.style.display = 'none';
+    enepar.style.display = 'none';
+    yougu.style.display = 'inline';
+    youchoki.style.display = 'inline';
+    youpar.style.display = 'inline';
+    roulette.style.display = 'inline';
+    msg3.innerText = 'この部屋は化物が放つ毒霧で満ちている・・・。';
+}
+
+//互いの残りHPの表示変更(残りHPが0以下になった場合、負の数は0で表示する)
+function hpHenkou(){
+    //こっちのHP
+    if(youhp<=0){
+        vp2.innerText = 'HP:000/200';
+    }else if(youhp<200 && youhp>=100){
+        vp2.innerText = 'HP:'+youhp+'/200';
+    }else if(youhp<100 && youhp>=10){
+        vp2.innerText = 'HP:0'+youhp+'/200';
+    }else if(youhp<10 && youhp>=1){
+        vp2.innerText = 'HP:00'+youhp+'/200';
+    }else{
+        vp2.innerText = 'HP:200/200';
+    }
+    //相手のHP
+    if(enehp<=0){
+        ep2.innerText = 'HP:000/200';
+    }else if(enehp<200 && enehp>=100){
+        ep2.innerText = 'HP:'+enehp+'/200';
+    }else if(enehp<100 && enehp>=10){
+        ep2.innerText = 'HP:0'+enehp+'/200';
+    }else if(enehp<10 && enehp>=1){
+        ep2.innerText = 'HP:00'+enehp+'/200';
+    }else{
+        ep2.innerText = 'HP:200/200';
+    }
+}
+//互いのHPの値が変わった後に残りHPをチェックして値に応じて処理を変える
+function hpCheck(){
+    if((youhp>0 && enehp<=0)||(youhp<=0 && enehp<=0)){
+        let wintimer = setInterval(function(){
+            switch(fpswin){
+                case 1:
+                msg3.innerText = 'マザープチプチに勝利した！';
+                sepiedeath.load();
+                sepiedeath.play();
+                break;
+                case 2:
+                pieyama.style.opacity = '0.8';
+                break;
+                case 4:
+                pieyama.style.opacity = '0.6';
+                break;
+                case 6:
+                pieyama.style.opacity = '0.4';
+                break;
+                case 8:
+                pieyama.style.opacity = '0.2';
+                break;
+                case 10:
+                pieyama.style.display = 'none';
+                blackout.style.display = 'inline';
+                break;
+                case 12:
+                blackout.style.opacity = '0.2';
+                break;
+                case 14:
+                blackout.style.opacity = '0.4';
+                break;
+                case 16:
+                blackout.style.opacity = '0.6';
+                break;
+                case 18:
+                blackout.style.opacity = '0.8';
+                break;
+                case 20:
+                clearInterval(renzokutimer);
+                clearInterval(gasTimer);
+                blackout.style.opacity = '1.0';
+                nextdoordm.style.display = 'inline';
+                bgmsentou.pause();
+                allnone();
+                break;
+                case 22:
+                blackout.style.opacity = '0.8';
+                break;
+                case 24:
+                blackout.style.opacity = '0.6';
+                break;
+                case 26:
+                blackout.style.opacity = '0.4';
+                break;
+                case 28:
+                blackout.style.opacity = '0.2';
+                break;
+                case 30:
+                blackout.style.display = 'none';
+                nextdoordm.style.display = 'none';
+                nextdoor.style.display = 'inline';
+                clearInterval(wintimer);
+                break;
+                }
+                fpswin++;
+                },80);
+    }else if(youhp<=0 && enehp>0){
+        let losetimer = setInterval(function(){
+            switch(fpslose){
+                case 1:
+                msg3.innerText = 'マザープチプチに敗北した・・・。';
+                break;
+                case 12:
+                gameover.style.display = 'inline';
+                break;
+                case 14:
+                gameover.style.opacity = '0.2';
+                body.style.backgroundColor = '#330000';
+                break;
+                case 16:
+                gameover.style.opacity = '0.4';
+                body.style.backgroundColor = '#660000';
+                break;
+                case 18:
+                gameover.style.opacity = '0.6';
+                body.style.backgroundColor = '#990000';
+                break;
+                case 20:
+                gameover.style.opacity = '0.8';
+                body.style.backgroundColor = '#cc0000';
+                break;
+                case 22:
+                clearInterval(renzokutimer);
+                gameover.style.opacity = '1.0';
+                body.style.backgroundColor = '#ff0000';
+                bgmsentou.pause();
+                allnone();
+                break;
+                case 34:
+                location.href = 'topd.html';
+                clearInterval(losetimer);
+                break;
+                }
+                fpslose++;
+                },80);
+    }else{
+        roundYoui();
+    }
+}
+//毒による追加ダメージ
+function poisonDamage(){
+    msg3.innerText = 'あなたは毒によるダメージを受けた。';
+    v1.style.backgroundColor = '#4c0271';
+    youhp -= 5;
+    hpHenkou();
+}
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■こっちがグー出した時のパターン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+yougu.addEventListener('mouseover',function(){yougu.style.opacity = '1.0';yougu.style.cursor = 'pointer';});
+yougu.addEventListener('mouseout',function(){yougu.style.opacity = '0.5';});
+yougu.addEventListener('click',function(){
+    BtseAndJanbthide();
+    yougudm.style.display = 'inline';
+    humhand1 = GU;
+    comhand1 = Math.floor(Math.random()*3)+1;
+    switch(comhand1){
+        //■■■■■■■■■■こっちグー相手グーであいこ■■■■■■■■■■
+        case GU:
+        roulette.style.display = 'none';
+        enegu.style.display = 'inline';
+        let timerId2 = setInterval(function(){
+            switch(fps2){
+                case 12:
+                seaikokun.load();
+                seaikokun.play();
+                aikokun.style.display = 'inline';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                e1.style.backgroundColor = '#ff0000';
+                seydamage.load();
+                seydamage.play();
+                enehp -= 20;
+                youhp -= 20;
+                hpHenkou();
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                aikokun.style.display = 'none';
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId2);
+                break;
+            }
+            fps2++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちグー相手チョキで相手負け■■■■■■■■■■
+        case CHOKI:
+        roulette.style.display = 'none';
+        enechoki.style.display = 'inline';
+        let timerId3 = setInterval(function(){
+            switch(fps3){
+                case 12:
+                msg3.innerText = 'マザープチプチに右ストレートを喰らわせた！';
+                break;
+                case 24:
+                pieyama.style.display = 'none';
+                e1.style.backgroundColor = '#ff0000';
+                seedamage.load();
+                seedamage.play();
+                enehp -= 20;
+                hpHenkou();
+                msg3.innerText = 'マザープチプチに20のダメージを与えた！';
+                break;
+                case 25:
+                pieyama.style.display = 'inline';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId3);
+                break;
+            }
+            fps3++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちグー相手パーでこっち負け■■■■■■■■■■
+        case PAR:
+        roulette.style.display = 'none';
+        enepar.style.display = 'inline';
+        let timerId4 = setInterval(function(){
+            switch(fps4){
+                case 12:
+                sepienoroi.load();
+                sepienoroi.play();
+                pieyama.style.display = 'none';
+                pienoroi.style.display = 'inline';
+                msg3.innerText = 'マザープチプチは呪いを唱えた。';
+                break;
+                case 24:
+                pienoroi.style.display = 'none';
+                pieyama.style.display = 'inline';
+                v1.style.backgroundColor = '#ff0000';
+                seydamage.load();
+                seydamage.play();
+                youhp -= 60;
+                hpHenkou();
+                msg3.innerText = 'あなたは60のダメージを受けた。';
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId4);
+                break;
+            }
+            fps4++;
+        },83);
+        break;
+    }
+});
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■こっちがチョキ出した時のパターン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+youchoki.addEventListener('mouseover',function(){youchoki.style.opacity = '1.0';youchoki.style.cursor = 'pointer';});
+youchoki.addEventListener('mouseout',function(){youchoki.style.opacity = '0.5';});
+youchoki.addEventListener('click',function(){
+    BtseAndJanbthide();
+    youchokidm.style.display = 'inline';
+    humhand2 = CHOKI;
+    comhand2 = Math.floor(Math.random()*3)+1;
+    switch(comhand2){
+        //■■■■■■■■■■こっちチョキ相手グーでこっち負け■■■■■■■■■■
+        case GU:
+        roulette.style.display = 'none';
+        enegu.style.display = 'inline';
+        let timerId5 = setInterval(function(){
+            switch(fps5){
+                case 12:
+                msg3.innerText = 'マザープチプチが体当たりしてきた。';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                seydamage.load();
+                seydamage.play();
+                youhp -= 30;
+                hpHenkou();
+                msg3.innerText = 'あなたは30のダメージを受けた。';
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId5);
+                break;
+            }
+            fps5++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちチョキ相手チョキであいこ■■■■■■■■■■
+        case CHOKI:
+        roulette.style.display = 'none';
+        enechoki.style.display = 'inline';
+        let timerId6 = setInterval(function(){
+            switch(fps6){
+                case 12:
+                seaikokun.load();
+                seaikokun.play();
+                aikokun.style.display = 'inline';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                e1.style.backgroundColor = '#ff0000';
+                seydamage.load();
+                seydamage.play();
+                enehp -= 20;
+                youhp -= 20;
+                hpHenkou();
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                aikokun.style.display = 'none';
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId6);
+                break;
+            }
+            fps6++;
+        },83);
+        break;
+        //■■■■■■■■■■こっちチョキ相手パーで相手負け■■■■■■■■■■
+        case PAR:
+        roulette.style.display = 'none';
+        enepar.style.display = 'inline';
+        let timerId7 = setInterval(function(){
+            fps7++;
+            switch(fps7){
+                case 13:
+                sepienoroi.load();
+                sepienoroi.play();
+                barrier1.style.display = 'inline';
+                msg3.innerText = 'あなたは呪いを跳ね返す結界を張った！';
+                break;
+                case 26:
+                e1.style.backgroundColor = '#ff0000';
+                seedamage.load();
+                seedamage.play();
+                enehp -= 40;
+                hpHenkou();
+                msg3.innerText = 'マザープチプチに40のダメージを与えた！';
+                break;
+                case 27:
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 28:
+                barrier1.style.display = 'none';
+                break;
+                case 40:
+                poisonDamage();
+                break;
+                case 41:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 52:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId7);
+                break;
+            }
+        },80);
+        break;
+    }
+});
+//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■こっちがパー出した時のパターン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+youpar.addEventListener('mouseover',function(){youpar.style.opacity = '1.0';youpar.style.cursor = 'pointer';});
+youpar.addEventListener('mouseout',function(){youpar.style.opacity = '0.5';});
+youpar.addEventListener('click',function(){
+    BtseAndJanbthide();
+    youpardm.style.display = 'inline';
+    humhand3 = PAR;
+    comhand3 = Math.floor(Math.random()*3)+1;
+    switch(comhand3){
+        //■■■■■■■■■■こっちパー相手グーで相手負け■■■■■■■■■■
+        case GU:
+        roulette.style.display = 'none';
+        enegu.style.display = 'inline';
+        let timerId8 = setInterval(function(){
+            fps8++;
+            switch(fps8){
+                case 12:
+                msg3.innerText = 'あなたはナタを振り下ろした！';
+                break;
+                case 21:
+                pieyama.style.display = 'none';
+                pienata.style.display = 'inline';
+                break;
+                case 23:
+                pienata.style.display = 'none';
+                pieyama.style.display = 'inline';
+                break;
+                case 25:
+                pieyama.style.display = 'none';
+                e1.style.backgroundColor = '#ff0000';
+                seedamage.load();
+                seedamage.play();
+                enehp -= 40;
+                hpHenkou();
+                msg3.innerText = 'マザープチプチに40のダメージを与えた！';
+                break;
+                case 26:
+                pieyama.style.display = 'inline';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 38:
+                poisonDamage();
+                break;
+                case 39:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId8);
+                break;
+            }
+        },80);
+        break;
+        //■■■■■■■■■■こっちパー相手チョキでこっち負け■■■■■■■■■■
+        case CHOKI:
+        roulette.style.display = 'none';
+        enechoki.style.display = 'inline';
+        let timerId9 = setInterval(function(){
+            switch(fps9){
+                case 12:
+                msg3.innerText = '化物が吐いた催涙ガスに視界を奪われた。';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                seydamage.load();
+                seydamage.play();
+                youhp -= 50;
+                hpHenkou();
+                msg3.innerText = '突進されて50のダメージを受けた。';
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId9);
+                break;
+            }
+            fps9++;
+        },80);
+        break;
+        //■■■■■■■■■■こっちパー相手パーであいこ■■■■■■■■■■
+        case PAR:
+        roulette.style.display = 'none';
+        enepar.style.display = 'inline';
+        let timerId10 = setInterval(function(){
+            switch(fps10){
+                case 12:
+                seaikokun.load();
+                seaikokun.play();
+                aikokun.style.display = 'inline';
+                break;
+                case 24:
+                v1.style.backgroundColor = '#ff0000';
+                e1.style.backgroundColor = '#ff0000';
+                seydamage.load();
+                seydamage.play();
+                enehp -= 20;
+                youhp -= 20;
+                hpHenkou();
+                break;
+                case 25:
+                v1.style.backgroundColor = '#000000';
+                e1.style.backgroundColor = '#000000';
+                break;
+                case 37:
+                aikokun.style.display = 'none';
+                poisonDamage();
+                break;
+                case 38:
+                v1.style.backgroundColor = '#000000';
+                break;
+                case 50:
+                //残りHPをチェックして勝利パターンor敗北パターンor次のROUNDを用意
+                hpCheck();
+                //ここまで
+                clearInterval(timerId10);
+                break;
+            }
+            fps10++;
+        },83);
+        break;
+    }
+});
+
+//メモイベントアイテム
+let yukie = document.getElementById('yukie');
+let seyukie = document.getElementById('yukiese');
+let memo = document.getElementById('memo');
+let memoleft = document.getElementById('memoleft');
+let yfp = 0;
+
+//ユキエさん出現
+nextdoor.addEventListener('mouseover',function(){nextdoor.style.cursor = 'pointer';});
+nextdoor.addEventListener('click',function(){
+    seyukie.load();
+    seyukie.play();
+    nextdoor.style.display = 'none';
+    back.style.display = 'none';
+    yukie.style.display = 'inline';
+    let yukiefinish = setInterval(function(){
+        if(yfp >= 1){
+            yukie.style.display = 'none';
+            memo.style.display = 'inline';
+            clearInterval(yukiefinish);
+        }
+        yfp++;
+    },240);
+});
+//メモを開く
+memo.addEventListener('mouseover',function(){memo.style.cursor = 'pointer';});
+memo.addEventListener('click',function(){
+    memo.style.display = 'none';
+    memoleft.style.display = 'inline';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/tn89alpnos6iop.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:59:28 GMT -->
+</html>

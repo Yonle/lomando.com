@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/mituqituqne.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:56:48 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ｲﾄｩﾌﾟｲﾄｩﾌﾟﾈｸﾞﾑ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:972px;
+    height:600px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:972px;height:600px;position:absolute;top:0px;left:0px;}
+/*プチプチ1*/
+#puchi1{width:243px;height:300px;position:absolute;left:0px;top:0px;}
+#puchi2{width:243px;height:300px;position:absolute;left:243px;top:0px;}
+#puchi3{width:243px;height:300px;position:absolute;left:483px;top:0px;}
+#puchi4{width:243px;height:300px;position:absolute;left:726px;top:0px;}
+#puchi5{width:243px;height:300px;position:absolute;left:0px;top:300px;}
+#puchi6{width:243px;height:300px;position:absolute;left:243px;top:300px;}
+#puchi7{width:243px;height:300px;position:absolute;left:483px;top:300px;}
+#puchi8{width:243px;height:300px;position:absolute;left:726px;top:300px;}
+
+#gcha1{width:243px;height:300px;position:absolute;left:0px;top:0px;display:none;}
+#gcha2{width:243px;height:300px;position:absolute;left:243px;top:0px;display:none;}
+#gcha3{width:243px;height:300px;position:absolute;left:483px;top:0px;display:none;}
+#gcha4{width:243px;height:300px;position:absolute;left:726px;top:0px;display:none;}
+#gcha5{width:243px;height:300px;position:absolute;left:0px;top:300px;display:none;}
+#gcha6{width:243px;height:300px;position:absolute;left:243px;top:300px;display:none;}
+#gcha7{width:243px;height:300px;position:absolute;left:483px;top:300px;display:none;}
+#gcha8{width:243px;height:300px;position:absolute;left:726px;top:300px;display:none;}
+
+#hantei1{width:213px;height:276px;position:absolute;left:15px;top:20px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei2{width:213px;height:276px;position:absolute;left:258px;top:20px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei3{width:213px;height:276px;position:absolute;left:501px;top:20px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei4{width:213px;height:276px;position:absolute;left:744px;top:20px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei5{width:213px;height:276px;position:absolute;left:15px;top:320px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei6{width:213px;height:276px;position:absolute;left:258px;top:320px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei7{width:213px;height:276px;position:absolute;left:501px;top:320px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+#hantei8{width:213px;height:276px;position:absolute;left:744px;top:320px;opacity:0.0;border-radius:100%;background-color:#ff0000;}
+
+#door{width:80px;height:183px;position:absolute;left:446px;top:208px;display:none;}
+#doorwhite{background-color:white;width:80px;height:183px;position:absolute;left:446px;top:208px;opacity:0.0;display:none;}
+#doorhantei{width:80px;height:183px;position:absolute;left:446px;top:208px;display:none;}
+/*
+#score{
+    color:#ffffff;
+    font-size:13px;
+    font-weight:bold;
+    margin:0px;
+    padding:0px;
+    line-height:1em;
+    text-align:left;
+    position:absolute;
+    top:10px;
+    left:10px;
+    }
+*/
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:972px;height:600px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="gchase" preload="auto">
+<source src="pse/gcha.wav" type="audio/wav">
+<source src="pse/gcha.mp3" type="audio/mp3">
+</audio>
+
+<audio id="puchikoe" preload="auto">
+<source src="pse/puchikoe.wav" type="audio/wav">
+<source src="pse/puchikoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="doorse" preload="auto">
+<source src="pse/appdoor.wav" type="audio/wav">
+<source src="pse/appdoor.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/puchiback.jpg"id="back">
+<!--プチプチ-->
+<img src="pimg/puchi1.gif"id="puchi1">
+<img src="pimg/puchi2.gif"id="puchi2">
+<img src="pimg/puchi3.gif"id="puchi3">
+<img src="pimg/puchi4.gif"id="puchi4">
+<img src="pimg/puchi5.gif"id="puchi5">
+<img src="pimg/puchi6.gif"id="puchi6">
+<img src="pimg/puchi7.gif"id="puchi7">
+<img src="pimg/puchi8.gif"id="puchi8">
+<!--潰れる-->
+<img src="pimg/break1.gif"id="gcha1">
+<img src="pimg/break2.gif"id="gcha2">
+<img src="pimg/break3.gif"id="gcha3">
+<img src="pimg/break4.gif"id="gcha4">
+<img src="pimg/break5.gif"id="gcha5">
+<img src="pimg/break6.gif"id="gcha6">
+<img src="pimg/break7.gif"id="gcha7">
+<img src="pimg/break8.gif"id="gcha8">
+<!--判定-->
+<div id="hantei1"></div>
+<div id="hantei2"></div>
+<div id="hantei3"></div>
+<div id="hantei4"></div>
+<div id="hantei5"></div>
+<div id="hantei6"></div>
+<div id="hantei7"></div>
+<div id="hantei8"></div>
+<!--ドアとその判定-->
+<img src="pimg/door.jpg"id="door">
+<div id="doorwhite"></div>
+<img src="pimg/door.jpg"id="doorhantei">
+
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let puchi1 = document.getElementById('puchi1');
+let puchi2 = document.getElementById('puchi2');
+let puchi3 = document.getElementById('puchi3');
+let puchi4 = document.getElementById('puchi4');
+let puchi5 = document.getElementById('puchi5');
+let puchi6 = document.getElementById('puchi6');
+let puchi7 = document.getElementById('puchi7');
+let puchi8 = document.getElementById('puchi8');
+let gcha1 = document.getElementById('gcha1');
+let gcha2 = document.getElementById('gcha2');
+let gcha3 = document.getElementById('gcha3');
+let gcha4 = document.getElementById('gcha4');
+let gcha5 = document.getElementById('gcha5');
+let gcha6 = document.getElementById('gcha6');
+let gcha7 = document.getElementById('gcha7');
+let gcha8 = document.getElementById('gcha8');
+let hantei1 = document.getElementById('hantei1');
+let hantei2 = document.getElementById('hantei2');
+let hantei3 = document.getElementById('hantei3');
+let hantei4 = document.getElementById('hantei4');
+let hantei5 = document.getElementById('hantei5');
+let hantei6 = document.getElementById('hantei6');
+let hantei7 = document.getElementById('hantei7');
+let hantei8 = document.getElementById('hantei8');
+
+let door = document.getElementById('door');
+let doorwhite = document.getElementById('doorwhite');
+let doorhantei = document.getElementById('doorhantei');
+
+let segcha = document.getElementById('gchase');
+let koepuchi = document.getElementById('puchikoe');
+let sedoor = document.getElementById('doorse');
+
+let timerId1 = '';
+let timerId2 = '';
+let timerId3 = '';
+let timerId4 = '';
+let timerId5 = '';
+let timerId6 = '';
+let timerId7 = '';
+let timerId8 = '';
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let ads1 = 0;
+let ads2 = 0;
+let ads3 = 0;
+let ads4 = 0;
+let ads5 = 0;
+let ads6 = 0;
+let ads7 = 0;
+let ads8 = 0;
+let point = 0;
+
+function allClear(){
+    clearInterval(timerId1);
+    clearInterval(timerId2);
+    clearInterval(timerId3);
+    clearInterval(timerId4);
+    clearInterval(timerId5);
+    clearInterval(timerId6);
+    clearInterval(timerId7);
+    clearInterval(timerId8);
+    puchi1.style.display = 'none';
+    puchi2.style.display = 'none';
+    puchi3.style.display = 'none';
+    puchi4.style.display = 'none';
+    puchi5.style.display = 'none';
+    puchi6.style.display = 'none';
+    puchi7.style.display = 'none';
+    puchi8.style.display = 'none';
+    gcha1.style.display = 'none';
+    gcha2.style.display = 'none';
+    gcha3.style.display = 'none';
+    gcha4.style.display = 'none';
+    gcha5.style.display = 'none';
+    gcha6.style.display = 'none';
+    gcha7.style.display = 'none';
+    gcha8.style.display = 'none';
+    hantei1.style.display = 'none';
+    hantei2.style.display = 'none';
+    hantei3.style.display = 'none';
+    hantei4.style.display = 'none';
+    hantei5.style.display = 'none';
+    hantei6.style.display = 'none';
+    hantei7.style.display = 'none';
+    hantei8.style.display = 'none';
+}
+
+hantei1.addEventListener('mouseover',function(){hantei1.style.cursor = 'pointer';});//■■■変える■■■
+hantei1.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei1.style.display = 'none';//■■■変える■■■
+        puchi1.style.display = 'none';//■■■変える■■■
+        gcha1.style.display = 'inline';//■■■変える■■■
+        let appdoor1 = setInterval(function(){//■■■変える■■■
+            ads1++;//■■■変える■■■
+            switch(ads1){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor1);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps1 = 0;//■■■変える■■■
+        hantei1.style.display = 'none';//■■■変える■■■
+        puchi1.style.display = 'none';//■■■変える■■■
+        gcha1.style.display = 'inline';//■■■変える■■■
+        timerId1 = setInterval(function(){//■■■変える■■■
+            fps1++;//■■■変える■■■
+            switch(fps1){//■■■変える■■■
+                case 2:
+                gcha1.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei1.style.display = 'inline';//■■■変える■■■
+                puchi1.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId1);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei2.addEventListener('mouseover',function(){hantei2.style.cursor = 'pointer';});//■■■変える■■■
+hantei2.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei2.style.display = 'none';//■■■変える■■■
+        puchi2.style.display = 'none';//■■■変える■■■
+        gcha2.style.display = 'inline';//■■■変える■■■
+        let appdoor2 = setInterval(function(){//■■■変える■■■
+            ads2++;//■■■変える■■■
+            switch(ads2){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor2);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps2 = 0;//■■■変える■■■
+        hantei2.style.display = 'none';//■■■変える■■■
+        puchi2.style.display = 'none';//■■■変える■■■
+        gcha2.style.display = 'inline';//■■■変える■■■
+        timerId2 = setInterval(function(){//■■■変える■■■
+            fps2++;//■■■変える■■■
+            switch(fps2){//■■■変える■■■
+                case 2:
+                gcha2.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei2.style.display = 'inline';//■■■変える■■■
+                puchi2.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId2);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei3.addEventListener('mouseover',function(){hantei3.style.cursor = 'pointer';});//■■■変える■■■
+hantei3.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei3.style.display = 'none';//■■■変える■■■
+        puchi3.style.display = 'none';//■■■変える■■■
+        gcha3.style.display = 'inline';//■■■変える■■■
+        let appdoor3 = setInterval(function(){//■■■変える■■■
+            ads3++;//■■■変える■■■
+            switch(ads3){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor3);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps3 = 0;//■■■変える■■■
+        hantei3.style.display = 'none';//■■■変える■■■
+        puchi3.style.display = 'none';//■■■変える■■■
+        gcha3.style.display = 'inline';//■■■変える■■■
+        timerId3 = setInterval(function(){//■■■変える■■■
+            fps3++;//■■■変える■■■
+            switch(fps3){//■■■変える■■■
+                case 2:
+                gcha3.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei3.style.display = 'inline';//■■■変える■■■
+                puchi3.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId3);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei4.addEventListener('mouseover',function(){hantei4.style.cursor = 'pointer';});//■■■変える■■■
+hantei4.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei4.style.display = 'none';//■■■変える■■■
+        puchi4.style.display = 'none';//■■■変える■■■
+        gcha4.style.display = 'inline';//■■■変える■■■
+        let appdoor4 = setInterval(function(){//■■■変える■■■
+            ads4++;//■■■変える■■■
+            switch(ads4){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor4);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps4 = 0;//■■■変える■■■
+        hantei4.style.display = 'none';//■■■変える■■■
+        puchi4.style.display = 'none';//■■■変える■■■
+        gcha4.style.display = 'inline';//■■■変える■■■
+        timerId4 = setInterval(function(){//■■■変える■■■
+            fps4++;//■■■変える■■■
+            switch(fps4){//■■■変える■■■
+                case 2:
+                gcha4.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei4.style.display = 'inline';//■■■変える■■■
+                puchi4.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId4);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei5.addEventListener('mouseover',function(){hantei5.style.cursor = 'pointer';});//■■■変える■■■
+hantei5.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei5.style.display = 'none';//■■■変える■■■
+        puchi5.style.display = 'none';//■■■変える■■■
+        gcha5.style.display = 'inline';//■■■変える■■■
+        let appdoor5 = setInterval(function(){//■■■変える■■■
+            ads5++;//■■■変える■■■
+            switch(ads5){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor5);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps5 = 0;//■■■変える■■■
+        hantei5.style.display = 'none';//■■■変える■■■
+        puchi5.style.display = 'none';//■■■変える■■■
+        gcha5.style.display = 'inline';//■■■変える■■■
+        timerId5 = setInterval(function(){//■■■変える■■■
+            fps5++;//■■■変える■■■
+            switch(fps5){//■■■変える■■■
+                case 2:
+                gcha5.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei5.style.display = 'inline';//■■■変える■■■
+                puchi5.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId5);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei6.addEventListener('mouseover',function(){hantei6.style.cursor = 'pointer';});//■■■変える■■■
+hantei6.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei6.style.display = 'none';//■■■変える■■■
+        puchi6.style.display = 'none';//■■■変える■■■
+        gcha6.style.display = 'inline';//■■■変える■■■
+        let appdoor6 = setInterval(function(){//■■■変える■■■
+            ads6++;//■■■変える■■■
+            switch(ads6){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor6);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps6 = 0;//■■■変える■■■
+        hantei6.style.display = 'none';//■■■変える■■■
+        puchi6.style.display = 'none';//■■■変える■■■
+        gcha6.style.display = 'inline';//■■■変える■■■
+        timerId6 = setInterval(function(){//■■■変える■■■
+            fps6++;//■■■変える■■■
+            switch(fps6){//■■■変える■■■
+                case 2:
+                gcha6.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei6.style.display = 'inline';//■■■変える■■■
+                puchi6.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId6);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei7.addEventListener('mouseover',function(){hantei7.style.cursor = 'pointer';});//■■■変える■■■
+hantei7.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei7.style.display = 'none';//■■■変える■■■
+        puchi7.style.display = 'none';//■■■変える■■■
+        gcha7.style.display = 'inline';//■■■変える■■■
+        let appdoor7 = setInterval(function(){//■■■変える■■■
+            ads7++;//■■■変える■■■
+            switch(ads7){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor7);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps7 = 0;//■■■変える■■■
+        hantei7.style.display = 'none';//■■■変える■■■
+        puchi7.style.display = 'none';//■■■変える■■■
+        gcha7.style.display = 'inline';//■■■変える■■■
+        timerId7 = setInterval(function(){//■■■変える■■■
+            fps7++;//■■■変える■■■
+            switch(fps7){//■■■変える■■■
+                case 2:
+                gcha7.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei7.style.display = 'inline';//■■■変える■■■
+                puchi7.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId7);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+hantei8.addEventListener('mouseover',function(){hantei8.style.cursor = 'pointer';});//■■■変える■■■
+hantei8.addEventListener('click',function(){//■■■変える■■■
+    segcha.load();
+    segcha.play();
+    koepuchi.pause();
+    if(point >= 70){
+        hantei8.style.display = 'none';//■■■変える■■■
+        puchi8.style.display = 'none';//■■■変える■■■
+        gcha8.style.display = 'inline';//■■■変える■■■
+        let appdoor8 = setInterval(function(){//■■■変える■■■
+            ads8++;//■■■変える■■■
+            switch(ads8){//■■■変える■■■
+                case 2:
+                allClear();
+                break;
+                case 14:
+                sedoor.load();
+                sedoor.play();
+                doorwhite.style.display = 'inline';
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 15:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 16:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 17:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 18:
+                doorwhite.style.opacity = '1.0';
+                door.style.display = 'inline';
+                break;
+                case 19:
+                doorwhite.style.opacity = '0.8';
+                break;
+                case 20:
+                doorwhite.style.opacity = '0.6';
+                break;
+                case 21:
+                doorwhite.style.opacity = '0.4';
+                break;
+                case 22:
+                doorwhite.style.opacity = '0.2';
+                break;
+                case 23:
+                doorhantei.style.display = 'inline';
+                clearInterval(appdoor8);//■■■変える■■■
+                break;
+            }
+        },80);
+    }else{
+        point += 10;
+        fps8 = 0;//■■■変える■■■
+        hantei8.style.display = 'none';//■■■変える■■■
+        puchi8.style.display = 'none';//■■■変える■■■
+        gcha8.style.display = 'inline';//■■■変える■■■
+        timerId8 = setInterval(function(){//■■■変える■■■
+            fps8++;//■■■変える■■■
+            switch(fps8){//■■■変える■■■
+                case 2:
+                gcha8.style.display = 'none';//■■■変える■■■
+                break;
+                case 40:
+                koepuchi.load();
+                koepuchi.play();
+                point -= 10;
+                hantei8.style.display = 'inline';//■■■変える■■■
+                puchi8.style.display = 'inline';//■■■変える■■■
+                clearInterval(timerId8);//■■■変える■■■
+                break;
+            }
+        },80);
+    }
+});
+
+doorhantei.addEventListener('mouseover',function(){doorhantei.style.cursor = 'pointer';});
+doorhantei.addEventListener('click',function(){
+    location.href = 'priclu.html';
+});
+
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/mituqituqne.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:57:09 GMT -->
+</html>

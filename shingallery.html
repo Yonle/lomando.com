@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/shingallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:59:00 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>蟲蟲蟲</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:1160px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back1{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+#back2{width:970px;height:580px;position:absolute;left:0px;top:580px;}
+#back3{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#back4{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#back5{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#back6{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#back7{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#back8{width:970px;height:580px;position:absolute;left:0px;top:0px;display:none;}
+#mukade1{width:303px;height:154px;position:absolute;left:0px;bottom:1160px;opacity:0.0;}
+#mukade2{width:303px;height:154px;position:absolute;right:0px;bottom:1160px;opacity:0.0;}
+#mukade3{width:303px;height:154px;position:absolute;left:0px;bottom:1160px;opacity:0.0;}
+#mukade4{width:312px;height:168px;position:absolute;right:0px;bottom:0px;opacity:0.0;}
+#mukade5{width:334px;height:98px;position:absolute;left:0px;bottom:460px;opacity:0.0;}
+#mukade6{width:334px;height:98px;position:absolute;right:0px;bottom:680px;opacity:0.0;}
+#door1{width:80px;height:183px;position:absolute;left:445px;bottom:0px;}
+#door2{width:80px;height:183px;position:absolute;left:445px;bottom:0px;display:none;}
+#door3{width:80px;height:183px;position:absolute;left:445px;bottom:0px;display:none;}
+#door4{width:80px;height:183px;position:absolute;left:445px;bottom:0px;display:none;}
+#tvlink{width:50px;height:50px;position:absolute;right:50px;top:2900px;display:none;}
+#spot{width:970px;height:1160px;position:absolute;left:0px;top:0px;}
+#dhantei1{width:80px;height:183px;position:absolute;left:445px;bottom:0px;opacity:0.0;}
+#dhantei2{width:80px;height:183px;position:absolute;left:445px;bottom:0px;opacity:0.0;display:none;}
+#dhantei3{width:80px;height:183px;position:absolute;left:445px;bottom:0px;opacity:0.0;display:none;}
+#dhantei4{width:80px;height:183px;position:absolute;left:445px;bottom:0px;opacity:0.0;display:none;}
+#obake{width:520px;height:630px;position:absolute;left:225px;top:3827px;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+<!--
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemget.wav" type="audio/wav">
+<source src="pse/itemget.mp3" type="audio/mp3">
+</audio>
+-->
+<div id="d1">
+<img src="pimg/mukadeback.jpg"id="back1">
+<img src="pimg/mukadeback.jpg"id="back2">
+<img src="pimg/mukadeback.jpg"id="back3">
+<img src="pimg/mukadeback.jpg"id="back4">
+<img src="pimg/mukadeback.jpg"id="back5">
+<img src="pimg/mukadeback.jpg"id="back6">
+<img src="pimg/mukadeback.jpg"id="back7">
+<img src="pimg/mukadeback.jpg"id="back8">
+<img src="pimg/door.jpg"id="door1">
+<img src="pimg/door.jpg"id="door2">
+<img src="pimg/door.jpg"id="door3">
+<img src="pimg/door.jpg"id="door4">
+<img src="pimg/mukade.gif"id="mukade1">
+<img src="pimg/mukade2.gif"id="mukade2">
+<img src="pimg/mukade.gif"id="mukade3">
+<img src="pimg/mukade3.gif"id="mukade4">
+<img src="pimg/mukade4.gif"id="mukade5">
+<img src="pimg/mukade5.gif"id="mukade6">
+<img src="pimg/mukadeobake.gif"id="obake">
+<img src="pimg/mukadespot.png"id="spot">
+<img src="pimg/cursetv.gif"id="tvlink">
+<img src="pimg/door.jpg"id="dhantei1">
+<img src="pimg/door.jpg"id="dhantei2">
+<img src="pimg/door.jpg"id="dhantei3">
+<img src="pimg/door.jpg"id="dhantei4">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let d1 = document.getElementById('d1');
+let back1 = document.getElementById('back1');
+let back2 = document.getElementById('back2');
+let back3 = document.getElementById('back3');
+let back4 = document.getElementById('back4');
+let back5 = document.getElementById('back5');
+let back6 = document.getElementById('back6');
+let back7 = document.getElementById('back7');
+let back8 = document.getElementById('back8');
+let door1 = document.getElementById('door1');
+let door2 = document.getElementById('door2');
+let door3 = document.getElementById('door3');
+let door4 = document.getElementById('door4');
+let tvlink = document.getElementById('tvlink');
+let spot = document.getElementById('spot');
+let dhantei1 = document.getElementById('dhantei1');
+let dhantei2 = document.getElementById('dhantei2');
+let dhantei3 = document.getElementById('dhantei3');
+let dhantei4 = document.getElementById('dhantei4');
+let mukade1 = document.getElementById('mukade1');
+let mukade2 = document.getElementById('mukade2');
+let mukade3 = document.getElementById('mukade3');
+let mukade4 = document.getElementById('mukade4');
+let mukade5 = document.getElementById('mukade5');
+let mukade6 = document.getElementById('mukade6');
+let mukadey1 = 1006;
+let mukadex1 = 0;
+let mukadey2 = 1006;
+let mukadex2 = 0;
+let mukadey3 = 1006;
+let mukadex3 = 0;
+let mukadey4 = 0;
+let mukadex4 = 0;
+let mukadey5 = 0;
+let mukadex5 = 0;
+let mukadey6 = 0;
+let mukadex6 = 0;
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+
+$(function(){
+    let obake = $('#obake');
+    obake.hide();
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 3827){
+            obake.show();
+        }else{
+            obake.fadeOut();
+        }
+    });
+});
+
+dhantei1.addEventListener('mouseover',function(){
+    dhantei1.style.display = 'none';
+    door1.style.display = 'none';
+    back1.style.display = 'none';
+    back2.style.display = 'none';
+    d1.style.height = '2320px';//前のd1の値+1160
+    spot.style.top = '1160px';
+    back3.style.top = '1160px';//前のd1の値
+    back4.style.top = '1740px';//前のd1の値+580
+    back3.style.display = 'inline';
+    back4.style.display = 'inline';
+    dhantei2.style.display = 'inline';
+    door2.style.display = 'inline';
+});
+
+dhantei2.addEventListener('mouseover',function(){
+    dhantei2.style.display = 'none';
+    door2.style.display = 'none';
+    back3.style.display = 'none';
+    back4.style.display = 'none';
+    d1.style.height = '3480px';//前のd1の値+1160
+    spot.style.top = '2320px';
+    back5.style.top = '2320px';//前のd1の値
+    back6.style.top = '2900px';//前のd1の値+580
+    back5.style.display = 'inline';
+    back6.style.display = 'inline';
+    tvlink.style.display = 'inline';
+    dhantei3.style.display = 'inline';
+    door3.style.display = 'inline';
+});
+
+dhantei3.addEventListener('mouseover',function(){
+    dhantei3.style.display = 'none';
+    door3.style.display = 'none';
+    tvlink.style.display = 'none';
+    back5.style.display = 'none';
+    back6.style.display = 'none';
+    d1.style.height = '4640px';//前のd1の値+1160
+    spot.style.top = '3480px';
+    back7.style.top = '3480px';//前のd1の値
+    back8.style.top = '4060px';//前のd1の値+580
+    back7.style.display = 'inline';
+    back8.style.display = 'inline';
+    dhantei4.style.display = 'inline';
+    door4.style.display = 'inline';
+});
+
+dhantei4.addEventListener('mouseover',function(){dhantei4.style.cursor = 'pointer';});
+dhantei4.addEventListener('click',function(){
+    location.href = 'tsrheiansguarlelery.html';
+});
+
+tvlink.addEventListener('mouseover',function(){tvlink.style.cursor = 'pointer';});
+tvlink.addEventListener('click',function(){
+    location.href = 'ngayngujwai.html';
+});
+
+function mukadeMove1(){
+    let timerId1 = setInterval(function(){
+        mukadey1 -= 2;//縦軸
+        mukadex1 += 4;//横軸
+        mukade1.style.bottom = mukadey1+'px';
+        mukade1.style.left = mukadex1+'px';
+        switch(mukadex1){
+            case 20:
+            mukade1.style.opacity = '0.2';
+            break;
+            case 40:
+            mukade1.style.opacity = '0.4';
+            break;
+            case 60:
+            mukade1.style.opacity = '0.6';
+            break;
+            case 80:
+            mukade1.style.opacity = '0.8';
+            break;
+            case 100:
+            mukade1.style.opacity = '1.0';
+            break;
+            case 588:
+            mukade1.style.opacity = '0.8';
+            break;
+            case 608:
+            mukade1.style.opacity = '0.6';
+            break;
+            case 628:
+            mukade1.style.opacity = '0.4';
+            break;
+            case 648:
+            mukade1.style.opacity = '0.2';
+            break;
+            case 668:
+            mukade1.style.opacity = '0.0';
+            mukadex1 = 0;
+            mukadey1 = 1006;
+            break;
+        }
+    },80);
+}
+function mukadeMove2(){
+    let timerId2 = setInterval(function(){
+        mukadey2 -= 2;//縦軸
+        mukadex2 += 4;//横軸
+        mukade2.style.bottom = mukadey2-100+'px';
+        mukade2.style.right = mukadex2+'px';
+        switch(mukadex2){
+            case 20:
+            mukade2.style.opacity = '0.2';
+            break;
+            case 40:
+            mukade2.style.opacity = '0.4';
+            break;
+            case 60:
+            mukade2.style.opacity = '0.6';
+            break;
+            case 80:
+            mukade2.style.opacity = '0.8';
+            break;
+            case 100:
+            mukade2.style.opacity = '1.0';
+            break;
+            case 588:
+            mukade2.style.opacity = '0.8';
+            break;
+            case 608:
+            mukade2.style.opacity = '0.6';
+            break;
+            case 628:
+            mukade2.style.opacity = '0.4';
+            break;
+            case 648:
+            mukade2.style.opacity = '0.2';
+            break;
+            case 668:
+            mukade2.style.opacity = '0.0';
+            mukadex2 = 0;
+            mukadey2 = 1006;
+            break;
+        }
+    },80);
+}
+function mukadeMove3(){
+    let timerId3 = setInterval(function(){
+        mukadey3 -= 2;//縦軸
+        mukadex3 += 4;//横軸
+        mukade3.style.bottom = mukadey3-400+'px';
+        mukade3.style.left = mukadex3+'px';
+        switch(mukadex3){
+            case 20:
+            mukade3.style.opacity = '0.2';
+            break;
+            case 40:
+            mukade3.style.opacity = '0.4';
+            break;
+            case 60:
+            mukade3.style.opacity = '0.6';
+            break;
+            case 80:
+            mukade3.style.opacity = '0.8';
+            break;
+            case 100:
+            mukade3.style.opacity = '1.0';
+            break;
+            case 588:
+            mukade3.style.opacity = '0.8';
+            break;
+            case 608:
+            mukade3.style.opacity = '0.6';
+            break;
+            case 628:
+            mukade3.style.opacity = '0.4';
+            break;
+            case 648:
+            mukade3.style.opacity = '0.2';
+            break;
+            case 668:
+            mukade3.style.opacity = '0.0';
+            mukadex3 = 0;
+            mukadey3 = 1006;
+            break;
+        }
+    },80);
+}
+function mukadeMove4(){
+    let timerId4 = setInterval(function(){
+        mukadey4 += 2;//縦軸
+        mukadex4 += 4;//横軸
+        mukade4.style.bottom = mukadey4+50+'px';
+        mukade4.style.right = mukadex4+'px';
+        switch(mukadex4){
+            case 20:
+            mukade4.style.opacity = '0.2';
+            break;
+            case 40:
+            mukade4.style.opacity = '0.4';
+            break;
+            case 60:
+            mukade4.style.opacity = '0.6';
+            break;
+            case 80:
+            mukade4.style.opacity = '0.8';
+            break;
+            case 100:
+            mukade4.style.opacity = '1.0';
+            break;
+            case 576:
+            mukade4.style.opacity = '0.8';
+            break;
+            case 596:
+            mukade4.style.opacity = '0.6';
+            break;
+            case 616:
+            mukade4.style.opacity = '0.4';
+            break;
+            case 636:
+            mukade4.style.opacity = '0.2';
+            break;
+            case 656:
+            mukade4.style.opacity = '0.0';
+            mukadex4 = 0;
+            mukadey4 = 0;
+            break;
+        }
+    },80);
+}
+function mukadeMove5(){
+    let timerId5 = setInterval(function(){
+        mukadex5 += 4;//横軸
+        mukade5.style.left = mukadex5+'px';
+        switch(mukadex5){
+            case 20:
+            mukade5.style.opacity = '0.2';
+            break;
+            case 40:
+            mukade5.style.opacity = '0.4';
+            break;
+            case 60:
+            mukade5.style.opacity = '0.6';
+            break;
+            case 80:
+            mukade5.style.opacity = '0.8';
+            break;
+            case 100:
+            mukade5.style.opacity = '1.0';
+            break;
+            case 556:
+            mukade5.style.opacity = '0.8';
+            break;
+            case 576:
+            mukade5.style.opacity = '0.6';
+            break;
+            case 596:
+            mukade5.style.opacity = '0.4';
+            break;
+            case 616:
+            mukade5.style.opacity = '0.2';
+            break;
+            case 636:
+            mukade5.style.opacity = '0.0';
+            mukadex5 = 0;
+            break;
+        }
+    },80);
+}
+function mukadeMove6(){
+    let timerId6 = setInterval(function(){
+        mukadex6 += 4;//横軸
+        mukade6.style.right = mukadex6+'px';
+        switch(mukadex6){
+            case 20:
+            mukade6.style.opacity = '0.2';
+            break;
+            case 40:
+            mukade6.style.opacity = '0.4';
+            break;
+            case 60:
+            mukade6.style.opacity = '0.6';
+            break;
+            case 80:
+            mukade6.style.opacity = '0.8';
+            break;
+            case 100:
+            mukade6.style.opacity = '1.0';
+            break;
+            case 556:
+            mukade6.style.opacity = '0.8';
+            break;
+            case 576:
+            mukade6.style.opacity = '0.6';
+            break;
+            case 596:
+            mukade6.style.opacity = '0.4';
+            break;
+            case 616:
+            mukade6.style.opacity = '0.2';
+            break;
+            case 636:
+            mukade6.style.opacity = '0.0';
+            mukadex6 = 0;
+            break;
+        }
+    },80);
+}
+function lateMukadeMove3(){
+    let lateId1 = setInterval(function(){
+        fps1++;
+        if(fps1>=1){
+            mukadeMove3();
+            clearInterval(lateId1);
+        }
+    },3000);
+}
+function lateMukadeMove4(){
+    let lateId2 = setInterval(function(){
+        fps2++;
+        if(fps2>=1){
+            mukadeMove4();
+            clearInterval(lateId2);
+        }
+    },5000);
+}
+function lateMukadeMove5(){
+    let lateId3 = setInterval(function(){
+        fps3++;
+        if(fps3>=1){
+            mukadeMove5();
+            clearInterval(lateId3);
+        }
+    },2000);
+}
+mukadeMove1();
+mukadeMove2();
+lateMukadeMove3();
+lateMukadeMove4();
+lateMukadeMove5();
+mukadeMove6();
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/shingallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:59:09 GMT -->
+</html>

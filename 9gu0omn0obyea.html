@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/9gu0omn0obyea.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:38 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ﾀmoだ轟ｳno、ﾋあ。拷</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back{width:970px;height:580px;position:absolute;top:0px;left:0px;}
+/*パネル左側手前*/
+#pane1{position:absolute;top:74px;left:56px;}
+#pane5{position:absolute;top:74px;left:56px;display:none;}
+/*パネル左側奥*/
+#pane2{position:absolute;top:169px;left:281px;}
+#pane6{position:absolute;top:169px;left:281px;display:none;}
+#pane9{position:absolute;top:169px;left:281px;display:none;}
+/*パネル右側手前*/
+#pane3{position:absolute;top:74px;right:56px;}
+#pane7{position:absolute;top:74px;right:56px;display:none;}
+#pane10{position:absolute;top:74px;right:56px;display:none;}
+/*パネル右側奥*/
+#pane4{position:absolute;top:169px;right:281px;}
+#pane8{position:absolute;top:169px;right:281px;display:none;}
+/*足エリア左側手前*/
+#farea1{position:absolute;top:508px;left:225px;}
+/*足エリア左奥*/
+#farea2{position:absolute;top:442px;left:334px;}
+/*足エリア右側手前*/
+#farea3{position:absolute;top:508px;right:225px;}
+/*足エリア右奥*/
+#farea4{position:absolute;top:442px;right:334px;}
+/*ドア*/
+#door{position:absolute;top:165px;right:421px;}
+#door2{position:absolute;top:165px;right:421px;display:none;}
+#door3{position:absolute;top:165px;right:421px;display:none;}
+/*マップパネルアップ*/
+#paneup1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#paneup4{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+/*それ以外のパネルアップ*/
+#paneup2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#paneup3{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+/*足アップ*/
+#foota{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#footb{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#footd{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+/*パネルアップのヒットエリア*/
+#hitarea1{width:632px;height:442px;position:absolute;top:68px;left:168px;opacity:0.0;display:none;}
+#hitarea2{width:632px;height:442px;position:absolute;top:68px;left:168px;opacity:0.0;display:none;}
+#hitarea3{width:632px;height:442px;position:absolute;top:68px;left:168px;opacity:0.0;display:none;}
+#hitarea4{width:632px;height:442px;position:absolute;top:68px;left:168px;opacity:0.0;display:none;}
+/*パネルオープン*/
+#paneopen1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#paneopen2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#paneopen3{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#paneopen4{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+/*パッドセット■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/*背景*/
+#padstage{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+/*1つめの入力*/
+#keyarea1{width:102px;height:102px;position:absolute;top:225px;left:382px;opacity:0.0;display:none;}
+#keyarea2{width:102px;height:102px;position:absolute;top:225px;left:485px;opacity:0.0;display:none;}
+#keyarea3{width:102px;height:102px;position:absolute;top:328px;left:382px;opacity:0.0;display:none;}
+#keyarea4{width:102px;height:102px;position:absolute;top:328px;left:485px;opacity:0.0;display:none;}
+/*2つめの入力*/
+#keyarea11{width:102px;height:102px;position:absolute;top:225px;left:382px;opacity:0.0;display:none;}
+#keyarea22{width:102px;height:102px;position:absolute;top:225px;left:485px;opacity:0.0;display:none;}
+#keyarea33{width:102px;height:102px;position:absolute;top:328px;left:382px;opacity:0.0;display:none;}
+#keyarea44{width:102px;height:102px;position:absolute;top:328px;left:485px;opacity:0.0;display:none;}
+/*3つめの入力*/
+#keyarea111{width:102px;height:102px;position:absolute;top:225px;left:382px;opacity:0.0;display:none;}
+#keyarea222{width:102px;height:102px;position:absolute;top:225px;left:485px;opacity:0.0;display:none;}
+#keyarea333{width:102px;height:102px;position:absolute;top:328px;left:382px;opacity:0.0;display:none;}
+#keyarea444{width:102px;height:102px;position:absolute;top:328px;left:485px;opacity:0.0;display:none;}
+/*4つめの入力*/
+#keyarea1111{width:102px;height:102px;position:absolute;top:225px;left:382px;opacity:0.0;display:none;}
+#keyarea2222{width:102px;height:102px;position:absolute;top:225px;left:485px;opacity:0.0;display:none;}
+#keyarea3333{width:102px;height:102px;position:absolute;top:328px;left:382px;opacity:0.0;display:none;}
+#keyarea4444{width:102px;height:102px;position:absolute;top:328px;left:485px;opacity:0.0;display:none;}
+/*セグ千の位*/
+#sega{width:42px;height:50px;position:absolute;top:148px;left:388px;display:none;}
+#segb{width:42px;height:50px;position:absolute;top:148px;left:388px;display:none;}
+#segc{width:42px;height:50px;position:absolute;top:148px;left:388px;display:none;}
+#segd{width:42px;height:50px;position:absolute;top:148px;left:388px;display:none;}
+/*セグ百の位*/
+#segaa{width:42px;height:50px;position:absolute;top:148px;left:438px;display:none;}
+#segbb{width:42px;height:50px;position:absolute;top:148px;left:438px;display:none;}
+#segcc{width:42px;height:50px;position:absolute;top:148px;left:438px;display:none;}
+#segdd{width:42px;height:50px;position:absolute;top:148px;left:438px;display:none;}
+/*セグ十の位*/
+#segaaa{width:42px;height:50px;position:absolute;top:148px;left:488px;display:none;}
+#segbbb{width:42px;height:50px;position:absolute;top:148px;left:488px;display:none;}
+#segccc{width:42px;height:50px;position:absolute;top:148px;left:488px;display:none;}
+#segddd{width:42px;height:50px;position:absolute;top:148px;left:488px;display:none;}
+/*セグ一の位*/
+#segaaaa{width:42px;height:50px;position:absolute;top:148px;left:538px;display:none;}
+#segbbbb{width:42px;height:50px;position:absolute;top:148px;left:538px;display:none;}
+#segcccc{width:42px;height:50px;position:absolute;top:148px;left:538px;display:none;}
+#segdddd{width:42px;height:50px;position:absolute;top:148px;left:538px;display:none;}
+/*入力成功セグ*/
+#sucseg{width:202px;height:50px;position:absolute;top:148px;left:383px;display:none;}
+/*ボタンセット■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#buttonstage1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#buttonstage2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#buttonhitarea{width:79px;height:79px;position:absolute;top:247px;left:443px;opacity:0.0;display:none;}
+#needlestopmsg{
+    color:#ffffff;
+    font-size:20px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    position:absolute;
+    bottom:5px;
+    left:360px;
+    display:none;
+}
+/*戻るボタン4種*/
+#backbuttonb{width:89px;height:30px;position:absolute;top:13px;left:13px;border-radius:10%;display:none;}
+#backbuttonp{width:89px;height:30px;position:absolute;top:13px;left:13px;border-radius:10%;display:none;}
+#backbuttonsuc{width:89px;height:30px;position:absolute;top:13px;left:13px;border-radius:10%;display:none;}
+#backbuttonsuc2{width:89px;height:30px;position:absolute;top:13px;left:13px;border-radius:10%;display:none;}
+/*オバケとゲームオーバー*/
+#ghost1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#ghost2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#blackout{width:970px;height:580px;position:absolute;top:0px;left:0px;opacity:0.0;display:none;}
+#gameover{width:970px;height:580px;position:absolute;top:0px;left:0px;opacity:0.0;display:none;}
+/*ナタ女の部屋*/
+#nextroom{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#natadrop1{width:207px;height:37px;position:absolute;top:514px;left:577px;display:none;}
+#natadrop2{width:207px;height:37px;position:absolute;top:514px;left:577px;display:none;}
+#natagetback{width:970px;height:580px;position:absolute;top:0px;left:0px;opacity:0.5;display:none;}
+#nataget{width:607px;height:518px;position:absolute;top:29px;left:154px;display:none;}
+#nataname{font-size:22px;color:#00ff00;font-weight:bold;position:absolute;left:634px;top:277px;display:none;}
+#natasetsu{font-size:22px;color:#ffffff;line-height:150%;text-align:left;position:absolute;left:634px;top:315px;display:none;}
+#closebutton1{width:90px;height:41px;position:absolute;top:522px;left:861px;display:none;}
+#closebutton2{width:90px;height:41px;position:absolute;top:522px;left:861px;display:none;}
+#shibouflag{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#nextpage{width:128px;height:284px;position:absolute;top:37px;left:421px;opacity:0.0;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="paneopense14" preload="auto">
+<source src="pse/natapane14.wav" type="audio/wav">
+<source src="pse/natapane14.mp3" type="audio/mp3">
+</audio>
+<audio id="paneopense23" preload="auto">
+<source src="pse/natapane23.wav" type="audio/wav">
+<source src="pse/natapane23.mp3" type="audio/mp3">
+</audio>
+<audio id="oowaraise" preload="auto">
+<source src="pse/oowarai.wav" type="audio/wav">
+<source src="pse/oowarai.mp3" type="audio/mp3">
+</audio>
+<audio id="kiruse" preload="auto">
+<source src="pse/janenedamage.wav" type="audio/wav">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+<audio id="keypadse" preload="auto">
+<source src="pse/piepasskey.wav" type="audio/wav">
+<source src="pse/piepasskey.mp3" type="audio/mp3">
+</audio>
+<audio id="keysucse" preload="auto">
+<source src="pse/piepasssuc.wav" type="audio/wav">
+<source src="pse/piepasssuc.mp3" type="audio/mp3">
+</audio>
+<audio id="buttonpushse" preload="auto">
+<source src="pse/natabuttonpush.wav" type="audio/wav">
+<source src="pse/natabuttonpush.mp3" type="audio/mp3">
+</audio>
+<audio id="needlestopse" preload="auto">
+<source src="pse/nataneedlestop.wav" type="audio/wav">
+<source src="pse/nataneedlestop.mp3" type="audio/mp3">
+</audio>
+<audio id="needledownse" preload="auto">
+<source src="pse/nataneedledown.wav" type="audio/wav">
+<source src="pse/nataneedledown.mp3" type="audio/mp3">
+</audio>
+</audio>
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemgetevent.wav" type="audio/wav">
+<source src="pse/itemgetevent.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/natastage.jpg"id="back">
+<!--パネル左側手前-->
+<img src="pimg/natapane1.png"id="pane1">
+<img src="pimg/natapane5.png"id="pane5">
+<!--パネル左側奥-->
+<img src="pimg/natapane2.png"id="pane2">
+<img src="pimg/natapane6.png"id="pane6">
+<img src="pimg/natapane6.png"id="pane9">
+<!--パネル右側手前-->
+<img src="pimg/natapane3.png"id="pane3">
+<img src="pimg/natapane7.png"id="pane7">
+<img src="pimg/natapane10.png"id="pane10">
+<!--パネル右側奥-->
+<img src="pimg/natapane4.png"id="pane4">
+<img src="pimg/natapane8.png"id="pane8">
+<!--足エリア左側手前-->
+<img src="pimg/natafootarea1.png"id="farea1">
+<!--足エリア左側奥-->
+<img src="pimg/natafootarea2.png"id="farea2">
+<!--足エリア右側手前-->
+<img src="pimg/natafootarea3.png"id="farea3">
+<!--足エリア右側奥-->
+<img src="pimg/natafootarea4.png"id="farea4">
+<!--ドア-->
+<img src="pimg/natadoor.jpg"id="door">
+<img src="pimg/natadoor.jpg"id="door2">
+<img src="pimg/natadoor.jpg"id="door3">
+<!--マップパネルアップ-->
+<img src="pimg/natapanemap.jpg"id="paneup1">
+<img src="pimg/natapanemap.jpg"id="paneup4">
+<!--それ以外のパネルアップ-->
+<img src="pimg/natapaneother.jpg"id="paneup2">
+<img src="pimg/natapaneother.jpg"id="paneup3">
+<!--足アップ-->
+<img src="pimg/natafoota.jpg"id="foota">
+<img src="pimg/natafootb.jpg"id="footb">
+<img src="pimg/natafootd.jpg"id="footd">
+<!--パネルアップのヒットエリア-->
+<img src="pimg/hitarea.jpg"id="hitarea1">
+<img src="pimg/hitarea.jpg"id="hitarea2">
+<img src="pimg/hitarea.jpg"id="hitarea3">
+<img src="pimg/hitarea.jpg"id="hitarea4">
+<!--パネルオープンアニメーション-->
+<img src="pimg/natamapleft.gif"id="paneopen1">
+<img src="pimg/natamapright.gif"id="paneopen4">
+<img src="pimg/natapanebutton.gif"id="paneopen3">
+<img src="pimg/natapanepad.gif"id="paneopen2">
+<!--パッドセット■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<!--背景-->
+<img src="pimg/natapadstage.jpg"id="padstage">
+<!--1つめの入力-->
+<img src="pimg/natapadkeyarea.jpg"id="keyarea1">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea2">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea3">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea4">
+<!--2つめの入力-->
+<img src="pimg/natapadkeyarea.jpg"id="keyarea11">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea22">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea33">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea44">
+<!--3つめの入力-->
+<img src="pimg/natapadkeyarea.jpg"id="keyarea111">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea222">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea333">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea444">
+<!--4つめの入力-->
+<img src="pimg/natapadkeyarea.jpg"id="keyarea1111">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea2222">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea3333">
+<img src="pimg/natapadkeyarea.jpg"id="keyarea4444">
+<!--セグ千の位-->
+<img src="pimg/natasega.jpg"id="sega">
+<img src="pimg/natasegb.jpg"id="segb">
+<img src="pimg/natasegc.jpg"id="segc">
+<img src="pimg/natasegd.jpg"id="segd">
+<!--セグ百の位-->
+<img src="pimg/natasega.jpg"id="segaa">
+<img src="pimg/natasegb.jpg"id="segbb">
+<img src="pimg/natasegc.jpg"id="segcc">
+<img src="pimg/natasegd.jpg"id="segdd">
+<!--セグ十の位-->
+<img src="pimg/natasega.jpg"id="segaaa">
+<img src="pimg/natasegb.jpg"id="segbbb">
+<img src="pimg/natasegc.jpg"id="segccc">
+<img src="pimg/natasegd.jpg"id="segddd">
+<!--セグ一の位-->
+<img src="pimg/natasega.jpg"id="segaaaa">
+<img src="pimg/natasegb.jpg"id="segbbbb">
+<img src="pimg/natasegc.jpg"id="segcccc">
+<img src="pimg/natasegd.jpg"id="segdddd">
+<!--入力成功セグ-->
+<img src="pimg/natapadsuc.jpg"id="sucseg">
+<!--ボタンセット■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<img src="pimg/natabuttonstage1.jpg"id="buttonstage1">
+<img src="pimg/natabuttonstage2.jpg"id="buttonstage2">
+<img src="pimg/natapadkeyarea.jpg"id="buttonhitarea">
+<p id="needlestopmsg"></p>
+<!--戻るボタン4種-->
+<img src="pimg/backbutton.jpg"id="backbuttonb">
+<img src="pimg/backbutton.jpg"id="backbuttonp">
+<img src="pimg/backbutton.jpg"id="backbuttonsuc">
+<img src="pimg/backbutton.jpg"id="backbuttonsuc2">
+<!--オバケに関するアニメーション-->
+<img src="pimg/nataghost1.gif"id="ghost1">
+<img src="pimg/nataghost2.gif"id="ghost2">
+<!--ナタ女の部屋-->
+<img src="pimg/natanextroom.jpg"id="nextroom">
+<img src="pimg/natadrop.png"id="natadrop1">
+<img src="pimg/natadrop.png"id="natadrop2">
+<img src="pimg/blackout.jpg"id="natagetback">
+<img src="pimg/nataget.png"id="nataget">
+<p id="nataname"></p>
+<p id="natasetsu"></p>
+<img src="pimg/closebutton.jpg"id="closebutton1">
+<img src="pimg/closebutton.jpg"id="closebutton2">
+<img src="pimg/natashibouflag.gif"id="shibouflag">
+<img src="pimg/hitarea.jpg"id="nextpage">
+<!--ゲームオーバー等の最前面エフェクト-->
+<img src="pimg/blackout.jpg"id="blackout">
+<img src="pimg/gameover.jpg"id="gameover">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let back = document.getElementById('back');
+let pane1 = document.getElementById('pane1');
+let pane2 = document.getElementById('pane2');
+let pane3 = document.getElementById('pane3');
+let pane4 = document.getElementById('pane4');
+let pane5 = document.getElementById('pane5');
+let pane6 = document.getElementById('pane6');
+let pane7 = document.getElementById('pane7');
+let pane8 = document.getElementById('pane8');
+let pane9 = document.getElementById('pane9');//入力成功時の遠目パッドパネル
+let pane10 = document.getElementById('pane10');//装置停止後の遠目パッドパネル
+let farea1 = document.getElementById('farea1');
+let farea2 = document.getElementById('farea2');
+let farea3 = document.getElementById('farea3');
+let farea4 = document.getElementById('farea4');
+let door = document.getElementById('door');//ナタオバケで死亡フラグ
+let door2 = document.getElementById('door2');//針天井で死亡フラグ
+let door3 = document.getElementById('door3');//生存フラグ
+let paneup1 = document.getElementById('paneup1');//パネル左手前(マップ)
+let paneup4 = document.getElementById('paneup4');//パネル右奥(マップ)
+let paneup3 = document.getElementById('paneup3');//パネル右手前(ボタン)
+let paneup2 = document.getElementById('paneup2');//パネル左奥(パッド)
+let foota = document.getElementById('foota');
+let footb = document.getElementById('footb');
+let footd = document.getElementById('footd');
+let hitarea1 = document.getElementById('hitarea1');
+let hitarea2 = document.getElementById('hitarea2');
+let hitarea3 = document.getElementById('hitarea3');
+let hitarea4 = document.getElementById('hitarea4');
+let paneopen1 = document.getElementById('paneopen1');
+let paneopen2 = document.getElementById('paneopen2');
+let paneopen3 = document.getElementById('paneopen3');
+let paneopen4 = document.getElementById('paneopen4');
+let backbuttonb = document.getElementById('backbuttonb');
+let backbuttonp = document.getElementById('backbuttonp');
+let backbuttonsuc = document.getElementById('backbuttonsuc');
+let backbuttonsuc2 = document.getElementById('backbuttonsuc2');
+/*パッドセット■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//背景
+let padstage = document.getElementById('padstage');
+//1つめの入力
+let keyarea1 = document.getElementById('keyarea1');
+let keyarea2 = document.getElementById('keyarea2');
+let keyarea3 = document.getElementById('keyarea3');
+let keyarea4 = document.getElementById('keyarea4');
+//2つめの入力
+let keyarea11 = document.getElementById('keyarea11');
+let keyarea22 = document.getElementById('keyarea22');
+let keyarea33 = document.getElementById('keyarea33');
+let keyarea44 = document.getElementById('keyarea44');
+//3つめの入力
+let keyarea111 = document.getElementById('keyarea111');
+let keyarea222 = document.getElementById('keyarea222');
+let keyarea333 = document.getElementById('keyarea333');
+let keyarea444 = document.getElementById('keyarea444');
+//4つめの入力
+let keyarea1111 = document.getElementById('keyarea1111');
+let keyarea2222 = document.getElementById('keyarea2222');
+let keyarea3333 = document.getElementById('keyarea3333');
+let keyarea4444 = document.getElementById('keyarea4444');
+//セグ千の位
+let sega = document.getElementById('sega');
+let segb = document.getElementById('segb');
+let segc = document.getElementById('segc');
+let segd = document.getElementById('segd');
+//セグ百の位
+let segaa = document.getElementById('segaa');
+let segbb = document.getElementById('segbb');
+let segcc = document.getElementById('segcc');
+let segdd = document.getElementById('segdd');
+//セグ十の位
+let segaaa = document.getElementById('segaaa');
+let segbbb = document.getElementById('segbbb');
+let segccc = document.getElementById('segccc');
+let segddd = document.getElementById('segddd');
+//セグ一の位
+let segaaaa = document.getElementById('segaaaa');
+let segbbbb = document.getElementById('segbbbb');
+let segcccc = document.getElementById('segcccc');
+let segdddd = document.getElementById('segdddd');
+//入力成功セグ
+let sucseg = document.getElementById('sucseg');
+/*ボタンセット■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+let buttonstage1 = document.getElementById('buttonstage1');
+let buttonstage2 = document.getElementById('buttonstage2');
+let buttonhitarea = document.getElementById('buttonhitarea');
+let needlestopmsg = document.getElementById('needlestopmsg');
+/*オバケとゲームオーバー*/
+let ghost1 = document.getElementById('ghost1');
+let ghost2 = document.getElementById('ghost2');
+let blackout = document.getElementById('blackout');
+let gameover = document.getElementById('gameover');
+/*ナタ女の部屋*/
+let nextroom = document.getElementById('nextroom');
+let natadrop1 = document.getElementById('natadrop1');
+let natadrop2 = document.getElementById('natadrop2');
+let natagetback = document.getElementById('natagetback');
+let nataget = document.getElementById('nataget');
+let nataname = document.getElementById('nataname');
+let natasetsu = document.getElementById('natasetsu');
+let closebutton1 = document.getElementById('closebutton1');
+let closebutton2 = document.getElementById('closebutton2');
+let shibouflag = document.getElementById('shibouflag');
+let nextpage = document.getElementById('nextpage');
+/*各種ポイント■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+let panepoint1 = 0;
+let panepoint2 = 0;
+let panepoint3 = 0;
+let panepoint4 = 0;
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let ffps1 = 0;
+let ffps2 = 0;
+let ffps3 = 0;
+let ffps4 = 0;
+let fpssf = 0;
+let fpstw1 = 0;
+let fpstw2 = 0;
+let sucpoint = 0;
+let needlepoint = 0;
+let buttonfps1 = 0;
+let buttonfps2 = 0;
+let owaripoint = 0;
+let gpoint1 = 0;
+let gpoint2 = 0;
+//SE
+let sepaneopen14 = document.getElementById('paneopense14');
+let sepaneopen23 = document.getElementById('paneopense23');
+let seoowarai = document.getElementById('oowaraise');
+let sekiru = document.getElementById('kiruse');
+let sekeypad = document.getElementById('keypadse');
+let sekeysuc = document.getElementById('keysucse');
+let sebuttonpush = document.getElementById('buttonpushse');
+let seneedlestop = document.getElementById('needlestopse');
+let seneedledown = document.getElementById('needledownse');
+let seitemget = document.getElementById('itemgetse');
+
+/*ナタ女の部屋■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//針天井で死亡ルート
+door2.addEventListener('mouseover',function(){door2.style.cursor = 'pointer';});
+door2.addEventListener('click',function(){
+    stagehide();//ステージ全消し
+    let timerWhite1 = setInterval(function(){
+        switch(fpstw1){
+            case 1:
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 2:
+            body.style.backgroundColor = '#000000';
+            nextroom.style.display = 'inline';
+            natadrop1.style.display = 'inline';
+            clearInterval(timerWhite1);
+            break;
+        }
+        fpstw1++;
+    },80);
+});
+natadrop1.addEventListener('mouseover',function(){natadrop1.style.cursor = 'pointer';});
+natadrop1.addEventListener('click',function(){
+    seitemget.load();
+    seitemget.play();
+    natadrop1.style.display = 'none';
+    natagetback.style.display = 'inline';
+    nataget.style.display = 'inline';
+    nataname.style.display = 'block';
+    nataname.innerText = 'ナタ';
+    natasetsu.style.display = 'block';
+    natasetsu.innerText = '木を削ったり、狩猟等に\n用いる刃物。\n倒れている化け物が\n持っていたものと思われる。';
+    closebutton1.style.display = 'inline';
+});
+closebutton1.addEventListener('mouseover',function(){closebutton1.style.cursor = 'pointer';});
+closebutton1.addEventListener('click',function(){
+    seneedledown.load();
+    seneedledown.play();
+    closebutton1.style.display = 'none';
+    nataget.style.display = 'none';
+    nataname.style.display = 'none';
+    natasetsu.style.display = 'none';
+    natagetback.style.display = 'none';
+    nextroom.style.display = 'none';
+    shibouflag.style.display = 'inline';
+    let timerIdsf = setInterval(function(){
+        switch(fpssf){
+            case 6:
+            seneedledown.pause();
+            sekiru.load();
+            sekiru.play();
+            gameover.style.display = 'inline';
+            break;
+            case 7:
+            gameover.style.opacity = '1.0';
+            body.style.backgroundColor ='#ff0000';
+            clearInterval(timerIdsf);
+            break;
+        }
+        fpssf++;
+    },80);
+});
+//生存ルート
+door3.addEventListener('mouseover',function(){door3.style.cursor = 'pointer';});
+door3.addEventListener('click',function(){
+    stagehide();//ステージ全消し
+    let timerWhite2 = setInterval(function(){
+        switch(fpstw2){
+            case 1:
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 2:
+            body.style.backgroundColor = '#000000';
+            nextroom.style.display = 'inline';
+            natadrop2.style.display = 'inline';
+            clearInterval(timerWhite2);
+            break;
+        }
+        fpstw2++;
+    },80);
+});
+natadrop2.addEventListener('mouseover',function(){natadrop2.style.cursor = 'pointer';});
+natadrop2.addEventListener('click',function(){
+    seitemget.load();
+    seitemget.play();
+    natadrop2.style.display = 'none';
+    natagetback.style.display = 'inline';
+    nataget.style.display = 'inline';
+    nataname.style.display = 'block';
+    nataname.innerText = 'ナタ';
+    natasetsu.style.display = 'block';
+    natasetsu.innerText = '木を削ったり、狩猟等に\n用いる刃物。\n倒れている化け物が\n持っていたものと思われる。';
+    closebutton2.style.display = 'inline';
+});
+closebutton2.addEventListener('mouseover',function(){closebutton2.style.cursor = 'pointer';});
+closebutton2.addEventListener('click',function(){
+    closebutton2.style.display = 'none';
+    nataget.style.display = 'none';
+    nataname.style.display = 'none';
+    natasetsu.style.display = 'none';
+    natagetback.style.display = 'none';
+    nextpage.style.display = 'inline';
+});
+nextpage.addEventListener('mouseover',function(){nextpage.style.cursor = 'pointer';});
+nextpage.addEventListener('click',function(){
+    location.href = 'awamsohniptosour.html';
+});
+
+
+
+/*パッド操作■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//1回目の入力でAを押す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+keyarea1.addEventListener('mouseover',function(){keyarea1.style.cursor = 'pointer';});
+keyarea1.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの千の位にAを表示
+    sega.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1.style.display = 'none';
+    keyarea2.style.display = 'none';
+    keyarea3.style.display = 'none';
+    keyarea4.style.display = 'none';
+    //次のキーを全て表示
+    keyarea11.style.display = 'inline';
+    keyarea22.style.display = 'inline';
+    keyarea33.style.display = 'inline';
+    keyarea44.style.display = 'inline';
+});
+//1回目の入力でBを押す
+keyarea2.addEventListener('mouseover',function(){keyarea2.style.cursor = 'pointer';});
+keyarea2.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの千の位にBを表示
+    segb.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1.style.display = 'none';
+    keyarea2.style.display = 'none';
+    keyarea3.style.display = 'none';
+    keyarea4.style.display = 'none';
+    //次のキーを全て表示
+    keyarea11.style.display = 'inline';
+    keyarea22.style.display = 'inline';
+    keyarea33.style.display = 'inline';
+    keyarea44.style.display = 'inline';
+});
+//1回目の入力でCを押す
+keyarea3.addEventListener('mouseover',function(){keyarea3.style.cursor = 'pointer';});
+keyarea3.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの千の位にCを表示
+    segc.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1.style.display = 'none';
+    keyarea2.style.display = 'none';
+    keyarea3.style.display = 'none';
+    keyarea4.style.display = 'none';
+    //次のキーを全て表示
+    keyarea11.style.display = 'inline';
+    keyarea22.style.display = 'inline';
+    keyarea33.style.display = 'inline';
+    keyarea44.style.display = 'inline';
+});
+//1回目の入力でDを押す
+keyarea4.addEventListener('mouseover',function(){keyarea4.style.cursor = 'pointer';});
+keyarea4.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    sucpoint += 10;
+    //セグの千の位にDを表示
+    segd.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1.style.display = 'none';
+    keyarea2.style.display = 'none';
+    keyarea3.style.display = 'none';
+    keyarea4.style.display = 'none';
+    //次のキーを全て表示
+    keyarea11.style.display = 'inline';
+    keyarea22.style.display = 'inline';
+    keyarea33.style.display = 'inline';
+    keyarea44.style.display = 'inline';
+});
+//2回目の入力でAを押す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+keyarea11.addEventListener('mouseover',function(){keyarea11.style.cursor = 'pointer';});
+keyarea11.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの百の位にAを表示
+    segaa.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea11.style.display = 'none';
+    keyarea22.style.display = 'none';
+    keyarea33.style.display = 'none';
+    keyarea44.style.display = 'none';
+    //次のキーを全て表示
+    keyarea111.style.display = 'inline';
+    keyarea222.style.display = 'inline';
+    keyarea333.style.display = 'inline';
+    keyarea444.style.display = 'inline';
+});
+//2回目の入力でBを押す
+keyarea22.addEventListener('mouseover',function(){keyarea22.style.cursor = 'pointer';});
+keyarea22.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    sucpoint += 10;
+    //セグの百の位にBを表示
+    segbb.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea11.style.display = 'none';
+    keyarea22.style.display = 'none';
+    keyarea33.style.display = 'none';
+    keyarea44.style.display = 'none';
+    //次のキーを全て表示
+    keyarea111.style.display = 'inline';
+    keyarea222.style.display = 'inline';
+    keyarea333.style.display = 'inline';
+    keyarea444.style.display = 'inline';
+});
+//2回目の入力でCを押す
+keyarea33.addEventListener('mouseover',function(){keyarea33.style.cursor = 'pointer';});
+keyarea33.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの百の位にCを表示
+    segcc.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea11.style.display = 'none';
+    keyarea22.style.display = 'none';
+    keyarea33.style.display = 'none';
+    keyarea44.style.display = 'none';
+    //次のキーを全て表示
+    keyarea111.style.display = 'inline';
+    keyarea222.style.display = 'inline';
+    keyarea333.style.display = 'inline';
+    keyarea444.style.display = 'inline';
+});
+//2回目の入力でDを押す
+keyarea44.addEventListener('mouseover',function(){keyarea44.style.cursor = 'pointer';});
+keyarea44.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの百の位にDを表示
+    segdd.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea11.style.display = 'none';
+    keyarea22.style.display = 'none';
+    keyarea33.style.display = 'none';
+    keyarea44.style.display = 'none';
+    //次のキーを全て表示
+    keyarea111.style.display = 'inline';
+    keyarea222.style.display = 'inline';
+    keyarea333.style.display = 'inline';
+    keyarea444.style.display = 'inline';
+});
+//3回目の入力でAを押す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+keyarea111.addEventListener('mouseover',function(){keyarea111.style.cursor = 'pointer';});
+keyarea111.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの十の位にAを表示
+    segaaa.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea111.style.display = 'none';
+    keyarea222.style.display = 'none';
+    keyarea333.style.display = 'none';
+    keyarea444.style.display = 'none';
+    //次のキーを全て表示
+    keyarea1111.style.display = 'inline';
+    keyarea2222.style.display = 'inline';
+    keyarea3333.style.display = 'inline';
+    keyarea4444.style.display = 'inline';
+});
+//3回目の入力でBを押す
+keyarea222.addEventListener('mouseover',function(){keyarea222.style.cursor = 'pointer';});
+keyarea222.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの十の位にBを表示
+    segbbb.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea111.style.display = 'none';
+    keyarea222.style.display = 'none';
+    keyarea333.style.display = 'none';
+    keyarea444.style.display = 'none';
+    //次のキーを全て表示
+    keyarea1111.style.display = 'inline';
+    keyarea2222.style.display = 'inline';
+    keyarea3333.style.display = 'inline';
+    keyarea4444.style.display = 'inline';
+});
+//3回目の入力でCを押す
+keyarea333.addEventListener('mouseover',function(){keyarea333.style.cursor = 'pointer';});
+keyarea333.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの十の位にCを表示
+    segccc.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea111.style.display = 'none';
+    keyarea222.style.display = 'none';
+    keyarea333.style.display = 'none';
+    keyarea444.style.display = 'none';
+    //次のキーを全て表示
+    keyarea1111.style.display = 'inline';
+    keyarea2222.style.display = 'inline';
+    keyarea3333.style.display = 'inline';
+    keyarea4444.style.display = 'inline';
+});
+//3回目の入力でDを押す
+keyarea444.addEventListener('mouseover',function(){keyarea444.style.cursor = 'pointer';});
+keyarea444.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    sucpoint += 10;
+    //セグの十の位にDを表示
+    segddd.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea111.style.display = 'none';
+    keyarea222.style.display = 'none';
+    keyarea333.style.display = 'none';
+    keyarea444.style.display = 'none';
+    //次のキーを全て表示
+    keyarea1111.style.display = 'inline';
+    keyarea2222.style.display = 'inline';
+    keyarea3333.style.display = 'inline';
+    keyarea4444.style.display = 'inline';
+});
+//4回目の入力でAを押す■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+keyarea1111.addEventListener('mouseover',function(){keyarea1111.style.cursor = 'pointer';});
+keyarea1111.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //現在のキーを全て消す
+    keyarea1111.style.display = 'none';
+    keyarea2222.style.display = 'none';
+    keyarea3333.style.display = 'none';
+    keyarea4444.style.display = 'none';
+    if(sucpoint>=30){
+        //入力成功SE
+        sekeysuc.load();
+        sekeysuc.play();
+        segd.style.display = 'none';
+        segbb.style.display = 'none';
+        segddd.style.display = 'none';
+        sucseg.style.display = 'inline';
+        backbuttonp.style.display = 'none';
+        sucpoint += 10;
+        needlepoint +=10;
+        //オバケが針天井に刺されるアニメ
+        let timerGhost2 = setInterval(function(){
+            switch(gpoint2){
+                case 12:
+                blackout.style.display = 'inline';
+                break;
+                case 13:
+                blackout.style.opacity = '0.2';
+                break;
+                case 14:
+                blackout.style.opacity = '0.4';
+                break;
+                case 15:
+                blackout.style.opacity = '0.6';
+                break;
+                case 16:
+                blackout.style.opacity = '0.8';
+                break;
+                case 17:
+                blackout.style.opacity = '1.0';
+                break;
+                case 18:
+                blackout.style.display = 'none';
+                ghost2.style.display = 'inline';
+                break;
+                case 30:
+                //針天井落下SE
+                seneedledown.load();
+                seneedledown.play();
+                break;
+                case 40:
+                seneedledown.pause();
+                //刺されるSE
+                sekiru.load();
+                sekiru.play();
+                break;
+                case 52:
+                seneedledown.play();
+                break;
+                case 63:
+                ghost2.style.display = 'none';
+                backbuttonsuc.style.display = 'inline';
+                clearInterval(timerGhost2);
+                break;
+            }
+            gpoint2++;
+        },80);
+    }else{
+        //セグの一の位にAを表示
+        segaaaa.style.display = 'inline';
+    }
+});
+//4回目の入力でBを押す
+keyarea2222.addEventListener('mouseover',function(){keyarea2222.style.cursor = 'pointer';});
+keyarea2222.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの一の位にBを表示
+    segbbbb.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1111.style.display = 'none';
+    keyarea2222.style.display = 'none';
+    keyarea3333.style.display = 'none';
+    keyarea4444.style.display = 'none';
+});
+//4回目の入力でCを押す
+keyarea3333.addEventListener('mouseover',function(){keyarea3333.style.cursor = 'pointer';});
+keyarea3333.addEventListener('click',function(){
+    //セグの一の位にCを表示
+    segcccc.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1111.style.display = 'none';
+    keyarea2222.style.display = 'none';
+    keyarea3333.style.display = 'none';
+    keyarea4444.style.display = 'none';
+});
+//4回目の入力でDを押す
+keyarea4444.addEventListener('mouseover',function(){keyarea4444.style.cursor = 'pointer';});
+keyarea4444.addEventListener('click',function(){
+    //キータイプSE
+    sekeypad.load();
+    sekeypad.play();
+    //セグの一の位にDを表示
+    segdddd.style.display = 'inline';
+    //現在のキーを全て消す
+    keyarea1111.style.display = 'none';
+    keyarea2222.style.display = 'none';
+    keyarea3333.style.display = 'none';
+    keyarea4444.style.display = 'none';
+});
+/*メインステージに戻ってきた時のパネルとドアの変化■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function panehenka(){
+    back.style.display = 'inline';
+    farea1.style.display = 'inline';
+    farea2.style.display = 'inline';
+    farea3.style.display = 'inline';
+    farea4.style.display = 'inline';
+    //ドアの変化
+    if(sucpoint === 40 && needlepoint === 10){
+        door2.style.display = 'inline';//針天井で死亡フラグ
+    }else if(sucpoint === 40 && needlepoint !== 10){
+        door3.style.display = 'inline';//生存フラグ
+    }else{
+        door.style.display = 'inline';//ナタオバケで死亡フラグ
+    }
+    //パネル左手前の変化
+    if(panepoint1 >= 1){
+        pane5.style.display = 'inline';
+    }else{
+        pane1.style.display = 'inline';
+    }
+    //パネル左奥の変化
+    if(panepoint2 >= 1　&& sucpoint !== 40){
+        pane6.style.display = 'inline';
+    }else if(panepoint2 >= 1　&& sucpoint === 40){
+        pane9.style.display = 'inline';
+    }else{
+        pane2.style.display = 'inline';
+    }
+    //パネル右手前の変化
+    if(panepoint3 >= 1 && owaripoint !== 10){
+        pane7.style.display = 'inline';
+    }else if(panepoint3 >= 1 && owaripoint === 10){
+        pane10.style.display = 'inline';
+    }else{
+        pane3.style.display = 'inline';
+    }
+     //パネル右奥の変化
+     if(panepoint4 >= 1){
+        pane8.style.display = 'inline';
+    }else{
+        pane4.style.display = 'inline';
+    }
+}
+
+function stagehide(){
+    back.style.display = 'none';
+    pane1.style.display = 'none';
+    pane2.style.display = 'none';
+    pane3.style.display = 'none';
+    pane4.style.display = 'none';
+    pane5.style.display = 'none';
+    pane6.style.display = 'none';
+    pane7.style.display = 'none';
+    pane8.style.display = 'none';
+    pane9.style.display = 'none';
+    pane10.style.display = 'none';
+    farea1.style.display = 'none';
+    farea2.style.display = 'none';
+    farea3.style.display = 'none';
+    farea4.style.display = 'none';
+    door.style.display = 'none';
+    door2.style.display = 'none';
+    door3.style.display = 'none';
+}
+//足左手前オープン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+farea1.addEventListener('mouseover',function(){farea1.style.cursor = 'pointer';});
+farea1.addEventListener('click',function(){
+    ffps1 = 0;
+    stagehide();
+    foota.style.display = 'inline';
+    let timerIdf1 = setInterval(function(){
+        if(ffps1>=24){
+            foota.style.display = 'none';
+            panehenka();
+            clearInterval(timerIdf1);
+        }
+        ffps1++;
+    },80);
+});
+//足左奥オープン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+farea2.addEventListener('mouseover',function(){farea2.style.cursor = 'pointer';});
+farea2.addEventListener('click',function(){
+    ffps2 = 0;
+    stagehide();
+    footd.style.display = 'inline';
+    let timerIdf2 = setInterval(function(){
+        if(ffps2>=24){
+            footd.style.display = 'none';
+            panehenka();
+            clearInterval(timerIdf2);
+        }
+        ffps2++;
+    },80);
+});
+//足右手前オープン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+farea3.addEventListener('mouseover',function(){farea3.style.cursor = 'pointer';});
+farea3.addEventListener('click',function(){
+    ffps3 = 0;
+    stagehide();
+    footb.style.display = 'inline';
+    let timerIdf3 = setInterval(function(){
+        if(ffps3>=24){
+            footb.style.display = 'none';
+            panehenka();
+            clearInterval(timerIdf3);
+        }
+        ffps3++;
+    },80);
+});
+//足右奥オープン■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+farea4.addEventListener('mouseover',function(){farea4.style.cursor = 'pointer';});
+farea4.addEventListener('click',function(){
+    ffps4 = 0;
+    stagehide();
+    footd.style.display = 'inline';
+    let timerIdf4 = setInterval(function(){
+        if(ffps4>=24){
+            footd.style.display = 'none';
+            panehenka();
+            clearInterval(timerIdf4);
+        }
+        ffps4++;
+    },80);
+});
+//パネル左手前オープン(マップ)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+//遠目からパネルをクリック
+pane1.addEventListener('mouseover',function(){pane1.style.cursor = 'pointer';});
+pane1.addEventListener('click',function(){
+    stagehide();
+    paneup1.style.display = 'inline';
+    hitarea1.style.display = 'inline';
+});
+//パネルをクリックして回転させる
+hitarea1.addEventListener('mouseover',function(){hitarea1.style.cursor = 'pointer';});
+hitarea1.addEventListener('click',function(){
+    panepoint1 += 1;
+    sepaneopen14.load();
+    sepaneopen14.play();
+    hitarea1.style.display = 'none';
+    paneup1.style.display = 'none';
+    paneopen1.style.display = 'inline';
+    let timerId1 = setInterval(function(){
+        if(fps1>=29){
+            paneopen1.style.display = 'none';
+            panehenka();
+            clearInterval(timerId1);
+        }
+        fps1++;
+    },80);
+});
+//遠目から回転後のパネルをクリック
+pane5.addEventListener('mouseover',function(){pane5.style.cursor = 'pointer';});
+pane5.addEventListener('click',function(){
+    fps5 = 0;
+    stagehide();
+    paneopen1.style.display = 'inline';
+    let timerId5 = setInterval(function(){
+        if(fps5>=24){
+            paneopen1.style.display = 'none';
+            panehenka();
+            clearInterval(timerId5);
+        }
+        fps5++;
+    },80);
+});
+//パネル右奥オープン(マップ)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+//遠目からパネルをクリック
+pane4.addEventListener('mouseover',function(){pane4.style.cursor = 'pointer';});
+pane4.addEventListener('click',function(){
+    stagehide();
+    paneup4.style.display = 'inline';
+    hitarea4.style.display = 'inline';
+});
+//パネルをクリックして回転させる
+hitarea4.addEventListener('mouseover',function(){hitarea4.style.cursor = 'pointer';});
+hitarea4.addEventListener('click',function(){
+    panepoint4 += 1;
+    sepaneopen14.load();
+    sepaneopen14.play();
+    hitarea4.style.display = 'none';
+    paneup4.style.display = 'none';
+    paneopen4.style.display = 'inline';
+    let timerId4 = setInterval(function(){
+        if(fps4>=29){
+            paneopen4.style.display = 'none';
+            panehenka();
+            clearInterval(timerId4);
+        }
+        fps4++;
+    },80);
+});
+//遠目から回転後のパネルをクリック
+pane8.addEventListener('mouseover',function(){pane8.style.cursor = 'pointer';});
+pane8.addEventListener('click',function(){
+    fps8 = 0;
+    stagehide();
+    paneopen4.style.display = 'inline';
+    let timerId8 = setInterval(function(){
+        if(fps8>=24){
+            paneopen4.style.display = 'none';
+            panehenka();
+            clearInterval(timerId8);
+        }
+        fps8++;
+    },80);
+});
+//パネル右手前オープン(ボタン)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+//遠目からパネルをクリック
+pane3.addEventListener('mouseover',function(){pane3.style.cursor = 'pointer';});
+pane3.addEventListener('click',function(){
+    stagehide();
+    paneup3.style.display = 'inline';
+    hitarea3.style.display = 'inline';
+});
+//パネルをクリックして開く
+hitarea3.addEventListener('mouseover',function(){hitarea3.style.cursor = 'pointer';});
+hitarea3.addEventListener('click',function(){
+    panepoint3 += 1;
+    sepaneopen23.load();
+    sepaneopen23.play();
+    hitarea3.style.display = 'none';
+    paneup3.style.display = 'none';
+    paneopen3.style.display = 'inline';
+    let timerId3 = setInterval(function(){
+        if(fps3>=5){
+            //アニメーションを消してボタンステージを表示
+            paneopen3.style.display = 'none';
+            buttonstage1.style.display = 'inline';
+            buttonhitarea.style.display = 'inline';
+            backbuttonb.style.display = 'inline';
+            clearInterval(timerId3);
+        }
+        fps3++;
+    },80);
+});
+//遠目から開いたパネルをクリックしてボタンシーンへ
+pane7.addEventListener('mouseover',function(){pane7.style.cursor = 'pointer';});
+pane7.addEventListener('click',function(){
+    stagehide();
+    //ボタンステージを表示
+    buttonstage1.style.display = 'inline';
+    buttonhitarea.style.display = 'inline';
+    backbuttonb.style.display = 'inline';
+});
+//最初のステージに戻るボタンを押す
+backbuttonb.addEventListener('mouseover',function(){backbuttonb.style.cursor = 'pointer';});
+backbuttonb.addEventListener('click',function(){
+    //ボタンステージを消す
+    buttonstage1.style.display = 'none';
+    buttonhitarea.style.display = 'none';
+    backbuttonb.style.display = 'none';
+    panehenka();
+});
+
+//最初のステージに戻るボタンを押す(装置停止後)
+backbuttonsuc2.addEventListener('mouseover',function(){backbuttonsuc2.style.cursor = 'pointer';});
+backbuttonsuc2.addEventListener('click',function(){
+    //ボタンステージを消す
+    buttonstage2.style.display = 'none';
+    backbuttonsuc2.style.display = 'none';
+    panehenka();
+});
+
+//装置停止後の遠目パッドパネルを押す
+pane10.addEventListener('mouseover',function(){pane10.style.cursor = 'pointer';});
+pane10.addEventListener('click',function(){
+    //装置停止後のボタンイベントステージを表示
+    buttonstage2.style.display = 'inline';
+    backbuttonsuc2.style.display = 'inline';
+});
+
+//針天井作動停止ボタンを押す
+buttonhitarea.addEventListener('mouseover',function(){buttonhitarea.style.cursor = 'pointer';});
+buttonhitarea.addEventListener('click',function(){
+    sebuttonpush.load();
+    sebuttonpush.play();
+    buttonfps2 = 0;
+    buttonhitarea.style.display = 'none';
+    backbuttonb.style.display = 'none';
+    buttonstage1.style.display = 'none';
+    buttonstage2.style.display = 'inline';
+    if(needlepoint === 10){
+        needlepoint = 0;
+        owaripoint += 10;
+        seneedlestop.load();
+        seneedlestop.play();
+        let timerButton1 = setInterval(function(){
+            switch(buttonfps1){
+                case 20:
+                needlestopmsg.style.display = 'block';
+                needlestopmsg.style.left = '320px';
+                needlestopmsg.innerText = '隣';
+                break;
+                case 21:
+                needlestopmsg.innerText = '隣の';
+                break;
+                case 22:
+                needlestopmsg.innerText = '隣の部';
+                break;
+                case 23:
+                needlestopmsg.innerText = '隣の部屋';
+                break;
+                case 24:
+                needlestopmsg.innerText = '隣の部屋か';
+                break;
+                case 25:
+                needlestopmsg.innerText = '隣の部屋から';
+                break;
+                case 26:
+                needlestopmsg.innerText = '隣の部屋から何';
+                break;
+                case 27:
+                needlestopmsg.innerText = '隣の部屋から何か';
+                break;
+                case 28:
+                needlestopmsg.innerText = '隣の部屋から何かが';
+                break;
+                case 29:
+                needlestopmsg.innerText = '隣の部屋から何かが止';
+                break;
+                case 30:
+                needlestopmsg.innerText = '隣の部屋から何かが止ま';
+                break;
+                case 31:
+                needlestopmsg.innerText = '隣の部屋から何かが止まる';
+                break;
+                case 32:
+                needlestopmsg.innerText = '隣の部屋から何かが止まる音';
+                break;
+                case 33:
+                needlestopmsg.innerText = '隣の部屋から何かが止まる音が';
+                break;
+                case 34:
+                needlestopmsg.innerText = '隣の部屋から何かが止まる音がし';
+                break;
+                case 35:
+                needlestopmsg.innerText = '隣の部屋から何かが止まる音がした';
+                break;
+                case 36:
+                needlestopmsg.innerText = '隣の部屋から何かが止まる音がした。';
+                break;
+                case 48:
+                needlestopmsg.style.display = 'none';
+                backbuttonsuc2.style.display = 'inline';
+                clearInterval(timerButton1);
+                break;
+            }
+            buttonfps1++;
+        },80);
+    }else{
+        let timerButton2 = setInterval(function(){
+            switch(buttonfps2){
+                case 1:
+                needlestopmsg.style.display = 'block';
+                needlestopmsg.innerText = '特';
+                break;
+                case 2:
+                needlestopmsg.innerText = '特に';
+                break;
+                case 3:
+                needlestopmsg.innerText = '特に何';
+                break;
+                case 4:
+                needlestopmsg.innerText = '特に何も';
+                break;
+                case 5:
+                needlestopmsg.innerText = '特に何も起';
+                break;
+                case 6:
+                needlestopmsg.innerText = '特に何も起き';
+                break;
+                case 7:
+                needlestopmsg.innerText = '特に何も起きな';
+                break;
+                case 8:
+                needlestopmsg.innerText = '特に何も起きない';
+                break;
+                case 9:
+                needlestopmsg.innerText = '特に何も起きないよ';
+                break;
+                case 10:
+                needlestopmsg.innerText = '特に何も起きないよう';
+                break;
+                case 11:
+                needlestopmsg.innerText = '特に何も起きないようだ';
+                break;
+                case 12:
+                needlestopmsg.innerText = '特に何も起きないようだ。';
+                break;
+                case 24:
+                needlestopmsg.style.display = 'none';
+                buttonhitarea.style.display = 'inline';
+                buttonstage2.style.display = 'none';
+                buttonstage1.style.display = 'inline';
+                backbuttonb.style.display = 'inline';
+                clearInterval(timerButton2);
+                break;
+            }
+            buttonfps2++;
+        },80);
+    }
+});
+
+
+//パネル左奥オープン(パッド)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+//遠目からパネルをクリック
+pane2.addEventListener('mouseover',function(){pane2.style.cursor = 'pointer';});
+pane2.addEventListener('click',function(){
+    stagehide();
+    paneup2.style.display = 'inline';
+    hitarea2.style.display = 'inline';
+});
+//パネルをクリックして開く
+hitarea2.addEventListener('mouseover',function(){hitarea2.style.cursor = 'pointer';});
+hitarea2.addEventListener('click',function(){
+    panepoint2 += 1;
+    sepaneopen23.load();
+    sepaneopen23.play();
+    hitarea2.style.display = 'none';
+    paneup2.style.display = 'none';
+    paneopen2.style.display = 'inline';
+    let timerId2 = setInterval(function(){
+        if(fps2>=5){
+            paneopen2.style.display = 'none';
+            //パッドイベントステージを用意
+            backbuttonp.style.display = 'inline';
+            padstage.style.display = 'inline';
+            keyarea1.style.display = 'inline';
+            keyarea2.style.display = 'inline';
+            keyarea3.style.display = 'inline';
+            keyarea4.style.display = 'inline';
+            clearInterval(timerId2);
+        }
+        fps2++;
+    },80);
+});
+//遠目から開いたパネルをクリックしてボタンシーンへ
+pane6.addEventListener('mouseover',function(){pane6.style.cursor = 'pointer';});
+pane6.addEventListener('click',function(){
+    stagehide();
+     //パッドイベントステージを用意
+     backbuttonp.style.display = 'inline';
+     padstage.style.display = 'inline';
+     keyarea1.style.display = 'inline';
+     keyarea2.style.display = 'inline';
+     keyarea3.style.display = 'inline';
+     keyarea4.style.display = 'inline';
+});
+//最初のステージに戻るボタンを押す
+backbuttonp.addEventListener('mouseover',function(){backbuttonp.style.cursor = 'pointer';});
+backbuttonp.addEventListener('click',function(){
+    //パッドイベントステージを消す
+    backbuttonp.style.display = 'none';
+    padstage.style.display = 'none';
+    keyarea1.style.display = 'none';
+    keyarea2.style.display = 'none';
+    keyarea3.style.display = 'none';
+    keyarea4.style.display = 'none';
+    keyarea11.style.display = 'none';
+    keyarea22.style.display = 'none';
+    keyarea33.style.display = 'none';
+    keyarea44.style.display = 'none';
+    keyarea111.style.display = 'none';
+    keyarea222.style.display = 'none';
+    keyarea333.style.display = 'none';
+    keyarea444.style.display = 'none';
+    keyarea1111.style.display = 'none';
+    keyarea2222.style.display = 'none';
+    keyarea3333.style.display = 'none';
+    keyarea4444.style.display = 'none';
+    sega.style.display = 'none';
+    segb.style.display = 'none';
+    segc.style.display = 'none';
+    segd.style.display = 'none';
+    segaa.style.display = 'none';
+    segbb.style.display = 'none';
+    segcc.style.display = 'none';
+    segdd.style.display = 'none';
+    segaaa.style.display = 'none';
+    segbbb.style.display = 'none';
+    segccc.style.display = 'none';
+    segddd.style.display = 'none';
+    segaaaa.style.display = 'none';
+    segbbbb.style.display = 'none';
+    segcccc.style.display = 'none';
+    segdddd.style.display = 'none';
+    sucpoint = 0;
+    panehenka();
+});
+//最初のステージに戻るボタンを押す(入力成功時)
+backbuttonsuc.addEventListener('mouseover',function(){backbuttonsuc.style.cursor = 'pointer';});
+backbuttonsuc.addEventListener('click',function(){
+    //パッドイベントステージを消す
+    backbuttonsuc.style.display = 'none';
+    padstage.style.display = 'none';
+    sucseg.style.display = 'none';
+    panehenka();
+});
+//入力成功後の遠目パッドパネルを押す
+pane9.addEventListener('mouseover',function(){pane9.style.cursor = 'pointer';});
+pane9.addEventListener('click',function(){
+    //入力成功後のパッドイベントステージを表示
+    backbuttonsuc.style.display = 'inline';
+    padstage.style.display = 'inline';
+    sucseg.style.display = 'inline';
+});
+//扉開く
+door.addEventListener('mouseover',function(){door.style.cursor = 'pointer';});
+door.addEventListener('click',function(){
+    stagehide();
+    let timerGhost1 = setInterval(function(){
+        switch(gpoint1){
+            case 1:
+            body.style.backgroundColor = '#ffffff';
+            break;
+            case 2:
+            seoowarai.load();
+            seoowarai.play();
+            body.style.backgroundColor = '#000000';
+            ghost1.style.display = 'inline';
+            break;
+            case 4:
+            sekiru.load();
+            sekiru.play();
+            break;
+            case 16:
+            gameover.style.display = 'inline';
+            break;
+            case 17:
+            gameover.style.opacity = '0.2';
+            body.style.backgroundColor = '#330000';
+            break;
+            case 18:
+            gameover.style.opacity = '0.4';
+            body.style.backgroundColor = '#660000';
+            break;
+            case 19:
+            gameover.style.opacity = '0.6';
+            body.style.backgroundColor = '#990000';
+            break;
+            case 20:
+            gameover.style.opacity = '0.8';
+            body.style.backgroundColor = '#cc0000';
+            break;
+            case 21:
+            gameover.style.opacity = '1.0';
+            body.style.backgroundColor = '#ff0000';
+            clearInterval(timerGhost1);
+            break;
+        }
+        gpoint1++;
+    },80);
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/9gu0omn0obyea.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:52:42 GMT -->
+</html>

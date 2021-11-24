@@ -1,0 +1,148 @@
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:375px;
+    height:667px;
+    background-color: #000000;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#mainent1{
+    width:375px;
+    height:667px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#mainent2{
+    width:375px;
+    height:667px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#entdoor1{
+    background-color: #ff0000;
+    opacity: 0.0;
+    width:227px;
+    height:285px;
+    position:absolute;
+    top:220px;
+    left:73px;
+}
+#entdoor2{
+    background-color: #ff0000;
+    opacity: 0.0;
+    width:227px;
+    height:285px;
+    position:absolute;
+    top:220px;
+    left:73px;
+    display:none;
+}
+#mainpic1{
+    width:375px;
+    height:574px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#dice1{
+    width:93px;
+    height:93px;
+    position: absolute;
+    top:574px;
+    left:0px;
+    display:none;
+}
+#dice2{
+    width:93px;
+    height:93px;
+    position: absolute;
+    top:574px;
+    left:94px;
+    display:none;
+}
+#dice3{
+    width:93px;
+    height:93px;
+    position: absolute;
+    top:574px;
+    left:188px;
+    display:none;
+}
+#dice4{
+    width:93px;
+    height:93px;
+    position: absolute;
+    top:574px;
+    left:282px;
+    display:none;
+}
+#yukie{
+    position: absolute;
+    top:0px;
+    left:0px;
+    display: none;
+}
+#mainpic2{
+    width:375px;
+    height:667px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#hantei{
+    width:330px;
+    height:367px;
+    opacity: 0.0;
+    position:absolute;
+    top:19px;
+    left:23px;
+    display:none;
+}
+#mirror1{
+    border-radius: 50%;
+    width:93px;
+    height:117px;
+    position:absolute;
+    top:433px;
+    left:0px;
+    display:none;
+}
+#mirror2{
+    border-radius: 50%;
+    width:93px;
+    height:117px;
+    position:absolute;
+    top:492px;
+    left:94px;
+    display:none;
+}
+#mirror3{
+    border-radius: 50%;
+    width:93px;
+    height:117px;
+    position:absolute;
+    top:492px;
+    left:188px;
+    display:none;
+}
+#mirror4{
+    border-radius: 50%;
+    width:93px;
+    height:117px;
+    position:absolute;
+    top:433px;
+    left:282px;
+    display:none;
+}

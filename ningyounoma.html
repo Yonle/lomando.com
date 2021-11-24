@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/ningyounoma.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:53:59 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>んヴぃｄさいうおりゃｈさｄ</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:800px;
+    height:600px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+/*ステージクリアセット*/
+#chead1{width:300px;height:300px;position:absolute;left:0px;top:150px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#chead2{width:300px;height:300px;position:absolute;right:0px;top:150px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#shukuji{
+    color:#ff0000;
+    font-size:25px;
+    font-weight:bold;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    text-align:left;
+    position:absolute;
+    left:270px;
+    top:208px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#doordm{width:80px;height:183px;position:absolute;left:360px;top:248px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nextdoor{width:80px;height:183px;position:absolute;left:360px;top:248px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*ステージ人形背面*/
+#nback{width:800px;height:336px;position:absolute;left:0px;top:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nback1{width:727px;height:336px;position:absolute;right:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nback2{width:567px;height:336px;position:absolute;right:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nback3{width:407px;height:336px;position:absolute;right:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nback4{width:246px;height:336px;position:absolute;right:0px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*ステージ人形中央*/
+#nmiddle{width:800px;height:336px;position:absolute;left:0px;top:155px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nmiddle1{width:726px;height:336px;position:absolute;left:0px;top:155px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nmiddle2{width:566px;height:336px;position:absolute;left:0px;top:155px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nmiddle3{width:406px;height:336px;position:absolute;left:0px;top:155px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nmiddle4{width:246px;height:336px;position:absolute;left:0px;top:155px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*ステージ人形前面*/
+#nfront{width:800px;height:292px;position:absolute;left:0px;bottom:0px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nfront1{width:727px;height:292px;position:absolute;right:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nfront2{width:567px;height:292px;position:absolute;right:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nfront3{width:407px;height:292px;position:absolute;right:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#nfront4{width:246px;height:292px;position:absolute;right:0px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*スタートボタン*/
+#startbt{width:226px;height:292px;position:absolute;left:287px;top:308px;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*上段人形*/
+#mato1{width:190px;height:250px;position:absolute;left:12px;top:198px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#mato2{width:190px;height:250px;position:absolute;left:206px;top:198px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#mato3{width:190px;height:250px;position:absolute;left:404px;top:198px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#mato4{width:190px;height:250px;position:absolute;left:598px;top:198px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*上段人形判定*/
+#hantei1{width:190px;height:250px;position:absolute;left:12px;top:0px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hantei2{width:190px;height:250px;position:absolute;left:206px;top:0px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hantei3{width:190px;height:250px;position:absolute;left:404px;top:0px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hantei4{width:190px;height:250px;position:absolute;left:598px;top:0px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*下段人形*/
+#mato5{width:190px;height:250px;position:absolute;left:12px;top:350px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#mato6{width:190px;height:250px;position:absolute;left:206px;top:350px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#mato7{width:190px;height:250px;position:absolute;left:404px;top:350px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#mato8{width:190px;height:250px;position:absolute;left:598px;top:350px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*下段人形判定*/
+#hantei5{width:190px;height:250px;position:absolute;left:12px;top:154px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hantei6{width:190px;height:250px;position:absolute;left:206px;top:154px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hantei7{width:190px;height:250px;position:absolute;left:404px;top:154px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#hantei8{width:190px;height:250px;position:absolute;left:598px;top:154px;opacity:0.0;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*せり上がる人形*/
+#ningyou{width:224px;height:336px;position:absolute;left:288px;bottom:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato1壊れる*/
+#diea1{width:190px;height:250px;position:absolute;left:12px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb1{width:190px;height:250px;position:absolute;left:12px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato2壊れる*/
+#diea2{width:190px;height:250px;position:absolute;left:206px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb2{width:190px;height:250px;position:absolute;left:206px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato3壊れる*/
+#diea3{width:190px;height:250px;position:absolute;left:404px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb3{width:190px;height:250px;position:absolute;left:404px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato4壊れる*/
+#diea4{width:190px;height:250px;position:absolute;left:598px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb4{width:190px;height:250px;position:absolute;left:598px;top:0px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato5壊れる*/
+#diea5{width:190px;height:250px;position:absolute;left:12px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb5{width:190px;height:250px;position:absolute;left:12px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato6壊れる*/
+#diea6{width:190px;height:250px;position:absolute;left:206px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb6{width:190px;height:250px;position:absolute;left:206px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato7壊れる*/
+#diea7{width:190px;height:250px;position:absolute;left:404px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb7{width:190px;height:250px;position:absolute;left:404px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+/*mato8壊れる*/
+#diea8{width:190px;height:250px;position:absolute;left:598px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#dieb8{width:190px;height:250px;position:absolute;left:598px;top:154px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka1{width:78px;height:79px;position:absolute;left:32px;top:25px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb1{width:78px;height:62px;position:absolute;left:11px;top:74px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc1{width:78px;height:79px;position:absolute;left:32px;top:105px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka2{width:78px;height:79px;position:absolute;left:226px;top:25px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb2{width:78px;height:62px;position:absolute;left:205px;top:74px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc2{width:78px;height:79px;position:absolute;left:226px;top:105px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka3{width:78px;height:79px;position:absolute;left:424px;top:25px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb3{width:78px;height:62px;position:absolute;left:403px;top:74px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc3{width:78px;height:79px;position:absolute;left:424px;top:105px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka4{width:78px;height:79px;position:absolute;left:618px;top:25px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb4{width:78px;height:62px;position:absolute;left:597px;top:74px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc4{width:78px;height:79px;position:absolute;left:618px;top:105px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka5{width:78px;height:79px;position:absolute;left:32px;top:179px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb5{width:78px;height:62px;position:absolute;left:11px;top:228px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc5{width:78px;height:79px;position:absolute;left:32px;top:259px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka6{width:78px;height:79px;position:absolute;left:226px;top:179px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb6{width:78px;height:62px;position:absolute;left:205px;top:228px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc6{width:78px;height:79px;position:absolute;left:226px;top:259px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka7{width:78px;height:79px;position:absolute;left:424px;top:179px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb7{width:78px;height:62px;position:absolute;left:403px;top:228px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc7{width:78px;height:79px;position:absolute;left:424px;top:259px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#necka8{width:78px;height:79px;position:absolute;left:618px;top:179px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckb8{width:78px;height:62px;position:absolute;left:597px;top:228px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+#neckc8{width:78px;height:79px;position:absolute;left:618px;top:259px;display:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+
+#scoreMessage{
+    background-color:#000000;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    padding:0px;
+    margin:0px;
+    line-height:1em;
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#timeMessage{
+    background-color:#000000;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:bold;
+    padding:0px;
+    margin:0px;
+    line-height:1em;
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#serifusp{
+    width:750px;
+    height:200px;
+    background-color:#000000;
+    border:2px solid #ffffff;
+    position:absolute;
+    left:25px;
+    bottom:25px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#serifu{
+    color:#ffffff;
+    font-size:20px;
+    padding:0px;
+    margin:0px;
+    line-height:1em;
+    text-align:left;
+    position:absolute;
+    left:240px;
+    bottom:175px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#ningyouface{
+    width:180px;
+    height:180px;
+    position:absolute;
+    left:35px;
+    bottom:35px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#semaru{
+    width:800px;
+    height:600px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#gameover{
+    width:800px;
+    height:600px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+#msgokrbt{
+    width:70px;
+    height:20px;
+    position:absolute;
+    right:35px;
+    bottom:35px;
+    display:none;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:800px;height:600px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="kiruse" preload="auto">
+<source src="pse/janenedamage.wav" type="audio/wav">
+<source src="pse/janenedamage.mp3" type="audio/mp3">
+</audio>
+
+<audio id="ningyoukoe" preload="auto">
+<source src="pse/ningyoukoe.wav" type="audio/wav">
+<source src="pse/ningyoukoe.mp3" type="audio/mp3">
+</audio>
+
+<audio id="clearbgm" preload="auto">
+<source src="pse/ningyouclear.wav" type="audio/wav">
+<source src="pse/ningyouclear.mp3" type="audio/mp3">
+</audio>
+
+<audio id="takawaraikoe" preload="auto">
+<source src="pse/takawarai.wav" type="audio/wav">
+<source src="pse/takawarai.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<!--ステージクリアセット-->
+<img src="pimg/ningclearhead.gif"id="chead1">
+<img src="pimg/ningclearhead.gif"id="chead2">
+<p id="shukuji">ゆっくりしていってね！</p>
+<img src="pimg/door.jpg"id="doordm">
+<img src="pimg/door.jpg"id="nextdoor">
+<!--ステージ人形背面-->
+<img src="pimg/ningback.png"id="nback">
+<img src="pimg/ningback1.png"id="nback1">
+<img src="pimg/ningback2.png"id="nback2">
+<img src="pimg/ningback3.png"id="nback3">
+<img src="pimg/ningback4.png"id="nback4">
+<!--人形上段-->
+<img src="pimg/ningmato.png"id="mato1">
+<img src="pimg/ningmato.png"id="mato2">
+<img src="pimg/ningmato.png"id="mato3">
+<img src="pimg/ningmato.png"id="mato4">
+<img src="pimg/ningmato.png"id="hantei1">
+<img src="pimg/ningmato.png"id="hantei2">
+<img src="pimg/ningmato.png"id="hantei3">
+<img src="pimg/ningmato.png"id="hantei4">
+<!--人形壊れる上段-->
+<img src="pimg/ningdie1.png"id="diea1">
+<img src="pimg/ningdie2.png"id="dieb1">
+<img src="pimg/ningneck1.png"id="necka1">
+<img src="pimg/ningneck2.png"id="neckb1">
+<img src="pimg/ningneck3.png"id="neckc1">
+<img src="pimg/ningdie1.png"id="diea2">
+<img src="pimg/ningdie2.png"id="dieb2">
+<img src="pimg/ningneck1.png"id="necka2">
+<img src="pimg/ningneck2.png"id="neckb2">
+<img src="pimg/ningneck3.png"id="neckc2">
+<img src="pimg/ningdie1.png"id="diea3">
+<img src="pimg/ningdie2.png"id="dieb3">
+<img src="pimg/ningneck1.png"id="necka3">
+<img src="pimg/ningneck2.png"id="neckb3">
+<img src="pimg/ningneck3.png"id="neckc3">
+<img src="pimg/ningdie1.png"id="diea4">
+<img src="pimg/ningdie2.png"id="dieb4">
+<img src="pimg/ningneck1.png"id="necka4">
+<img src="pimg/ningneck2.png"id="neckb4">
+<img src="pimg/ningneck3.png"id="neckc4">
+<!--ステージ人形中央-->
+<img src="pimg/ningback.png"id="nmiddle">
+<img src="pimg/ningback1.png"id="nmiddle1">
+<img src="pimg/ningback2.png"id="nmiddle2">
+<img src="pimg/ningback3.png"id="nmiddle3">
+<img src="pimg/ningback4.png"id="nmiddle4">
+<!--人形下段-->
+<img src="pimg/ningmato.png"id="mato5">
+<img src="pimg/ningmato.png"id="mato6">
+<img src="pimg/ningmato.png"id="mato7">
+<img src="pimg/ningmato.png"id="mato8">
+<img src="pimg/ningmato.png"id="hantei5">
+<img src="pimg/ningmato.png"id="hantei6">
+<img src="pimg/ningmato.png"id="hantei7">
+<img src="pimg/ningmato.png"id="hantei8">
+<!--人形壊れる下段-->
+<img src="pimg/ningdie1.png"id="diea5">
+<img src="pimg/ningdie2.png"id="dieb5">
+<img src="pimg/ningneck1.png"id="necka5">
+<img src="pimg/ningneck2.png"id="neckb5">
+<img src="pimg/ningneck3.png"id="neckc5">
+<img src="pimg/ningdie1.png"id="diea6">
+<img src="pimg/ningdie2.png"id="dieb6">
+<img src="pimg/ningneck1.png"id="necka6">
+<img src="pimg/ningneck2.png"id="neckb6">
+<img src="pimg/ningneck3.png"id="neckc6">
+<img src="pimg/ningdie1.png"id="diea7">
+<img src="pimg/ningdie2.png"id="dieb7">
+<img src="pimg/ningneck1.png"id="necka7">
+<img src="pimg/ningneck2.png"id="neckb7">
+<img src="pimg/ningneck3.png"id="neckc7">
+<img src="pimg/ningdie1.png"id="diea8">
+<img src="pimg/ningdie2.png"id="dieb8">
+<img src="pimg/ningneck1.png"id="necka8">
+<img src="pimg/ningneck2.png"id="neckb8">
+<img src="pimg/ningneck3.png"id="neckc8">
+<!--ステージ人形前面-->
+<img src="pimg/ningfront.png"id="nfront">
+<img src="pimg/ningfront1.png"id="nfront1">
+<img src="pimg/ningfront2.png"id="nfront2">
+<img src="pimg/ningfront3.png"id="nfront3">
+<img src="pimg/ningfront4.png"id="nfront4">
+<!--せり上がる人形-->
+<img src="pimg/ningyou.png"id="ningyou">
+<!--スタートボタン-->
+<img src="pimg/ningstartbt.png"id="startbt">
+<!--スコア表示-->
+<p id="scoreMessage"></p>
+<p id="timeMessage"></p>
+<!--敵の台詞スペース-->
+<div id="serifusp"></div>
+<p id="serifu"></p>
+<img src = "pimg/ningface.jpg"id="ningyouface">
+<img src = "pimg/ningmsgokuribt.gif"id="msgokrbt">
+<img src = "pimg/ningsemaru.gif"id="semaru">
+<img src = "pimg/gameover86.jpg"id="gameover">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+/*ステージクリアセット*/
+let chead1 = document.getElementById('chead1');
+let chead2 = document.getElementById('chead2');
+let shukuji = document.getElementById('shukuji');
+let doordm = document.getElementById('doordm');
+let nextdoor = document.getElementById('nextdoor');
+let nback = document.getElementById('nback');
+let nback1 = document.getElementById('nback1');
+let nback2 = document.getElementById('nback2');
+let nback3 = document.getElementById('nback3');
+let nback4 = document.getElementById('nback4');
+let nmiddle = document.getElementById('nmiddle');
+let nmiddle1 = document.getElementById('nmiddle1');
+let nmiddle2 = document.getElementById('nmiddle2');
+let nmiddle3 = document.getElementById('nmiddle3');
+let nmiddle4 = document.getElementById('nmiddle4');
+let nfront = document.getElementById('nfront');
+let nfront1 = document.getElementById('nfront1');
+let nfront2 = document.getElementById('nfront2');
+let nfront3 = document.getElementById('nfront3');
+let nfront4 = document.getElementById('nfront4');
+let startbt = document.getElementById('startbt');
+//上段人形
+let mato1 = document.getElementById('mato1');
+let mato2 = document.getElementById('mato2');
+let mato3 = document.getElementById('mato3');
+let mato4 = document.getElementById('mato4');
+//上段人形判定
+let hantei1 = document.getElementById('hantei1');
+let hantei2 = document.getElementById('hantei2');
+let hantei3 = document.getElementById('hantei3');
+let hantei4 = document.getElementById('hantei4');
+//下段人形
+let mato5 = document.getElementById('mato5');
+let mato6 = document.getElementById('mato6');
+let mato7 = document.getElementById('mato7');
+let mato8 = document.getElementById('mato8');
+//下段人形判定
+let hantei5 = document.getElementById('hantei5');
+let hantei6 = document.getElementById('hantei6');
+let hantei7 = document.getElementById('hantei7');
+let hantei8 = document.getElementById('hantei8');
+//人形壊れる
+diea1 = document.getElementById('diea1');
+dieb1 = document.getElementById('dieb1');
+diea2 = document.getElementById('diea2');
+dieb2 = document.getElementById('dieb2');
+diea3 = document.getElementById('diea3');
+dieb3 = document.getElementById('dieb3');
+diea4 = document.getElementById('diea4');
+dieb4 = document.getElementById('dieb4');
+diea5 = document.getElementById('diea5');
+dieb5 = document.getElementById('dieb5');
+diea6 = document.getElementById('diea6');
+dieb6 = document.getElementById('dieb6');
+diea7 = document.getElementById('diea7');
+dieb7 = document.getElementById('dieb7');
+diea8 = document.getElementById('diea8');
+dieb8 = document.getElementById('dieb8');
+necka1 = document.getElementById('necka1');
+neckb1 = document.getElementById('neckb1');
+neckc1 = document.getElementById('neckc1');
+necka2 = document.getElementById('necka2');
+neckb2 = document.getElementById('neckb2');
+neckc2 = document.getElementById('neckc2');
+necka3 = document.getElementById('necka3');
+neckb3 = document.getElementById('neckb3');
+neckc3 = document.getElementById('neckc3');
+necka4 = document.getElementById('necka4');
+neckb4 = document.getElementById('neckb4');
+neckc4 = document.getElementById('neckc4');
+necka5 = document.getElementById('necka5');
+neckb5 = document.getElementById('neckb5');
+neckc5 = document.getElementById('neckc5');
+necka6 = document.getElementById('necka6');
+neckb6 = document.getElementById('neckb6');
+neckc6 = document.getElementById('neckc6');
+necka7 = document.getElementById('necka7');
+neckb7 = document.getElementById('neckb7');
+neckc7 = document.getElementById('neckc7');
+necka8 = document.getElementById('necka8');
+neckb8 = document.getElementById('neckb8');
+neckc8 = document.getElementById('neckc8');
+//効果音
+let sekiru = document.getElementById('kiruse');
+let koeningyou = document.getElementById('ningyoukoe');
+let bgmclear = document.getElementById('clearbgm');
+let koetakawarai = document.getElementById('takawaraikoe');
+//タイマー
+let timerId1 = '';
+let timerId2 = '';
+let timerId3 = '';
+let timerId4 = '';
+let timerId5 = '';
+let timerId6 = '';
+let timerId7 = '';
+let timerId8 = '';
+//メッセージとスコア
+let scoreMessage = document.getElementById('scoreMessage');
+let timeMessage = document.getElementById('timeMessage');
+let serifusp = document.getElementById('serifusp');
+let serifu = document.getElementById('serifu');
+let msgokrbt = document.getElementById('msgokrbt');
+let ningyouface = document.getElementById('ningyouface');
+let semaru = document.getElementById('semaru');
+let gameover = document.getElementById('gameover');
+let ningyou = document.getElementById('ningyou');
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fpswin = 0;
+let fpslose = 0;
+let fpsokr = 0;
+let bfps1 = 0;
+let bfps2 = 0;
+let bfps3 = 0;
+let bfps4 = 0;
+let bfps5 = 0;
+let bfps6 = 0;
+let bfps7 = 0;
+let bfps8 = 0;
+let timelimit = 30;
+let score = 0;
+//壊れた人形がステージ上に出現してる時は変数onに1を代入
+let on1 = 0;
+let on2 = 0;
+let on3 = 0;
+let on4 = 0;
+let on5 = 0;
+let on6 = 0;
+let on7 = 0;
+let on8 = 0;
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■タイムリミットによる人形強制停止■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function limitStop(){
+    clearInterval(timerId1);
+    clearInterval(timerId2);
+    clearInterval(timerId3);
+    clearInterval(timerId4);
+    clearInterval(timerId5);
+    clearInterval(timerId6);
+    clearInterval(timerId7);
+    clearInterval(timerId8);
+    mato1.style.display = 'none';
+    mato2.style.display = 'none';
+    mato3.style.display = 'none';
+    mato4.style.display = 'none';
+    mato5.style.display = 'none';
+    mato6.style.display = 'none';
+    mato7.style.display = 'none';
+    mato8.style.display = 'none';
+    hantei1.style.display = 'none';
+    hantei2.style.display = 'none';
+    hantei3.style.display = 'none';
+    hantei4.style.display = 'none';
+    hantei5.style.display = 'none';
+    hantei6.style.display = 'none';
+    hantei7.style.display = 'none';
+    hantei8.style.display = 'none';
+}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形の動き■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//■■■■■■■上段の人形の動き■■■■■■■
+function matomove1(){
+    fps1 = 0;
+    timerId1 = setInterval(function(){
+        switch(fps1){
+            case 1:
+            mato1.style.top = '198px';
+            mato1.style.display = 'inline';
+            break;
+            case 2:
+            hantei1.style.display = 'inline';
+            mato1.style.top = '165px';
+            break;
+            case 3:
+            mato1.style.top = '132px';
+            break;
+            case 4:
+            mato1.style.top = '99px';
+            break;
+            case 5:
+            mato1.style.top = '66px';
+            break;
+            case 6:
+            mato1.style.top = '33px';
+            break;
+            case 7:
+            mato1.style.top = '0px';//折り返し↓
+            break;
+            case 8:
+            mato1.style.top = '33px';
+            break;
+            case 9:
+            mato1.style.top = '66px';
+            break;
+            case 10:
+            mato1.style.top = '99px';
+            break;
+            case 11:
+            mato1.style.top = '132px';
+            break;
+            case 12:
+            hantei1.style.display = 'none';
+            mato1.style.top = '165px';
+            break;
+            case 13:
+            mato1.style.display = 'none';
+            clearInterval(timerId1);
+            break;
+            }
+        fps1++;
+    },80);
+}
+function matomove2(){
+    fps2 = 0;
+    timerId2 = setInterval(function(){
+        switch(fps2){
+            case 1:
+            mato2.style.top = '198px';
+            mato2.style.display = 'inline';
+            break;
+            case 2:
+            hantei2.style.display = 'inline';
+            mato2.style.top = '165px';
+            break;
+            case 3:
+            mato2.style.top = '132px';
+            break;
+            case 4:
+            mato2.style.top = '99px';
+            break;
+            case 5:
+            mato2.style.top = '66px';
+            break;
+            case 6:
+            mato2.style.top = '33px';
+            break;
+            case 7:
+            mato2.style.top = '0px';//折り返し↓
+            break;
+            case 8:
+            mato2.style.top = '33px';
+            break;
+            case 9:
+            mato2.style.top = '66px';
+            break;
+            case 10:
+            mato2.style.top = '99px';
+            break;
+            case 11:
+            mato2.style.top = '132px';
+            break;
+            case 12:
+            hantei2.style.display = 'none';
+            mato2.style.top = '165px';
+            break;
+            case 13:
+            mato2.style.display = 'none';
+            clearInterval(timerId2);
+            break;
+        }
+        fps2++;
+    },80);
+}
+function matomove3(){
+    fps3 = 0;
+    timerId3 = setInterval(function(){
+        switch(fps3){
+            case 1:
+            mato3.style.top = '198px';
+            mato3.style.display = 'inline';
+            break;
+            case 2:
+            hantei3.style.display = 'inline';
+            mato3.style.top = '165px';
+            break;
+            case 3:
+            mato3.style.top = '132px';
+            break;
+            case 4:
+            mato3.style.top = '99px';
+            break;
+            case 5:
+            mato3.style.top = '66px';
+            break;
+            case 6:
+            mato3.style.top = '33px';
+            break;
+            case 7:
+            mato3.style.top = '0px';//折り返し↓
+            break;
+            case 8:
+            mato3.style.top = '33px';
+            break;
+            case 9:
+            mato3.style.top = '66px';
+            break;
+            case 10:
+            mato3.style.top = '99px';
+            break;
+            case 11:
+            mato3.style.top = '132px';
+            break;
+            case 12:
+            hantei3.style.display = 'none';
+            mato3.style.top = '165px';
+            break;
+            case 13:
+            mato3.style.display = 'none';
+            clearInterval(timerId3);
+            break;
+        }
+        fps3++;
+    },80);
+}
+function matomove4(){
+    fps4 = 0;
+    timerId4 = setInterval(function(){
+        switch(fps4){
+            case 1:
+            mato4.style.top = '198px';
+            mato4.style.display = 'inline';
+            break;
+            case 2:
+            hantei4.style.display = 'inline';
+            mato4.style.top = '165px';
+            break;
+            case 3:
+            mato4.style.top = '132px';
+            break;
+            case 4:
+            mato4.style.top = '99px';
+            break;
+            case 5:
+            mato4.style.top = '66px';
+            break;
+            case 6:
+            mato4.style.top = '33px';
+            break;
+            case 7:
+            mato4.style.top = '0px';//折り返し↓
+            break;
+            case 8:
+            mato4.style.top = '33px';
+            break;
+            case 9:
+            mato4.style.top = '66px';
+            break;
+            case 10:
+            mato4.style.top = '99px';
+            break;
+            case 11:
+            mato4.style.top = '132px';
+            break;
+            case 12:
+            hantei4.style.display = 'none';
+            mato4.style.top = '165px';
+            break;
+            case 13:
+            mato4.style.display = 'none';
+            clearInterval(timerId4);
+            break;
+        }
+        fps4++;
+    },80);
+}
+//■■■■■■■下段の人形の動き■■■■■■■
+function matomove5(){
+    fps5 = 0;
+    timerId5 = setInterval(function(){
+        switch(fps5){
+            case 1:
+            mato5.style.top = '352px';
+            mato5.style.display = 'inline';
+            break;
+            case 2:
+            hantei5.style.display = 'inline';
+            mato5.style.top = '319px';
+            break;
+            case 3:
+            mato5.style.top = '286px';
+            break;
+            case 4:
+            mato5.style.top = '253px';
+            break;
+            case 5:
+            mato5.style.top = '220px';
+            break;
+            case 6:
+            mato5.style.top = '187px';
+            break;
+            case 7:
+            mato5.style.top = '154px';//折り返し↓
+            break;
+            case 8:
+            mato5.style.top = '187px';
+            break;
+            case 9:
+            mato5.style.top = '220px';
+            break;
+            case 10:
+            mato5.style.top = '253px';
+            break;
+            case 11:
+            mato5.style.top = '286px';
+            break;
+            case 12:
+            hantei5.style.display = 'none';
+            mato5.style.top = '319px';
+            break;
+            case 13:
+            mato5.style.display = 'none';
+            clearInterval(timerId5);
+            break;
+        }
+        fps5++;
+    },80);
+}
+function matomove6(){
+    fps6 = 0;
+    timerId6 = setInterval(function(){
+        switch(fps6){
+            case 1:
+            mato6.style.top = '352px';
+            mato6.style.display = 'inline';
+            break;
+            case 2:
+            hantei6.style.display = 'inline';
+            mato6.style.top = '319px';
+            break;
+            case 3:
+            mato6.style.top = '286px';
+            break;
+            case 4:
+            mato6.style.top = '253px';
+            break;
+            case 5:
+            mato6.style.top = '220px';
+            break;
+            case 6:
+            mato6.style.top = '187px';
+            break;
+            case 7:
+            mato6.style.top = '154px';//折り返し↓
+            break;
+            case 8:
+            mato6.style.top = '187px';
+            break;
+            case 9:
+            mato6.style.top = '220px';
+            break;
+            case 10:
+            mato6.style.top = '253px';
+            break;
+            case 11:
+            mato6.style.top = '286px';
+            break;
+            case 12:
+            hantei6.style.display = 'none';
+            mato6.style.top = '319px';
+            break;
+            case 13:
+            mato6.style.display = 'none';
+            clearInterval(timerId6);
+            break;
+        }
+        fps6++;
+    },80);
+}
+function matomove7(){
+    fps7 = 0;
+    timerId7 = setInterval(function(){
+        switch(fps7){
+            case 1:
+            mato7.style.top = '352px';
+            mato7.style.display = 'inline';
+            break;
+            case 2:
+            hantei7.style.display = 'inline';
+            mato7.style.top = '319px';
+            break;
+            case 3:
+            mato7.style.top = '286px';
+            break;
+            case 4:
+            mato7.style.top = '253px';
+            break;
+            case 5:
+            mato7.style.top = '220px';
+            break;
+            case 6:
+            mato7.style.top = '187px';
+            break;
+            case 7:
+            mato7.style.top = '154px';//折り返し↓
+            break;
+            case 8:
+            mato7.style.top = '187px';
+            break;
+            case 9:
+            mato7.style.top = '220px';
+            break;
+            case 10:
+            mato7.style.top = '253px';
+            break;
+            case 11:
+            mato7.style.top = '286px';
+            break;
+            case 12:
+            hantei7.style.display = 'none';
+            mato7.style.top = '319px';
+            break;
+            case 13:
+            mato7.style.display = 'none';
+            clearInterval(timerId7);
+            break;
+        }
+        fps7++;
+    },80);
+}
+function matomove8(){
+    fps8 = 0;
+    timerId8 = setInterval(function(){
+        switch(fps8){
+            case 1:
+            mato8.style.top = '352px';
+            mato8.style.display = 'inline';
+            break;
+            case 2:
+            hantei8.style.display = 'inline';
+            mato8.style.top = '319px';
+            break;
+            case 3:
+            mato8.style.top = '286px';
+            break;
+            case 4:
+            mato8.style.top = '253px';
+            break;
+            case 5:
+            mato8.style.top = '220px';
+            break;
+            case 6:
+            mato8.style.top = '187px';
+            break;
+            case 7:
+            mato8.style.top = '154px';//折り返し↓
+            break;
+            case 8:
+            mato8.style.top = '187px';
+            break;
+            case 9:
+            mato8.style.top = '220px';
+            break;
+            case 10:
+            mato8.style.top = '253px';
+            break;
+            case 11:
+            mato8.style.top = '286px';
+            break;
+            case 12:
+            hantei8.style.display = 'none';
+            mato8.style.top = '319px';
+            break;
+            case 13:
+            mato8.style.display = 'none';
+            clearInterval(timerId8);
+            break;
+        }
+        fps8++;
+    },80);
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形(の判定)をクリックした時の処理■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//■■■■■■■人形1をクリックした時■■■■■■■
+hantei1.addEventListener('mouseover',function(){hantei1.style.cursor = 'pointer';});
+hantei1.addEventListener('click',function(){
+    hantei1.style.display = 'none';
+    mato1.style.display = 'none';
+    clearInterval(timerId1);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps1 = 0;
+    score += 1;
+    on1 = 1;//壊れた人形の出現状態をオンにする
+    diea1.style.display = 'inline';
+    necka1.style.display = 'inline';
+    let breakTime1 = setInterval(function(){
+        switch(bfps1){
+            case 1:
+            diea1.style.display = 'none';
+            necka1.style.display = 'none';
+            dieb1.style.display = 'inline';
+            neckb1.style.display = 'inline';
+            break;
+            case 2:
+            dieb1.style.display = 'none';
+            neckb1.style.display = 'none';
+            neckc1.style.display = 'inline';
+            break;
+            case 3:
+            neckc1.style.display = 'none';
+            on1 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime1);
+            break;
+        }
+        bfps1++;
+    },80);
+});
+//■■■■■■■人形2をクリックした時■■■■■■■
+hantei2.addEventListener('mouseover',function(){hantei2.style.cursor = 'pointer';});
+hantei2.addEventListener('click',function(){
+    hantei2.style.display = 'none';
+    mato2.style.display = 'none';
+    clearInterval(timerId2);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps2 = 0;
+    score += 1;
+    on2 = 1;//壊れた人形の出現状態をオンにする
+    diea2.style.display = 'inline';
+    necka2.style.display = 'inline';
+    let breakTime2 = setInterval(function(){
+        switch(bfps2){
+            case 1:
+            diea2.style.display = 'none';
+            necka2.style.display = 'none';
+            dieb2.style.display = 'inline';
+            neckb2.style.display = 'inline';
+            break;
+            case 2:
+            dieb2.style.display = 'none';
+            neckb2.style.display = 'none';
+            neckc2.style.display = 'inline';
+            break;
+            case 3:
+            neckc2.style.display = 'none';
+            on2 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime2);
+            break;
+        }
+        bfps2++;
+    },80);
+});
+//■■■■■■■人形3をクリックした時■■■■■■■
+hantei3.addEventListener('mouseover',function(){hantei3.style.cursor = 'pointer';});
+hantei3.addEventListener('click',function(){
+    hantei3.style.display = 'none';
+    mato3.style.display = 'none';
+    clearInterval(timerId3);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps3 = 0;
+    score += 1;
+    on3 = 1;//壊れた人形の出現状態をオンにする
+    diea3.style.display = 'inline';
+    necka3.style.display = 'inline';
+    let breakTime3 = setInterval(function(){
+        switch(bfps3){
+            case 1:
+            diea3.style.display = 'none';
+            necka3.style.display = 'none';
+            dieb3.style.display = 'inline';
+            neckb3.style.display = 'inline';
+            break;
+            case 2:
+            dieb3.style.display = 'none';
+            neckb3.style.display = 'none';
+            neckc3.style.display = 'inline';
+            break;
+            case 3:
+            neckc3.style.display = 'none';
+            on3 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime3);
+            break;
+        }
+        bfps3++;
+    },80);
+});
+//■■■■■■■人形4をクリックした時■■■■■■■
+hantei4.addEventListener('mouseover',function(){hantei4.style.cursor = 'pointer';});
+hantei4.addEventListener('click',function(){
+    hantei4.style.display = 'none';
+    mato4.style.display = 'none';
+    clearInterval(timerId4);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps4 = 0;
+    score += 1;
+    on4 = 1;//壊れた人形の出現状態をオンにする
+    diea4.style.display = 'inline';
+    necka4.style.display = 'inline';
+    let breakTime4 = setInterval(function(){
+        switch(bfps4){
+            case 1:
+            diea4.style.display = 'none';
+            necka4.style.display = 'none';
+            dieb4.style.display = 'inline';
+            neckb4.style.display = 'inline';
+            break;
+            case 2:
+            dieb4.style.display = 'none';
+            neckb4.style.display = 'none';
+            neckc4.style.display = 'inline';
+            break;
+            case 3:
+            neckc4.style.display = 'none';
+            on4 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime4);
+            break;
+        }
+        bfps4++;
+    },80);
+});
+//■■■■■■■人形5をクリックした時■■■■■■■
+hantei5.addEventListener('mouseover',function(){hantei5.style.cursor = 'pointer';});
+hantei5.addEventListener('click',function(){
+    hantei5.style.display = 'none';
+    mato5.style.display = 'none';
+    clearInterval(timerId5);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps5 = 0;
+    score += 1;
+    on5 = 1;//壊れた人形の出現状態をオンにする
+    diea5.style.display = 'inline';
+    necka5.style.display = 'inline';
+    let breakTime5 = setInterval(function(){
+        switch(bfps5){
+            case 1:
+            diea5.style.display = 'none';
+            necka5.style.display = 'none';
+            dieb5.style.display = 'inline';
+            neckb5.style.display = 'inline';
+            break;
+            case 2:
+            dieb5.style.display = 'none';
+            neckb5.style.display = 'none';
+            neckc5.style.display = 'inline';
+            break;
+            case 3:
+            neckc5.style.display = 'none';
+            on5 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime5);
+            break;
+        }
+        bfps5++;
+    },80);
+});
+//■■■■■■■人形6をクリックした時■■■■■■■
+hantei6.addEventListener('mouseover',function(){hantei6.style.cursor = 'pointer';});
+hantei6.addEventListener('click',function(){
+    hantei6.style.display = 'none';
+    mato6.style.display = 'none';
+    clearInterval(timerId6);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps6 = 0;
+    score += 1;
+    on6 = 1;//壊れた人形の出現状態をオンにする
+    diea6.style.display = 'inline';
+    necka6.style.display = 'inline';
+    let breakTime6 = setInterval(function(){
+        switch(bfps6){
+            case 1:
+            diea6.style.display = 'none';
+            necka6.style.display = 'none';
+            dieb6.style.display = 'inline';
+            neckb6.style.display = 'inline';
+            break;
+            case 2:
+            dieb6.style.display = 'none';
+            neckb6.style.display = 'none';
+            neckc6.style.display = 'inline';
+            break;
+            case 3:
+            neckc6.style.display = 'none';
+            on6 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime6);
+            break;
+        }
+        bfps6++;
+    },80);
+});
+//■■■■■■■人形7をクリックした時■■■■■■■
+hantei7.addEventListener('mouseover',function(){hantei7.style.cursor = 'pointer';});
+hantei7.addEventListener('click',function(){
+    hantei7.style.display = 'none';
+    mato7.style.display = 'none';
+    clearInterval(timerId7);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps7 = 0;
+    score += 1;
+    on7 = 1;//壊れた人形の出現状態をオンにする
+    diea7.style.display = 'inline';
+    necka7.style.display = 'inline';
+    let breakTime7 = setInterval(function(){
+        switch(bfps7){
+            case 1:
+            diea7.style.display = 'none';
+            necka7.style.display = 'none';
+            dieb7.style.display = 'inline';
+            neckb7.style.display = 'inline';
+            break;
+            case 2:
+            dieb7.style.display = 'none';
+            neckb7.style.display = 'none';
+            neckc7.style.display = 'inline';
+            break;
+            case 3:
+            neckc7.style.display = 'none';
+            on7 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime7);
+            break;
+        }
+        bfps7++;
+    },80);
+});
+//■■■■■■■人形8をクリックした時■■■■■■■
+hantei8.addEventListener('mouseover',function(){hantei8.style.cursor = 'pointer';});
+hantei8.addEventListener('click',function(){
+    hantei8.style.display = 'none';
+    mato8.style.display = 'none';
+    clearInterval(timerId8);
+    sekiru.load();
+    sekiru.play();
+    koeningyou.load();
+    koeningyou.play();
+    bfps8 = 0;
+    score += 1;
+    on8 = 1;//壊れた人形の出現状態をオンにする
+    diea8.style.display = 'inline';
+    necka8.style.display = 'inline';
+    let breakTime8 = setInterval(function(){
+        switch(bfps8){
+            case 1:
+            diea8.style.display = 'none';
+            necka8.style.display = 'none';
+            dieb8.style.display = 'inline';
+            neckb8.style.display = 'inline';
+            break;
+            case 2:
+            dieb8.style.display = 'none';
+            neckb8.style.display = 'none';
+            neckc8.style.display = 'inline';
+            break;
+            case 3:
+            neckc8.style.display = 'none';
+            on8 = 0;//壊れた人形の出現状態をオフにする
+            clearInterval(breakTime8);
+            break;
+        }
+        bfps8++;
+    },80);
+});
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■人形をランダムで出現させる■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+function randomposi(com){
+    switch(com){
+        case 1:
+            matomove1();
+            break;
+        case 2:
+            matomove2();
+            break;
+        case 3:
+            matomove3();
+            break;
+        case 4:
+            matomove4();
+            break;
+        case 5:
+            matomove5();
+            break;
+        case 6:
+            matomove6();
+            break;
+        case 7:
+            matomove7();
+            break;
+        case 8:
+            matomove8();
+            break;
+    }
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ゲーム開始■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+//制限時間とスコアのカウント
+startbt.addEventListener('mouseover',function(){startbt.style.cursor = 'pointer';});
+startbt.addEventListener('click',function(){
+    startbt.style.display = 'none';
+    let ningyouTimeId = setInterval(function(){
+        let com = Math.floor(Math.random()*8)+1;
+        randomposi(com);
+        if(timelimit<=0){
+            clearInterval(ningyouTimeId);
+        }
+    },1500);
+    let resulTimeId = setInterval(function(){
+        if(score<10){
+            scoreMessage.innerText = '討伐数:0'+score+'体/15体';
+        }else{
+            scoreMessage.innerText = '討伐数:'+score+'体/15体';
+        }
+        if(timelimit<10){
+            timeMessage.innerText = '制限時間:0'+timelimit+'秒';
+        }else{
+            timeMessage.innerText = '制限時間:'+timelimit+'秒';
+        }
+        //■■■■■■勝敗判定■■■■■■
+        if(timelimit<=0 && score>=15){//************勝利************
+            limitStop();
+            scoreMessage.style.display = 'none';
+            timeMessage.style.display = 'none';
+            let winTimer = setInterval(function(){
+                switch(fpswin){
+                    case 1:
+                    bgmclear.load();
+                    chead1.style.display = 'inline';
+                    chead2.style.display = 'inline';
+                    doordm.style.display = 'inline';
+                    shukuji.style.display = 'block';
+                    break;
+                    case 24:
+                    nfront.style.display = 'none';
+                    nfront1.style.display = 'inline';
+                    break;
+                    case 27:
+                    nfront1.style.display = 'none';
+                    nfront2.style.display = 'inline';
+                    break;
+                    case 30:
+                    nfront2.style.display = 'none';
+                    nfront3.style.display = 'inline';
+                    break;
+                    case 33:
+                    nfront3.style.display = 'none';
+                    nfront4.style.display = 'inline';
+                    break;
+                    case 36:
+                    nfront4.style.display = 'none';
+                    break;
+                    case 48:
+                    nmiddle.style.display = 'none';
+                    nmiddle1.style.display = 'inline';
+                    break;
+                    case 51:
+                    nmiddle1.style.display = 'none';
+                    nmiddle2.style.display = 'inline';
+                    break;
+                    case 54:
+                    nmiddle2.style.display = 'none';
+                    nmiddle3.style.display = 'inline';
+                    break;
+                    case 57:
+                    nmiddle3.style.display = 'none';
+                    nmiddle4.style.display = 'inline';
+                    break;
+                    case 60:
+                    nmiddle4.style.display = 'none';
+                    break;
+                    case 72:
+                    nback.style.display = 'none';
+                    nback1.style.display = 'inline';
+                    break;
+                    case 75:
+                    nback1.style.display = 'none';
+                    nback2.style.display = 'inline';
+                    break;
+                    case 78:
+                    nback2.style.display = 'none';
+                    nback3.style.display = 'inline';
+                    break;
+                    case 81:
+                    nback3.style.display = 'none';
+                    nback4.style.display = 'inline';
+                    break;
+                    case 84:
+                    bgmclear.play();
+                    nback4.style.display = 'none';
+                    doordm.style.display = 'none';
+                    nextdoor.style.display = 'inline';
+                    clearInterval(winTimer);
+                    break;
+                }
+                fpswin++;
+            },80);
+        }else if(timelimit<=0 && score<15){//**********ゲームオーバー***********
+            limitStop();
+            scoreMessage.style.display = 'none';
+            timeMessage.style.display = 'none';
+            serifusp.style.display = 'inline';
+            serifu.style.display = 'block';
+            let loseTimer = setInterval(function(){
+                switch(fpslose){
+                    case 1:
+                    ningyou.style.display = 'inline';
+                    ningyouface.style.display = 'inline';
+                    serifu.innerText = '人形「ザ';
+                    break;
+                    case 3:
+                    ningyou.style.bottom = '20px';
+                    serifu.innerText = '人形「ザン';
+                    break;
+                    case 5:
+                    ningyou.style.bottom = '40px';
+                    serifu.innerText = '人形「ザンネ';
+                    break;
+                    case 7:
+                    ningyou.style.bottom = '60px';
+                    serifu.innerText = '人形「ザンネン';
+                    break;
+                    case 9:
+                    ningyou.style.bottom = '80px';
+                    serifu.innerText = '人形「ザンネンデ';
+                    break;
+                    case 11:
+                    ningyou.style.bottom = '100px';
+                    serifu.innerText = '人形「ザンネンデシ';
+                    break;
+                    case 13:
+                    ningyou.style.bottom = '120px';
+                    serifu.innerText = '人形「ザンネンデシタ';
+                    break;
+                    case 15:
+                    ningyou.style.bottom = '140px';
+                    serifu.innerText = '人形「ザンネンデシタ・';
+                    break;
+                    case 17:
+                    ningyou.style.bottom = '160px';
+                    serifu.innerText = '人形「ザンネンデシタ・・';
+                    break;
+                    case 19:
+                    serifu.innerText = '人形「ザンネンデシタ・・・';
+                    break;
+                    case 21:
+                    serifu.innerText = '人形「ザンネンデシタ・・・。';
+                    break;
+                    case 23:
+                    serifu.innerText = '人形「ザンネンデシタ・・・。」';
+                    msgokrbt.style.display = 'inline';
+                    clearInterval(loseTimer);
+                    break;
+                }
+                fpslose++;
+            },60);
+        }
+        timelimit--;
+    },1000);
+});
+
+msgokrbt.addEventListener('mouseover',function(){msgokrbt.style.cursor = 'pointer';});
+msgokrbt.addEventListener('click',function(){
+    koetakawarai.load();
+    koetakawarai.play();
+    msgokrbt.style.display = 'none';
+    semaru.style.display = 'inline';
+    let okrTimer = setInterval(function(){
+        if(fpsokr === 1){
+            gameover.style.display = 'inline';
+            body.style.backgroundColor = '#ff0000';
+            clearInterval(okrTimer);
+        }
+        fpsokr++;
+    },100);
+});
+
+nextdoor.addEventListener('mouseover',function(){nextdoor.style.cursor = 'pointer';});
+nextdoor.addEventListener('click',function(){
+    location.href = 'gallery.html';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/ningyounoma.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:54:26 GMT -->
+</html>

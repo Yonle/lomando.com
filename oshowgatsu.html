@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/oshowgatsu.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:47:27 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>PC版お正月おみくじ|ふぁんしーあいらんど</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #ffcccc;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position:relative;
+}
+#pcback{width:970px;height:580px;position:absolute;left:0px;top:0px;}
+#whalfback{width:163px;height:580px;position:absolute;top:0px;left:322px;background-color:#ffffff;}
+#redback{width:163px;height:580px;position:absolute;top:0px;right:322px;background-color:#ff0000;}
+#kanban{width:326px;height:104px;position:absolute;left:322px;top:0px;}
+#mimi1{width:326px;height:407px;position:absolute;left:322px;bottom:61px;}
+#mimi2{width:326px;height:407px;position:absolute;left:322px;bottom:61px;display:none;}
+#mimi3{width:326px;height:407px;position:absolute;left:322px;bottom:61px;display:none;}
+#mimi4{width:326px;height:580px;position:absolute;left:322px;top:0px;display:none;}
+#mimieyeclose{width:112px;height:94px;position:absolute;left:428px;top:186px;display:none;}
+#mimiase{width:18px;height:42px;position:absolute;left:537px;top:173px;opacity:0.3;display:none;}
+#fukidashi{width:121px;height:197px;position:absolute;left:322px;top:127px;opacity:0.2;display:none;}
+#fukidashia{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#fukidashib{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#fukidashic{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#fukidashid{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#fukidashie{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#fukidashif{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#fukidashig{width:121px;height:197px;position:absolute;left:322px;top:127px;display:none;}
+#saisenbako{width:326px;height:164px;position:absolute;left:322px;bottom:0px;}
+#saisenhitarea{
+    width:326px;height:164px;
+    position:absolute;left:322px;bottom:0px;
+    background-color:#00ff00;opacity:0.0;
+}
+#coin1{width:38px;height:67px;position:absolute;left:466px;top:320px;display:none;}
+#coin2{width:13px;height:20px;position:absolute;left:461px;top:436px;display:none;}
+#omikuji{
+    width:31px;height:20px;
+    position:absolute;left:598px;top:339px;
+    background-color:#ffffff;display:none;
+}
+#resultmsg{
+    margin: 0px;padding: 0px;line-height: 1em;
+    color:#000000;font-weight:bold;font-size:25px;
+    position:absolute;left:601px;top:348px;
+}
+#restartbt{width:114px;height:47px;position:absolute;left:324px;top:367px;display:none;}
+#rush1{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#rush2{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#rush3{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#rush4{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#rush5{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#rush6{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#whiteback{
+    width:970px;height:580px;
+    position:absolute;top:0px;left:0px;
+    background-color:#ffffff;display:none;
+}
+#readyback{
+    width:970px;height:580px;
+    position:absolute;top:0px;left:0px;
+    background-color:#000000;opacity:0.9;
+}
+#readymsg{
+    font-size:16px;
+    color:#ffffff;
+    text-align:center;
+    margin: auto;
+    padding: 0px;
+    line-height:140%;
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:80px;
+}
+#startbt{width:280px;height:50px;position:absolute;left:345px;bottom:150px;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="coinse" preload="auto">
+<source src="pse/omikujicoin.wav" type="audio/wav">
+<source src="pse/omikujicoin.mp3" type="audio/mp3">
+</audio>
+
+<audio id="shakese" preload="auto">
+<source src="pse/omikujishake.wav" type="audio/wav">
+<source src="pse/omikujishake.mp3" type="audio/mp3">
+</audio>
+
+<audio id="gaaanse" preload="auto">
+<source src="pse/omikujigaaan.wav" type="audio/wav">
+<source src="pse/omikujigaaan.mp3" type="audio/mp3">
+</audio>
+
+<audio id="diekyobgm" preload="auto">
+<source src="pse/omikujisong.wav" type="audio/wav">
+<source src="pse/omikujisong.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/pomikuji/pcyouback.jpg"id="pcback">
+<div id="redback"></div>
+<div id="whalfback"></div>
+<img src="pimg/pomikuji/kanban.png"id="kanban">
+<img src="pimg/pomikuji/mimi1.jpg"id="mimi1">
+<img src="pimg/pomikuji/mimi2.jpg"id="mimi2">
+<img src="pimg/pomikuji/mimi3.jpg"id="mimi3">
+<img src="pimg/pomikuji/mimieyeclose.png"id="mimieyeclose">
+<img src="pimg/pomikuji/mimiase.png"id="mimiase">
+<img src="pimg/pomikuji/fukidashi.png"id="fukidashi">
+<img src="pimg/pomikuji/fukidashia.png"id="fukidashia">
+<img src="pimg/pomikuji/fukidashib.png"id="fukidashib">
+<img src="pimg/pomikuji/fukidashic.png"id="fukidashic">
+<img src="pimg/pomikuji/fukidashid.png"id="fukidashid">
+<img src="pimg/pomikuji/fukidashie.png"id="fukidashie">
+<img src="pimg/pomikuji/fukidashif.png"id="fukidashif">
+<img src="pimg/pomikuji/fukidashig.png"id="fukidashig">
+<img src="pimg/pomikuji/saisenbako.png"id="saisenbako">
+<div id="saisenhitarea"></div>
+<img src="pimg/pomikuji/coin1.png"id="coin1">
+<img src="pimg/pomikuji/coin2.png"id="coin2">
+<img src="pimg/pomikuji/mimi4.jpg"id="mimi4">
+<div id="omikuji"></div>
+<p id="resultmsg"></p>
+<img src="pimg/pomikuji/restartbt.png"id="restartbt">
+<div id="whiteback"></div>
+<img src="pimg/pomikuji/rush1.png"id="rush1">
+<img src="pimg/pomikuji/rush2.png"id="rush2">
+<img src="pimg/pomikuji/rush3.png"id="rush3">
+<img src="pimg/pomikuji/rush4.png"id="rush4">
+<img src="pimg/pomikuji/rush5.png"id="rush5">
+<img src="pimg/pomikuji/rush6.png"id="rush6">
+<div id="readyback"></div>
+<p id="readymsg"></p>
+<img src="pimg/pomikuji/startbt.png"id="startbt">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let d1 = document.getElementById('d1');
+let pcback = document.getElementById('pcback');
+let whalfback = document.getElementById('whalfback');
+let redback = document.getElementById('redback');
+let kanban = document.getElementById('kanban');
+let mimi1 = document.getElementById('mimi1');
+let mimi2 = document.getElementById('mimi2');
+let mimi3 = document.getElementById('mimi3');
+let mimieyeclose = document.getElementById('mimieyeclose');
+let mimiase = document.getElementById('mimiase');
+let fukidashi = document.getElementById('fukidashi');
+let fukidashia = document.getElementById('fukidashia');
+let fukidashib = document.getElementById('fukidashib');
+let fukidashic = document.getElementById('fukidashic');
+let fukidashid = document.getElementById('fukidashid');
+let fukidashie = document.getElementById('fukidashie');
+let fukidashif = document.getElementById('fukidashif');
+let fukidashig = document.getElementById('fukidashig');
+let saisenbako = document.getElementById('saisenbako');
+let saisenhitarea = document.getElementById('saisenhitarea');
+let coin1 = document.getElementById('coin1');
+let coin2 = document.getElementById('coin2');
+let omikuji = document.getElementById('omikuji');
+let resultmsg = document.getElementById('resultmsg');
+let restartbt = document.getElementById('restartbt');
+let mimi4 = document.getElementById('mimi4');
+let rush1 = document.getElementById('rush1');
+let rush2 = document.getElementById('rush2');
+let rush3 = document.getElementById('rush3');
+let rush4 = document.getElementById('rush4');
+let rush5 = document.getElementById('rush5');
+let rush6 = document.getElementById('rush6');
+let whiteback = document.getElementById('whiteback');
+let readyback = document.getElementById('readyback');
+let readymsg = document.getElementById('readymsg');
+let startbt = document.getElementById('startbt');
+//効果音
+let seshake = document.getElementById('shakese');
+let secoin = document.getElementById('coinse');
+let segaaan = document.getElementById('gaaanse');
+let bgmdiekyo = document.getElementById('diekyobgm');
+//スコア
+let fps1 = 0;
+let fps2 = 0;
+let fps3 = 0;
+let fps4 = 0;
+let fps5 = 0;
+let fps6 = 0;
+let fps7 = 0;
+let fps8 = 0;
+let fps9 = 0;
+let fps10 = 0;
+let timerId1 = '';
+let timerId2 = '';
+
+function pachipachi(){
+    timerId1 = setInterval(function(){
+        fps1++;        
+        switch(fps1){
+            case 12:
+            mimieyeclose.style.display = 'inline';
+            break;
+            case 13:
+            mimieyeclose.style.display = 'none';
+            break;
+            case 36:
+            mimieyeclose.style.display = 'inline';
+            break;
+            case 37:
+            mimieyeclose.style.display = 'none';
+            break;
+            case 38:
+            mimieyeclose.style.display = 'inline';
+            break;
+            case 39:
+            mimieyeclose.style.display = 'none';
+            break;
+            case 72:
+            fps1 = 0;
+            break;
+        }
+    },80);
+}
+function fukidashiApp(){
+    timerId2 = setInterval(function(){
+        fps2++;
+        switch(fps2){
+            case 1:
+            fukidashi.style.display = 'inline';
+            break;
+            case 2:
+            fukidashi.style.opacity = '0.4';
+            break;
+            case 3:
+            fukidashi.style.opacity = '0.6';
+            break;
+            case 4:
+            fukidashi.style.opacity = '0.8';
+            break;
+            case 5:
+            fukidashi.style.opacity = '1.0';
+            clearInterval(timerId2);
+            break;
+        }
+    },80);   
+}
+
+function readymsgYoui(){
+    readymsg.innerText = '■ご注意-CAUTION-■\n\nこのゲームは本編と同様に音が出ます。\n公共の場でプレイする際は周囲のご迷惑にならないよう\nイヤホンをつけてお楽しみください。\n(一部音量注意の為、予め端末の音量を下げてお楽しみ下さい。)\nビックリ要素を含むため、心臓の弱い方はプレイをお控え下さい。\nThis game sounds like the main part.\nWhen playing this game in a public place,\n please wear earphones to avoid inconvenience to others.\nThis game may make a loud sound, so please lower the volume beforehand.\nPlease note that this game contains scary expressions.';
+}
+
+/*実行する処理*/
+readymsgYoui();
+
+startbt.addEventListener('mouseover',function(){startbt.style.cursor='pointer';});
+startbt.addEventListener('click',function(){
+    startbt.style.display = 'none';
+    readyback.style.display = 'none';
+    readymsg.innerText = '';
+    pachipachi();
+    fukidashiApp();
+});
+
+/*実行する処理
+pachipachi();
+fukidashiApp();
+*/
+
+/*おみくじがランダム出る*/
+function omikujiRandom(){
+    let com = Math.floor(Math.random()*7)+1;
+    switch(com){
+        case 1:
+        resultmsg.style.color = '#ff42bd';
+        resultmsg.innerText = '大\n吉';
+        fukidashia.style.display = 'inline';
+        restartbt.style.display = 'inline';
+        mimieyeclose.style.display = 'inline';
+        break;
+        case 2:
+        resultmsg.innerText = '中\n吉';
+        fukidashib.style.display = 'inline';
+        restartbt.style.display = 'inline';
+        break;
+        case 3:
+        resultmsg.innerText = '小\n吉';
+        fukidashic.style.display = 'inline';
+        restartbt.style.display = 'inline';
+        break;
+        case 4:
+        resultmsg.style.top = '360px';
+        resultmsg.innerText = '吉';
+        fukidashid.style.display = 'inline';
+        restartbt.style.display = 'inline';
+        break;
+        case 5:
+        resultmsg.innerText = '末\n吉';
+        fukidashie.style.display = 'inline';
+        restartbt.style.display = 'inline';
+        break;
+        case 6:
+        resultmsg.style.top = '360px';
+        resultmsg.innerText = '凶';
+        fukidashif.style.display = 'inline';
+        mimieyeclose.style.display = 'inline';
+        restartbt.style.display = 'inline';
+        mimiase.style.display = 'inline';
+        let timerId4 = setInterval(function(){
+            fps4++;
+            switch(fps4){
+                case 1:
+                mimiase.style.opacity = '0.6';
+                mimiase.style.top = '202px';
+                break;
+                case 2:
+                mimiase.style.opacity = '0.9';
+                mimiase.style.top = '205px';
+                clearInterval(timerId4);
+                break;
+            }
+        },80);
+        break;
+        case 7:
+        omikuji.style.backgroundColor = '#000000';
+        resultmsg.style.color = '#ffffff';
+        resultmsg.innerText = '大\n凶';
+        pcback.style.display = 'none';
+        redback.style.backgroundColor = '#000000';
+        whiteback.style.backgroundColor = '#000000';
+        d1.style.backgroundColor = '#000000';
+        body.style.backgroundColor = '#000000';
+        bgmdiekyo.load();
+        let timerId5 = setInterval(function(){
+            fps5++;
+            switch(fps5){
+                case 1:
+                segaaan.load();
+                segaaan.play();
+                saisenbako.style.display = 'none';
+                kanban.style.display = 'none';
+                mimi3.style.display = 'none';
+                mimi4.style.display = 'inline';
+                break;
+                case 11:
+                mimi4.style.display = 'none';
+                whiteback.style.display = 'inline';
+                break;
+                case 12:
+                bgmdiekyo.play();
+                whiteback.style.display = 'none';
+                rush1.style.display = 'inline';
+                break;
+                case 25:
+                rush1.style.display = 'none';
+                rush2.style.display = 'inline';
+                break;
+                case 31:
+                rush2.style.display = 'none';
+                rush3.style.display = 'inline';
+                break;
+                case 34:
+                rush3.style.display = 'none';
+                rush4.style.display = 'inline';
+                break;
+                case 37:
+                rush4.style.display = 'none';
+                rush5.style.display = 'inline';
+                break;
+                case 43:
+                rush5.style.display = 'none';
+                rush6.style.display = 'inline';
+                break;
+                case 50:
+                rush6.style.display = 'none';
+                rush1.style.display = 'inline';
+                break;
+                case 62:
+                rush1.style.display = 'none';
+                rush2.style.display = 'inline';
+                break;
+                case 68:
+                rush2.style.display = 'none';
+                rush3.style.display = 'inline';
+                break;
+                case 75:
+                rush3.style.display = 'none';
+                rush4.style.display = 'inline';
+                break;
+                case 81:
+                rush4.style.display = 'none';
+                rush5.style.display = 'inline';
+                break;
+                case 87:
+                rush5.style.display = 'none';
+                rush6.style.display = 'inline';
+                break;
+                case 137:
+                location.href = 'main.html';
+                clearInterval(timerId5);
+                break;
+            }
+        },80);
+        break;
+    }
+}
+
+restartbt.addEventListener('mouseover',function(){restartbt.style.cursor = 'pointer';});
+restartbt.addEventListener('click',function(){
+    location.reload();
+});
+
+saisenhitarea.addEventListener('mouseover',function(){saisenhitarea.style.cursor = 'pointer';});
+saisenhitarea.addEventListener('click',function(){
+    secoin.load();
+    seshake.load();
+    saisenhitarea.style.display = 'none';
+    clearInterval(timerId1);
+    clearInterval(timerId2);
+    mimieyeclose.style.display = 'none';
+    fukidashi.style.display = 'none';
+    fukidashi.style.opacity = '1.0';
+    let timerId3 = setInterval(function(){
+        fps3++;
+        switch(fps3){
+            case 2:
+            secoin.play();
+            coin1.style.display = 'inline';
+            break;
+            case 4:
+            coin1.style.display = 'none';
+            coin2.style.display = 'inline';
+            break;
+            case 6:
+            coin2.style.display = 'none';
+            break;
+            case 30://一振り
+            seshake.play();
+            mimi1.style.display = 'none';
+            mimi2.style.display = 'inline';
+            break;
+            case 32:
+            mimi2.style.display = 'none';
+            mimi3.style.display = 'inline';
+            break;
+            case 34:
+            mimi3.style.display = 'none';
+            mimi2.style.display = 'inline';
+            break;
+            case 36:
+            mimi2.style.display = 'none';
+            mimi1.style.display = 'inline';
+            break;
+            case 38://二振り
+            mimi1.style.display = 'none';
+            mimi2.style.display = 'inline';
+            break;
+            case 40:
+            mimi2.style.display = 'none';
+            mimi3.style.display = 'inline';
+            break;
+            case 42:
+            mimi3.style.display = 'none';
+            mimi2.style.display = 'inline';
+            break;
+            case 44:
+            mimi2.style.display = 'none';
+            mimi1.style.display = 'inline';
+            break;
+            case 46://三振り
+            mimi1.style.display = 'none';
+            mimi2.style.display = 'inline';
+            break;
+            case 48:
+            mimi2.style.display = 'none';
+            mimi3.style.display = 'inline';
+            omikuji.style.display = 'inline';
+            break;
+            case 49:
+            omikuji.style.height = '35px';
+            break;
+            case 50:
+            omikuji.style.height = '50px';
+            break;
+            case 51:
+            omikuji.style.height = '65px';
+            omikujiRandom();
+            clearInterval(timerId3);
+            break;
+            //clearInterval(timerId3);
+        }
+    },40);
+});
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/oshowgatsu.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:48:03 GMT -->
+</html>

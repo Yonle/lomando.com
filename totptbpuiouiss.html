@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/totptbpuiouiss.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:58:22 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>ｵi私遺y、knkヲ他。beﾀ異</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#gameover{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0.0;
+    display:none;
+}
+#wall{width:970px;height:580px;position:absolute;top:0px;left:0px;}
+#wallup{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#ghost{width:970px;height:580px;position:absolute;top:0px;left:0px;display:none;}
+#cl100{width:91px;height:411px;position:absolute;top:169px;left:394px;}
+#cl75{width:68px;height:411px;position:absolute;top:169px;left:394px;display:none;}
+#cl50{width:45px;height:411px;position:absolute;top:169px;left:394px;display:none;}
+#cl25{width:23px;height:411px;position:absolute;top:169px;left:394px;display:none;}
+#cr100{width:91px;height:411px;position:absolute;top:169px;right:394px;}
+#cr75{width:68px;height:411px;position:absolute;top:169px;right:394px;display:none;}
+#cr50{width:45px;height:411px;position:absolute;top:169px;right:394px;display:none;}
+#cr25{width:23px;height:411px;position:absolute;top:169px;right:394px;display:none;}
+#curhantei{width:182px;height:411px;position:absolute;top:169px;left:394px;opacity:0.0;}
+#curhantei2{width:182px;height:411px;position:absolute;top:169px;left:394px;opacity:0.0;display:none;}
+#nextdoor{width:180px;height:411px;position:absolute;top:169px;left:395px;display:none;}
+#piehead{width:225px;height:258px;position:absolute;top:4px;left:372px;}
+#pad{width:63px;height:82px;position:absolute;top:302px;left:233px;}
+#paddm{width:63px;height:82px;position:absolute;top:302px;left:233px;display:none;}
+#pad2{width:63px;height:82px;position:absolute;top:302px;left:233px;display:none;}
+#paddaiza{width:270px;height:353px;position:absolute;top:113px;left:350px;display:none;}
+#sucimput{width:215px;height:53px;position:absolute;top:141px;left:378px;display:none;}
+#backbt{width:89px;height:30px;position:absolute;top:15px;left:15px;border-radius:30%;display:none;}
+#backbt2{width:89px;height:30px;position:absolute;top:15px;left:15px;border-radius:30%;display:none;}
+/*万の位入力*/
+#yhidari1{width:107px;height:107px;position:absolute;top:332px;left:376px;display:none;}
+#yue1{width:107px;height:107px;position:absolute;top:224px;left:376px;display:none;}
+#ymigi1{width:107px;height:107px;position:absolute;top:224px;left:486px;display:none;}
+#yshita1{width:107px;height:107px;position:absolute;top:332px;left:486px;display:none;}
+/*千の位入力*/
+#yhidari2{width:107px;height:107px;position:absolute;top:332px;left:376px;display:none;}
+#yue2{width:107px;height:107px;position:absolute;top:224px;left:376px;display:none;}
+#ymigi2{width:107px;height:107px;position:absolute;top:224px;left:486px;display:none;}
+#yshita2{width:107px;height:107px;position:absolute;top:332px;left:486px;display:none;}
+/*百の位入力*/
+#yhidari3{width:107px;height:107px;position:absolute;top:332px;left:376px;display:none;}
+#yue3{width:107px;height:107px;position:absolute;top:224px;left:376px;display:none;}
+#ymigi3{width:107px;height:107px;position:absolute;top:224px;left:486px;display:none;}
+#yshita3{width:107px;height:107px;position:absolute;top:332px;left:486px;display:none;}
+/*十の位入力*/
+#yhidari4{width:107px;height:107px;position:absolute;top:332px;left:376px;display:none;}
+#yue4{width:107px;height:107px;position:absolute;top:224px;left:376px;display:none;}
+#ymigi4{width:107px;height:107px;position:absolute;top:224px;left:486px;display:none;}
+#yshita4{width:107px;height:107px;position:absolute;top:332px;left:486px;display:none;}
+/*一の位入力*/
+#yhidari5{width:107px;height:107px;position:absolute;top:332px;left:376px;display:none;}
+#yue5{width:107px;height:107px;position:absolute;top:224px;left:376px;display:none;}
+#ymigi5{width:107px;height:107px;position:absolute;top:224px;left:486px;display:none;}
+#yshita5{width:107px;height:107px;position:absolute;top:332px;left:486px;display:none;}
+/*キーパッドダミー*/
+#yhidaridm{width:107px;height:107px;position:absolute;top:332px;left:376px;display:none;}
+#yuedm{width:107px;height:107px;position:absolute;top:224px;left:376px;display:none;}
+#ymigidm{width:107px;height:107px;position:absolute;top:224px;left:486px;display:none;}
+#yshitadm{width:107px;height:107px;position:absolute;top:332px;left:486px;display:none;}
+/*セグ1*/
+#seghidari1{width:43px;height:39px;position:absolute;left:378px;top:146px;display:none;}
+#segue1{width:43px;height:39px;position:absolute;left:378px;top:146px;display:none;}
+#segmigi1{width:43px;height:39px;position:absolute;left:378px;top:146px;display:none;}
+#segshita1{width:43px;height:39px;position:absolute;left:378px;top:146px;display:none;}
+/*セグ2*/
+#seghidari2{width:43px;height:39px;position:absolute;left:421px;top:146px;display:none;}
+#segue2{width:43px;height:39px;position:absolute;left:421px;top:146px;display:none;}
+#segmigi2{width:43px;height:39px;position:absolute;left:421px;top:146px;display:none;}
+#segshita2{width:43px;height:39px;position:absolute;left:421px;top:146px;display:none;}
+/*セグ3*/
+#seghidari3{width:43px;height:39px;position:absolute;left:464px;top:146px;display:none;}
+#segue3{width:43px;height:39px;position:absolute;left:464px;top:146px;display:none;}
+#segmigi3{width:43px;height:39px;position:absolute;left:464px;top:146px;display:none;}
+#segshita3{width:43px;height:39px;position:absolute;left:464px;top:146px;display:none;}
+/*セグ4*/
+#seghidari4{width:43px;height:39px;position:absolute;left:507px;top:146px;display:none;}
+#segue4{width:43px;height:39px;position:absolute;left:507px;top:146px;display:none;}
+#segmigi4{width:43px;height:39px;position:absolute;left:507px;top:146px;display:none;}
+#segshita4{width:43px;height:39px;position:absolute;left:507px;top:146px;display:none;}
+/*セグ5*/
+#seghidari5{width:43px;height:39px;position:absolute;left:549px;top:146px;display:none;}
+#segue5{width:43px;height:39px;position:absolute;left:549px;top:146px;display:none;}
+#segmigi5{width:43px;height:39px;position:absolute;left:549px;top:146px;display:none;}
+#segshita5{width:43px;height:39px;position:absolute;left:549px;top:146px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="curopense" preload="auto">
+<source src="pse/piepasscuropen.wav" type="audio/wav">
+<source src="pse/piepasscuropen.mp3" type="audio/mp3">
+</audio>
+
+<audio id="curclosese" preload="auto">
+<source src="pse/piepasscurclose.wav" type="audio/wav">
+<source src="pse/piepasscurclose.mp3" type="audio/mp3">
+</audio>
+
+<audio id="keytypese" preload="auto">
+<source src="pse/piepasskey.wav" type="audio/wav">
+<source src="pse/piepasskey.mp3" type="audio/mp3">
+</audio>
+
+<audio id="successse" preload="auto">
+<source src="pse/piepasssuc.wav" type="audio/wav">
+<source src="pse/piepasssuc.mp3" type="audio/mp3">
+</audio>
+
+<audio id="oowaraise" preload="auto">
+<source src="pse/oowarai.wav" type="audio/wav">
+<source src="pse/oowarai.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/piepasswall.jpg"id="wall">
+<img src="pimg/piepasswallup.jpg"id="wallup">
+<img src="pimg/piecurtainhantei.jpg"id="nextdoor">
+<img src="pimg/piecurl100.jpg"id="cl100">
+<img src="pimg/piecurl75.jpg"id="cl75">
+<img src="pimg/piecurl50.jpg"id="cl50">
+<img src="pimg/piecurl25.jpg"id="cl25">
+<img src="pimg/piecurr100.jpg"id="cr100">
+<img src="pimg/piecurr75.jpg"id="cr75">
+<img src="pimg/piecurr50.jpg"id="cr50">
+<img src="pimg/piecurr25.jpg"id="cr25">
+<img src="pimg/piecurtainhantei.jpg"id="curhantei">
+<img src="pimg/piecurtainhantei.jpg"id="curhantei2">
+<img src="pimg/piepasshead.png"id="piehead">
+<img src="pimg/piepad.jpg"id="pad">
+<img src="pimg/piepad.jpg"id="paddm">
+<img src="pimg/piepad2.jpg"id="pad2">
+<img src="pimg/backbutton.jpg"id="backbt">
+<img src="pimg/backbutton.jpg"id="backbt2">
+<img src="pimg/piepaddaiza.jpg"id="paddaiza">
+<!--セグ1-->
+<img src="pimg/pieseghidari.jpg"id="seghidari1">
+<img src="pimg/piesegue.jpg"id="segue1">
+<img src="pimg/piesegmigi.jpg"id="segmigi1">
+<img src="pimg/piesegshita.jpg"id="segshita1">
+<!--セグ2-->
+<img src="pimg/pieseghidari.jpg"id="seghidari2">
+<img src="pimg/piesegue.jpg"id="segue2">
+<img src="pimg/piesegmigi.jpg"id="segmigi2">
+<img src="pimg/piesegshita.jpg"id="segshita2">
+<!--セグ3-->
+<img src="pimg/pieseghidari.jpg"id="seghidari3">
+<img src="pimg/piesegue.jpg"id="segue3">
+<img src="pimg/piesegmigi.jpg"id="segmigi3">
+<img src="pimg/piesegshita.jpg"id="segshita3">
+<!--セグ4-->
+<img src="pimg/pieseghidari.jpg"id="seghidari4">
+<img src="pimg/piesegue.jpg"id="segue4">
+<img src="pimg/piesegmigi.jpg"id="segmigi4">
+<img src="pimg/piesegshita.jpg"id="segshita4">
+<!--セグ5-->
+<img src="pimg/pieseghidari.jpg"id="seghidari5">
+<img src="pimg/piesegue.jpg"id="segue5">
+<img src="pimg/piesegmigi.jpg"id="segmigi5">
+<img src="pimg/piesegshita.jpg"id="segshita5">
+<!--入力成功-->
+<img src="pimg/piesucimput.jpg"id="sucimput">
+<!--万の位入力-->
+<img src="pimg/pieyhidari.jpg"id="yhidari1">
+<img src="pimg/pieyue.jpg"id="yue1">
+<img src="pimg/pieymigi.jpg"id="ymigi1">
+<img src="pimg/pieyshita.jpg"id="yshita1">
+<!--千の位入力-->
+<img src="pimg/pieyhidari.jpg"id="yhidari2">
+<img src="pimg/pieyue.jpg"id="yue2">
+<img src="pimg/pieymigi.jpg"id="ymigi2">
+<img src="pimg/pieyshita.jpg"id="yshita2">
+<!--百の位入力-->
+<img src="pimg/pieyhidari.jpg"id="yhidari3">
+<img src="pimg/pieyue.jpg"id="yue3">
+<img src="pimg/pieymigi.jpg"id="ymigi3">
+<img src="pimg/pieyshita.jpg"id="yshita3">
+<!--十の位入力-->
+<img src="pimg/pieyhidari.jpg"id="yhidari4">
+<img src="pimg/pieyue.jpg"id="yue4">
+<img src="pimg/pieymigi.jpg"id="ymigi4">
+<img src="pimg/pieyshita.jpg"id="yshita4">
+<!--一の位入力-->
+<img src="pimg/pieyhidari.jpg"id="yhidari5">
+<img src="pimg/pieyue.jpg"id="yue5">
+<img src="pimg/pieymigi.jpg"id="ymigi5">
+<img src="pimg/pieyshita.jpg"id="yshita5">
+<!--キーパッドダミー-->
+<img src="pimg/pieyhidari.jpg"id="yhidaridm">
+<img src="pimg/pieyue.jpg"id="yuedm">
+<img src="pimg/pieymigi.jpg"id="ymigidm">
+<img src="pimg/pieyshita.jpg"id="yshitadm">
+<!--お化け-->
+<img src="pimg/piepasghost.jpg"id="ghost">
+<!--ゲームオーバー-->
+<img src="pimg/gameover.jpg"id="gameover">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let body = document.getElementById('body');
+let wall = document.getElementById('wall');
+let wallup = document.getElementById('wallup');
+let cl100 = document.getElementById('cl100');
+let cl75 = document.getElementById('cl75');
+let cl50 = document.getElementById('cl50');
+let cl25 = document.getElementById('cl25');
+let cr100 = document.getElementById('cr100');
+let cr75 = document.getElementById('cr75');
+let cr50 = document.getElementById('cr50');
+let cr25 = document.getElementById('cr25');
+let curhantei = document.getElementById('curhantei');
+let curhantei2 = document.getElementById('curhantei2');
+let nextdoor = document.getElementById('nextdoor');
+let piehead = document.getElementById('piehead');
+let pad = document.getElementById('pad');
+let paddm = document.getElementById('paddm');
+let pad2 = document.getElementById('pad2');
+let paddaiza = document.getElementById('paddaiza');
+let backbt = document.getElementById('backbt');
+let backbt2 = document.getElementById('backbt2');
+let ghost = document.getElementById('ghost');
+let gameover = document.getElementById('gameover');
+//セグ1
+let seghidari1 = document.getElementById('seghidari1');
+let segue1 = document.getElementById('segue1');
+let segmigi1 = document.getElementById('segmigi1');
+let segshita1 = document.getElementById('segshita1');
+//セグ2
+let seghidari2 = document.getElementById('seghidari2');
+let segue2 = document.getElementById('segue2');
+let segmigi2 = document.getElementById('segmigi2');
+let segshita2 = document.getElementById('segshita2');
+//セグ3
+let seghidari3 = document.getElementById('seghidari3');
+let segue3 = document.getElementById('segue3');
+let segmigi3 = document.getElementById('segmigi3');
+let segshita3 = document.getElementById('segshita3');
+//セグ4
+let seghidari4 = document.getElementById('seghidari4');
+let segue4 = document.getElementById('segue4');
+let segmigi4 = document.getElementById('segmigi4');
+let segshita4 = document.getElementById('segshita4');
+//セグ5
+let seghidari5 = document.getElementById('seghidari5');
+let segue5 = document.getElementById('segue5');
+let segmigi5 = document.getElementById('segmigi5');
+let segshita5 = document.getElementById('segshita5');
+//入力成功
+let sucimput = document.getElementById('sucimput');
+//万の位入力
+let yhidari1 = document.getElementById('yhidari1');
+let yue1 = document.getElementById('yue1');
+let ymigi1 = document.getElementById('ymigi1');
+let yshita1 = document.getElementById('yshita1');
+//千の位入力
+let yhidari2 = document.getElementById('yhidari2');
+let yue2 = document.getElementById('yue2');
+let ymigi2 = document.getElementById('ymigi2');
+let yshita2 = document.getElementById('yshita2');
+//百の位入力
+let yhidari3 = document.getElementById('yhidari3');
+let yue3 = document.getElementById('yue3');
+let ymigi3 = document.getElementById('ymigi3');
+let yshita3 = document.getElementById('yshita3');
+//十の位入力
+let yhidari4 = document.getElementById('yhidari4');
+let yue4 = document.getElementById('yue4');
+let ymigi4 = document.getElementById('ymigi4');
+let yshita4 = document.getElementById('yshita4');
+//一の位入力
+let yhidari5 = document.getElementById('yhidari5');
+let yue5 = document.getElementById('yue5');
+let ymigi5 = document.getElementById('ymigi5');
+let yshita5 = document.getElementById('yshita5');
+//効果音
+let securopen = document.getElementById('curopense');
+let securclose = document.getElementById('curclosese');
+let sekeytype = document.getElementById('keytypese');
+let sesuccess = document.getElementById('successse');
+let seoowarai = document.getElementById('oowaraise');
+//スコア
+let fps1 = 0;
+let fps2 = 0;
+let fpsgo = 0;
+let ghostpoint = 0;
+let passpoint = 0;
+/*シーン1****************************************/
+//カーテンを開ける
+curhantei.addEventListener('mouseover',function(){curhantei.style.cursor = 'pointer';});
+curhantei.addEventListener('click',function(){
+    fps1 = 0;
+    ghostpoint += 10;
+    if(ghostpoint === 50){
+        //シーン1の要素全消し
+        wall.style.display = 'none';
+        cl100.style.display ='none';
+        cr100.style.display = 'none';
+        piehead.style.display = 'none';
+        pad.style.display = 'none';
+        curhantei.style.display = 'none';
+        //お化け
+        seoowarai.load();
+        seoowarai.play();
+        ghost.style.display = 'inline';
+        let timerGameover = setInterval(function(){
+            switch(fpsgo){
+                case 12:
+                gameover.style.display = 'inline';
+                break;
+                case 24:
+                gameover.style.opacity = '0.2';
+                body.style.backgroundColor = '#330000';
+                break;
+                case 26:
+                gameover.style.opacity = '0.4';
+                body.style.backgroundColor = '#660000';
+                break;
+                case 28:
+                gameover.style.opacity = '0.6';
+                body.style.backgroundColor = '#990000';
+                break;
+                case 30:
+                gameover.style.opacity = '0.8';
+                body.style.backgroundColor = '#cc0000';
+                break;
+                case 32:
+                gameover.style.opacity = '1.0';
+                body.style.backgroundColor = '#ff0000';
+                clearInterval(timerGameover);
+                break;
+            }
+            fpsgo++;
+        },80);
+    }else{
+        securopen.load();
+        securopen.play();
+        let timerId1 = setInterval(function(){
+            switch(fps1){
+                case 1:
+                pad.style.display = 'none';
+                paddm.style.display = 'inline';
+                curhantei.style.display = 'none';
+                cl100.style.display = 'none';
+                cr100.style.display = 'none';
+                cl75.style.display = 'inline';
+                cr75.style.display = 'inline';
+                break;
+                case 2:
+                cl75.style.display = 'none';
+                cr75.style.display = 'none';
+                cl50.style.display = 'inline';
+                cr50.style.display = 'inline';
+                break;
+                case 3:
+                cl50.style.display = 'none';
+                cr50.style.display = 'none';
+                cl25.style.display = 'inline';
+                cr25.style.display = 'inline';
+                break;
+                case 9:
+                securclose.load();
+                securclose.play();
+                cl25.style.display = 'none';
+                cr25.style.display = 'none';
+                cl50.style.display = 'inline';
+                cr50.style.display = 'inline';
+                break;
+                case 10:
+                cl50.style.display = 'none';
+                cr50.style.display = 'none';
+                cl75.style.display = 'inline';
+                cr75.style.display = 'inline';
+                break;
+                case 11:
+                cl75.style.display = 'none';
+                cr75.style.display = 'none';
+                cl100.style.display = 'inline';
+                cr100.style.display = 'inline';
+                paddm.style.display = 'none';
+                pad.style.display = 'inline';
+                curhantei.style.display = 'inline';
+                clearInterval(timerId1);
+                break;
+                }
+                fps1++;
+                },80);
+    }
+});
+//パッド画面に移動する
+pad.addEventListener('mouseover',function(){pad.style.cursor = 'pointer';});
+pad.addEventListener('click',function(){
+    //シーン1の要素全消し
+    wall.style.display = 'none';
+    cl100.style.display ='none';
+    cr100.style.display = 'none';
+    piehead.style.display = 'none';
+    pad.style.display = 'none';
+    curhantei.style.display = 'none';
+    //入力シーンの表示
+    wallup.style.display = 'inline';
+    paddaiza.style.display = 'inline';
+    yhidari1.style.display = 'inline';
+    yue1.style.display = 'inline';
+    ymigi1.style.display = 'inline';
+    yshita1.style.display = 'inline';
+    backbt.style.display = 'inline';
+});
+/*パッド操作画面****************************************/
+//シーン1に戻る
+backbt.addEventListener('mouseover',function(){backbt.style.cursor = 'pointer';});
+backbt.addEventListener('click',function(){
+    //入力シーン全消し
+    passpoint = 0;
+    wallup.style.display = 'none';
+    paddaiza.style.display = 'none';
+    yhidari1.style.display = 'none';
+    yue1.style.display = 'none';
+    ymigi1.style.display = 'none';
+    yshita1.style.display = 'none';
+    yhidari2.style.display = 'none';
+    yue2.style.display = 'none';
+    ymigi2.style.display = 'none';
+    yshita2.style.display = 'none';
+    yhidari3.style.display = 'none';
+    yue3.style.display = 'none';
+    ymigi3.style.display = 'none';
+    yshita3.style.display = 'none';
+    yhidari4.style.display = 'none';
+    yue4.style.display = 'none';
+    ymigi4.style.display = 'none';
+    yshita4.style.display = 'none';
+    yhidari5.style.display = 'none';
+    yue5.style.display = 'none';
+    ymigi5.style.display = 'none';
+    yshita5.style.display = 'none';
+    yhidaridm.style.display = 'none';
+    yuedm.style.display = 'none';
+    ymigidm.style.display = 'none';
+    yshitadm.style.display = 'none';
+    seghidari1.style.display = 'none';
+    segue1.style.display = 'none';
+    segmigi1.style.display = 'none';
+    segshita1.style.display = 'none';
+    seghidari2.style.display = 'none';
+    segue2.style.display = 'none';
+    segmigi2.style.display = 'none';
+    segshita2.style.display = 'none';
+    seghidari3.style.display = 'none';
+    segue3.style.display = 'none';
+    segmigi3.style.display = 'none';
+    segshita3.style.display = 'none';
+    seghidari4.style.display = 'none';
+    segue4.style.display = 'none';
+    segmigi4.style.display = 'none';
+    segshita4.style.display = 'none';
+    seghidari5.style.display = 'none';
+    segue5.style.display = 'none';
+    segmigi5.style.display = 'none';
+    segshita5.style.display = 'none';
+    backbt.style.display = 'none';
+    //シーン1の要素表示
+    wall.style.display = 'inline';
+    cl100.style.display ='inline';
+    cr100.style.display = 'inline';
+    piehead.style.display = 'inline';
+    pad.style.display = 'inline';
+    curhantei.style.display = 'inline';
+});
+//万の位入力*******************************************************************************
+//「←」を押した場合
+yhidari1.addEventListener('mouseover',function(){yhidari1.style.cursor = 'pointer';});
+yhidari1.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「←」を表示
+    seghidari1.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari1.style.display = 'none';
+    yue1.style.display = 'none';
+    ymigi1.style.display = 'none';
+    yshita1.style.display = 'none';
+    //次のパッドキー表示
+    yhidari2.style.display = 'inline';
+    yue2.style.display = 'inline';
+    ymigi2.style.display = 'inline';
+    yshita2.style.display = 'inline';
+});
+//「↑」を押した場合
+yue1.addEventListener('mouseover',function(){yue1.style.cursor = 'pointer';});
+yue1.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↑」を表示
+    segue1.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari1.style.display = 'none';
+    yue1.style.display = 'none';
+    ymigi1.style.display = 'none';
+    yshita1.style.display = 'none';
+    //次のパッドキー表示
+    yhidari2.style.display = 'inline';
+    yue2.style.display = 'inline';
+    ymigi2.style.display = 'inline';
+    yshita2.style.display = 'inline';
+});
+//「→」を押した場合
+ymigi1.addEventListener('mouseover',function(){ymigi1.style.cursor = 'pointer';});
+ymigi1.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    passpoint += 10;
+    //セグに「→」を表示
+    segmigi1.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari1.style.display = 'none';
+    yue1.style.display = 'none';
+    ymigi1.style.display = 'none';
+    yshita1.style.display = 'none';
+    //次のパッドキー表示
+    yhidari2.style.display = 'inline';
+    yue2.style.display = 'inline';
+    ymigi2.style.display = 'inline';
+    yshita2.style.display = 'inline';
+});
+//「↓」を押した場合
+yshita1.addEventListener('mouseover',function(){yshita1.style.cursor = 'pointer';});
+yshita1.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↓」を表示
+    segshita1.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari1.style.display = 'none';
+    yue1.style.display = 'none';
+    ymigi1.style.display = 'none';
+    yshita1.style.display = 'none';
+    //次のパッドキー表示
+    yhidari2.style.display = 'inline';
+    yue2.style.display = 'inline';
+    ymigi2.style.display = 'inline';
+    yshita2.style.display = 'inline';
+});
+
+//千の位入力*******************************************************************************
+//「←」を押した場合
+yhidari2.addEventListener('mouseover',function(){yhidari2.style.cursor = 'pointer';});
+yhidari2.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    passpoint += 10;
+    //セグに「←」を表示
+    seghidari2.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari2.style.display = 'none';
+    yue2.style.display = 'none';
+    ymigi2.style.display = 'none';
+    yshita2.style.display = 'none';
+    //次のパッドキー表示
+    yhidari3.style.display = 'inline';
+    yue3.style.display = 'inline';
+    ymigi3.style.display = 'inline';
+    yshita3.style.display = 'inline';
+});
+//「↑」を押した場合
+yue2.addEventListener('mouseover',function(){yue2.style.cursor = 'pointer';});
+yue2.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↑」を表示
+    segue2.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari2.style.display = 'none';
+    yue2.style.display = 'none';
+    ymigi2.style.display = 'none';
+    yshita2.style.display = 'none';
+    //次のパッドキー表示
+    yhidari3.style.display = 'inline';
+    yue3.style.display = 'inline';
+    ymigi3.style.display = 'inline';
+    yshita3.style.display = 'inline';
+});
+//「→」を押した場合
+ymigi2.addEventListener('mouseover',function(){ymigi2.style.cursor = 'pointer';});
+ymigi2.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「→」を表示
+    segmigi2.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari2.style.display = 'none';
+    yue2.style.display = 'none';
+    ymigi2.style.display = 'none';
+    yshita2.style.display = 'none';
+    //次のパッドキー表示
+    yhidari3.style.display = 'inline';
+    yue3.style.display = 'inline';
+    ymigi3.style.display = 'inline';
+    yshita3.style.display = 'inline';
+});
+//「↓」を押した場合
+yshita2.addEventListener('mouseover',function(){yshita2.style.cursor = 'pointer';});
+yshita2.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↓」を表示
+    segshita2.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari2.style.display = 'none';
+    yue2.style.display = 'none';
+    ymigi2.style.display = 'none';
+    yshita2.style.display = 'none';
+    //次のパッドキー表示
+    yhidari3.style.display = 'inline';
+    yue3.style.display = 'inline';
+    ymigi3.style.display = 'inline';
+    yshita3.style.display = 'inline';
+});
+
+//百の位入力*******************************************************************************
+//「←」を押した場合
+yhidari3.addEventListener('mouseover',function(){yhidari3.style.cursor = 'pointer';});
+yhidari3.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「←」を表示
+    seghidari3.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari3.style.display = 'none';
+    yue3.style.display = 'none';
+    ymigi3.style.display = 'none';
+    yshita3.style.display = 'none';
+    //次のパッドキー表示
+    yhidari4.style.display = 'inline';
+    yue4.style.display = 'inline';
+    ymigi4.style.display = 'inline';
+    yshita4.style.display = 'inline';
+});
+//「↑」を押した場合
+yue3.addEventListener('mouseover',function(){yue3.style.cursor = 'pointer';});
+yue3.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↑」を表示
+    segue3.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari3.style.display = 'none';
+    yue3.style.display = 'none';
+    ymigi3.style.display = 'none';
+    yshita3.style.display = 'none';
+    //次のパッドキー表示
+    yhidari4.style.display = 'inline';
+    yue4.style.display = 'inline';
+    ymigi4.style.display = 'inline';
+    yshita4.style.display = 'inline';
+});
+//「→」を押した場合
+ymigi3.addEventListener('mouseover',function(){ymigi3.style.cursor = 'pointer';});
+ymigi3.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「→」を表示
+    segmigi3.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari3.style.display = 'none';
+    yue3.style.display = 'none';
+    ymigi3.style.display = 'none';
+    yshita3.style.display = 'none';
+    //次のパッドキー表示
+    yhidari4.style.display = 'inline';
+    yue4.style.display = 'inline';
+    ymigi4.style.display = 'inline';
+    yshita4.style.display = 'inline';
+});
+//「↓」を押した場合
+yshita3.addEventListener('mouseover',function(){yshita3.style.cursor = 'pointer';});
+yshita3.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    passpoint += 10;
+    //セグに「↓」を表示
+    segshita3.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari3.style.display = 'none';
+    yue3.style.display = 'none';
+    ymigi3.style.display = 'none';
+    yshita3.style.display = 'none';
+    //次のパッドキー表示
+    yhidari4.style.display = 'inline';
+    yue4.style.display = 'inline';
+    ymigi4.style.display = 'inline';
+    yshita4.style.display = 'inline';
+});
+
+//十の位入力*******************************************************************************
+//「←」を押した場合
+yhidari4.addEventListener('mouseover',function(){yhidari4.style.cursor = 'pointer';});
+yhidari4.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「←」を表示
+    seghidari4.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari4.style.display = 'none';
+    yue4.style.display = 'none';
+    ymigi4.style.display = 'none';
+    yshita4.style.display = 'none';
+    //次のパッドキー表示
+    yhidari5.style.display = 'inline';
+    yue5.style.display = 'inline';
+    ymigi5.style.display = 'inline';
+    yshita5.style.display = 'inline';
+});
+//「↑」を押した場合
+yue4.addEventListener('mouseover',function(){yue4.style.cursor = 'pointer';});
+yue4.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↑」を表示
+    segue4.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari4.style.display = 'none';
+    yue4.style.display = 'none';
+    ymigi4.style.display = 'none';
+    yshita4.style.display = 'none';
+    //次のパッドキー表示
+    yhidari5.style.display = 'inline';
+    yue5.style.display = 'inline';
+    ymigi5.style.display = 'inline';
+    yshita5.style.display = 'inline';
+});
+//「→」を押した場合
+ymigi4.addEventListener('mouseover',function(){ymigi4.style.cursor = 'pointer';});
+ymigi4.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「→」を表示
+    segmigi4.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari4.style.display = 'none';
+    yue4.style.display = 'none';
+    ymigi4.style.display = 'none';
+    yshita4.style.display = 'none';
+    //次のパッドキー表示
+    yhidari5.style.display = 'inline';
+    yue5.style.display = 'inline';
+    ymigi5.style.display = 'inline';
+    yshita5.style.display = 'inline';
+});
+//「↓」を押した場合
+yshita4.addEventListener('mouseover',function(){yshita4.style.cursor = 'pointer';});
+yshita4.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    passpoint += 10;
+    //セグに「↓」を表示
+    segshita4.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari4.style.display = 'none';
+    yue4.style.display = 'none';
+    ymigi4.style.display = 'none';
+    yshita4.style.display = 'none';
+    //次のパッドキー表示
+    yhidari5.style.display = 'inline';
+    yue5.style.display = 'inline';
+    ymigi5.style.display = 'inline';
+    yshita5.style.display = 'inline';
+});
+
+//一の位入力*******************************************************************************
+//「←」を押した場合
+yhidari5.addEventListener('mouseover',function(){yhidari5.style.cursor = 'pointer';});
+yhidari5.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「←」を表示
+    seghidari5.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari5.style.display = 'none';
+    yue5.style.display = 'none';
+    ymigi5.style.display = 'none';
+    yshita5.style.display = 'none';
+    //次のパッドキー表示
+    yhidaridm.style.display = 'inline';
+    yuedm.style.display = 'inline';
+    ymigidm.style.display = 'inline';
+    yshitadm.style.display = 'inline';
+});
+//「↑」を押した場合
+yue5.addEventListener('mouseover',function(){yue5.style.cursor = 'pointer';});
+yue5.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↑」を表示
+    segue5.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari5.style.display = 'none';
+    yue5.style.display = 'none';
+    ymigi5.style.display = 'none';
+    yshita5.style.display = 'none';
+    //次のパッドキー表示
+    yhidaridm.style.display = 'inline';
+    yuedm.style.display = 'inline';
+    ymigidm.style.display = 'inline';
+    yshitadm.style.display = 'inline';
+    //passpointが40だった場合
+    if(passpoint === 40){
+        sesuccess.load();
+        sesuccess.play();
+        sucimput.style.display = 'inline';
+        backbt.style.display = 'none';
+        backbt2.style.display = 'inline';
+    }
+});
+//「→」を押した場合
+ymigi5.addEventListener('mouseover',function(){ymigi5.style.cursor = 'pointer';});
+ymigi5.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「→」を表示
+    segmigi5.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari5.style.display = 'none';
+    yue5.style.display = 'none';
+    ymigi5.style.display = 'none';
+    yshita5.style.display = 'none';
+    //次のパッドキー表示
+    yhidaridm.style.display = 'inline';
+    yuedm.style.display = 'inline';
+    ymigidm.style.display = 'inline';
+    yshitadm.style.display = 'inline';
+});
+//「↓」を押した場合
+yshita5.addEventListener('mouseover',function(){yshita5.style.cursor = 'pointer';});
+yshita5.addEventListener('click',function(){
+    sekeytype.load();
+    sekeytype.play();
+    //セグに「↓」を表示
+    segshita5.style.display = 'inline';
+    //現在のパッドキー消す
+    yhidari5.style.display = 'none';
+    yue5.style.display = 'none';
+    ymigi5.style.display = 'none';
+    yshita5.style.display = 'none';
+    //次のパッドキー表示
+    yhidaridm.style.display = 'inline';
+    yuedm.style.display = 'inline';
+    ymigidm.style.display = 'inline';
+    yshitadm.style.display = 'inline';
+});
+//成功した場合の戻るボタン
+backbt2.addEventListener('mouseover',function(){backbt2.style.cursor = 'pointer';});
+backbt2.addEventListener('click',function(){
+    //現在の表示消す
+    backbt2.style.display = 'none';
+    paddaiza.style.display = 'none';
+    sucimput.style.display = 'none';
+    yhidaridm.style.display = 'none';
+    yuedm.style.display = 'none';
+    ymigidm.style.display = 'none';
+    yshitadm.style.display = 'none';
+    segmigi1.style.display = 'none';
+    seghidari2.style.display = 'none';
+    segshita3.style.display = 'none';
+    segshita4.style.display = 'none';
+    segue5.style.display = 'none';
+    wallup.style.display = 'none';
+    //次のページへ行くシーン表示
+    cl100.style.display ='inline';
+    cr100.style.display = 'inline';
+    curhantei2.style.display = 'inline';
+    wall.style.display = 'inline';
+    piehead.style.display = 'inline';
+    pad2.style.display = 'inline';
+    nextdoor.style.display = 'inline';
+});
+curhantei2.addEventListener('mouseover',function(){curhantei2.style.cursor = 'pointer';});
+curhantei2.addEventListener('click',function(){
+    securopen.load();
+    securopen.play();
+    let timerId2 = setInterval(function(){
+        switch(fps2){
+            case 1:
+            curhantei2.style.display = 'none';
+            cl100.style.display = 'none';
+            cr100.style.display = 'none';
+            cl75.style.display = 'inline';
+            cr75.style.display = 'inline';
+            break;
+            case 2:
+            cl75.style.display = 'none';
+            cr75.style.display = 'none';
+            cl25.style.display = 'inline';
+            cr25.style.display = 'inline';
+            clearInterval(timerId2);
+            break;
+        }
+        fps2++;
+    },80);
+});
+nextdoor.addEventListener('mouseover',function(){nextdoor.style.cursor = 'pointer';});
+nextdoor.addEventListener('click',function(){
+    location.href = 'akaitupne63gum.html';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/totptbpuiouiss.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:58:51 GMT -->
+</html>

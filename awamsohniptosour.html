@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/awamsohniptosour.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:53:04 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>」ﾙru室ゐo和ﾌﾟo簾</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#back1{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#back2{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#fusumahantei{
+    width:248px;
+    height:245px;
+    position:absolute;
+    top:159px;
+    left:361px;
+    opacity:0.0;
+}
+#nata{
+    width:137px;
+    height:24px;
+    position:absolute;
+    top:452px;
+    left:417px;
+    display:none;
+}
+#nataget{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#closebutton{
+    width:119px;
+    height:34px;
+    position:absolute;
+    top:450px;
+    left:426px;
+    display:none;
+}
+#fusumamove{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#fusumamove2{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#ghost1{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#ghost2{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#ghost3{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#circle1{
+    width:485px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    right:485px;
+    opacity:0.0;
+    display:none;
+}
+#circle2{
+    width:485px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:485px;
+    opacity:0.0;
+    display:none;
+}
+#fusumahantei2{
+    width:248px;
+    height:245px;
+    position:absolute;
+    top:159px;
+    left:361px;
+    opacity:0.0;
+    display:none;
+}
+#circle3{
+    width:485px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    right:485px;
+    opacity:0.0;
+    display:none;
+}
+#circle4{
+    width:485px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:485px;
+    opacity:0.0;
+    display:none;
+}
+#fusumahantei3{
+    width:248px;
+    height:245px;
+    position:absolute;
+    top:159px;
+    left:361px;
+    opacity:0.0;
+    display:none;
+}
+#fr100{width:485px;height:580px;position:absolute;top:0px;left:485px;display:none;}
+#fr75{width:364px;height:580px;position:absolute;top:0px;left:606px;display:none;}
+#fr50{width:242px;height:580px;position:absolute;top:0px;left:728px;display:none;}
+#fr25{width:122px;height:580px;position:absolute;top:0px;left:848px;display:none;}
+#fl100{width:485px;height:580px;position:absolute;top:0px;right:485px;display:none;}
+#fl75{width:364px;height:580px;position:absolute;top:0px;right:606px;display:none;}
+#fl50{width:242px;height:580px;position:absolute;top:0px;right:728px;display:none;}
+#fl25{width:122px;height:580px;position:absolute;top:0px;right:848px;display:none;}
+#gameover{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    opacity:0.0;
+    display:none;
+}
+/*チケット入手*/
+#clickboushi{
+    width:970px;
+    height:580px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:#000000;
+    opacity:0.0;
+}
+#ticket{width:77px;height:18px;position:absolute;top:480px;left:280px;}
+#ticketbig{width:860px;height:400px;position:absolute;top:55px;left:90px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+
+<audio id="itemgetse" preload="auto">
+<source src="se/smpitemgetevent.wav" type="audio/wav">
+<source src="se/smpitemgetevent.mp3" type="audio/mp3">
+</audio>
+
+<audio id="tatamiwalkse" preload="auto">
+<source src="se/smpwalktatami.wav" type="audio/wav">
+<source src="se/smpwalktatami.mp3" type="audio/mp3">
+</audio>
+
+<audio id="openfusumase" preload="auto">
+<source src="se/smpopenfusuma.wav" type="audio/wav">
+<source src="se/smpopenfusuma.mp3" type="audio/mp3">
+</audio>
+
+<audio id="ghostse" preload="auto">
+<source src="se/smpoowarai.wav" type="audio/wav">
+<source src="se/smpoowarai.mp3" type="audio/mp3">
+</audio>
+
+<audio id="kiruse" preload="auto">
+<source src="se/kiru01.wav" type="audio/wav">
+<source src="se/kiru01.mp3" type="audio/mp3">
+</audio>
+
+<div id="d1">
+<img src="pimg/oohiroma.jpg"id="back1">
+<img src="pimg/oohiroma2.jpg"id="back2">
+<img src="pimg/oosquare.jpg"id="fusumahantei">
+<img src="pimg/oonata.png"id="nata">
+<img src="pimg/oonataget.png"id="nataget">
+<img src="pimg/ooclosebutton.png"id="closebutton">
+<img src="pimg/oofusumamove1.gif"id="fusumamove">
+<img src="pimg/oosquare.jpg"id="circle1">
+<img src="pimg/oosquare.jpg"id="circle2">
+<img src="pimg/oosquare.jpg"id="fusumahantei2">
+<img src="pimg/oofusumamove2.gif"id="fusumamove2">
+<img src="pimg/oosquare.jpg"id="circle3">
+<img src="pimg/oosquare.jpg"id="circle4">
+<img src="pimg/oosquare.jpg"id="fusumahantei3">
+<img src="pimg/oofanime1.gif"id="ghost1">
+<img src="pimg/oofanime2.gif"id="ghost2">
+<img src="pimg/oofanime3.gif"id="ghost3">
+<img src="pimg/oofr100.jpg"id="fr100">
+<img src="pimg/oofr75.jpg"id="fr75">
+<img src="pimg/oofr50.jpg"id="fr50">
+<img src="pimg/oofr25.jpg"id="fr25">
+<img src="pimg/oofl100.jpg"id="fl100">
+<img src="pimg/oofl75.jpg"id="fl75">
+<img src="pimg/oofl50.jpg"id="fl50">
+<img src="pimg/oofl25.jpg"id="fl25">
+<img src="pimg/gameover.jpg"id="gameover">
+<!--チケット入手-->
+<div id="clickboushi"></div>
+<img src="pimg/ooticket.png"id="ticket">
+<img src="pimg/ooticketbig.jpg"id="ticketbig">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+//効果音の定義
+let seitemget = document.getElementById('itemgetse');
+let setatamiwalk = document.getElementById('tatamiwalkse');
+let seopenfusuma = document.getElementById('openfusumase');
+let seghost = document.getElementById('ghostse');
+let sekiru = document.getElementById('kiruse');
+//オブジェクトの定義
+let body = document.getElementById('body');
+let back1 = document.getElementById('back1');
+let back2 = document.getElementById('back2');
+let fusumahantei = document.getElementById('fusumahantei');
+let nata = document.getElementById('nata');
+let nataget = document.getElementById('nataget');
+let closebutton = document.getElementById('closebutton');
+let fusumamove = document.getElementById('fusumamove');
+let fusumamove2 = document.getElementById('fusumamove2');
+let point1 = 0;
+let point2 = 0;
+let point3 = 0;
+let point4 = 0;
+let point5 = 0;
+let point6 = 0;
+let circle1 = document.getElementById('circle1');
+let circle2 = document.getElementById('circle2');
+let circle3 = document.getElementById('circle3');
+let circle4 = document.getElementById('circle4');
+let fusumahantei2 = document.getElementById('fusumahantei2');
+let fusumahantei3 = document.getElementById('fusumahantei3');
+//右襖
+let fr100 = document.getElementById('fr100');
+let fr75 = document.getElementById('fr75');
+let fr50 = document.getElementById('fr50');
+let fr25 = document.getElementById('fr25');
+//左襖
+let fl100 = document.getElementById('fl100');
+let fl75 = document.getElementById('fl75');
+let fl50 = document.getElementById('fl50');
+let fl25 = document.getElementById('fl25');
+//その他
+let ghost1 = document.getElementById('ghost1');
+let ghost2 = document.getElementById('ghost2');
+let ghostbreak = document.getElementById('ghost3');
+let timerId5 = '';
+//チケット入手
+let clickboushi = document.getElementById('clickboushi');
+let ticket = document.getElementById('ticket');
+let ticketbig = document.getElementById('ticketbig');
+
+/*チケット入手イベント*******************************************************************/
+ticket.addEventListener('mouseover',function(){ticket.style.cursor = 'pointer';});
+ticket.addEventListener('click',function(){
+    ticket.style.display = 'none';
+    ticketbig.style.display = 'inline';
+});
+ticketbig.addEventListener('mouseover',function(){ticketbig.style.cursor = 'pointer';});
+ticketbig.addEventListener('click',function(){
+    ticketbig.style.display = 'none';
+    clickboushi.style.display = 'none';
+});
+/*大広間1*******************************************************************/
+//襖に近づく
+fusumahantei.addEventListener('mouseover',function(){
+    fusumahantei.style.cursor = 'pointer';
+});
+fusumahantei.addEventListener('mouseout',function(){
+    fusumahantei.style.cursor = 'default';
+});
+fusumahantei.addEventListener('click',function(){
+    setatamiwalk.load();
+    setatamiwalk.play();
+    fusumahantei.style.display = 'none';
+    fusumamove.style.display = 'inline';
+    let timerId = setInterval(function(){
+        if(point1 === 1){
+            circle1.style.display = 'inline';
+            circle2.style.display = 'inline';
+            clearInterval(timerId);
+        }
+        point1++;
+    },1890);
+});
+//襖開ける
+circle1.addEventListener('mouseover',function(){circle1.style.cursor = 'pointer';});
+circle1.addEventListener('mouseout',function(){circle1.style.cursor = 'default';});
+circle1.addEventListener('click',function(){
+    seopenfusuma.load();
+    seopenfusuma.play();
+    circle1.style.display = 'none';
+    circle2.style.display = 'none';
+    fusumamove.style.display = 'none';
+    fr100.style.display = 'inline';
+    fl100.style.display = 'inline';
+    let timerId2 = setInterval(function(){
+        switch(point2){
+            case 1:
+                fr100.style.display = 'none';
+                fl100.style.display = 'none';
+                fr75.style.display = 'inline';
+                fl75.style.display = 'inline';
+                break;
+            case 2:
+                fr75.style.display = 'none';
+                fl75.style.display = 'none';
+                fr50.style.display = 'inline';
+                fl50.style.display = 'inline';
+                break;
+            case 3:
+                fr50.style.display = 'none';
+                fl50.style.display = 'none';
+                fr25.style.display = 'inline';
+                fl25.style.display = 'inline';
+                break;
+            case 4:
+                fr25.style.display = 'none';
+                fl25.style.display = 'none';
+                fusumahantei2.style.display = 'inline';
+                clearInterval(timerId2);
+                break;
+        }
+        point2++;
+    },100);
+});
+
+circle2.addEventListener('mouseover',function(){circle2.style.cursor = 'pointer';});
+circle2.addEventListener('mouseout',function(){circle2.style.cursor = 'default';});
+circle2.addEventListener('click',function(){
+    seopenfusuma.load();
+    seopenfusuma.play();
+    circle1.style.display = 'none';
+    circle2.style.display = 'none';
+    fusumamove.style.display = 'none';
+    fr100.style.display = 'inline';
+    fl100.style.display = 'inline';
+    let timerId3 = setInterval(function(){
+        switch(point3){
+            case 1:
+                fr100.style.display = 'none';
+                fl100.style.display = 'none';
+                fr75.style.display = 'inline';
+                fl75.style.display = 'inline';
+                break;
+            case 2:
+                fr75.style.display = 'none';
+                fl75.style.display = 'none';
+                fr50.style.display = 'inline';
+                fl50.style.display = 'inline';
+                break;
+            case 3:
+                fr50.style.display = 'none';
+                fl50.style.display = 'none';
+                fr25.style.display = 'inline';
+                fl25.style.display = 'inline';
+                break;
+            case 4:
+                fr25.style.display = 'none';
+                fl25.style.display = 'none';
+                fusumahantei2.style.display = 'inline';
+                clearInterval(timerId3);
+                break;
+        }
+        point3++;
+    },100);
+});
+
+/*大広間2*******************************************************************/
+//襖に近づく
+fusumahantei2.addEventListener('mouseover',function(){fusumahantei2.style.cursor = 'pointer';});
+fusumahantei2.addEventListener('mouseout',function(){fusumahantei2.style.cursor = 'default';});
+fusumahantei2.addEventListener('click',function(){
+    setatamiwalk.load();
+    setatamiwalk.play();
+    back1.style.display = 'none';
+    back2.style.display = 'inline';
+    fusumahantei2.style.display = 'none';
+    fusumamove2.style.display = 'inline';
+    let timerId4 = setInterval(function(){
+        if(point4 === 1){
+            circle3.style.display = 'inline';
+            circle4.style.display = 'inline';
+            clearInterval(timerId4);
+        }
+        point4++;
+    },1890);
+});
+//幽霊撃破時
+ghost1.addEventListener('mouseover',function(){ghost1.style.cursor = 'pointer';});
+ghost1.addEventListener('mouseout',function(){ghost1.style.cursor = 'default';});
+ghost1.addEventListener('click',function(){
+    clearInterval(timerId5);
+    seghost.pause();
+    sekiru.load();
+    sekiru.play();
+    fusumahantei3.style.display = 'inline';
+    ghost1.style.display = 'none';
+    ghostbreak.style.display = 'inline';
+    let timerId6 = setInterval(function(){
+        if(point6 === 5){
+            ghostbreak.style.display = 'none';
+            clearInterval(timerId6);
+        }
+        point6++;
+    },70);
+    gameover.style.display = 'none';
+    fr100.style.display = 'none';
+    fr75.style.display = 'none';
+    fr50.style.display = 'none';
+    fr25.style.display = 'none';
+    fl100.style.display = 'none';
+    fl75.style.display = 'none';
+    fl50.style.display = 'none';
+    fl25.style.display = 'none';
+});
+ghost2.addEventListener('mouseover',function(){ghost2.style.cursor = 'pointer';});
+ghost2.addEventListener('mouseout',function(){ghost2.style.cursor = 'default';});
+ghost2.addEventListener('click',function(){
+    clearInterval(timerId5);
+    seghost.pause();
+    sekiru.load();
+    sekiru.play();
+    fusumahantei3.style.display = 'inline';
+    ghost2.style.display = 'none';
+    ghostbreak.style.display = 'inline';
+    let timerId6 = setInterval(function(){
+        if(point6 === 5){
+            ghostbreak.style.display = 'none';
+            clearInterval(timerId6);
+        }
+        point6++;
+    },70);
+    gameover.style.display = 'none';
+    fr100.style.display = 'none';
+    fr75.style.display = 'none';
+    fr50.style.display = 'none';
+    fr25.style.display = 'none';
+    fl100.style.display = 'none';
+    fl75.style.display = 'none';
+    fl50.style.display = 'none';
+    fl25.style.display = 'none';
+});
+//襖開ける
+circle3.addEventListener('mouseover',function(){circle3.style.cursor = 'pointer';});
+circle3.addEventListener('mouseout',function(){circle3.style.cursor = 'default';});
+circle3.addEventListener('click',function(){
+    seghost.load();
+    seghost.play();
+    circle3.style.display = 'none';
+    circle4.style.display = 'none';
+    fusumamove2.style.display = 'none';
+    fr100.style.display = 'inline';
+    fl100.style.display = 'inline';
+    timerId5 = setInterval(function(){
+        switch(point5){
+            case 1:
+                fr100.style.display = 'none';
+                fl100.style.display = 'none';
+                fr75.style.display = 'inline';
+                fl75.style.display = 'inline';
+                ghost1.style.display = 'inline';
+                break;
+            case 2:
+                fr75.style.display = 'none';
+                fl75.style.display = 'none';
+                fr50.style.display = 'inline';
+                fl50.style.display = 'inline';
+                break;
+            case 3:
+                fr50.style.display = 'none';
+                fl50.style.display = 'none';
+                fr25.style.display = 'inline';
+                fl25.style.display = 'inline';
+                break;
+            case 4:
+                fr25.style.display = 'none';
+                fl25.style.display = 'none';
+                break;
+            case 12:
+                ghost1.style.display = 'none';
+                ghost2.style.display = 'inline';
+                break;
+            case 29:
+                gameover.style.display = 'inline';
+                break;
+            case 30:
+                body.style.backgroundColor = '#330000';
+                gameover.style.opacity = '0.2';
+                break;
+            case 31:
+                body.style.backgroundColor = '#660000';
+                gameover.style.opacity = '0.4';
+                break;
+            case 32:
+                body.style.backgroundColor = '#990000';
+                gameover.style.opacity = '0.6';
+                break;
+            case 33:
+                body.style.backgroundColor = '#cc0000';
+                ghost2.style.display = 'none';
+                ghost1.style.display = 'inline';
+                gameover.style.opacity = '0.8';
+                break;
+            case 34:
+                body.style.backgroundColor = '#ff0000';
+                gameover.style.opacity = '1.0';
+                clearInterval(timerId5);
+                break;
+        }
+        point5++;
+    },70);
+});
+
+circle4.addEventListener('mouseover',function(){circle4.style.cursor = 'pointer';});
+circle4.addEventListener('mouseout',function(){circle4.style.cursor = 'default';});
+circle4.addEventListener('click',function(){
+    seghost.load();
+    seghost.play();
+    circle3.style.display = 'none';
+    circle4.style.display = 'none';
+    fusumamove2.style.display = 'none';
+    fr100.style.display = 'inline';
+    fl100.style.display = 'inline';
+    timerId5 = setInterval(function(){
+        switch(point5){
+            case 1:
+                fr100.style.display = 'none';
+                fl100.style.display = 'none';
+                fr75.style.display = 'inline';
+                fl75.style.display = 'inline';
+                ghost1.style.display = 'inline';
+                break;
+            case 2:
+                fr75.style.display = 'none';
+                fl75.style.display = 'none';
+                fr50.style.display = 'inline';
+                fl50.style.display = 'inline';
+                break;
+            case 3:
+                fr50.style.display = 'none';
+                fl50.style.display = 'none';
+                fr25.style.display = 'inline';
+                fl25.style.display = 'inline';
+                break;
+            case 4:
+                fr25.style.display = 'none';
+                fl25.style.display = 'none';
+                break;
+            case 12:
+                ghost1.style.display = 'none';
+                ghost2.style.display = 'inline';
+                break;
+            case 29:
+                gameover.style.display = 'inline';
+                break;
+            case 30:
+                gameover.style.opacity = '0.2';
+                break;
+            case 31:
+                gameover.style.opacity = '0.4';
+                break;
+            case 32:
+                gameover.style.opacity = '0.6';
+                break;
+            case 33:
+                ghost2.style.display = 'none';
+                ghost1.style.display = 'inline';
+                gameover.style.opacity = '0.8';
+                break;
+            case 34:
+                gameover.style.opacity = '1.0';
+                clearInterval(timerId5);
+                break;
+        }
+        point5++;
+    },70);
+});
+fusumahantei3.addEventListener('mouseover',function(){fusumahantei3.style.cursor = 'pointer';});
+fusumahantei3.addEventListener('click',function(){
+    location.href = 'ningyounoma.html';
+});
+</script>
+<!--
+<script src="js/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/awamsohniptosour.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:53:35 GMT -->
+</html>

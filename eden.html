@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/eden.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:20 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 17 Jun 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=device-width" >
+<title>do血選n出mo逝ｹma諏</title>
+<!--
+<link rel="stylesheet" type="text/css" href=".css">
+-->
+<style type="text/css">
+#body{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+#d1{
+    width:970px;
+    height:580px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    position: relative;
+}
+#door1{width:80px;height:183px;position:absolute;left:10px;top:198px;}
+#door2{width:80px;height:183px;position:absolute;right:10px;top:198px;}
+#kanbanthum{width:100px;height:60px;position:absolute;left:435px;top:260px;}
+#kanban{width:500px;height:300px;position:absolute;left:235px;top:140px;display:none;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★*/
+#loadback{
+    width:970px;height:580px;
+    position:absolute;left:0px;top:0px;
+    background-color:#000000;
+}
+#nowloading{
+    width:231px;height:231px;
+    position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;
+    user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+</style>
+
+</head>
+<body id="body">
+<!--効果音の二次配布・無断利用禁止。各効果音素材のサイト様へのリンクはトップページにございます。-->
+<!--Secondary distribution of sound effects · Unauthorized use prohibited. The link to the site of each sound effect material is on the top page.-->
+<!--音声の二次配布・無断利用禁止。-->
+<!--Secondary distribution of voice / unauthorized use prohibited.-->
+<!--
+<audio id="itemgetse" preload="auto">
+<source src="pse/itemget.wav" type="audio/wav">
+<source src="pse/itemget.mp3" type="audio/mp3">
+</audio>
+-->
+<div id="d1">
+<img src="pimg/door.jpg"id="door1">
+<img src="pimg/door.jpg"id="door2">
+<img src="pimg/edenkanban.jpg"id="kanbanthum">
+<img src="pimg/edenkanban.jpg"id="kanban">
+<!--★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★-->
+<div id="loadback"></div>
+<img src="pimg/nowloading.gif"id="nowloading">
+</div>
+<script>
+/*★★★★★★★★★★★★★★★★★右クリック＆画像ドロップ禁止★★★★★★★★★★★★★★★★★★★★*/
+document.oncontextmenu = function(){return false;}
+document.onselectstart = function(){return false;}
+document.onmousedown = function(){return false;}
+/*★★★★★★★★★★★★★★★★★★★★★ロード画面★★★★★★★★★★★★★★★★★★★★★★★★*/
+let loadback = document.getElementById('loadback');
+let nowloading = document.getElementById('nowloading');
+/*★★★★★★★★★★★★★★★★読み込みが完了したらロード画面を非表示★★★★★★★★★★★★★★★★*/
+window.addEventListener('load',function(){
+    nowloading.style.display = 'none';
+    loadback.style.display = 'none';
+});
+let door1 = document.getElementById('door1');
+let door2 = document.getElementById('door2');
+let kanbanthum = document.getElementById('kanbanthum');
+let kanban = document.getElementById('kanban');
+
+door1.addEventListener('mouseover',function(){door1.style.cursor = 'pointer';});
+door1.addEventListener('click',function(){
+    location.href = 'ederkauizraatbsouu.html';
+});
+
+door2.addEventListener('mouseover',function(){door2.style.cursor = 'pointer';});
+door2.addEventListener('click',function(){
+    location.href = 'edeuenatseurre.html';
+});
+
+kanbanthum.addEventListener('mouseover',function(){kanbanthum.style.cursor = 'pointer';});
+kanbanthum.addEventListener('click',function(){
+    kanbanthum.style.display = 'none';
+    kanban.style.display = 'inline';
+});
+</script>
+<!--
+<script src="pjs/jquery-3.3.1.min.js"></script>
+<script src="pjs/.js"></script>
+-->
+</body>
+
+<!-- Mirrored from lomando.com/eden.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:51:21 GMT -->
+</html>

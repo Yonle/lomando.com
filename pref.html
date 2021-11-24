@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lomando.com/pref.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:47:24 GMT -->
+<head>
+<meta http-equiv="Expires" content="Mon, 11 Mar 2019 21:30:00 GMT">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>メインメニューに行く前に</title>
+<!--
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44623591-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+-->
+<style type="text/css">
+#body{
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+    position: relative;
+}
+#header{
+    width:100%;
+    height:70px;
+    background-color: #ff9999;
+    text-align: center;
+    position:absolute;
+    top:0px;
+    left:0px;
+    box-shadow:gray 0px 1px 6px 0px;
+}
+#headerlogo{
+     width:300px;
+     height:32px;
+     position:absolute;
+     top:20px;
+     left:20px;
+}
+/*ヘッダとフォローボタンの間の面積514px：60px*/
+/*ページの左端からロゴまでの幅320px*/
+/*広告のleft=(514-広告のwidth)/2+320*/
+#headadsp{
+     width:468px;
+     height:60px;
+     position:absolute;
+     left:343px;
+     top:3px;
+}
+#adlink{
+     font-size:12px;
+     position:absolute;
+     left:368px;
+     top:15px;
+}
+#d0{height:90px;}
+#t1{width:970px;margin-left:auto;margin-right:auto;}
+.adspace{text-align:center;vertical-align:middle;}
+#th1{
+     height:40px;
+     text-align:center;vertical-align:middle;
+     color:#666666;font-size:15pt;font-weight:bold;
+     border-top:1px solid #dddddd;
+}
+#d2{
+     height:30px;
+     border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;
+     text-align:left;vertical-align:middle;
+}
+#d3{text-align:center;vertical-align:middle;margin:0px;padding:0px;line-height:1em;}
+#adspacegedan{border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;text-align:center;vertical-align:middle;}
+#d5{
+     height:30px;
+     text-align:center;vertical-align:middle;
+     border-bottom:1px solid #dddddd;
+     color:#666666;font-size:15pt;
+}
+#d6{height:90px;}
+#footer{
+    width:100%;
+    height:90px;
+    background-color: #ff9999;
+    text-align: center;
+    position:absolute;
+    bottom:0px;
+    box-shadow:gray 0px -1px 6px 0px;
+}
+#kinshijikou{width:100%;text-align:center;position:absolute;left:0px;bottom:10px;}
+.normal{color:#666666;font-size:10pt;}
+.shironuki{color:#ffffff;font-size:10pt;}
+.redfont{color:#ff0000;font-size:10pt;}
+.s1{color:#ff42bd;font-size:10pt;}
+.a1{color:#ff42bd;font-size:10pt;}
+.minicell1{width:242px;text-align:center;vertical-align:middle;}
+.minicell2{width:243px;text-align:center;vertical-align:middle;}
+#twitube{position:absolute;top:35px;right:20px;}
+</style>
+</head>
+
+<body id="body">
+<div id="header"></div>
+<img src="aboutlogolong.png"id="headerlogo">
+<div id="headadsp">
+     <a href="https://px.a8.net/svt/ejp?a8mat=3BBMEQ+B7NYGY+1LOO+BZGEP" rel="nofollow">
+          <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=200416562678&amp;wid=003&amp;eno=01&amp;mid=s00000007476002013000&amp;mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=3BBMEQ+B7NYGY+1LOO+BZGEP" alt="">
+</div>
+<table id="t1">
+<tr><td id="d0">
+</td></tr>
+<!--■■■■■■■■■■■■■■■■広告欄1■■■■■■■■■■■■■■■■-->
+<tr><td class="adspace" colspan="4">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- 新pref上 -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-9642990549530289"
+               data-ad-slot="5214444298"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+</td></tr>
+<!--■■■■■■■■■■■■■■■■見出し■■■■■■■■■■■■■■■■-->
+<tr><th id="th1" colspan="4">
+【メインメニューに行く前に】
+</th></tr>
+<!--■■■■■■■■■■■■■■■■ぱんくず■■■■■■■■■■■■■■■■-->
+<tr><td id="d2" colspan="4">
+<span class="normal">
+<a href="index.html" target="_top" class="a1">トップ</a>
+&gt;&gt;前置き
+</span>
+</td></tr>
+<!--■■■■■■■■■■■■■■■■内容■■■■■■■■■■■■■■■■-->
+<tr>
+<!--■内容■-->
+<td id="d3" colspan="4">
+<p>
+<span class="normal">
+<!--
+【<span class="redfont">2019/08/01追記</span>】<br>
+Google Chromeの最新版(Ver.76)ではFlashが確認なしでブロックされるようです。<br><br>
+Chromeブラウザの右上の「︙」をクリック<br>
+↓<br>
+「設定」<br>
+↓<br>
+「詳細設定」<br>
+↓<br>
+「サイトの設定」<br>
+↓<br>
+「Flash」にあるスライドバーを「最初に確認する」<br>
+<a href="flashkakunin.html"target="_top" class="a1">図解で詳しく見る</a><br><br>
+にすることで、従来のクロームのようにFlashを許可するかどうか確認してくるようになります。<br><br>
+-->
+【<span class="redfont">注意</span>】<br>
+当サイトは、各ページの謎を解いてギャラリー(画廊)を目指す<br>
+ホームページ型<span class="redfont">ホラーアドベンチャーゲーム</span>です。<br>
+メインメニュー以降随所に<span class="redfont">ホラー要素</span>や<span class="redfont">ビックリ要素</span>があるので<br>
+怖いの苦手な方・心臓の弱い方はそのままブラウザバックでお願い致します。<br><br>
+
+また、上記のような性質上、<span class="redfont">殆どのページで音が鳴ります。</span><br>
+公共の場でプレイする際は周囲のご迷惑にならないよう<br>
+イヤホンをつけてお楽しみください。<br>
+(一部音量注意の為、予め端末の音量を下げてお楽しみ下さい。)<br><br>
+
+尚、当サイトのリンクを貼る際は<br>
+<a href="index.html"target="_top"style="text-decoration:none;color:#008080;">PC版トップページ</a>か
+<a href="http://www.lomando.com/smpindex.html"target="_top"style="text-decoration:none;color:#008080;">スマートフォン版トップページ</a><br>
+のURLのみでお願い致します。<br><br>
+
+<!--■■■■■■■■■■■■■■■■広告欄2■■■■■■■■■■■■■■■■-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 新pref中央 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9642990549530289"
+     data-ad-slot="9652576273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br><br>
+2020年2月3日に全てのページがHTML5に変更されましたが、<br>
+以前当サイトにお越しいただいたことのある方は<br>
+キャッシュの関係上、ページが以前のFlash版のままで表示される場合がございます。<br>
+もし、ページに「クリックしてAdobe Flash Playerを有効にします」と出る場合は<br>
+恐れ入りますがブラウザの更新ボタンを押してページをリロードして下さい。<br><br>
+
+Flashでは無くなったためスマートフォンでも表示できるようになりましたが<br>
+最適化はされておりません。スマートフォンで遊ばれる方は<a href="http://www.lomando.com/smpindex.html"target="_top"style="text-decoration:none;color:#008080;">こちら</a>よりお進み下さい。<br><br>
+
+以上の内容をご理解いただけましたらすぐ下の猫耳少女の画像よりメインメニューへお進み下さい。<br>
+<a href="main.html"target="_top">
+<img src="tope.jpg"style="width:300px; height:300px; border-width:0;">
+</a>
+<br>
+</span>
+</p>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■下段広告貼り付け位置■■■■■■■■■■■■■■■■-->
+<tr><td id="adspacegedan" colspan="4">
+     <br>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <!-- 新pref下 -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-9642990549530289"
+          data-ad-slot="1275199284"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
+     </br>
+</td></tr>
+<!--■■■■■■■■■■■■■■■■スタンプとか告知■■■■■■■■■■■■■■■■-->
+<tr><td id="d5" colspan="4">
+【LINEスタンプ・その他】
+</td></tr>
+<!--■■■■上段■■■■-->
+<tr>
+<!--■■PR1■■-->
+<td class="minicell1">
+<a href="http://www.lomando.com/smpindex.html"target="_top">
+<img src="sumahobunnertate.jpg"style="width:163px; height:350px; border-width:0;">
+</a>
+</td>
+<!--■■PR2■■-->
+<td class="minicell1">
+<a href="http://line.me/S/sticker/1192060"target="_blank">
+<img src="fancystp2.jpg"style="width:200px; height:350px; border-width:0;">
+</a>
+</td>
+<!--■■PR3■■-->
+<td class="minicell2">
+<a href="http://line.me/S/sticker/1166446"target="_blank">
+<img src="fancystpadlong.jpg"style="width:200px; height:350px; border-width:0;">
+</a>
+</td>
+<!--■■PR4■■-->
+<td class="minicell2">
+<a href="http://line.me/S/sticker/1149391"target="_blank">
+<img src="lstpoplongneko.jpg"style="width:200px; height:350px; border-width:0;">
+</a>
+</td>
+</tr>
+<!--■■■■■■■■■■■■■■■■フッター■■■■■■■■■■■■■■■■-->
+<tr><td id="d6"colspan="4">
+</td></tr>
+</table>
+<div id="footer"></div>
+<p id="kinshijikou"><span class="shironuki">
+当サイト内のコンテンツの無断転載・無断複製を固く禁止致します。<br>
+<!--
+実況動画等は構いませんが、管理人が投稿しているyoutube動画のみを<br>
+そのままの状態で動画投稿サイトに上げる行為は禁止致します。<br>
+(「実況」動画の一部として紹介するのは構いません。)<br>
+-->
+Copyright&copy;2010-2019 "Fancy Island" All Rights Reserved.
+</span></p>
+<div id="twitube">
+<!--twitter-->
+<a href="https://twitter.com/fancy_islandrss?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @fancy_islandrss</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!--youtube-->
+<script src="https://apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UC-5ac9sGp8pCguVRcUkdqiA" data-layout="default" data-count="hidden"></div>
+</div>
+</body>
+
+<!-- Mirrored from lomando.com/pref.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Nov 2021 05:47:24 GMT -->
+</html>
